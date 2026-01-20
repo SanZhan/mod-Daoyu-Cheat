@@ -5,17 +5,11 @@ daoyu_culture_effect = {
 	}
 	if = {
 		limit = { has_global_variable = daoyu_one_earth_one_nation_one_religion }
-		random_culture = {
-			limit = { is_culture_type = cu:$CULTURE$ }
-			save_scope_as = daoyu_only_one_culture
-		}
+		cu:$CULTURE$ = { save_scope_as = daoyu_only_one_culture }
 	}
 	if = {
 		limit = { has_global_variable = daoyu_new_culture_for_name }
-		random_culture = {
-			limit = { is_culture_type = cu:$CULTURE$ }
-			save_scope_as = daoyu_new_culture_for_name
-		}
+		cu:$CULTURE$ = { save_scope_as = daoyu_new_culture_for_name }
 	}
 	if = {
 		limit = { has_global_variable = daoyu_mark_target_culture_begin }

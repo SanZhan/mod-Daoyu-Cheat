@@ -2073,10 +2073,7 @@ daoyu_political_movement_buff = {
 daoyu_remove_company = {
 	random_country = {
 		limit = { has_modifier = daoyu_target_country }
-		random_company = {
-			limit = { is_company_type = company_type:$COM$ }
-			remove_owned_country = prev
-		}
+		company:$COM$ = { remove_owned_country = prev }
 		remove_company = company_type:$COM$
 	}
 }
