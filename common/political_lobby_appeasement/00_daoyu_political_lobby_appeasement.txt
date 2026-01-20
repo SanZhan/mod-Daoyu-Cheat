@@ -1,0 +1,8 @@
+﻿catalyst_event_positive = {
+	duration_to_show = { months = 0 }
+	is_always_usable = yes
+}
+catalyst_event_negative = {
+	duration_to_show = { months = 0 }
+	is_always_usable = yes
+}

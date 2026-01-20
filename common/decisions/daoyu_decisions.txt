@@ -1,0 +1,134 @@
+daoyu_on = {
+	is_shown = {
+		is_ai = no
+		not = { has_global_variable = daoyu_on }
+		not = { has_global_variable = daoyu_off }
+	}
+	when_taken = {
+		trigger_event = { id = daoyu.1 popup = yes }
+		set_global_variable = daoyu_off
+	}
+}
+daoyu_cheat = {
+	is_shown = {
+		is_ai = no
+		has_global_variable = daoyu_on
+		nor = { has_global_variable = daoyu_off has_global_variable = daoyu_cheat }
+	}
+	possible = {
+		custom_tooltip = { text = daoyu_quit_diplomatic_actions nor = { has_global_variable = daoyu_declare_war has_global_variable = daoyu_from_diplomatic_actions } }
+		custom_tooltip = { text = daoyu_quit_manage_character not = { has_global_variable = daoyu_character_interactions } }
+	}
+	when_taken = {
+		set_global_variable = daoyu_cheat
+		if = { limit = { not = { has_variable = daoyu_no_mustard_gas } any_scope_state = { has_modifier = mustard_gas } } trigger_event = { id = daoyu.109 popup = yes } }
+		else = { trigger_event = { id = daoyu.10 popup = yes } }
+	}
+}
+daoyu_cheat_missing = {
+	is_shown = {
+		is_ai = no
+		has_global_variable = daoyu_on
+		not = { has_global_variable = daoyu_off }
+		has_global_variable = daoyu_cheat
+	}
+	when_taken = {
+		remove_global_variable = daoyu_cheat
+	}
+}
+daoyu_diplomatic_actions_missing = {
+	is_shown = {
+		is_ai = no
+		has_global_variable = daoyu_from_diplomatic_actions
+	}
+	when_taken = {
+		remove_global_variable = daoyu_from_diplomatic_actions
+		remove_global_variable = daoyu_declare_war
+		random_country = { limit = { has_modifier = daoyu_target_country } remove_modifier = daoyu_target_country }
+	}
+}
+daoyu_remove_obsession_opium = {
+	is_shown = {
+		has_global_variable = daoyu_solve_lag
+		not = { this = c:CHI }
+		any_scope_state = { any_primary_culture = { has_cultural_obsession = opium } }
+	}
+	possible = {
+	}
+	when_taken = {
+		every_scope_state = { every_primary_culture = { remove_cultural_obsession = opium } }
+	}
+	ai_chance = { base = 100 }
+}
+daoyu_territorial_integrity = {
+	is_shown = {
+		is_ai = no
+		not = { has_global_variable = daoyu_off }
+		game_date = 1836.1.1
+	}
+	possible = {
+		any_state_region = {
+			any_scope_state = { owner = { not = { is_country_type = decentralized } is_ai = yes } }
+			any_scope_state = { owner = root or = { custom_tooltip = { text = daoyu_territorial_integrity_tooltip is_homeland_of_country_cultures = root } and = { is_incorporated = yes is_treaty_port = no } } }
+		}
+	}
+	when_taken = {
+		every_state_region = {
+			limit = {
+				any_scope_state = { owner = { not = { is_country_type = decentralized has_war_with = root } is_ai = yes } }
+				any_scope_state = { owner = root or = { is_homeland_of_country_cultures = root and = { is_incorporated = yes is_treaty_port = no } } }
+			}
+			every_scope_state = {
+				limit = { owner = { not = { is_country_type = decentralized } is_ai = yes } }
+				set_state_owner = root
+			}
+		}
+	}
+}
+daoyu_enactment_success = {
+	is_shown = { is_ai = no has_global_variable = daoyu_enactment_success_on }
+	possible = { enacting_any_law = yes }
+	when_taken = { activate_law = currently_enacting_law.type }
+}
+daoyu_enactment_success_on = {
+	is_shown = { is_ai = no game_date = 1836.1.1 not = { has_global_variable = daoyu_enactment_success_on } }
+	possible = {  }
+	when_taken = { set_global_variable = daoyu_enactment_success_on }
+}
+
+daoyu_clear_target_state = {
+	is_shown = {
+		is_ai = no
+		has_global_variable = daoyu_can_select_target_state
+		any_state = { has_decree = decree_daoyu_target_state }
+	}
+	possible = {
+	}
+	when_taken = {
+		custom_tooltip = { text = daoyu_clear_target_statetooltip }
+		every_state = { limit = { has_decree = decree_daoyu_target_state } set_variable = { name = daoyu_clear_target_state days = 8 } }
+	}
+}
+daoyu_treaty_articles = {
+	is_shown = {
+		is_ai = no
+		is_ai = yes
+	}
+	possible = {
+		not = { has_modifier = daoyu_treaty_articles }
+	}
+	when_taken = {
+		add_modifier = { name = daoyu_treaty_articles }
+	}
+}
+daoyu_text_4 = {
+	is_shown = {
+		is_ai = no
+		is_ai = yes
+	}
+	possible = {
+	}
+	when_taken = {
+		#random_company = { limit = { is_company_type = company_type:company_dmc } add_modifier = { name = daoyu_executive_modifiers months = -1 } }
+	}
+}

@@ -1,0 +1,38 @@
+daoyu_fast_construction = {
+	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+	group = je_group_historical_content
+    possible = {
+        has_variable = daoyu_show_daoyu_fast_construction
+    }
+	scripted_button = daoyu_fast_construction
+	scripted_button = daoyu_fast_construction_off
+	scripted_button = daoyu_stop_construction
+	scripted_button = daoyu_stop_construction_off
+	scripted_button = daoyu_w1
+	scripted_button = daoyu_w2
+	scripted_button = daoyu_w3
+	scripted_button = daoyu_w4
+	scripted_button = daoyu_w5
+	scripted_button = daoyu_w6
+	scripted_button = daoyu_w7
+	scripted_button = daoyu_expand_nationally_owned_building_under_construction
+	scripted_button = daoyu_nationalized_buildings_under_construction
+	scripted_button = daoyu_quit
+    complete = {
+        is_ai = yes
+    }
+    fail = {
+		custom_tooltip = {
+			text = QUIT
+			not = { has_variable = daoyu_show_daoyu_fast_construction }
+		}
+    }
+    on_complete = {
+		custom_tooltip = QUIT
+		remove_variable = daoyu_show_daoyu_fast_construction
+    }
+    on_fail = {
+		custom_tooltip = QUIT
+    }
+    should_be_pinned_by_default = yes
+}

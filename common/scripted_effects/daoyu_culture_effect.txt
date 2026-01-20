@@ -1,0 +1,697 @@
+daoyu_culture_effect = {
+	if = {
+		limit = { has_global_variable = daoyu_target_character_mark_target_culture }
+		scope:daoyu_target_character = { change_character_culture = cu:$CULTURE$ }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_one_earth_one_nation_one_religion }
+		random_culture = {
+			limit = { is_culture_type = cu:$CULTURE$ }
+			save_scope_as = daoyu_only_one_culture
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_new_culture_for_name }
+		random_culture = {
+			limit = { is_culture_type = cu:$CULTURE$ }
+			save_scope_as = daoyu_new_culture_for_name
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_mark_target_culture_begin }
+		set_global_variable = daoyu_mark_target_culture_complete set_global_variable = dculo_$CULTURE$
+		remove_global_variable = daoyu_mark_target_culture_begin
+	}
+	if = {
+		limit = { has_global_variable = daoyu_r_cu exists = scope:daoyu_target_country }
+		scope:daoyu_target_country = { remove_primary_culture = cu:$CULTURE$ }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_a_cu exists = scope:daoyu_target_country }
+		scope:daoyu_target_country = { add_primary_culture = cu:$CULTURE$ }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_m_cu exists = scope:daoyu_target_country exists = scope:daoyu_target_state }
+		scope:daoyu_target_state = {
+			limit = { state_is_eligible_as_mass_migration_target = yes }
+			if = { limit = { not = { has_modifier = daoyu_migration_pull } } add_modifier = { name = daoyu_migration_pull multiplier = 100 years = 2 } }
+			remove_variable = daoyu_target_state
+			create_mass_migration = { origin = scope:daoyu_target_country culture = cu:$CULTURE$ }
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_c_cu exists = scope:daoyu_target_country }
+		scope:daoyu_target_country = {
+			every_scope_state = {
+				if = { limit = { has_cultural_community = cu:$CULTURE$ not = { has_cultural_community = scope:daoyu_t_cu } } add_cultural_community = scope:daoyu_t_cu }
+				if = { limit = { state_region = { is_homeland = cu:$CULTURE$ } not = { state_region = { is_homeland = scope:daoyu_t_cu } } } state_region = { add_homeland = scope:daoyu_t_cu } }
+				if = { limit = { state_region = { is_homeland = cu:$CULTURE$ not = { any_scope_state = { not = { owner = scope:daoyu_target_country } any_scope_pop = { has_pop_culture = $CULTURE$ } } } } } state_region = { remove_homeland = cu:$CULTURE$ } }
+				every_scope_pop = { limit = { has_pop_culture = $CULTURE$ } change_pop_culture = { value = 1 target = scope:daoyu_t_cu } }
+			}
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_remove_homeland }
+		every_scope_state = { limit = { has_variable = daoyu_target_state } state_region = { remove_homeland = cu:$CULTURE$ } }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_add_homeland }
+		every_scope_state = { limit = { has_variable = daoyu_target_state } state_region = { add_homeland = cu:$CULTURE$ } }
+	}
+}
+daoyu_count_culture_effect = {
+	set_global_variable = daoyu_count_culture_effect
+	if = { limit = { not = { has_variable = daoyu_count } } set_variable = { name = daoyu_count value = 0 } }
+	daoyu_all_culture_effect = yes
+	remove_global_variable = daoyu_count_culture_effect
+}
+daoyu_remove_show_cu_effect = {
+	remove_variable = daoyu_count
+	set_global_variable = daoyu_remove_show_cu_effect
+	daoyu_all_culture_effect = yes
+	remove_global_variable = daoyu_remove_show_cu_effect
+}
+daoyu_remove_all_primary_culture_effect = {
+	set_global_variable = daoyu_remove_all_primary_culture_effect
+	daoyu_all_culture_effect = yes
+	remove_global_variable = daoyu_remove_all_primary_culture_effect
+}
+daoyu_add_radicals_in_state_effect = {
+	set_global_variable = daoyu_add_radicals_in_state_effect
+	daoyu_all_culture_effect = yes
+	remove_global_variable = daoyu_add_radicals_in_state_effect
+}
+daoyu_remove_homeland_effect = {
+	set_global_variable = daoyu_remove_homeland_effect
+	daoyu_all_culture_effect = yes
+	remove_global_variable = daoyu_remove_homeland_effect
+}
+daoyu_save_primary_culture_effect = {
+	set_global_variable = daoyu_save_primary_culture_effect
+	daoyu_all_culture_effect = yes
+	remove_global_variable = daoyu_save_primary_culture_effect
+}
+daoyu_create_primary_culture_pops_effect = {
+	set_global_variable = daoyu_create_primary_culture_pops_effect
+	every_scope_state = { limit = { has_decree = decree_daoyu_target_state } set_variable = daoyu_target_state }
+	daoyu_create_pop_effect = yes
+	daoyu_all_culture_effect = yes
+	every_state = { limit = { has_variable = daoyu_target_state } remove_variable = daoyu_target_state }
+	remove_global_variable = daoyu_create_primary_culture_pops_effect
+}
+daoyu_create_pop_for_mark_target_culture_effect = {
+	set_global_variable = daoyu_create_pop_for_mark_target_culture_effect
+	daoyu_create_pop_effect = yes
+	daoyu_all_culture_effect = yes
+	remove_global_variable = daoyu_create_pop_for_mark_target_culture_effect
+}
+daoyu_add_homeland_for_mark_target_culture_effect = {
+	set_global_variable = daoyu_add_homeland_for_mark_target_culture_effect
+	daoyu_all_culture_effect = yes
+	remove_global_variable = daoyu_add_homeland_for_mark_target_culture_effect
+}
+daoyu_add_owner_homeland_remove_others_effect = {
+	set_global_variable = daoyu_add_owner_homeland_remove_others_effect
+	every_scope_state = {
+		limit = { has_variable = daoyu_target_state }
+		daoyu_all_culture_effect = yes
+	}
+	remove_global_variable = daoyu_add_owner_homeland_remove_others_effect
+}
+daoyu_change_target_character_culture = {
+	if = {
+		limit = { not = { exists = scope:daoyu_target_character } }
+		random_character = { limit = { has_trait = daoyu_target_character } save_scope_as = daoyu_target_character }
+	}
+	set_global_variable = daoyu_change_target_character_culture
+	daoyu_all_culture_effect = yes
+}
+
+
+daoyu_single_culture_effect = {
+	if = {
+		limit = { has_global_variable = daoyu_remove_show_cu_effect }
+		if = { limit = { has_variable = daoyu_show_cu_$CULTURE$ } remove_variable = daoyu_show_cu_$CULTURE$ }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_save_primary_culture_effect }
+		if = { limit = { exists = scope:daoyu_target_country scope:daoyu_target_country = { country_has_primary_culture = cu:$CULTURE$ } } cu:$CULTURE$ = { save_scope_as = daoyu_t_cu } }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_count_culture_effect }
+		if = {
+			limit = { has_global_variable = daoyu_add_homeland }
+			if = {
+				limit = { any_scope_state = { has_variable = daoyu_target_state any_scope_pop = { has_pop_culture = $CULTURE$ } not = { state_region = { is_homeland = cu:$CULTURE$ } } } }
+				change_variable = { name = daoyu_count add = 1 }
+				if = { limit = { has_variable = daoyu_page_01 has_variable = daoyu_count var:daoyu_count <= 14 } set_variable = daoyu_show_cu_$CULTURE$ }
+				if = { limit = { has_variable = daoyu_page_02 has_variable = daoyu_count var:daoyu_count > 14 var:daoyu_count <= 27 } set_variable = daoyu_show_cu_$CULTURE$ }
+				if = { limit = { has_variable = daoyu_page_03 has_variable = daoyu_count var:daoyu_count > 27 } set_variable = daoyu_show_cu_$CULTURE$ }
+			}
+		}
+		if = {
+			limit = { has_global_variable = daoyu_remove_homeland }
+			if = {
+				limit = { any_scope_state = { has_variable = daoyu_target_state state_region = { is_homeland = cu:$CULTURE$ } } }
+				change_variable = { name = daoyu_count add = 1 }
+				if = { limit = { has_variable = daoyu_page_01 has_variable = daoyu_count var:daoyu_count <= 14 } set_variable = daoyu_show_cu_$CULTURE$ }
+				if = { limit = { has_variable = daoyu_page_02 has_variable = daoyu_count var:daoyu_count > 14 var:daoyu_count <= 27 } set_variable = daoyu_show_cu_$CULTURE$ }
+				if = { limit = { has_variable = daoyu_page_03 has_variable = daoyu_count var:daoyu_count > 27 } set_variable = daoyu_show_cu_$CULTURE$ }
+			}
+		}
+		if = {
+			limit = { or = { has_global_variable = daoyu_mark_target_culture_begin has_global_variable = daoyu_one_earth_one_nation_one_religion } }
+			if = {
+				limit = { daoyu_cu_$CULTURE$ = yes has_variable = daoyu_count }
+				change_variable = { name = daoyu_count add = 1 }
+				if = { limit = { has_variable = daoyu_page_01 has_variable = daoyu_count var:daoyu_count <= 14 } set_variable = daoyu_show_cu_$CULTURE$ }
+				if = { limit = { has_variable = daoyu_page_02 has_variable = daoyu_count var:daoyu_count > 14 var:daoyu_count <= 27 } set_variable = daoyu_show_cu_$CULTURE$ }
+				if = { limit = { has_variable = daoyu_page_03 has_variable = daoyu_count var:daoyu_count > 27 } set_variable = daoyu_show_cu_$CULTURE$ }
+			}
+		}
+		if = {
+			limit = { has_global_variable = daoyu_m_cu exists = scope:daoyu_target_country }
+			if = {
+				limit = { scope:daoyu_target_country = { any_scope_state = { any_scope_pop = { has_pop_culture = $CULTURE$ } } } }
+				change_variable = { name = daoyu_count add = 1 }
+				if = { limit = { has_variable = daoyu_page_01 has_variable = daoyu_count var:daoyu_count <= 14 } set_variable = daoyu_show_cu_$CULTURE$ }
+				if = { limit = { has_variable = daoyu_page_02 has_variable = daoyu_count var:daoyu_count > 14 var:daoyu_count <= 27 } set_variable = daoyu_show_cu_$CULTURE$ }
+				if = { limit = { has_variable = daoyu_page_03 has_variable = daoyu_count var:daoyu_count > 27 } set_variable = daoyu_show_cu_$CULTURE$ }
+			}
+		}
+		if = {
+			limit = { has_global_variable = daoyu_r_cu exists = scope:daoyu_target_country }
+			if = {
+				limit = { scope:daoyu_target_country = { country_has_primary_culture = cu:$CULTURE$ } }
+				change_variable = { name = daoyu_count add = 1 }
+				if = { limit = { has_variable = daoyu_page_01 has_variable = daoyu_count var:daoyu_count <= 14 } set_variable = daoyu_show_cu_$CULTURE$ }
+				if = { limit = { has_variable = daoyu_page_02 has_variable = daoyu_count var:daoyu_count > 14 var:daoyu_count <= 27 } set_variable = daoyu_show_cu_$CULTURE$ }
+				if = { limit = { has_variable = daoyu_page_03 has_variable = daoyu_count var:daoyu_count > 27 } set_variable = daoyu_show_cu_$CULTURE$ }
+			}
+		}
+		if = {
+			limit = { or = { has_global_variable = daoyu_a_cu has_global_variable = daoyu_c_cu } exists = scope:daoyu_target_country }
+			if = {
+				limit = { scope:daoyu_target_country = { any_scope_state = { any_scope_pop = { pop_has_primary_culture = no has_pop_culture = $CULTURE$ } } } }
+				change_variable = { name = daoyu_count add = 1 }
+				if = { limit = { has_variable = daoyu_page_01 has_variable = daoyu_count var:daoyu_count <= 14 } set_variable = daoyu_show_cu_$CULTURE$ }
+				if = { limit = { has_variable = daoyu_page_02 has_variable = daoyu_count var:daoyu_count > 14 var:daoyu_count <= 27 } set_variable = daoyu_show_cu_$CULTURE$ }
+				if = { limit = { has_variable = daoyu_page_03 has_variable = daoyu_count var:daoyu_count > 27 } set_variable = daoyu_show_cu_$CULTURE$ }
+			}
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_remove_homeland_effect }
+		every_state = {
+			limit = { state_region = { is_homeland = cu:$CULTURE$ } }
+			state_region = { remove_homeland = cu:$CULTURE$ }
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_add_radicals_in_state_effect }
+		if = { limit = { owner = { country_has_primary_culture = cu:$CULTURE$ } state_region = { is_homeland = cu:$CULTURE$ } any_scope_pop = { strata = poor } } add_radicals_in_state = { value = 1 strata = poor } order_by = turmoil }
+		if = {
+			limit = { owner = { not = { country_has_primary_culture = cu:$CULTURE$ } } state_region = { is_homeland = cu:$CULTURE$ } any_scope_pop = { culture = cu:$CULTURE$ } }
+			add_radicals_in_state = { value = 1 culture = cu:$CULTURE$ } order_by = turmoil 
+			if = { limit = { has_global_variable = daoyu_country_add_radicals } add_culture_standard_of_living_modifier = { culture = cu:$CULTURE$ months = 1 multiplier = -100 } }
+			else = { add_culture_standard_of_living_modifier = { culture = cu:$CULTURE$ months = 12 multiplier = -100 } }
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_add_homeland_for_mark_target_culture_effect }
+		if = {
+			limit = { has_global_variable = dculo_$CULTURE$ }
+			every_state = {
+				limit = { has_variable = daoyu_target_state state_region = { not = { is_homeland = cu:$CULTURE$ } } }
+				state_region = { add_homeland = cu:$CULTURE$ }
+				if = { limit = { not = { has_cultural_community = cu:$CULTURE$ } } add_cultural_community = cu:$CULTURE$ }
+			}
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_add_owner_homeland_remove_others_effect }
+		if = {
+			limit = { owner = { country_has_primary_culture = cu:$CULTURE$ } }
+			if = { limit = { not = { state_region = { is_homeland = cu:$CULTURE$ } } } state_region = { add_homeland = cu:$CULTURE$ } }
+			if = { limit = { not = { has_cultural_community = cu:$CULTURE$ } } add_cultural_community = cu:$CULTURE$ }
+		}
+		if = {
+			limit = { owner = { not = { country_has_primary_culture = cu:$CULTURE$ } } }
+			owner = { save_temporary_scope_as = daoyu_temporary_owner }
+			if = { limit = { state_region = { is_homeland = cu:$CULTURE$ not = { any_scope_state = { not = { owner = scope:daoyu_temporary_owner } any_scope_pop = { has_pop_culture = $CULTURE$ } } } } } state_region = { remove_homeland = cu:$CULTURE$ } }
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_create_pop_for_mark_target_culture_effect }
+		if = {
+			limit = { has_global_variable = dculo_$CULTURE$ }
+			every_state = {
+				limit = { has_variable = daoyu_target_state }
+				every_scope_pop = {
+					limit = { culture = cu:daoyu_nonexistent }
+					if = { limit = { has_global_variable = daoyu_set_create_pops_L_R_02 } set_pop_literacy = { literacy_rate = 0.2 } }
+					if = { limit = { has_global_variable = daoyu_set_create_pops_L_R_04 } set_pop_literacy = { literacy_rate = 0.4 } }
+					if = { limit = { has_global_variable = daoyu_set_create_pops_L_R_06 } set_pop_literacy = { literacy_rate = 0.6 } }
+					if = { limit = { has_global_variable = daoyu_set_create_pops_L_R_08 } set_pop_literacy = { literacy_rate = 0.8 } }
+					if = { limit = { has_global_variable = daoyu_set_create_pops_L_R_10 } set_pop_literacy = { literacy_rate = 1 } }
+					change_pop_culture = { value = 1 target = cu:$CULTURE$ }
+				}
+				if = { limit = { not = { has_cultural_community = cu:$CULTURE$ } } add_cultural_community = cu:$CULTURE$ }
+			}
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_create_primary_culture_pops_effect }
+		every_scope_state = {
+			if = {
+				limit = { root = { country_has_primary_culture = cu:$CULTURE$ } }
+				every_scope_pop = {
+					limit = { culture = cu:daoyu_nonexistent }
+					if = { limit = { has_global_variable = daoyu_set_create_pops_L_R_02 } set_pop_literacy = { literacy_rate = 0.2 } }
+					if = { limit = { has_global_variable = daoyu_set_create_pops_L_R_04 } set_pop_literacy = { literacy_rate = 0.4 } }
+					if = { limit = { has_global_variable = daoyu_set_create_pops_L_R_06 } set_pop_literacy = { literacy_rate = 0.6 } }
+					if = { limit = { has_global_variable = daoyu_set_create_pops_L_R_08 } set_pop_literacy = { literacy_rate = 0.8 } }
+					if = { limit = { has_global_variable = daoyu_set_create_pops_L_R_10 } set_pop_literacy = { literacy_rate = 1.0 } }
+					change_pop_culture = { value = 1 target = cu:$CULTURE$ }
+				}
+				if = { limit = { not = { has_cultural_community = cu:$CULTURE$ } } add_cultural_community = cu:$CULTURE$ }
+			}
+		}
+	}
+	if = {
+		limit = { has_global_variable = dculo_remove_global_variable_effect }
+		remove_global_variable = dculo_$CULTURE$
+	}
+	if = {
+		limit = { has_global_variable = daoyu_save_mark_target_culture_effect }
+		if = { limit = { has_global_variable = dculo_$CULTURE$ } cu:$CULTURE$ = { save_scope_as = daoyu_mark_target_culture } }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_remove_all_primary_culture_effect }
+		remove_primary_culture = cu:$CULTURE$
+	}
+	if = {
+		limit = { has_global_variable = daoyu_change_target_character_culture exists = scope:daoyu_target_character }
+		if = {
+			limit = { country_has_primary_culture = cu:$CULTURE$ }
+			scope:daoyu_target_character = { change_character_culture = cu:$CULTURE$ }
+			remove_global_variable = daoyu_change_target_character_culture
+			clear_saved_scope = daoyu_target_character
+		}
+	}
+}
+daoyu_create_pop_effect = {
+	every_scope_state = {
+		limit = { has_variable = daoyu_target_state }
+		if = { limit = { has_global_variable = daoyu_set_create_pops_1K } while = { count = 1 daoyu_create_religion_pop_effect = yes } }
+		if = { limit = { has_global_variable = daoyu_set_create_pops_2K } while = { count = 2 daoyu_create_religion_pop_effect = yes } }
+		if = { limit = { has_global_variable = daoyu_set_create_pops_5K } while = { count = 5 daoyu_create_religion_pop_effect = yes } }
+		if = { limit = { has_global_variable = daoyu_set_create_pops_10K } while = { count = 10 daoyu_create_religion_pop_effect = yes } }
+		if = { limit = { has_global_variable = daoyu_set_create_pops_20K } while = { count = 20 daoyu_create_religion_pop_effect = yes } }
+		if = { limit = { has_global_variable = daoyu_set_create_pops_50K } while = { count = 50 daoyu_create_religion_pop_effect = yes } }
+		if = { limit = { has_global_variable = daoyu_set_create_pops_100K } while = { count = 100 daoyu_create_religion_pop_effect = yes } }
+		if = { limit = { has_global_variable = daoyu_set_create_pops_1M } while = { count = 1000 daoyu_create_religion_pop_effect = yes } }
+	}
+}
+daoyu_create_religion_pop_effect = {
+	if = { limit = { root = { country_has_state_religion = rel:catholic } } create_pop = { religion = catholic size = 1000 culture = daoyu_nonexistent } }
+	if = { limit = { root = { country_has_state_religion = rel:protestant } } create_pop = { religion = protestant size = 1000 culture = daoyu_nonexistent } }
+	if = { limit = { root = { country_has_state_religion = rel:orthodox } } create_pop = { religion = orthodox size = 1000 culture = daoyu_nonexistent } }
+	if = { limit = { root = { country_has_state_religion = rel:oriental_orthodox } } create_pop = { religion = oriental_orthodox size = 1000 culture = daoyu_nonexistent } }
+	if = { limit = { root = { country_has_state_religion = rel:sunni } } create_pop = { religion = sunni size = 1000 culture = daoyu_nonexistent } }
+	if = { limit = { root = { country_has_state_religion = rel:shiite } } create_pop = { religion = shiite size = 1000 culture = daoyu_nonexistent } }
+	if = { limit = { root = { country_has_state_religion = rel:ibadi } } create_pop = { religion = ibadi size = 1000 culture = daoyu_nonexistent } }
+	if = { limit = { root = { country_has_state_religion = rel:jewish } } create_pop = { religion = jewish size = 1000 culture = daoyu_nonexistent } }
+	if = { limit = { root = { country_has_state_religion = rel:mahayana } } create_pop = { religion = mahayana size = 1000 culture = daoyu_nonexistent } }
+	if = { limit = { root = { country_has_state_religion = rel:gelugpa } } create_pop = { religion = gelugpa size = 1000 culture = daoyu_nonexistent } }
+	if = { limit = { root = { country_has_state_religion = rel:theravada } } create_pop = { religion = theravada size = 1000 culture = daoyu_nonexistent } }
+	if = { limit = { root = { country_has_state_religion = rel:confucian } } create_pop = { religion = confucian size = 1000 culture = daoyu_nonexistent } }
+	if = { limit = { root = { country_has_state_religion = rel:hindu } } create_pop = { religion = hindu size = 1000 culture = daoyu_nonexistent } }
+	if = { limit = { root = { country_has_state_religion = rel:shinto } } create_pop = { religion = shinto size = 1000 culture = daoyu_nonexistent } }
+	if = { limit = { root = { country_has_state_religion = rel:sikh } } create_pop = { religion = sikh size = 1000 culture = daoyu_nonexistent } }
+	if = { limit = { root = { country_has_state_religion = rel:animist } } create_pop = { religion = animist size = 1000 culture = daoyu_nonexistent } }
+	if = { limit = { root = { country_has_state_religion = rel:atheist } } create_pop = { religion = atheist size = 1000 culture = daoyu_nonexistent } }
+}
+daoyu_set_pop_default_parameters = {
+	if = {
+		limit = {
+			nor = {
+				has_global_variable = daoyu_set_create_pops_1K
+				has_global_variable = daoyu_set_create_pops_2K
+				has_global_variable = daoyu_set_create_pops_5K
+				has_global_variable = daoyu_set_create_pops_10K
+				has_global_variable = daoyu_set_create_pops_20K
+				has_global_variable = daoyu_set_create_pops_50K
+				has_global_variable = daoyu_set_create_pops_100K
+				has_global_variable = daoyu_set_create_pops_1M
+			}
+		}
+		set_global_variable = daoyu_set_create_pops_10K
+	}
+	if = {
+		limit = {
+			nor = {
+				has_global_variable = daoyu_set_create_pops_L_R_02
+				has_global_variable = daoyu_set_create_pops_L_R_04
+				has_global_variable = daoyu_set_create_pops_L_R_06
+				has_global_variable = daoyu_set_create_pops_L_R_08
+				has_global_variable = daoyu_set_create_pops_L_R_10
+			}
+		}
+		set_global_variable = daoyu_set_create_pops_L_R_10
+	}
+}
+daoyu_remove_create_pops_SIZE = {
+	remove_global_variable = daoyu_set_create_pops_1K
+	remove_global_variable = daoyu_set_create_pops_2K
+	remove_global_variable = daoyu_set_create_pops_5K
+	remove_global_variable = daoyu_set_create_pops_10K
+	remove_global_variable = daoyu_set_create_pops_20K
+	remove_global_variable = daoyu_set_create_pops_50K
+	remove_global_variable = daoyu_set_create_pops_100K
+	remove_global_variable = daoyu_set_create_pops_1M
+}
+daoyu_remove_create_pops_L_R = {
+	remove_global_variable = daoyu_set_create_pops_L_R_02
+	remove_global_variable = daoyu_set_create_pops_L_R_04
+	remove_global_variable = daoyu_set_create_pops_L_R_06
+	remove_global_variable = daoyu_set_create_pops_L_R_08
+	remove_global_variable = daoyu_set_create_pops_L_R_10
+}
+daoyu_all_culture_effect = {
+	daoyu_single_culture_effect = { CULTURE = "north_german" }
+	daoyu_single_culture_effect = { CULTURE = "south_german" }
+	daoyu_single_culture_effect = { CULTURE = "ashkenazi" }
+	daoyu_single_culture_effect = { CULTURE = "dutch" }
+	daoyu_single_culture_effect = { CULTURE = "flemish" }
+	daoyu_single_culture_effect = { CULTURE = "wallonian" }
+	daoyu_single_culture_effect = { CULTURE = "boer" }
+	daoyu_single_culture_effect = { CULTURE = "alemannic" }
+	daoyu_single_culture_effect = { CULTURE = "swedish" }
+	daoyu_single_culture_effect = { CULTURE = "danish" }
+	daoyu_single_culture_effect = { CULTURE = "norwegian" }
+	daoyu_single_culture_effect = { CULTURE = "icelandic" }
+	daoyu_single_culture_effect = { CULTURE = "finnish" }
+	daoyu_single_culture_effect = { CULTURE = "sami" }
+	daoyu_single_culture_effect = { CULTURE = "british" }
+	daoyu_single_culture_effect = { CULTURE = "irish" }
+	daoyu_single_culture_effect = { CULTURE = "australian" }
+	daoyu_single_culture_effect = { CULTURE = "north_italian" }
+	daoyu_single_culture_effect = { CULTURE = "south_italian" }
+	daoyu_single_culture_effect = { CULTURE = "maltese" }
+	daoyu_single_culture_effect = { CULTURE = "basque" }
+	daoyu_single_culture_effect = { CULTURE = "spanish" }
+	daoyu_single_culture_effect = { CULTURE = "catalan" }
+	daoyu_single_culture_effect = { CULTURE = "portuguese" }
+	daoyu_single_culture_effect = { CULTURE = "french" }
+	daoyu_single_culture_effect = { CULTURE = "occitan" }
+	daoyu_single_culture_effect = { CULTURE = "breton" }
+	daoyu_single_culture_effect = { CULTURE = "croat" }
+	daoyu_single_culture_effect = { CULTURE = "serb" }
+	daoyu_single_culture_effect = { CULTURE = "bulgarian" }
+	daoyu_single_culture_effect = { CULTURE = "albanian" }
+	daoyu_single_culture_effect = { CULTURE = "slovene" }
+	daoyu_single_culture_effect = { CULTURE = "bosniak" }
+	daoyu_single_culture_effect = { CULTURE = "romanian" }
+	daoyu_single_culture_effect = { CULTURE = "hungarian" }
+	daoyu_single_culture_effect = { CULTURE = "polish" }
+	daoyu_single_culture_effect = { CULTURE = "lithuanian" }
+	daoyu_single_culture_effect = { CULTURE = "czech" }
+	daoyu_single_culture_effect = { CULTURE = "slovak" }
+	daoyu_single_culture_effect = { CULTURE = "russian" }
+	daoyu_single_culture_effect = { CULTURE = "byelorussian" }
+	daoyu_single_culture_effect = { CULTURE = "ukrainian" }
+	daoyu_single_culture_effect = { CULTURE = "ugrian" }
+	daoyu_single_culture_effect = { CULTURE = "latvian" }
+	daoyu_single_culture_effect = { CULTURE = "estonian" }
+	daoyu_single_culture_effect = { CULTURE = "greek" }
+	daoyu_single_culture_effect = { CULTURE = "georgian" }
+	daoyu_single_culture_effect = { CULTURE = "armenian" }
+	daoyu_single_culture_effect = { CULTURE = "sephardic" }
+	daoyu_single_culture_effect = { CULTURE = "turkish" }
+	daoyu_single_culture_effect = { CULTURE = "azerbaijani" }
+	daoyu_single_culture_effect = { CULTURE = "north_caucasian" }
+	daoyu_single_culture_effect = { CULTURE = "maghrebi" }
+	daoyu_single_culture_effect = { CULTURE = "misri" }
+	daoyu_single_culture_effect = { CULTURE = "mashriqi" }
+	daoyu_single_culture_effect = { CULTURE = "bedouin" }
+	daoyu_single_culture_effect = { CULTURE = "berber" }
+	daoyu_single_culture_effect = { CULTURE = "persian" }
+	daoyu_single_culture_effect = { CULTURE = "uzbek" }
+	daoyu_single_culture_effect = { CULTURE = "kazak" }
+	daoyu_single_culture_effect = { CULTURE = "kirgiz" }
+	daoyu_single_culture_effect = { CULTURE = "tajik" }
+	daoyu_single_culture_effect = { CULTURE = "uighur" }
+	daoyu_single_culture_effect = { CULTURE = "pashtun" }
+	daoyu_single_culture_effect = { CULTURE = "baluchi" }
+	daoyu_single_culture_effect = { CULTURE = "hazara" }
+	daoyu_single_culture_effect = { CULTURE = "turkmen" }
+	daoyu_single_culture_effect = { CULTURE = "kurdish" }
+	daoyu_single_culture_effect = { CULTURE = "tatar" }
+	daoyu_single_culture_effect = { CULTURE = "mongol" }
+	daoyu_single_culture_effect = { CULTURE = "kalmyk" }
+	daoyu_single_culture_effect = { CULTURE = "siberian" }
+	daoyu_single_culture_effect = { CULTURE = "yakut" }
+	daoyu_single_culture_effect = { CULTURE = "tibetan" }
+	daoyu_single_culture_effect = { CULTURE = "assamese" }
+	daoyu_single_culture_effect = { CULTURE = "bengali" }
+	daoyu_single_culture_effect = { CULTURE = "bihari" }
+	daoyu_single_culture_effect = { CULTURE = "manipuri" }
+	daoyu_single_culture_effect = { CULTURE = "nepali" }
+	daoyu_single_culture_effect = { CULTURE = "oriya" }
+	daoyu_single_culture_effect = { CULTURE = "sinhala" }
+	daoyu_single_culture_effect = { CULTURE = "avadhi" }
+	daoyu_single_culture_effect = { CULTURE = "panjabi" }
+	daoyu_single_culture_effect = { CULTURE = "kashmiri" }
+	daoyu_single_culture_effect = { CULTURE = "gujarati" }
+	daoyu_single_culture_effect = { CULTURE = "marathi" }
+	daoyu_single_culture_effect = { CULTURE = "sindi" }
+	daoyu_single_culture_effect = { CULTURE = "rajput" }
+	daoyu_single_culture_effect = { CULTURE = "kannada" }
+	daoyu_single_culture_effect = { CULTURE = "malayalam" }
+	daoyu_single_culture_effect = { CULTURE = "tamil" }
+	daoyu_single_culture_effect = { CULTURE = "telegu" }
+	daoyu_single_culture_effect = { CULTURE = "vietnamese" }
+	daoyu_single_culture_effect = { CULTURE = "khmer" }
+	daoyu_single_culture_effect = { CULTURE = "batak" }
+	daoyu_single_culture_effect = { CULTURE = "dayak" }
+	daoyu_single_culture_effect = { CULTURE = "malagasy" }
+	daoyu_single_culture_effect = { CULTURE = "filipino" }
+	daoyu_single_culture_effect = { CULTURE = "moro" }
+	daoyu_single_culture_effect = { CULTURE = "javan" }
+	daoyu_single_culture_effect = { CULTURE = "moluccan" }
+	daoyu_single_culture_effect = { CULTURE = "thai" }
+	daoyu_single_culture_effect = { CULTURE = "mon" }
+	daoyu_single_culture_effect = { CULTURE = "khmu" }
+	daoyu_single_culture_effect = { CULTURE = "lao" }
+	daoyu_single_culture_effect = { CULTURE = "shan" }
+	daoyu_single_culture_effect = { CULTURE = "burmese" }
+	daoyu_single_culture_effect = { CULTURE = "kachin" }
+	daoyu_single_culture_effect = { CULTURE = "karen" }
+	daoyu_single_culture_effect = { CULTURE = "japanese" }
+	daoyu_single_culture_effect = { CULTURE = "manchu" }
+	daoyu_single_culture_effect = { CULTURE = "han" }
+	daoyu_single_culture_effect = { CULTURE = "korean" }
+	daoyu_single_culture_effect = { CULTURE = "ainu" }
+	daoyu_single_culture_effect = { CULTURE = "hakka" }
+	daoyu_single_culture_effect = { CULTURE = "miao" }
+	daoyu_single_culture_effect = { CULTURE = "min" }
+	daoyu_single_culture_effect = { CULTURE = "zhuang" }
+	daoyu_single_culture_effect = { CULTURE = "yi" }
+	daoyu_single_culture_effect = { CULTURE = "yue" }
+	daoyu_single_culture_effect = { CULTURE = "polynesian" }
+	daoyu_single_culture_effect = { CULTURE = "hawaiian" }
+	daoyu_single_culture_effect = { CULTURE = "melanesian" }
+	daoyu_single_culture_effect = { CULTURE = "micronesian" }
+	daoyu_single_culture_effect = { CULTURE = "maori" }
+	daoyu_single_culture_effect = { CULTURE = "yuanzhumin" }
+	daoyu_single_culture_effect = { CULTURE = "aborigine" }
+	daoyu_single_culture_effect = { CULTURE = "zapotec" }
+	daoyu_single_culture_effect = { CULTURE = "mayan" }
+	daoyu_single_culture_effect = { CULTURE = "nahua" }
+	daoyu_single_culture_effect = { CULTURE = "tarascan" }
+	daoyu_single_culture_effect = { CULTURE = "quechua" }
+	daoyu_single_culture_effect = { CULTURE = "guarani" }
+	daoyu_single_culture_effect = { CULTURE = "aimara" }
+	daoyu_single_culture_effect = { CULTURE = "amazonian" }
+	daoyu_single_culture_effect = { CULTURE = "patagonian" }
+	daoyu_single_culture_effect = { CULTURE = "guajiro" }
+	daoyu_single_culture_effect = { CULTURE = "tupinamba" }
+	daoyu_single_culture_effect = { CULTURE = "metis" }
+	daoyu_single_culture_effect = { CULTURE = "dakota" }
+	daoyu_single_culture_effect = { CULTURE = "cherokee" }
+	daoyu_single_culture_effect = { CULTURE = "muskogean" }
+	daoyu_single_culture_effect = { CULTURE = "pueblo" }
+	daoyu_single_culture_effect = { CULTURE = "inuit" }
+	daoyu_single_culture_effect = { CULTURE = "cree" }
+	daoyu_single_culture_effect = { CULTURE = "navajo" }
+	daoyu_single_culture_effect = { CULTURE = "athabaskan" }
+	daoyu_single_culture_effect = { CULTURE = "salish" }
+	daoyu_single_culture_effect = { CULTURE = "nez_perce" }
+	daoyu_single_culture_effect = { CULTURE = "siouan" }
+	daoyu_single_culture_effect = { CULTURE = "comanche" }
+	daoyu_single_culture_effect = { CULTURE = "algonquian" }
+	daoyu_single_culture_effect = { CULTURE = "iroquoian" }
+	daoyu_single_culture_effect = { CULTURE = "caddoan" }
+	daoyu_single_culture_effect = { CULTURE = "paiute" }
+	daoyu_single_culture_effect = { CULTURE = "hokan" }
+	daoyu_single_culture_effect = { CULTURE = "apache" }
+	daoyu_single_culture_effect = { CULTURE = "oodham" }
+	daoyu_single_culture_effect = { CULTURE = "mixtec" }
+	daoyu_single_culture_effect = { CULTURE = "muisca" }
+	daoyu_single_culture_effect = { CULTURE = "miskito" }
+	daoyu_single_culture_effect = { CULTURE = "cariban" }
+	daoyu_single_culture_effect = { CULTURE = "yankee" }
+	daoyu_single_culture_effect = { CULTURE = "dixie" }
+	daoyu_single_culture_effect = { CULTURE = "mexican" }
+	daoyu_single_culture_effect = { CULTURE = "central_american" }
+	daoyu_single_culture_effect = { CULTURE = "caribeno" }
+	daoyu_single_culture_effect = { CULTURE = "north_andean" }
+	daoyu_single_culture_effect = { CULTURE = "south_andean" }
+	daoyu_single_culture_effect = { CULTURE = "peruvian" }
+	daoyu_single_culture_effect = { CULTURE = "bolivian" }
+	daoyu_single_culture_effect = { CULTURE = "ecuadorian" }
+	daoyu_single_culture_effect = { CULTURE = "chilean" }
+	daoyu_single_culture_effect = { CULTURE = "venezuelan" }
+	daoyu_single_culture_effect = { CULTURE = "argentine" }
+	daoyu_single_culture_effect = { CULTURE = "uruguayan" }
+	daoyu_single_culture_effect = { CULTURE = "paraguayan" }
+	daoyu_single_culture_effect = { CULTURE = "colombian" }
+	daoyu_single_culture_effect = { CULTURE = "platinean" }
+	daoyu_single_culture_effect = { CULTURE = "brazilian" }
+	daoyu_single_culture_effect = { CULTURE = "sulista" }
+	daoyu_single_culture_effect = { CULTURE = "nordestino" }
+	daoyu_single_culture_effect = { CULTURE = "amazonic" }
+	daoyu_single_culture_effect = { CULTURE = "paulista" }
+	daoyu_single_culture_effect = { CULTURE = "afro_american" }
+	daoyu_single_culture_effect = { CULTURE = "afro_caribbean" }
+	daoyu_single_culture_effect = { CULTURE = "afro_caribeno" }
+	daoyu_single_culture_effect = { CULTURE = "afro_brazilian" }
+	daoyu_single_culture_effect = { CULTURE = "afro_antillean" }
+	daoyu_single_culture_effect = { CULTURE = "akan" }
+	daoyu_single_culture_effect = { CULTURE = "bambara" }
+	daoyu_single_culture_effect = { CULTURE = "bassa" }
+	daoyu_single_culture_effect = { CULTURE = "dyula" }
+	daoyu_single_culture_effect = { CULTURE = "edo" }
+	daoyu_single_culture_effect = { CULTURE = "ewe" }
+	daoyu_single_culture_effect = { CULTURE = "fon" }
+	daoyu_single_culture_effect = { CULTURE = "fulbe" }
+	daoyu_single_culture_effect = { CULTURE = "haratin" }
+	daoyu_single_culture_effect = { CULTURE = "hausa" }
+	daoyu_single_culture_effect = { CULTURE = "ibibio" }
+	daoyu_single_culture_effect = { CULTURE = "ibo" }
+	daoyu_single_culture_effect = { CULTURE = "kissi" }
+	daoyu_single_culture_effect = { CULTURE = "kru" }
+	daoyu_single_culture_effect = { CULTURE = "mande" }
+	daoyu_single_culture_effect = { CULTURE = "bidan" }
+	daoyu_single_culture_effect = { CULTURE = "mossi" }
+	daoyu_single_culture_effect = { CULTURE = "senufo" }
+	daoyu_single_culture_effect = { CULTURE = "songhai" }
+	daoyu_single_culture_effect = { CULTURE = "tiv" }
+	daoyu_single_culture_effect = { CULTURE = "tuareg" }
+	daoyu_single_culture_effect = { CULTURE = "wolof" }
+	daoyu_single_culture_effect = { CULTURE = "yoruba" }
+	daoyu_single_culture_effect = { CULTURE = "bakongo" }
+	daoyu_single_culture_effect = { CULTURE = "baguirmi" }
+	daoyu_single_culture_effect = { CULTURE = "fang" }
+	daoyu_single_culture_effect = { CULTURE = "kanuri" }
+	daoyu_single_culture_effect = { CULTURE = "luba" }
+	daoyu_single_culture_effect = { CULTURE = "lunda" }
+	daoyu_single_culture_effect = { CULTURE = "mongo" }
+	daoyu_single_culture_effect = { CULTURE = "sara" }
+	daoyu_single_culture_effect = { CULTURE = "teda" }
+	daoyu_single_culture_effect = { CULTURE = "equatorial_bantu" }
+	daoyu_single_culture_effect = { CULTURE = "fluvian_bantu" }
+	daoyu_single_culture_effect = { CULTURE = "nilotic" }
+	daoyu_single_culture_effect = { CULTURE = "amhara" }
+	daoyu_single_culture_effect = { CULTURE = "afar" }
+	daoyu_single_culture_effect = { CULTURE = "azande" }
+	daoyu_single_culture_effect = { CULTURE = "baganda" }
+	daoyu_single_culture_effect = { CULTURE = "beja" }
+	daoyu_single_culture_effect = { CULTURE = "dinka" }
+	daoyu_single_culture_effect = { CULTURE = "fur" }
+	daoyu_single_culture_effect = { CULTURE = "kikuyu" }
+	daoyu_single_culture_effect = { CULTURE = "luo" }
+	daoyu_single_culture_effect = { CULTURE = "maasai" }
+	daoyu_single_culture_effect = { CULTURE = "nuer" }
+	daoyu_single_culture_effect = { CULTURE = "nuba" }
+	daoyu_single_culture_effect = { CULTURE = "oromo" }
+	daoyu_single_culture_effect = { CULTURE = "ruanda" }
+	daoyu_single_culture_effect = { CULTURE = "rundi" }
+	daoyu_single_culture_effect = { CULTURE = "sidama" }
+	daoyu_single_culture_effect = { CULTURE = "somali" }
+	daoyu_single_culture_effect = { CULTURE = "sudanese" }
+	daoyu_single_culture_effect = { CULTURE = "sukuma" }
+	daoyu_single_culture_effect = { CULTURE = "swahili" }
+	daoyu_single_culture_effect = { CULTURE = "tigray" }
+	daoyu_single_culture_effect = { CULTURE = "nyamwezi" }
+	daoyu_single_culture_effect = { CULTURE = "lacustrine_bantu" }
+	daoyu_single_culture_effect = { CULTURE = "chewa" }
+	daoyu_single_culture_effect = { CULTURE = "herero" }
+	daoyu_single_culture_effect = { CULTURE = "khoisan" }
+	daoyu_single_culture_effect = { CULTURE = "lomwe" }
+	daoyu_single_culture_effect = { CULTURE = "makua" }
+	daoyu_single_culture_effect = { CULTURE = "nguni" }
+	daoyu_single_culture_effect = { CULTURE = "ovimbundu" }
+	daoyu_single_culture_effect = { CULTURE = "sena" }
+	daoyu_single_culture_effect = { CULTURE = "shona" }
+	daoyu_single_culture_effect = { CULTURE = "sotho" }
+	daoyu_single_culture_effect = { CULTURE = "tonga" }
+	daoyu_single_culture_effect = { CULTURE = "tswana" }
+	daoyu_single_culture_effect = { CULTURE = "xhosa" }
+	daoyu_single_culture_effect = { CULTURE = "yao" }
+	daoyu_single_culture_effect = { CULTURE = "zulu" }
+	daoyu_single_culture_effect = { CULTURE = "kavango_bantu" }
+	daoyu_single_culture_effect = { CULTURE = "anglo_canadian" }
+	daoyu_single_culture_effect = { CULTURE = "franco_canadian" }
+	daoyu_single_culture_effect = { CULTURE = "sorb" }
+	daoyu_single_culture_effect = { CULTURE = "tuvan" }
+	daoyu_single_culture_effect = { CULTURE = "corsican" }
+	daoyu_single_culture_effect = { CULTURE = "yemenite" }
+	daoyu_single_culture_effect = { CULTURE = "welsh" }
+	daoyu_single_culture_effect = { CULTURE = "scottish" }
+	daoyu_single_culture_effect = { CULTURE = "galician" }
+	daoyu_single_culture_effect = { CULTURE = "malay" }
+	daoyu_single_culture_effect = { CULTURE = "bornean" }
+	daoyu_single_culture_effect = { CULTURE = "sumatran" }
+	daoyu_single_culture_effect = { CULTURE = "balinese" }
+	daoyu_single_culture_effect = { CULTURE = "cajun" }
+	daoyu_single_culture_effect = { CULTURE = "assyrian" }
+	daoyu_single_culture_effect = { CULTURE = "circassian" }
+	daoyu_single_culture_effect = { CULTURE = "francoprovencal" }
+	daoyu_single_culture_effect = { CULTURE = "chechen" }
+	daoyu_single_culture_effect = { CULTURE = "karelian" }
+	daoyu_single_culture_effect = { CULTURE = "bashkir" }
+	daoyu_single_culture_effect = { CULTURE = "buryat" }
+	daoyu_single_culture_effect = { CULTURE = "mordvin" }
+	daoyu_single_culture_effect = { CULTURE = "chuvash" }
+	daoyu_single_culture_effect = { CULTURE = "mari" }
+	daoyu_single_culture_effect = { CULTURE = "udmurt" }
+	daoyu_single_culture_effect = { CULTURE = "mazanderani" }
+	daoyu_single_culture_effect = { CULTURE = "luri" }
+	daoyu_single_culture_effect = { CULTURE = "kho" }
+	daoyu_single_culture_effect = { CULTURE = "szekely" }
+	daoyu_single_culture_effect = { CULTURE = "hindustani" }
+	daoyu_single_culture_effect = { CULTURE = "lushai" }
+	daoyu_single_culture_effect = { CULTURE = "bundeli" }
+	daoyu_single_culture_effect = { CULTURE = "pahari" }
+	daoyu_single_culture_effect = { CULTURE = "gondi" }
+	daoyu_single_culture_effect = { CULTURE = "bageli" }
+	daoyu_single_culture_effect = { CULTURE = "chhattisgarhi" }
+	daoyu_single_culture_effect = { CULTURE = "naga" }
+	daoyu_single_culture_effect = { CULTURE = "deccani" }
+	daoyu_single_culture_effect = { CULTURE = "pathan" }
+	daoyu_single_culture_effect = { CULTURE = "champa" }
+	daoyu_single_culture_effect = { CULTURE = "east_german" }
+}
+daoyu_united_all_state_culture_effect = {
+	scope:daoyu_target_country = {
+		daoyu_add_owner_homeland_remove_others_effect = yes
+		every_scope_state = {
+			limit = { has_variable = daoyu_target_state }
+			convert_population = { value = 1 target = scope:daoyu_target_religion }
+			every_scope_pop = { limit = { not = { culture = scope:daoyu_target_culture } } change_pop_culture = { value = 1 target = scope:daoyu_target_culture } }
+			remove_variable = daoyu_target_state
+		}
+	}
+}

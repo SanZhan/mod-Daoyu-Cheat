@@ -1,0 +1,41 @@
+daoyu_treaty_articles = {
+	kind = directed
+	cost = 0
+	relations_progress_per_day = 100
+	relations_improvement_max = 200
+	icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/daoyu_treaty_articles.dds"
+	usage_limit = once_per_side
+	flags = { is_trade_privilege }
+	visible = {
+		is_ai = no
+		has_global_variable = daoyu_on
+	}
+	possible = {
+		is_ai = no 
+		scope:other_country = { is_ai = yes }
+		custom_tooltip = { text = daoyu_treaty_articles_on_tooltip has_global_variable = daoyu_treaty_articles_on }
+	}
+	can_ratify = {  }
+	on_entry_into_force = {
+		#scope:article_options = { every_country = { limit = { has_modifier = daoyu_treaty_articles } remove_modifier = daoyu_treaty_articles } }
+	}
+	on_withdrawal = {}
+	on_break = {
+	}
+	ai = {
+		treaty_categories = {
+			trade
+		}
+		article_ai_usage = {
+			offer
+		}
+		evaluation_chance = {
+			value = 0
+		}
+		article_ai_usage = {
+			request
+		}
+		inherent_accept_score = { value = 10000 }
+		contextual_accept_score = { value = 10000 }
+	}
+}

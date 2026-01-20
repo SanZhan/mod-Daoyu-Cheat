@@ -1,0 +1,428 @@
+#Pre-1836 era_1
+#1836-1861 era_2
+#1862-1886 era_3
+#1887-1911 era_4
+#1911-1936 era_5
+#production 生产
+#military 军事
+#society 社会
+#修改科技与法律的mod，兼容刀鱼作弊添加并修改以下3个文件：
+#Mods that modify technology and law. If you are a mod author and want to be compatible with Daoyu Cheat, you need to add and modify the following 3 files:
+#\events\daoyu_tec_and_law_events.txt
+#\common\scripted_triggers\daoyu_tec_and_law_triggers.txt
+#\common\scripted_effects\daoyu_tec_and_law_effects.txt
+#在mod使用上注明mod排序在Daoyu Cheat的下面。
+#In the mod instructions, indicate that the mod is listed below Daoyu Cheat.
+daoyu_add_tech = { if = { limit = { not = { has_technology_researched = $TECH$ } } add_technology_researched = $TECH$ } }
+daoyu_production_era_1 = {
+	daoyu_add_tech = { TECH = "sericulture" }
+	daoyu_add_tech = { TECH = "enclosure" }
+	daoyu_add_tech = { TECH = "manufacturies" }
+	daoyu_add_tech = { TECH = "shaft_mining" }
+	daoyu_add_tech = { TECH = "cotton_gin" }
+	daoyu_add_tech = { TECH = "lathe" }
+	daoyu_add_tech = { TECH = "distillation" }
+	daoyu_add_tech = { TECH = "steelworking" }
+	daoyu_add_tech = { TECH = "prospecting" }
+}
+daoyu_production_era_2 = {
+	daoyu_add_tech = { TECH = "crystal_glass" }
+	daoyu_add_tech = { TECH = "intensive_agriculture" }
+	daoyu_add_tech = { TECH = "fractional_distillation" }
+	daoyu_add_tech = { TECH = "canneries" }
+	daoyu_add_tech = { TECH = "watertube_boiler" }
+	daoyu_add_tech = { TECH = "atmospheric_engine" }
+	daoyu_add_tech = { TECH = "railways" }
+	daoyu_add_tech = { TECH = "chemical_bleaching" }
+	daoyu_add_tech = { TECH = "nitroglycerin" }
+	daoyu_add_tech = { TECH = "bessemer_process" }
+	daoyu_add_tech = { TECH = "baking_powder" }
+	daoyu_add_tech = { TECH = "mechanized_workshops" }
+	daoyu_add_tech = { TECH = "mechanical_tools" }
+}
+daoyu_production_era_3 = {
+	daoyu_add_tech = { TECH = "improved_fertilizer" }
+	daoyu_add_tech = { TECH = "steam_donkey" }
+	daoyu_add_tech = { TECH = "dynamite" }
+	daoyu_add_tech = { TECH = "rubber_mastication" }
+	daoyu_add_tech = { TECH = "rotary_valve_engine" }
+	daoyu_add_tech = { TECH = "reinforced_concrete" }
+	daoyu_add_tech = { TECH = "threshing_machine" }
+	daoyu_add_tech = { TECH = "pumpjacks" }
+	daoyu_add_tech = { TECH = "aniline" }
+	daoyu_add_tech = { TECH = "open_hearth_process" }
+	daoyu_add_tech = { TECH = "vulcanization" }
+	daoyu_add_tech = { TECH = "vacuum_canning" }
+	daoyu_add_tech = { TECH = "shift_work" }
+	daoyu_add_tech = { TECH = "steel_railway_cars" }
+	daoyu_add_tech = { TECH = "electrical_generation" }
+}
+daoyu_production_era_4 = {
+	daoyu_add_tech = { TECH = "mechanized_farming" }
+	daoyu_add_tech = { TECH = "art_silk" }
+	daoyu_add_tech = { TECH = "automatic_bottle_blowers" }
+	daoyu_add_tech = { TECH = "conveyors" }
+	daoyu_add_tech = { TECH = "pasteurization" }
+	daoyu_add_tech = { TECH = "electric_railway" }
+	daoyu_add_tech = { TECH = "combustion_engine" }
+	daoyu_add_tech = { TECH = "pneumatic_tools" }
+	daoyu_add_tech = { TECH = "nitrogen_fixation" }
+	daoyu_add_tech = { TECH = "electric_arc_process" }
+	daoyu_add_tech = { TECH = "steam_turbine" }
+	daoyu_add_tech = { TECH = "plastics" }
+	daoyu_add_tech = { TECH = "electrical_capacitors" }
+	daoyu_add_tech = { TECH = "radio" }
+	daoyu_add_tech = { TECH = "telephone" }
+}
+daoyu_production_era_5 = {
+	daoyu_add_tech = { TECH = "dough_rollers" }
+	daoyu_add_tech = { TECH = "flash_freezing" }
+	daoyu_add_tech = { TECH = "oil_turbine" }
+	daoyu_add_tech = { TECH = "arc_welding" }
+	daoyu_add_tech = { TECH = "compression_ignition" }
+}
+daoyu_military_era_1 = {
+	daoyu_add_tech = { TECH = "standing_army" }
+	daoyu_add_tech = { TECH = "navigation" }
+	daoyu_add_tech = { TECH = "drydocks" }
+	daoyu_add_tech = { TECH = "mandatory_service" }
+	daoyu_add_tech = { TECH = "gunsmithing" }
+	daoyu_add_tech = { TECH = "artillery" }
+	daoyu_add_tech = { TECH = "military_drill" }
+	daoyu_add_tech = { TECH = "napoleonic_warfare" }
+	daoyu_add_tech = { TECH = "admiralty" }
+	daoyu_add_tech = { TECH = "army_reserves" }
+	daoyu_add_tech = { TECH = "line_infantry" }
+	daoyu_add_tech = { TECH = "paddle_steamer" }
+}
+daoyu_military_era_2 = {
+	daoyu_add_tech = { TECH = "field_works" }
+	daoyu_add_tech = { TECH = "logistics" }
+	daoyu_add_tech = { TECH = "triage" }
+	daoyu_add_tech = { TECH = "shell_gun" }
+	daoyu_add_tech = { TECH = "percussion_cap" }
+	daoyu_add_tech = { TECH = "rifling" }
+	daoyu_add_tech = { TECH = "general_staff" }
+	daoyu_add_tech = { TECH = "screw_frigate" }
+	daoyu_add_tech = { TECH = "power_of_the_purse" }
+	daoyu_add_tech = { TECH = "hydraulic_cranes" }
+}
+daoyu_military_era_3 = {
+	daoyu_add_tech = { TECH = "modern_nursing" }
+	daoyu_add_tech = { TECH = "enlistment_offices" }
+	daoyu_add_tech = { TECH = "electric_telegraph" }
+	daoyu_add_tech = { TECH = "military_statistics" }
+	daoyu_add_tech = { TECH = "repeaters" }
+	daoyu_add_tech = { TECH = "breech_loading_artillery" }
+	daoyu_add_tech = { TECH = "handcranked_machine_gun" }
+	daoyu_add_tech = { TECH = "self_propelled_torpedoes" }
+	daoyu_add_tech = { TECH = "monitor_tech" }
+	daoyu_add_tech = { TECH = "ironclad_tech" }
+	daoyu_add_tech = { TECH = "jeune_ecole" }
+	daoyu_add_tech = { TECH = "floating_harbor" }
+	daoyu_add_tech = { TECH = "gantry_cranes" }
+}
+daoyu_military_era_4 = {
+	daoyu_add_tech = { TECH = "trench_works" }
+	daoyu_add_tech = { TECH = "war_propaganda" }
+	daoyu_add_tech = { TECH = "wargaming" }
+	daoyu_add_tech = { TECH = "defense_in_depth" }
+	daoyu_add_tech = { TECH = "bolt_action_rifles" }
+	daoyu_add_tech = { TECH = "automatic_machine_guns" }
+	daoyu_add_tech = { TECH = "submarine" }
+	daoyu_add_tech = { TECH = "destroyer" }
+	daoyu_add_tech = { TECH = "dreadnought" }
+	daoyu_add_tech = { TECH = "sea_lane_strategies" }
+	daoyu_add_tech = { TECH = "landing_craft" }
+	daoyu_add_tech = { TECH = "concrete_dockyards" }
+}
+daoyu_military_era_5 = {
+	daoyu_add_tech = { TECH = "nco_training" }
+	daoyu_add_tech = { TECH = "chemical_warfare" }
+	daoyu_add_tech = { TECH = "stormtroopers" }
+	daoyu_add_tech = { TECH = "concrete_fortifications" }
+	daoyu_add_tech = { TECH = "mobile_armor" }
+	daoyu_add_tech = { TECH = "military_aviation" }
+	daoyu_add_tech = { TECH = "flamethrowers" }
+	daoyu_add_tech = { TECH = "carrier_tech" }
+	daoyu_add_tech = { TECH = "battleship_tech" }
+	daoyu_add_tech = { TECH = "battlefleet_tactics" }
+}
+daoyu_society_era_1 = {
+	daoyu_add_tech = { TECH = "urbanization" }
+	daoyu_add_tech = { TECH = "urban_planning" }
+	daoyu_add_tech = { TECH = "rationalism" }
+	daoyu_add_tech = { TECH = "tech_bureaucracy" }
+	daoyu_add_tech = { TECH = "currency_standards" }
+	daoyu_add_tech = { TECH = "democracy" }
+	daoyu_add_tech = { TECH = "romanticism" }
+	daoyu_add_tech = { TECH = "international_trade" }
+	daoyu_add_tech = { TECH = "centralization" }
+	daoyu_add_tech = { TECH = "banking" }
+	daoyu_add_tech = { TECH = "academia" }
+	daoyu_add_tech = { TECH = "colonization" }
+	daoyu_add_tech = { TECH = "international_relations" }
+	daoyu_add_tech = { TECH = "law_enforcement" }
+	daoyu_add_tech = { TECH = "stock_exchange" }
+	daoyu_add_tech = { TECH = "medical_degrees" }
+	daoyu_add_tech = { TECH = "mass_communication" }
+	daoyu_add_tech = { TECH = "empiricism" }
+}
+daoyu_society_era_2 = {
+	daoyu_add_tech = { TECH = "corporate_charters" }
+	daoyu_add_tech = { TECH = "egalitarianism" }
+	daoyu_add_tech = { TECH = "pharmaceuticals" }
+	daoyu_add_tech = { TECH = "modern_sewerage" }
+	daoyu_add_tech = { TECH = "quinine" }
+	daoyu_add_tech = { TECH = "organized_sports" }
+	daoyu_add_tech = { TECH = "central_archives" }
+	daoyu_add_tech = { TECH = "central_banking" }
+	daoyu_add_tech = { TECH = "joint_stock_companies" }
+	daoyu_add_tech = { TECH = "dialectics" }
+	daoyu_add_tech = { TECH = "psychiatry" }
+	daoyu_add_tech = { TECH = "realism" }
+	daoyu_add_tech = { TECH = "nationalism" }
+	daoyu_add_tech = { TECH = "labor_movement" }
+	daoyu_add_tech = { TECH = "postal_savings" }
+}
+daoyu_society_era_3 = {
+	daoyu_add_tech = { TECH = "human_rights" }
+	daoyu_add_tech = { TECH = "feminism" }
+	daoyu_add_tech = { TECH = "steel_frame_buildings" }
+	daoyu_add_tech = { TECH = "civilizing_mission" }
+	daoyu_add_tech = { TECH = "anarchism" }
+	daoyu_add_tech = { TECH = "socialism" }
+	daoyu_add_tech = { TECH = "corporatism" }
+	daoyu_add_tech = { TECH = "pan-nationalism" }
+	daoyu_add_tech = { TECH = "mutual_funds" }
+	daoyu_add_tech = { TECH = "investment_banks" }
+	daoyu_add_tech = { TECH = "camera" }
+	daoyu_add_tech = { TECH = "philosophical_pragmatism" }
+	daoyu_add_tech = { TECH = "identification_documents" }
+}
+daoyu_society_era_4 = {
+	daoyu_add_tech = { TECH = "elevator" }
+	daoyu_add_tech = { TECH = "zeppelins" }
+	daoyu_add_tech = { TECH = "malaria_prevention" }
+	daoyu_add_tech = { TECH = "central_planning" }
+	daoyu_add_tech = { TECH = "political_agitation" }
+	daoyu_add_tech = { TECH = "international_exchange_standards" }
+	daoyu_add_tech = { TECH = "corporate_management" }
+	daoyu_add_tech = { TECH = "psychoanalysis" }
+	daoyu_add_tech = { TECH = "film" }
+	daoyu_add_tech = { TECH = "multilateral_alliances" }
+}
+daoyu_society_era_5 = {
+	daoyu_add_tech = { TECH = "mass_surveillance" }
+	daoyu_add_tech = { TECH = "antibiotics" }
+	daoyu_add_tech = { TECH = "mass_propaganda" }
+	daoyu_add_tech = { TECH = "modern_financial_instruments" }
+	daoyu_add_tech = { TECH = "macroeconomics" }
+	daoyu_add_tech = { TECH = "behaviorism" }
+	daoyu_add_tech = { TECH = "analytical_philosophy" }
+	daoyu_add_tech = { TECH = "paved_roads" }
+}
+daoyu_sericulture_effect = { daoyu_add_tech = { TECH = "sericulture" } }
+daoyu_enclosure_effect = { daoyu_add_tech = { TECH = "enclosure" } }
+daoyu_manufacturies_effect = { daoyu_add_tech = { TECH = "manufacturies" } }
+daoyu_shaft_mining_effect = { daoyu_enclosure_effect = yes daoyu_manufacturies_effect = yes daoyu_add_tech = { TECH = "shaft_mining" } }
+daoyu_cotton_gin_effect = { daoyu_manufacturies_effect = yes daoyu_add_tech = { TECH = "cotton_gin" } }
+daoyu_lathe_effect = { daoyu_cotton_gin_effect = yes daoyu_add_tech = { TECH = "lathe" } }
+daoyu_distillation_effect = { daoyu_manufacturies_effect = yes daoyu_add_tech = { TECH = "distillation" } }
+daoyu_steelworking_effect = { daoyu_shaft_mining_effect = yes daoyu_add_tech = { TECH = "steelworking" } }
+daoyu_prospecting_effect = { daoyu_shaft_mining_effect = yes daoyu_add_tech = { TECH = "prospecting" } }
+daoyu_crystal_glass_effect = { daoyu_lathe_effect = yes daoyu_add_tech = { TECH = "crystal_glass" } }
+daoyu_intensive_agriculture_effect = { daoyu_enclosure_effect = yes daoyu_add_tech = { TECH = "intensive_agriculture" } }
+daoyu_fractional_distillation_effect = { daoyu_distillation_effect = yes daoyu_add_tech = { TECH = "fractional_distillation" } }
+daoyu_canneries_effect = { daoyu_lathe_effect = yes daoyu_add_tech = { TECH = "canneries" } }
+daoyu_watertube_boiler_effect = { daoyu_atmospheric_engine_effect = yes daoyu_add_tech = { TECH = "watertube_boiler" } }
+daoyu_atmospheric_engine_effect = { daoyu_shaft_mining_effect = yes daoyu_add_tech = { TECH = "atmospheric_engine" } }
+daoyu_railways_effect = { daoyu_mechanical_tools_effect = yes daoyu_atmospheric_engine_effect = yes daoyu_add_tech = { TECH = "railways" } }
+daoyu_chemical_bleaching_effect = { daoyu_crystal_glass_effect = yes daoyu_add_tech = { TECH = "chemical_bleaching" } }
+daoyu_nitroglycerin_effect = { daoyu_intensive_agriculture_effect = yes daoyu_prospecting_effect = yes daoyu_add_tech = { TECH = "nitroglycerin" } }
+daoyu_bessemer_process_effect = { daoyu_steelworking_effect = yes daoyu_add_tech = { TECH = "bessemer_process" } }
+daoyu_baking_powder_effect = { daoyu_fractional_distillation_effect = yes daoyu_add_tech = { TECH = "baking_powder" } }
+daoyu_mechanized_workshops_effect = { daoyu_canneries_effect = yes daoyu_mechanical_tools_effect = yes daoyu_add_tech = { TECH = "mechanized_workshops" } }
+daoyu_mechanical_tools_effect = { daoyu_lathe_effect = yes daoyu_steelworking_effect = yes daoyu_add_tech = { TECH = "mechanical_tools" } }
+daoyu_improved_fertilizer_effect = { daoyu_intensive_agriculture_effect = yes daoyu_add_tech = { TECH = "improved_fertilizer" } }
+daoyu_steam_donkey_effect = { daoyu_intensive_agriculture_effect = yes daoyu_add_tech = { TECH = "steam_donkey" } }
+daoyu_dynamite_effect = { daoyu_nitroglycerin_effect = yes daoyu_add_tech = { TECH = "dynamite" } }
+daoyu_rubber_mastication_effect = { daoyu_fractional_distillation_effect = yes daoyu_chemical_bleaching_effect = yes daoyu_add_tech = { TECH = "rubber_mastication" } }
+daoyu_rotary_valve_engine_effect = { daoyu_watertube_boiler_effect = yes daoyu_add_tech = { TECH = "rotary_valve_engine" } }
+daoyu_reinforced_concrete_effect = { daoyu_bessemer_process_effect = yes daoyu_add_tech = { TECH = "reinforced_concrete" } }
+daoyu_threshing_machine_effect = { daoyu_steam_donkey_effect = yes daoyu_add_tech = { TECH = "threshing_machine" } }
+daoyu_pumpjacks_effect = { daoyu_steam_donkey_effect = yes daoyu_dynamite_effect = yes daoyu_add_tech = { TECH = "pumpjacks" } }
+daoyu_aniline_effect = { daoyu_rubber_mastication_effect = yes daoyu_add_tech = { TECH = "aniline" } }
+daoyu_open_hearth_process_effect = { daoyu_bessemer_process_effect = yes daoyu_add_tech = { TECH = "open_hearth_process" } }
+daoyu_vulcanization_effect = { daoyu_rubber_mastication_effect = yes daoyu_add_tech = { TECH = "vulcanization" } }
+daoyu_vacuum_canning_effect = { daoyu_mechanized_workshops_effect = yes daoyu_add_tech = { TECH = "vacuum_canning" } }
+daoyu_shift_work_effect = { daoyu_mechanized_workshops_effect = yes daoyu_add_tech = { TECH = "shift_work" } }
+daoyu_steel_railway_cars_effect = { daoyu_railways_effect = yes daoyu_add_tech = { TECH = "steel_railway_cars" } }
+daoyu_electrical_generation_effect = { daoyu_rotary_valve_engine_effect = yes daoyu_add_tech = { TECH = "electrical_generation" } }
+daoyu_mechanized_farming_effect = { daoyu_threshing_machine_effect = yes daoyu_add_tech = { TECH = "mechanized_farming" } }
+daoyu_art_silk_effect = { daoyu_aniline_effect = yes daoyu_add_tech = { TECH = "art_silk" } }
+daoyu_automatic_bottle_blowers_effect = { daoyu_vulcanization_effect = yes daoyu_add_tech = { TECH = "automatic_bottle_blowers" } }
+daoyu_conveyors_effect = { daoyu_vulcanization_effect = yes daoyu_shift_work_effect = yes daoyu_electrical_generation_effect = yes daoyu_add_tech = { TECH = "conveyors" } }
+daoyu_pasteurization_effect = { daoyu_vacuum_canning_effect = yes daoyu_electrical_capacitors_effect = yes daoyu_add_tech = { TECH = "pasteurization" } }
+daoyu_electric_railway_effect = { daoyu_electrical_capacitors_effect = yes daoyu_steel_railway_cars_effect = yes daoyu_add_tech = { TECH = "electric_railway" } }
+daoyu_combustion_engine_effect = { daoyu_rotary_valve_engine_effect = yes daoyu_add_tech = { TECH = "combustion_engine" } }
+daoyu_pneumatic_tools_effect = { daoyu_rotary_valve_engine_effect = yes daoyu_reinforced_concrete_effect = yes daoyu_add_tech = { TECH = "pneumatic_tools" } }
+daoyu_nitrogen_fixation_effect = { daoyu_improved_fertilizer_effect = yes daoyu_add_tech = { TECH = "nitrogen_fixation" } }
+daoyu_electric_arc_process_effect = { daoyu_open_hearth_process_effect = yes daoyu_add_tech = { TECH = "electric_arc_process" } }
+daoyu_steam_turbine_effect = { daoyu_electrical_generation_effect = yes daoyu_add_tech = { TECH = "steam_turbine" } }
+daoyu_plastics_effect = { daoyu_reinforced_concrete_effect = yes daoyu_add_tech = { TECH = "plastics" } }
+daoyu_electrical_capacitors_effect = { daoyu_electrical_generation_effect = yes daoyu_add_tech = { TECH = "electrical_capacitors" } }
+daoyu_radio_effect = { daoyu_telephone_effect = yes daoyu_add_tech = { TECH = "radio" } }
+daoyu_telephone_effect = { daoyu_shift_work_effect = yes daoyu_electrical_generation_effect = yes daoyu_add_tech = { TECH = "telephone" } }
+daoyu_dough_rollers_effect = { daoyu_conveyors_effect = yes daoyu_add_tech = { TECH = "dough_rollers" } }
+daoyu_flash_freezing_effect = { daoyu_pasteurization_effect = yes daoyu_add_tech = { TECH = "flash_freezing" } }
+daoyu_oil_turbine_effect = { daoyu_steam_turbine_effect = yes daoyu_add_tech = { TECH = "oil_turbine" } }
+daoyu_arc_welding_effect = { daoyu_electric_arc_process_effect = yes daoyu_pneumatic_tools_effect = yes daoyu_add_tech = { TECH = "arc_welding" } }
+daoyu_compression_ignition_effect = { daoyu_combustion_engine_effect = yes daoyu_add_tech = { TECH = "compression_ignition" } }
+daoyu_standing_army_effect = { daoyu_add_tech = { TECH = "standing_army" } }
+daoyu_navigation_effect = { daoyu_add_tech = { TECH = "navigation" } }
+daoyu_drydocks_effect = { daoyu_navigation_effect = yes daoyu_add_tech = { TECH = "drydocks" } }
+daoyu_mandatory_service_effect = { daoyu_standing_army_effect = yes daoyu_add_tech = { TECH = "mandatory_service" } }
+daoyu_gunsmithing_effect = { daoyu_standing_army_effect = yes daoyu_add_tech = { TECH = "gunsmithing" } }
+daoyu_artillery_effect = { daoyu_gunsmithing_effect = yes daoyu_add_tech = { TECH = "artillery" } }
+daoyu_military_drill_effect = { daoyu_standing_army_effect = yes daoyu_add_tech = { TECH = "military_drill" } }
+daoyu_napoleonic_warfare_effect = { daoyu_line_infantry_effect = yes daoyu_artillery_effect = yes daoyu_add_tech = { TECH = "napoleonic_warfare" } }
+daoyu_admiralty_effect = { daoyu_navigation_effect = yes daoyu_add_tech = { TECH = "admiralty" } }
+daoyu_army_reserves_effect = { daoyu_line_infantry_effect = yes daoyu_add_tech = { TECH = "army_reserves" } }
+daoyu_line_infantry_effect = { daoyu_mandatory_service_effect = yes daoyu_military_drill_effect = yes daoyu_add_tech = { TECH = "line_infantry" } }
+daoyu_paddle_steamer_effect = { daoyu_admiralty_effect = yes daoyu_add_tech = { TECH = "paddle_steamer" } }
+daoyu_field_works_effect = { daoyu_napoleonic_warfare_effect = yes daoyu_add_tech = { TECH = "field_works" } }
+daoyu_logistics_effect = { daoyu_napoleonic_warfare_effect = yes daoyu_army_reserves_effect = yes daoyu_add_tech = { TECH = "logistics" } }
+daoyu_triage_effect = { daoyu_logistics_effect = yes daoyu_add_tech = { TECH = "triage" } }
+daoyu_shell_gun_effect = { daoyu_artillery_effect = yes daoyu_add_tech = { TECH = "shell_gun" } }
+daoyu_percussion_cap_effect = { daoyu_gunsmithing_effect = yes daoyu_add_tech = { TECH = "percussion_cap" } }
+daoyu_rifling_effect = { daoyu_percussion_cap_effect = yes daoyu_add_tech = { TECH = "rifling" } }
+daoyu_general_staff_effect = { daoyu_army_reserves_effect = yes daoyu_add_tech = { TECH = "general_staff" } }
+daoyu_screw_frigate_effect = { daoyu_paddle_steamer_effect = yes daoyu_add_tech = { TECH = "screw_frigate" } }
+daoyu_power_of_the_purse_effect = { daoyu_admiralty_effect = yes daoyu_add_tech = { TECH = "power_of_the_purse" } }
+daoyu_hydraulic_cranes_effect = { daoyu_drydocks_effect = yes daoyu_add_tech = { TECH = "hydraulic_cranes" } }
+daoyu_modern_nursing_effect = { daoyu_triage_effect = yes daoyu_add_tech = { TECH = "modern_nursing" } }
+daoyu_enlistment_offices_effect = { daoyu_logistics_effect = yes daoyu_add_tech = { TECH = "enlistment_offices" } }
+daoyu_electric_telegraph_effect = { daoyu_logistics_effect = yes daoyu_add_tech = { TECH = "electric_telegraph" } }
+daoyu_military_statistics_effect = { daoyu_electric_telegraph_effect = yes daoyu_general_staff_effect = yes daoyu_add_tech = { TECH = "military_statistics" } }
+daoyu_repeaters_effect = { daoyu_rifling_effect = yes daoyu_add_tech = { TECH = "repeaters" } }
+daoyu_breech_loading_artillery_effect = { daoyu_rifling_effect = yes daoyu_shell_gun_effect = yes daoyu_add_tech = { TECH = "breech_loading_artillery" } }
+daoyu_handcranked_machine_gun_effect = { daoyu_repeaters_effect = yes daoyu_breech_loading_artillery_effect = yes daoyu_add_tech = { TECH = "handcranked_machine_gun" } }
+daoyu_self_propelled_torpedoes_effect = { daoyu_ironclad_tech_effect = yes daoyu_jeune_ecole_effect = yes daoyu_add_tech = { TECH = "self_propelled_torpedoes" } }
+daoyu_monitor_tech_effect = { daoyu_ironclad_tech_effect = yes daoyu_add_tech = { TECH = "monitor_tech" } }
+daoyu_ironclad_tech_effect = { daoyu_screw_frigate_effect = yes daoyu_add_tech = { TECH = "ironclad_tech" } }
+daoyu_jeune_ecole_effect = { daoyu_power_of_the_purse_effect = yes daoyu_add_tech = { TECH = "jeune_ecole" } }
+daoyu_floating_harbor_effect = { daoyu_gantry_cranes_effect = yes daoyu_add_tech = { TECH = "floating_harbor" } }
+daoyu_gantry_cranes_effect = { daoyu_hydraulic_cranes_effect = yes daoyu_screw_frigate_effect = yes daoyu_add_tech = { TECH = "gantry_cranes" } }
+daoyu_trench_works_effect = { daoyu_general_staff_effect = yes daoyu_electric_telegraph_effect = yes daoyu_add_tech = { TECH = "trench_works" } }
+daoyu_war_propaganda_effect = { daoyu_enlistment_offices_effect = yes daoyu_add_tech = { TECH = "war_propaganda" } }
+daoyu_wargaming_effect = { daoyu_military_statistics_effect = yes daoyu_add_tech = { TECH = "wargaming" } }
+daoyu_defense_in_depth_effect = { daoyu_trench_works_effect = yes daoyu_handcranked_machine_gun_effect = yes daoyu_add_tech = { TECH = "defense_in_depth" } }
+daoyu_bolt_action_rifles_effect = { daoyu_repeaters_effect = yes daoyu_add_tech = { TECH = "bolt_action_rifles" } }
+daoyu_automatic_machine_guns_effect = { daoyu_handcranked_machine_gun_effect = yes daoyu_bolt_action_rifles_effect = yes daoyu_add_tech = { TECH = "automatic_machine_guns" } }
+daoyu_submarine_effect = { daoyu_self_propelled_torpedoes_effect = yes daoyu_add_tech = { TECH = "submarine" } }
+daoyu_destroyer_effect = { daoyu_monitor_tech_effect = yes daoyu_add_tech = { TECH = "destroyer" } }
+daoyu_dreadnought_effect = { daoyu_ironclad_tech_effect = yes daoyu_sea_lane_strategies_effect = yes daoyu_add_tech = { TECH = "dreadnought" } }
+daoyu_sea_lane_strategies_effect = { daoyu_jeune_ecole_effect = yes daoyu_add_tech = { TECH = "sea_lane_strategies" } }
+daoyu_landing_craft_effect = { daoyu_jeune_ecole_effect = yes daoyu_monitor_tech_effect = yes daoyu_add_tech = { TECH = "landing_craft" } }
+daoyu_concrete_dockyards_effect = { daoyu_floating_harbor_effect = yes daoyu_add_tech = { TECH = "concrete_dockyards" } }
+daoyu_nco_training_effect = { daoyu_wargaming_effect = yes daoyu_trench_works_effect = yes daoyu_add_tech = { TECH = "nco_training" } }
+daoyu_chemical_warfare_effect = { daoyu_automatic_machine_guns_effect = yes daoyu_add_tech = { TECH = "chemical_warfare" } }
+daoyu_stormtroopers_effect = { daoyu_wargaming_effect = yes daoyu_trench_works_effect = yes daoyu_add_tech = { TECH = "stormtroopers" } }
+daoyu_concrete_fortifications_effect = { daoyu_defense_in_depth_effect = yes daoyu_add_tech = { TECH = "concrete_fortifications" } }
+daoyu_mobile_armor_effect = { daoyu_military_aviation_effect = yes daoyu_concrete_fortifications_effect = yes daoyu_nco_training_effect = yes daoyu_add_tech = { TECH = "mobile_armor" } }
+daoyu_military_aviation_effect = { daoyu_defense_in_depth_effect = yes daoyu_add_tech = { TECH = "military_aviation" } }
+daoyu_flamethrowers_effect = { daoyu_trench_works_effect = yes daoyu_automatic_machine_guns_effect = yes daoyu_add_tech = { TECH = "flamethrowers" } }
+daoyu_carrier_tech_effect = { daoyu_dreadnought_effect = yes daoyu_add_tech = { TECH = "carrier_tech" } }
+daoyu_battleship_tech_effect = { daoyu_dreadnought_effect = yes daoyu_add_tech = { TECH = "battleship_tech" } }
+daoyu_battlefleet_tactics_effect = { daoyu_battleship_tech_effect = yes daoyu_sea_lane_strategies_effect = yes daoyu_add_tech = { TECH = "battlefleet_tactics" } }
+daoyu_urbanization_effect = { daoyu_add_tech = { TECH = "urbanization" } }
+daoyu_urban_planning_effect = { daoyu_urbanization_effect = yes daoyu_add_tech = { TECH = "urban_planning" } }
+daoyu_rationalism_effect = { daoyu_add_tech = { TECH = "rationalism" } }
+daoyu_tech_bureaucracy_effect = { daoyu_urbanization_effect = yes daoyu_add_tech = { TECH = "tech_bureaucracy" } }
+daoyu_currency_standards_effect = { daoyu_international_trade_effect = yes daoyu_centralization_effect = yes daoyu_add_tech = { TECH = "currency_standards" } }
+daoyu_democracy_effect = { daoyu_rationalism_effect = yes daoyu_add_tech = { TECH = "democracy" } }
+daoyu_romanticism_effect = { daoyu_academia_effect = yes daoyu_add_tech = { TECH = "romanticism" } }
+daoyu_international_trade_effect = { daoyu_tech_bureaucracy_effect = yes daoyu_add_tech = { TECH = "international_trade" } }
+daoyu_centralization_effect = { daoyu_tech_bureaucracy_effect = yes daoyu_add_tech = { TECH = "centralization" } }
+daoyu_corporate_charters_effect = { daoyu_stock_exchange_effect = yes daoyu_add_tech = { TECH = "corporate_charters" } }
+daoyu_banking_effect = { daoyu_currency_standards_effect = yes daoyu_add_tech = { TECH = "banking" } }
+daoyu_academia_effect = { daoyu_rationalism_effect = yes daoyu_add_tech = { TECH = "academia" } }
+daoyu_colonization_effect = { daoyu_international_relations_effect = yes daoyu_add_tech = { TECH = "colonization" } }
+daoyu_international_relations_effect = { daoyu_tech_bureaucracy_effect = yes daoyu_add_tech = { TECH = "international_relations" } }
+daoyu_law_enforcement_effect = { daoyu_tech_bureaucracy_effect = yes daoyu_urban_planning_effect = yes daoyu_add_tech = { TECH = "law_enforcement" } }
+daoyu_stock_exchange_effect = { daoyu_international_trade_effect = yes daoyu_add_tech = { TECH = "stock_exchange" } }
+daoyu_medical_degrees_effect = { daoyu_academia_effect = yes daoyu_add_tech = { TECH = "medical_degrees" } }
+daoyu_mass_communication_effect = { daoyu_democracy_effect = yes daoyu_add_tech = { TECH = "mass_communication" } }
+daoyu_empiricism_effect = { daoyu_academia_effect = yes daoyu_add_tech = { TECH = "empiricism" } }
+daoyu_egalitarianism_effect = { daoyu_democracy_effect = yes daoyu_add_tech = { TECH = "egalitarianism" } }
+daoyu_pharmaceuticals_effect = { daoyu_medical_degrees_effect = yes daoyu_add_tech = { TECH = "pharmaceuticals" } }
+daoyu_modern_sewerage_effect = { daoyu_urban_planning_effect = yes daoyu_add_tech = { TECH = "modern_sewerage" } }
+daoyu_quinine_effect = { daoyu_colonization_effect = yes daoyu_pharmaceuticals_effect = yes daoyu_add_tech = { TECH = "quinine" } }
+daoyu_organized_sports_effect = { daoyu_nationalism_effect = yes daoyu_add_tech = { TECH = "organized_sports" } }
+daoyu_central_archives_effect = { daoyu_centralization_effect = yes daoyu_add_tech = { TECH = "central_archives" } }
+daoyu_central_banking_effect = { daoyu_banking_effect = yes daoyu_add_tech = { TECH = "central_banking" } }
+daoyu_joint_stock_companies_effect = { daoyu_banking_effect = yes daoyu_corporate_charters_effect = yes daoyu_add_tech = { TECH = "joint_stock_companies" } }
+daoyu_dialectics_effect = { daoyu_empiricism_effect = yes daoyu_add_tech = { TECH = "dialectics" } }
+daoyu_psychiatry_effect = { daoyu_empiricism_effect = yes daoyu_add_tech = { TECH = "psychiatry" } }
+daoyu_realism_effect = { daoyu_romanticism_effect = yes daoyu_add_tech = { TECH = "realism" } }
+daoyu_nationalism_effect = { daoyu_mass_communication_effect = yes daoyu_international_relations_effect = yes daoyu_add_tech = { TECH = "nationalism" } }
+daoyu_labor_movement_effect = { daoyu_mass_communication_effect = yes daoyu_egalitarianism_effect = yes daoyu_add_tech = { TECH = "labor_movement" } }
+daoyu_postal_savings_effect = { daoyu_stock_exchange_effect = yes daoyu_add_tech = { TECH = "postal_savings" } }
+daoyu_human_rights_effect = { daoyu_egalitarianism_effect = yes daoyu_add_tech = { TECH = "human_rights" } }
+daoyu_feminism_effect = { daoyu_human_rights_effect = yes daoyu_add_tech = { TECH = "feminism" } }
+daoyu_steel_frame_buildings_effect = { daoyu_modern_sewerage_effect = yes daoyu_add_tech = { TECH = "steel_frame_buildings" } }
+daoyu_civilizing_mission_effect = { daoyu_quinine_effect = yes daoyu_nationalism_effect = yes daoyu_add_tech = { TECH = "civilizing_mission" } }
+daoyu_anarchism_effect = { daoyu_egalitarianism_effect = yes daoyu_add_tech = { TECH = "anarchism" } }
+daoyu_socialism_effect = { daoyu_labor_movement_effect = yes daoyu_dialectics_effect = yes daoyu_add_tech = { TECH = "socialism" } }
+daoyu_corporatism_effect = { daoyu_labor_movement_effect = yes daoyu_nationalism_effect = yes daoyu_add_tech = { TECH = "corporatism" } }
+daoyu_pan-nationalism_effect = { daoyu_nationalism_effect = yes daoyu_add_tech = { TECH = "pan-nationalism" } }
+daoyu_mutual_funds_effect = { daoyu_central_banking_effect = yes daoyu_postal_savings_effect = yes daoyu_add_tech = { TECH = "mutual_funds" } }
+daoyu_investment_banks_effect = { daoyu_joint_stock_companies_effect = yes daoyu_mutual_funds_effect = yes daoyu_add_tech = { TECH = "investment_banks" } }
+daoyu_camera_effect = { daoyu_realism_effect = yes daoyu_add_tech = { TECH = "camera" } }
+daoyu_philosophical_pragmatism_effect = { daoyu_psychiatry_effect = yes daoyu_add_tech = { TECH = "philosophical_pragmatism" } }
+daoyu_identification_documents_effect = { daoyu_central_archives_effect = yes daoyu_add_tech = { TECH = "identification_documents" } }
+daoyu_elevator_effect = { daoyu_steel_frame_buildings_effect = yes daoyu_add_tech = { TECH = "elevator" } }
+daoyu_zeppelins_effect = { daoyu_steel_frame_buildings_effect = yes daoyu_add_tech = { TECH = "zeppelins" } }
+daoyu_malaria_prevention_effect = { daoyu_civilizing_mission_effect = yes daoyu_add_tech = { TECH = "malaria_prevention" } }
+daoyu_central_planning_effect = { daoyu_identification_documents_effect = yes daoyu_add_tech = { TECH = "central_planning" } }
+daoyu_political_agitation_effect = { daoyu_anarchism_effect = yes daoyu_socialism_effect = yes daoyu_corporatism_effect = yes daoyu_add_tech = { TECH = "political_agitation" } }
+daoyu_international_exchange_standards_effect = { daoyu_mutual_funds_effect = yes daoyu_add_tech = { TECH = "international_exchange_standards" } }
+daoyu_corporate_management_effect = { daoyu_investment_banks_effect = yes daoyu_add_tech = { TECH = "corporate_management" } }
+daoyu_psychoanalysis_effect = { daoyu_philosophical_pragmatism_effect = yes daoyu_add_tech = { TECH = "psychoanalysis" } }
+daoyu_film_effect = { daoyu_camera_effect = yes daoyu_add_tech = { TECH = "film" } }
+daoyu_multilateral_alliances_effect = { daoyu_pan-nationalism_effect = yes daoyu_add_tech = { TECH = "multilateral_alliances" } }
+daoyu_mass_surveillance_effect = { daoyu_central_planning_effect = yes daoyu_add_tech = { TECH = "mass_surveillance" } }
+daoyu_antibiotics_effect = { daoyu_malaria_prevention_effect = yes daoyu_add_tech = { TECH = "antibiotics" } }
+daoyu_mass_propaganda_effect = { daoyu_political_agitation_effect = yes daoyu_film_effect = yes daoyu_add_tech = { TECH = "mass_propaganda" } }
+daoyu_modern_financial_instruments_effect = { daoyu_international_exchange_standards_effect = yes daoyu_add_tech = { TECH = "modern_financial_instruments" } }
+daoyu_macroeconomics_effect = { daoyu_international_exchange_standards_effect = yes daoyu_corporate_management_effect = yes daoyu_add_tech = { TECH = "macroeconomics" } }
+daoyu_behaviorism_effect = { daoyu_psychoanalysis_effect = yes daoyu_add_tech = { TECH = "behaviorism" } }
+daoyu_analytical_philosophy_effect = { daoyu_psychoanalysis_effect = yes daoyu_add_tech = { TECH = "analytical_philosophy" } }
+daoyu_paved_roads_effect = { daoyu_elevator_effect = yes daoyu_add_tech = { TECH = "paved_roads" } }
+daoyu_remove_law_var_effect = {
+	remove_global_variable = lawgroup_governance_principles
+	remove_global_variable = lawgroup_distribution_of_power
+	remove_global_variable = lawgroup_citizenship
+	remove_global_variable = lawgroup_caste_hegemony
+	remove_global_variable = lawgroup_church_and_state
+	remove_global_variable = lawgroup_bureaucracy
+	remove_global_variable = lawgroup_army_model
+	remove_global_variable = lawgroup_internal_security
+	remove_global_variable = lawgroup_economic_system
+	remove_global_variable = lawgroup_trade_policy
+	remove_global_variable = lawgroup_taxation
+	remove_global_variable = lawgroup_land_reform
+	remove_global_variable = lawgroup_colonization
+	remove_global_variable = lawgroup_policing
+	remove_global_variable = lawgroup_education_system
+	remove_global_variable = lawgroup_health_system
+	remove_global_variable = lawgroup_free_speech
+	remove_global_variable = lawgroup_labor_rights
+	remove_global_variable = lawgroup_childrens_rights
+	remove_global_variable = lawgroup_rights_of_women
+	remove_global_variable = lawgroup_welfare
+	remove_global_variable = lawgroup_migration
+	remove_global_variable = lawgroup_slavery
+	remove_global_variable = lawgroup_labour_associations
+}

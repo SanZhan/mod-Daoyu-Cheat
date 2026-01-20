@@ -1,0 +1,323 @@
+daoyu_exile_character = {
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/exile_character"
+	potential = {
+		owner ?= { is_ai = no }
+		has_global_variable = daoyu_on
+		is_in_exile_pool = no
+		is_in_void = no
+		is_ruler = no
+		is_heir = no
+		or = {
+			has_role = politician
+			has_role = agitator
+		}
+	}
+	show_requirements = yes
+	effect = {
+		this.interest_group = {
+			save_scope_as = relevant_ig
+		}
+		this = {
+			save_scope_as = exile_scope
+		}
+		owner = {
+			save_scope_as = exiling_country_scope
+		}
+		if = {
+			limit = {
+				has_role = politician
+			}
+			owner = {
+				scope:relevant_ig = {
+					add_modifier = {
+						name = modifier_exiled_leader
+						days = normal_modifier_time
+						is_decaying = yes
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_journal_entry = je_caudillo }
+				interest_group = {
+					is_interest_group_type = ig_armed_forces
+				}
+			}
+			if = {
+				limit = {
+					interest_group = {
+						leader = {
+							this = ROOT
+						}
+					}
+				}
+				owner = {
+					custom_tooltip = {
+						text = lose_large_caudillo_points
+						change_variable = {
+							name = caudillo_var
+							add = -200
+						}
+					}
+				}
+			}
+			else = {
+				owner = {
+					custom_tooltip = {
+						text = lose_caudillo_points
+						change_variable = {
+							name = caudillo_var
+							add = -100
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					is_player = yes
+					NOT = { has_variable = achievement_agitate_elsewhere_var }
+				}
+				popularity >= 100
+			}
+			owner = { set_variable = achievement_agitate_elsewhere_var }
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_role = agitator }
+				}
+				add_character_role = agitator
+			}
+			if = {
+				limit = {
+					has_role = general
+				}
+				remove_character_role = general
+			}
+			if = {
+				limit = {
+					has_role = admiral
+				}
+				remove_character_role = admiral
+			}
+			if = {
+				limit = {
+					has_role = politician
+				}
+				set_as_interest_group_leader = no
+				remove_character_role = politician
+			}
+		}
+		owner = {
+			custom_tooltip = exiling_dissident_radicals_factors
+		}
+		# Extra radical from exiling a popular character
+		if = {
+			limit = {
+				popularity >= 50
+			}
+			owner = {
+				add_radicals = {
+					value = small_radicals
+					interest_group = scope:relevant_ig
+				}
+			}
+		}
+		# Standard radicals from having Right of Assembly
+		if = {
+			limit = {
+				owner = { has_law = law_type:law_right_of_assembly }
+			}
+			owner = {
+				add_radicals = {
+					value = medium_radicals
+					interest_group = scope:relevant_ig
+				}
+			}
+		}
+		# Fewer radicals from Censorship
+		else_if = {
+			limit = {
+				owner = { has_law = law_type:law_censorship }
+			}
+			owner = {
+				add_radicals = {
+					value = small_radicals
+					interest_group = scope:relevant_ig
+				}
+			}
+		}
+		# Boring characters should be made interesting when being exiled
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_moderate
+			}
+			adopt_random_antigovernment_ideology = yes
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					popularity > 15
+				}
+				add_modifier = {
+					name = in_exile_modifier
+				}
+				every_country = {
+					limit = {
+						has_diplomatic_relevance = scope:exiling_country_scope
+					}
+					post_notification = exile_notification
+				}
+			}
+			else = {
+				add_modifier = {
+					name = in_exile_modifier
+					multiplier = 3
+				}
+			}
+		}
+		custom_tooltip = {
+			text = exile_dissident_tt
+			exile_character_with_martyrdom = yes
+		}
+	}
+	show_confirmation_box = yes
+}
+daoyu_arrange_accident = {
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/exile_character"
+	potential = {
+		owner ?= { is_ai = no }
+		has_global_variable = daoyu_on
+		is_in_exile_pool = no
+		is_in_void = no
+		is_ruler = no
+		is_heir = no
+		not = { has_variable = daoyu_dead }
+	}
+	show_requirements = yes
+	effect = {
+		custom_tooltip = { text = daoyu_arrange_accident_tt }
+		set_variable = daoyu_dead
+		kill_character = { hidden = yes }
+	}
+	show_confirmation_box = yes
+}
+daoyu_open_daoyu_cheat = {
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/agitator_promote"
+	potential = {
+		owner ?= { is_ai = no }
+		has_global_variable = daoyu_on
+		is_ruler = yes
+	}
+	possible = {
+		custom_tooltip = { text = daoyu_quit_diplomatic_actions nor = { has_global_variable = daoyu_declare_war has_global_variable = daoyu_from_diplomatic_actions } }
+		custom_tooltip = { text = daoyu_quit_manage_character not = { has_global_variable = daoyu_character_interactions } }
+	}
+	show_requirements = yes
+	effect = {
+		owner = { trigger_event = { id = daoyu.10 popup = yes } }
+	}
+}
+daoyu_interactions_manage_character = {
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/exile_character"
+	potential = {
+		owner ?= { is_ai = no }
+		has_global_variable = daoyu_on
+		not = { has_variable = daoyu_dead }
+	}
+	possible = {
+		custom_tooltip = {
+			text = daoyu_manage_character_cannot_be_opened_repeatedly
+			not = { has_global_variable = daoyu_character_interactions }
+			not = { has_global_variable = daoyu_character_events }
+		}
+		custom_tooltip = {
+			text = daoyu_has_been_activated
+			not = { has_global_variable = daoyu_cheat }
+		}
+	}
+	show_requirements = yes
+	effect = {
+		this = { add_trait = daoyu_target_character }
+		set_global_variable = daoyu_character_interactions
+		owner = { set_variable = daoyu_target_country trigger_event = { id = daoyu.220 popup = yes } }
+	}
+}
+daoyu_in_military_formation_create_commander = {
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/agitator_promote"
+	potential = {
+		owner ?= { is_ai = no }
+		has_global_variable = daoyu_on
+		or = { has_role = general has_role = admiral }
+	}
+	possible = {
+		custom_tooltip = {
+			text = daoyu_manage_character_cannot_be_opened_repeatedly
+			not = { has_global_variable = daoyu_character_interactions }
+			owner ?= { not = { any_scope_character = { has_trait = daoyu_target_character } } }
+		}
+		custom_tooltip = {
+			text = daoyu_has_been_activated
+			not = { has_global_variable = daoyu_cheat }
+		}
+	}
+	show_requirements = yes
+	effect = {
+		set_global_variable = daoyu_character_interactions
+		this = {
+			commander_military_formation = { save_scope_as = daoyu_mf_1 }
+			if = { limit = { has_role = general } owner = { set_global_variable = daoyu_create_general } }
+			if = { limit = { has_role = admiral } owner = { set_global_variable = daoyu_create_admiral } }
+		}
+		owner = { set_variable = daoyu_target_country trigger_event = { id = daoyu.271 popup = yes } }
+	}
+}
+daoyu_interactions_generals_orders = {
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/exile_character"
+	potential = {
+		owner ?= { is_ai = no }
+		has_global_variable = daoyu_on
+		or = { is_ruler = yes has_role = general }
+	}
+	possible = {
+		custom_tooltip = {
+			text = daoyu_manage_character_cannot_be_opened_repeatedly
+			not = { has_global_variable = daoyu_character_interactions }
+		}
+		custom_tooltip = {
+			text = daoyu_has_been_activated
+			not = { has_global_variable = daoyu_cheat }
+		}
+	}
+	show_requirements = yes
+	effect = {
+		set_global_variable = daoyu_character_interactions
+		owner = { set_variable = daoyu_target_country set_variable = daoyu_generals_orders trigger_event = { id = daoyu.280 popup = yes } }
+	}
+}
+daoyu_interactions_admirals_orders = {
+	clicksound = "event:/SFX/DLC/1.3_ip1/UI/exile_character"
+	potential = {
+		owner ?= { is_ai = no }
+		has_global_variable = daoyu_on
+		or = { is_ruler = yes has_role = admiral }
+	}
+	possible = {
+		custom_tooltip = {
+			text = daoyu_manage_character_cannot_be_opened_repeatedly
+			not = { has_global_variable = daoyu_character_interactions }
+		}
+		custom_tooltip = {
+			text = daoyu_has_been_activated
+			not = { has_global_variable = daoyu_cheat }
+		}
+	}
+	show_requirements = yes
+	effect = {
+		set_global_variable = daoyu_character_interactions
+		owner = { set_variable = daoyu_target_country set_variable = daoyu_admirals_orders trigger_event = { id = daoyu.280 popup = yes } }
+	}
+}

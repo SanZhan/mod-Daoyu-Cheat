@@ -1,0 +1,1432 @@
+#Pre-1836 era_1
+#1836-1861 era_2
+#1862-1886 era_3
+#1887-1911 era_4
+#1911-1936 era_5
+#production 生产
+#military 军事
+#society 社会
+#修改科技与法律的mod，兼容刀鱼作弊添加并修改以下3个文件：
+#Mods that modify technology and law. If you are a mod author and want to be compatible with Daoyu Cheat, you need to add and modify the following 3 files:
+#\events\daoyu_tec_and_law_events.txt
+#\common\scripted_triggers\daoyu_tec_and_law_triggers.txt
+#\common\scripted_effects\daoyu_tec_and_law_effects.txt
+#在mod使用上注明mod排序在Daoyu Cheat的下面。
+#In the mod instructions, indicate that the mod is listed below Daoyu Cheat.
+namespace = d_law_tec
+#法律
+d_law_tec.700 = {
+	type = country_event
+	placement = ROOT
+	title = daoyu_cheat
+	desc = concept_laws
+	flavor = {
+		first_valid = { triggered_desc = { trigger = { not = { any_country = { is_ai = yes has_modifier = daoyu_target_country } } } desc = TARGET_COUNTRY_NOT_VALID } }
+		first_valid = { desc = daoyu_line_reaks }
+		first_valid = { desc = daoyu_laws_flavor }
+	}
+	event_image = { video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	duration = 0
+	immediate = {
+		clear_saved_scope = daoyu_target_country
+		random_state = { limit = { owner = { is_ai = yes has_modifier = daoyu_target_country } } owner = { save_scope_as = daoyu_target_country } }
+	}
+	option = {
+		name = RELOAD#重新加载
+		hidden_effect = { trigger_event = { id = d_law_tec.700 popup = yes } }
+	}
+	option = {
+		name = daoyu_remove_target_country#重新选目标
+		trigger = { any_country = { is_ai = yes has_modifier = daoyu_target_country } }
+		random_country = { limit = { has_modifier = daoyu_target_country } remove_modifier = daoyu_target_country }
+		clear_saved_scope = daoyu_target_country
+		hidden_effect = { trigger_event = { id = d_law_tec.700 popup = yes } }
+	}
+	option = {
+		name = daoyu_modify_target_country#调整目标国家
+		trigger = { exists = scope:daoyu_target_country scope:daoyu_target_country = { is_ai = yes has_modifier = daoyu_target_country } }
+		hidden_effect = { trigger_event = { id = d_law_tec.720 popup = yes } }
+	}
+	option = {
+		name = daoyu_modify_our_country#调整本国
+		random_country = { limit = { is_ai = yes has_modifier = daoyu_target_country } remove_modifier = daoyu_target_country }
+		add_modifier = { name = daoyu_target_country days = 1 }
+		hidden_effect = { trigger_event = { id = d_law_tec.720 popup = yes } }
+	}
+	option = {
+		name = RESIGN
+		ai_chance = { base = 100 }
+		hidden_effect = { trigger_event = { id = daoyu.10 popup = yes } }
+	}
+}
+#法律
+d_law_tec.720 = {
+	type = country_event
+	placement = ROOT
+	title = daoyu_cheat
+	desc = concept_laws
+	flavor = daoyu_laws_desc
+	event_image = { video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	duration = 0
+	immediate = {
+		if = {
+			limit = { any_country = { has_modifier = daoyu_target_country } }
+			random_country = { limit = { has_modifier = daoyu_target_country } save_scope_as = daoyu_target_country }
+		}
+	}
+	option = {
+		name = POWER_STRUCTURE#权力结构
+		set_global_variable = daoyu_power_structure
+		hidden_effect = { trigger_event = { id = d_law_tec.730 popup = yes } }
+	}
+	option = {
+		name = ECONOMY#经济
+		set_global_variable = daoyu_economy
+		hidden_effect = { trigger_event = { id = d_law_tec.730 popup = yes } }
+	}
+	option = {
+		name = HUMAN_RIGHTS#人权
+		set_global_variable = daoyu_human_rights
+		hidden_effect = { trigger_event = { id = d_law_tec.730 popup = yes } }
+	}
+	option = {
+		name = daoyu_target_country_industry_banned#禁止工业
+		trigger = { any_country = { is_ai = yes has_modifier = daoyu_target_country not = { has_variable = daoyu_target_country_industry_banned has_variable = daoyu_target_country_extraction_economy } } }
+		custom_tooltip = {
+			text = daoyu_target_country_industry_banned_desc
+			scope:daoyu_target_country = { set_variable = daoyu_target_country_industry_banned trigger_event = { id = daoyu.962 } }
+		}
+		hidden_effect = { trigger_event = { id = d_law_tec.720 popup = yes } }
+	}
+	option = {
+		name = daoyu_break_target_country_industry_banned#禁止工业
+		trigger = { any_country = { is_ai = yes has_modifier = daoyu_target_country has_variable = daoyu_target_country_industry_banned } }
+		scope:daoyu_target_country = { remove_variable = daoyu_target_country_industry_banned }
+		hidden_effect = { trigger_event = { id = d_law_tec.720 popup = yes } }
+	}
+	option = {
+		name = daoyu_target_country_extraction_economy#盘剥经济
+		trigger = { any_country = { is_ai = yes has_modifier = daoyu_target_country not = { has_variable = daoyu_target_country_industry_banned has_variable = daoyu_target_country_extraction_economy } } }
+		custom_tooltip = {
+			text = daoyu_target_country_extraction_economy_desc
+			scope:daoyu_target_country = { set_variable = daoyu_target_country_extraction_economy trigger_event = { id = daoyu.962 } }
+		}
+		hidden_effect = { trigger_event = { id = d_law_tec.720 popup = yes } }
+	}
+	option = {
+		name = daoyu_break_target_country_extraction_economy#盘剥经济
+		trigger = { any_country = { is_ai = yes has_modifier = daoyu_target_country has_variable = daoyu_target_country_extraction_economy } }
+		scope:daoyu_target_country = { remove_variable = daoyu_target_country_extraction_economy }
+		hidden_effect = { trigger_event = { id = d_law_tec.720 popup = yes } }
+	}
+	option = {
+		name = RESIGN
+		ai_chance = { base = 100 }
+		hidden_effect = { trigger_event = { id = d_law_tec.700 popup = yes } }
+	}
+}
+#权力结构
+d_law_tec.730 = {
+	type = country_event
+	placement = ROOT
+	title = LAWS
+	desc = {
+		first_valid = {
+			triggered_desc = { desc = POWER_STRUCTURE trigger = { has_global_variable = daoyu_power_structure } }
+			triggered_desc = { desc = ECONOMY trigger = { has_global_variable = daoyu_economy } }
+			triggered_desc = { desc = HUMAN_RIGHTS trigger = { has_global_variable = daoyu_human_rights } }
+		}
+	}
+	flavor = daoyu_laws_desc
+	event_image = { video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	duration = 0
+	immediate = { daoyu_remove_law_var_effect = yes set_variable = d_law_tec_750 }
+	option = {
+		name = lawgroup_governance_principles#治理原则
+		trigger = { has_global_variable = daoyu_power_structure }
+		set_global_variable = lawgroup_governance_principles
+	}
+	option = {
+		name = lawgroup_distribution_of_power#权力分配
+		trigger = { has_global_variable = daoyu_power_structure }
+		set_global_variable = lawgroup_distribution_of_power
+	}
+	option = {
+		name = lawgroup_citizenship#公民权
+		trigger = { has_global_variable = daoyu_power_structure }
+		set_global_variable = lawgroup_citizenship
+	}
+	option = {
+		name = lawgroup_caste_hegemony#种姓支配权
+		trigger = { has_global_variable = daoyu_power_structure or = { has_law = law_type:law_hindu_caste_enforced has_law = law_type:law_hindu_caste_codified has_law = law_type:law_hindu_caste_not_enforced has_law = law_type:law_affirmative_action } }
+		set_global_variable = lawgroup_caste_hegemony
+	}
+	option = {
+		name = lawgroup_church_and_state#教会与国家
+		trigger = { has_global_variable = daoyu_power_structure }
+		set_global_variable = lawgroup_church_and_state
+	}
+	option = {
+		name = lawgroup_bureaucracy#官僚体制
+		trigger = { has_global_variable = daoyu_power_structure }
+		set_global_variable = lawgroup_bureaucracy
+	}
+	option = {
+		name = lawgroup_army_model#军队类型
+		trigger = { has_global_variable = daoyu_power_structure }
+		set_global_variable = lawgroup_army_model
+	}
+	option = {
+		name = lawgroup_internal_security#国内安全
+		trigger = { has_global_variable = daoyu_power_structure }
+		set_global_variable = lawgroup_internal_security
+	}
+	option = {
+		name = lawgroup_economic_system#经济体制
+		trigger = { has_global_variable = daoyu_economy }
+		set_global_variable = lawgroup_economic_system
+	}
+	option = {
+		name = lawgroup_trade_policy#贸易政策
+		trigger = { has_global_variable = daoyu_economy }
+		set_global_variable = lawgroup_trade_policy
+	}
+	option = {
+		name = lawgroup_taxation#赋税
+		trigger = { has_global_variable = daoyu_economy }
+		set_global_variable = lawgroup_taxation
+	}
+	option = {
+		name = lawgroup_land_reform#土地改革
+		trigger = { has_global_variable = daoyu_economy }
+		set_global_variable = lawgroup_land_reform
+	}
+	option = {
+		name = lawgroup_colonization#殖民机构
+		trigger = { has_global_variable = daoyu_economy }
+		set_global_variable = lawgroup_colonization
+	}
+	option = {
+		name = lawgroup_policing#警察机构
+		trigger = { has_global_variable = daoyu_economy }
+		set_global_variable = lawgroup_policing
+	}
+	option = {
+		name = lawgroup_education_system#教育体制
+		trigger = { has_global_variable = daoyu_economy }
+		set_global_variable = lawgroup_education_system
+	}
+	option = {
+		name = lawgroup_health_system#卫生系统
+		trigger = { has_global_variable = daoyu_economy }
+		set_global_variable = lawgroup_health_system
+	}
+	option = {
+		name = lawgroup_free_speech#言论自由
+		trigger = { has_global_variable = daoyu_human_rights }
+		set_global_variable = lawgroup_free_speech
+	}
+	option = {
+		name = lawgroup_labor_rights#劳动者权益
+		trigger = { has_global_variable = daoyu_human_rights }
+		set_global_variable = lawgroup_labor_rights
+	}
+	option = {
+		name = lawgroup_childrens_rights#儿童权利
+		trigger = { has_global_variable = daoyu_human_rights }
+		set_global_variable = lawgroup_childrens_rights
+	}
+	option = {
+		name = lawgroup_rights_of_women#女性权利
+		trigger = { has_global_variable = daoyu_human_rights }
+		set_global_variable = lawgroup_rights_of_women
+	}
+	option = {
+		name = lawgroup_welfare#社会福利
+		trigger = { has_global_variable = daoyu_human_rights }
+		set_global_variable = lawgroup_welfare
+	}
+	option = {
+		name = lawgroup_migration#移民制度
+		trigger = { has_global_variable = daoyu_human_rights }
+		set_global_variable = lawgroup_migration
+	}
+	option = {
+		name = lawgroup_slavery#奴隶制
+		trigger = { has_global_variable = daoyu_human_rights }
+		set_global_variable = lawgroup_slavery
+	}
+	option = {
+		name = lawgroup_labour_associations#劳工组织
+		trigger = { has_global_variable = daoyu_human_rights }
+		set_global_variable = lawgroup_labour_associations
+	}
+	option = {
+		name = RESIGN
+		ai_chance = { base = 100 }
+		set_variable = d_law_tec_720
+		remove_global_variable = daoyu_power_structure
+		remove_global_variable = daoyu_economy
+		remove_global_variable = daoyu_human_rights
+	}
+	after = {
+		if = { limit = { has_variable = d_law_tec_720 } remove_variable = d_law_tec_720 hidden_effect = { trigger_event = { id = d_law_tec.720 popup = yes } } }
+		else = { hidden_effect = { trigger_event = { id = d_law_tec.750 popup = yes } } }
+	}
+}
+d_law_tec.750 = {
+	type = country_event
+	placement = ROOT
+	title = {
+		first_valid = {
+			triggered_desc = { desc = POWER_STRUCTURE trigger = { has_global_variable = daoyu_power_structure } }
+			triggered_desc = { desc = ECONOMY trigger = { has_global_variable = daoyu_economy } }
+			triggered_desc = { desc = HUMAN_RIGHTS trigger = { has_global_variable = daoyu_human_rights } }
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = { desc = lawgroup_governance_principles trigger = { has_global_variable = lawgroup_governance_principles } }
+			triggered_desc = { desc = lawgroup_distribution_of_power trigger = { has_global_variable = lawgroup_distribution_of_power } }
+			triggered_desc = { desc = lawgroup_citizenship trigger = { has_global_variable = lawgroup_citizenship } }
+			triggered_desc = { desc = lawgroup_caste_hegemony trigger = { has_global_variable = lawgroup_caste_hegemony } }
+			triggered_desc = { desc = lawgroup_church_and_state trigger = { has_global_variable = lawgroup_church_and_state } }
+			triggered_desc = { desc = lawgroup_bureaucracy trigger = { has_global_variable = lawgroup_bureaucracy } }
+			triggered_desc = { desc = lawgroup_army_model trigger = { has_global_variable = lawgroup_army_model } }
+			triggered_desc = { desc = lawgroup_internal_security trigger = { has_global_variable = lawgroup_internal_security } }
+			triggered_desc = { desc = lawgroup_economic_system trigger = { has_global_variable = lawgroup_economic_system } }
+			triggered_desc = { desc = lawgroup_trade_policy trigger = { has_global_variable = lawgroup_trade_policy } }
+			triggered_desc = { desc = lawgroup_taxation trigger = { has_global_variable = lawgroup_taxation } }
+			triggered_desc = { desc = lawgroup_land_reform trigger = { has_global_variable = lawgroup_land_reform } }
+			triggered_desc = { desc = lawgroup_colonization trigger = { has_global_variable = lawgroup_colonization } }
+			triggered_desc = { desc = lawgroup_policing trigger = { has_global_variable = lawgroup_policing } }
+			triggered_desc = { desc = lawgroup_education_system trigger = { has_global_variable = lawgroup_education_system } }
+			triggered_desc = { desc = lawgroup_health_system trigger = { has_global_variable = lawgroup_health_system } }
+			triggered_desc = { desc = lawgroup_free_speech trigger = { has_global_variable = lawgroup_free_speech } }
+			triggered_desc = { desc = lawgroup_labor_rights trigger = { has_global_variable = lawgroup_labor_rights } }
+			triggered_desc = { desc = lawgroup_childrens_rights trigger = { has_global_variable = lawgroup_childrens_rights } }
+			triggered_desc = { desc = lawgroup_rights_of_women trigger = { has_global_variable = lawgroup_rights_of_women } }
+			triggered_desc = { desc = lawgroup_welfare trigger = { has_global_variable = lawgroup_welfare } }
+			triggered_desc = { desc = lawgroup_migration trigger = { has_global_variable = lawgroup_migration } }
+			triggered_desc = { desc = lawgroup_slavery trigger = { has_global_variable = lawgroup_slavery } }
+			triggered_desc = { desc = lawgroup_labour_associations trigger = { has_global_variable = lawgroup_labour_associations } }
+		}
+	}
+	flavor = daoyu_laws_desc
+	event_image = { video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	duration = 0
+	option = {
+		name = law_chiefdom#酋邦制
+		trigger = { has_global_variable = lawgroup_governance_principles scope:daoyu_target_country = { not = { has_law = law_type:law_chiefdom } is_country_type = decentralized } }
+		scope:daoyu_target_country = { activate_law = law_type:law_chiefdom }
+	}
+	option = {
+		name = law_monarchy#君主制
+		trigger = { has_global_variable = lawgroup_governance_principles scope:daoyu_target_country = { nor = { has_law = law_type:law_monarchy has_law = law_type:law_anarchy } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_monarchy }
+	}
+	option = {
+		name = law_presidential_republic#总统共和制
+		trigger = { has_global_variable = lawgroup_governance_principles scope:daoyu_target_country = { not = { has_law = law_type:law_presidential_republic } } }
+		daoyu_democracy_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_presidential_republic }
+	}
+	option = {
+		name = law_parliamentary_republic#议会共和制
+		trigger = { has_global_variable = lawgroup_governance_principles scope:daoyu_target_country = { nor = { has_law = law_type:law_parliamentary_republic has_law = law_type:law_autocracy } } }
+		daoyu_democracy_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_parliamentary_republic }
+	}
+	option = {
+		name = law_theocracy#神权制
+		trigger = { has_global_variable = lawgroup_governance_principles scope:daoyu_target_country = { nor = { has_law = law_type:law_theocracy has_law = law_type:law_total_separation } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_theocracy }
+	}
+	option = {
+		name = law_council_republic#委员会共和制
+		trigger = { has_global_variable = lawgroup_governance_principles scope:daoyu_target_country = { not = { has_law = law_type:law_council_republic } } }
+		daoyu_socialism_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_council_republic }
+	}
+	option = {
+		name = law_corporate_state#法团国家
+		trigger = { has_global_variable = lawgroup_governance_principles scope:daoyu_target_country = { not = { has_law = law_type:law_corporate_state } } }
+		daoyu_corporatism_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_corporate_state }
+	}
+	option = {
+		name = law_autocracy#独裁制
+		trigger = { has_global_variable = lawgroup_distribution_of_power scope:daoyu_target_country = { nor = { has_law = law_type:law_autocracy has_law = law_type:law_parliamentary_republic } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_autocracy }
+	}
+	option = {
+		name = law_technocracy#技术治国
+		trigger = { has_global_variable = lawgroup_distribution_of_power scope:daoyu_target_country = { not = { has_law = law_type:law_technocracy } } }
+		daoyu_central_archives_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_technocracy }
+	}
+	option = {
+		name = law_oligarchy#寡头制
+		trigger = { has_global_variable = lawgroup_distribution_of_power scope:daoyu_target_country = { not = { has_law = law_type:law_oligarchy } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_oligarchy }
+	}
+	option = {
+		name = law_elder_council#长老议会
+		trigger = { has_global_variable = lawgroup_distribution_of_power scope:daoyu_target_country = { not = { has_law = law_type:law_elder_council } has_law = law_type:law_chiefdom is_country_type = decentralized } }
+		scope:daoyu_target_country = { activate_law = law_type:law_elder_council }
+	}
+	option = {
+		name = law_landed_voting#地产投票
+		trigger = { has_global_variable = lawgroup_distribution_of_power scope:daoyu_target_country = { nor = { has_law = law_type:law_landed_voting has_law = law_type:law_chiefdom has_law = law_type:law_command_economy } } }
+		daoyu_democracy_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_landed_voting }
+	}
+	option = {
+		name = law_wealth_voting#财产投票
+		trigger = { has_global_variable = lawgroup_distribution_of_power scope:daoyu_target_country = { nor = { has_law = law_type:law_wealth_voting has_law = law_type:law_chiefdom has_law = law_type:law_command_economy } } }
+		daoyu_democracy_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_wealth_voting }
+	}
+	option = {
+		name = law_census_voting#资格性选举制
+		trigger = { has_global_variable = lawgroup_distribution_of_power scope:daoyu_target_country = { nor = { has_law = law_type:law_census_voting has_law = law_type:law_chiefdom has_law = law_type:law_command_economy } } }
+		daoyu_democracy_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_census_voting }
+	}
+	option = {
+		name = law_universal_suffrage#普选制
+		trigger = { has_global_variable = lawgroup_distribution_of_power scope:daoyu_target_country = { nor = { has_law = law_type:law_universal_suffrage has_law = law_type:law_chiefdom has_law = law_type:law_command_economy } } }
+		daoyu_egalitarianism_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_universal_suffrage }
+	}
+	option = {
+		name = law_anarchy#无政府
+		trigger = { has_global_variable = lawgroup_distribution_of_power scope:daoyu_target_country = { not = { has_law = law_type:law_anarchy } has_law = law_type:law_cooperative_ownership } }
+		daoyu_anarchism_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_anarchy }
+	}
+	option = {
+		name = law_single_party_state#一党制国家
+		trigger = { has_global_variable = lawgroup_distribution_of_power scope:daoyu_target_country = { not = { has_law = law_type:law_single_party_state } } }
+		daoyu_political_agitation_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_single_party_state }
+	}
+	option = {
+		name = law_subjecthood#臣民身份
+		trigger = { has_global_variable = lawgroup_citizenship scope:daoyu_target_country = { not = { has_law = law_type:law_subjecthood } or = { has_law = law_type:law_monarchy has_law = law_type:law_theocracy has_law = law_type:law_chiefdom } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_subjecthood }
+	}
+	option = {
+		name = law_ethnostate#族裔国家
+		trigger = { has_global_variable = lawgroup_citizenship scope:daoyu_target_country = { not = { has_law = law_type:law_ethnostate } } }
+		daoyu_nationalism_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_ethnostate }
+	}
+	option = {
+		name = law_national_supremacy#民族至上
+		trigger = { has_global_variable = lawgroup_citizenship scope:daoyu_target_country = { not = { has_law = law_type:law_national_supremacy } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_national_supremacy }
+	}
+	option = {
+		name = law_racial_segregation#种族隔离
+		trigger = { has_global_variable = lawgroup_citizenship scope:daoyu_target_country = { not = { has_law = law_type:law_racial_segregation } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_racial_segregation }
+	}
+	option = {
+		name = law_cultural_exclusion#文化排斥
+		trigger = { has_global_variable = lawgroup_citizenship scope:daoyu_target_country = { not = { has_law = law_type:law_cultural_exclusion } or = { has_law = law_type:law_slavery_banned has_law = law_type:law_debt_slavery } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_cultural_exclusion }
+	}
+	option = {
+		name = law_multicultural#文化多元
+		trigger = { has_global_variable = lawgroup_citizenship scope:daoyu_target_country = { not = { has_law = law_type:law_multicultural } has_law = law_type:law_slavery_banned } }
+		daoyu_human_rights_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_multicultural }
+	}
+	option = {
+		name = law_hindu_caste_enforced#实施种姓制度
+		trigger = { has_global_variable = lawgroup_caste_hegemony scope:daoyu_target_country = { not = { has_law = law_type:law_hindu_caste_enforced } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_hindu_caste_enforced }
+	}
+	option = {
+		name = law_hindu_caste_codified#种姓制度法典化
+		trigger = { has_global_variable = lawgroup_caste_hegemony scope:daoyu_target_country = { not = { has_law = law_type:law_hindu_caste_codified } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_hindu_caste_codified }
+	}
+	option = {
+		name = law_hindu_caste_not_enforced#不实施种姓制度
+		trigger = { has_global_variable = lawgroup_caste_hegemony scope:daoyu_target_country = { not = { has_law = law_type:law_hindu_caste_not_enforced } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_hindu_caste_not_enforced }
+	}
+	option = {
+		name = law_affirmative_action#平权法案
+		trigger = { has_global_variable = lawgroup_caste_hegemony scope:daoyu_target_country = { not = { has_law = law_type:law_affirmative_action } has_law = law_type:law_slavery_banned } }
+		scope:daoyu_target_country = { activate_law = law_type:law_affirmative_action }
+	}
+	option = {
+		name = law_state_religion#国教
+		trigger = { has_global_variable = lawgroup_church_and_state scope:daoyu_target_country = { not = { has_law = law_type:law_state_religion } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_state_religion }
+	}
+	option = {
+		name = law_freedom_of_conscience#信仰自由
+		trigger = { has_global_variable = lawgroup_church_and_state scope:daoyu_target_country = { nor = { has_law = law_type:law_freedom_of_conscience has_law = law_type:law_theocracy } } }
+		daoyu_rationalism_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_freedom_of_conscience }
+	}
+	option = {
+		name = law_total_separation#完全分离
+		trigger = { has_global_variable = lawgroup_church_and_state scope:daoyu_target_country = { nor = { has_law = law_type:law_total_separation has_law = law_type:law_theocracy } } }
+		daoyu_empiricism_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_total_separation }
+	}
+	option = {
+		name = law_state_atheism#国家无神论
+		trigger = { has_global_variable = lawgroup_church_and_state scope:daoyu_target_country = { nor = { has_law = law_type:law_state_atheism has_law = law_type:law_theocracy } } }
+		daoyu_empiricism_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_state_atheism }
+	}
+	option = {
+		name = law_hereditary_bureaucrats#世袭官僚制
+		trigger = { has_global_variable = lawgroup_bureaucracy scope:daoyu_target_country = { nor = { has_law = law_type:law_hereditary_bureaucrats has_law = law_type:law_council_republic } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_hereditary_bureaucrats }
+	}
+	option = {
+		name = law_appointed_bureaucrats#任命官僚制
+		trigger = { has_global_variable = lawgroup_bureaucracy scope:daoyu_target_country = { not = { has_law = law_type:law_appointed_bureaucrats } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_appointed_bureaucrats }
+	}
+	option = {
+		name = law_elected_bureaucrats#选举官僚制
+		trigger = { has_global_variable = lawgroup_bureaucracy scope:daoyu_target_country = { nor = { has_law = law_type:law_elected_bureaucrats has_law = law_type:law_autocracy has_law = law_type:law_oligarchy has_law = law_type:law_technocracy has_law = law_type:law_elder_council } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_elected_bureaucrats }
+	}
+	option = {
+		name = law_peasant_levies#征召农兵
+		trigger = { has_global_variable = lawgroup_army_model scope:daoyu_target_country = { not = { has_law = law_type:law_peasant_levies } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_peasant_levies }
+	}
+	option = {
+		name = law_professional_army#职业军队
+		trigger = { has_global_variable = lawgroup_army_model scope:daoyu_target_country = { not = { has_law = law_type:law_professional_army } } }
+		daoyu_military_drill_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_professional_army }
+	}
+	option = {
+		name = law_national_militia#国家民兵
+		trigger = { has_global_variable = lawgroup_army_model scope:daoyu_target_country = { not = { has_law = law_type:law_national_militia } } }
+		daoyu_mandatory_service_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_national_militia }
+	}
+	option = {
+		name = law_mass_conscription#大规模征兵
+		trigger = { has_global_variable = lawgroup_army_model scope:daoyu_target_country = { not = { has_law = law_type:law_mass_conscription } } }
+		daoyu_enlistment_offices_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_mass_conscription }
+	}
+	option = {
+		name = law_no_home_affairs#无内务机构
+		trigger = { has_global_variable = lawgroup_internal_security scope:daoyu_target_country = { not = { has_law = law_type:law_no_home_affairs } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_no_home_affairs }
+	}
+	option = {
+		name = law_national_guard#国民警卫队
+		trigger = { has_global_variable = lawgroup_internal_security scope:daoyu_target_country = { not = { has_law = law_type:law_national_guard } } }
+		daoyu_law_enforcement_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_national_guard }
+	}
+	option = {
+		name = law_secret_police#秘密警察
+		trigger = { has_global_variable = lawgroup_internal_security scope:daoyu_target_country = { not = { has_law = law_type:law_secret_police } } }
+		daoyu_central_archives_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_secret_police }
+	}
+	option = {
+		name = law_guaranteed_liberties#保障自由
+		trigger = { has_global_variable = lawgroup_internal_security scope:daoyu_target_country = { not = { has_law = law_type:law_guaranteed_liberties } or = { has_law = law_type:law_right_of_assembly has_law = law_type:law_protected_speech } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_guaranteed_liberties }
+	}
+	option = {
+		name = law_traditionalism#传统主义
+		trigger = {
+			has_global_variable = lawgroup_economic_system
+			scope:daoyu_target_country = { nor = { has_law = law_type:law_traditionalism has_law = law_type:law_per_capita_based_taxation has_law = law_type:law_proportional_taxation has_law = law_type:law_graduated_taxation has_law = law_type:law_anarchy } }
+		}
+		scope:daoyu_target_country = { activate_law = law_type:law_traditionalism }
+	}
+	option = {
+		name = law_interventionism#经济干预
+		trigger = { has_global_variable = lawgroup_economic_system scope:daoyu_target_country = { nor = { has_law = law_type:law_interventionism has_law = law_type:law_serfdom has_law = law_type:law_anarchy } } }
+		daoyu_manufacturies_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_interventionism }
+	}
+	option = {
+		name = law_agrarianism#农本主义
+		trigger = { has_global_variable = lawgroup_economic_system scope:daoyu_target_country = { nor = { has_law = law_type:law_agrarianism has_law = law_type:law_anarchy } } }
+		daoyu_romanticism_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_agrarianism }
+	}
+	option = {
+		name = law_industry_banned#禁止工业
+		trigger = { has_global_variable = lawgroup_economic_system scope:daoyu_target_country = { not = { has_law = law_type:law_industry_banned } } }
+		daoyu_romanticism_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_industry_banned }
+	}
+	option = {
+		name = law_extraction_economy#盘剥经济
+		trigger = { has_global_variable = lawgroup_economic_system scope:daoyu_target_country = { not = { has_law = law_type:law_extraction_economy } } }
+		daoyu_colonization_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_extraction_economy }
+	}
+	option = {
+		name = law_laissez_faire#自由放任
+		trigger = { has_global_variable = lawgroup_economic_system scope:daoyu_target_country = { nor = { has_law = law_type:law_laissez_faire has_law = law_type:law_serfdom has_law = law_type:law_isolationism has_law = law_type:law_anarchy } } }
+		daoyu_international_trade_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_laissez_faire }
+	}
+	option = {
+		name = law_cooperative_ownership#合作社所有制
+		trigger = { has_global_variable = lawgroup_economic_system scope:daoyu_target_country = { nor = { has_law = law_type:law_cooperative_ownership has_law = law_type:law_serfdom } or = { has_law = law_type:law_council_republic has_law = law_type:law_corporate_state } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_cooperative_ownership }
+	}
+	option = {
+		name = law_command_economy#计划经济
+		trigger = {
+			has_global_variable = lawgroup_economic_system
+			scope:daoyu_target_country = { nor = { has_law = law_type:law_command_economy has_law = law_type:law_serfdom has_law = law_type:law_anarchy } or = { has_law = law_type:law_autocracy has_law = law_type:law_oligarchy has_law = law_type:law_single_party_state has_law = law_type:law_technocracy } }
+		}
+		daoyu_central_planning_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_command_economy }
+	}
+	option = {
+		name = law_mercantilism#重商主义
+		trigger = { has_global_variable = lawgroup_trade_policy scope:daoyu_target_country = { not = { has_law = law_type:law_mercantilism } } }
+		daoyu_international_trade_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_mercantilism }
+	}
+	option = {
+		name = law_protectionism#贸易保护
+		trigger = { has_global_variable = lawgroup_trade_policy scope:daoyu_target_country = { not = { has_law = law_type:law_protectionism } } }
+		daoyu_stock_exchange_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_protectionism }
+	}
+	option = {
+		name = law_free_trade#自由贸易
+		trigger = { has_global_variable = lawgroup_trade_policy scope:daoyu_target_country = { nor = { has_law = law_type:law_free_trade has_law = law_type:law_command_economy } } }
+		daoyu_stock_exchange_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_free_trade }
+	}
+	option = {
+		name = law_isolationism#孤立主义
+		trigger = { has_global_variable = lawgroup_trade_policy scope:daoyu_target_country = { nor = { has_law = law_type:law_isolationism has_law = law_type:law_laissez_faire } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_isolationism }
+	}
+	option = {
+		name = law_consumption_based_taxation#消费税制
+		trigger = { has_global_variable = lawgroup_taxation scope:daoyu_target_country = { not = { has_law = law_type:law_consumption_based_taxation } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_consumption_based_taxation }
+	}
+	option = {
+		name = law_land_based_taxation#土地税制
+		trigger = { has_global_variable = lawgroup_taxation scope:daoyu_target_country = { not = { has_law = law_type:law_land_based_taxation } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_land_based_taxation }
+	}
+	option = {
+		name = law_per_capita_based_taxation#人均税制
+		trigger = { has_global_variable = lawgroup_taxation scope:daoyu_target_country = { nor = { has_law = law_type:law_per_capita_based_taxation has_law = law_type:law_traditionalism } } }
+		daoyu_currency_standards_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_per_capita_based_taxation }
+	}
+	option = {
+		name = law_proportional_taxation#比例税制
+		trigger = { has_global_variable = lawgroup_taxation scope:daoyu_target_country = { nor = { has_law = law_type:law_proportional_taxation has_law = law_type:law_traditionalism } } }
+		daoyu_egalitarianism_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_proportional_taxation }
+	}
+	option = {
+		name = law_graduated_taxation#累进税制
+		trigger = { has_global_variable = lawgroup_taxation scope:daoyu_target_country = { nor = { has_law = law_type:law_graduated_taxation has_law = law_type:law_traditionalism } } }
+		daoyu_socialism_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_graduated_taxation }
+	}
+	option = {
+		name = law_serfdom#农奴制
+		trigger = { has_global_variable = lawgroup_land_reform scope:daoyu_target_country = { nor = { has_law = law_type:law_serfdom has_law = law_type:law_interventionism has_law = law_type:law_laissez_faire has_law = law_type:law_command_economy } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_serfdom }
+	}
+	option = {
+		name = law_tenant_farmers#佃农
+		trigger = { has_global_variable = lawgroup_land_reform scope:daoyu_target_country = { not = { has_law = law_type:law_tenant_farmers } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_tenant_farmers }
+	}
+	option = {
+		name = law_commercialized_agriculture#商品化农业
+		trigger = { has_global_variable = lawgroup_land_reform scope:daoyu_target_country = { nor = { has_law = law_type:law_commercialized_agriculture has_law = law_type:law_traditionalism } } }
+		daoyu_mutual_funds_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_commercialized_agriculture }
+	}
+	option = {
+		name = law_homesteading#宅地法
+		trigger = { has_global_variable = lawgroup_land_reform scope:daoyu_target_country = { not = { has_law = law_type:law_homesteading } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_homesteading }
+	}
+	option = {
+		name = law_collectivized_agriculture#集体化农业
+		trigger = { has_global_variable = lawgroup_land_reform scope:daoyu_target_country = { not = { has_law = law_type:law_collectivized_agriculture } or = { has_law = law_type:law_command_economy has_law = law_type:law_cooperative_ownership } } }
+		daoyu_socialism_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_collectivized_agriculture }
+	}
+	option = {
+		name = law_no_colonial_affairs#无殖民事务
+		trigger = { has_global_variable = lawgroup_colonization scope:daoyu_target_country = { not = { has_law = law_type:law_no_colonial_affairs } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_no_colonial_affairs }
+	}
+	option = {
+		name = law_frontier_colonization#边疆殖民
+		trigger = { has_global_variable = lawgroup_colonization scope:daoyu_target_country = { not = { has_law = law_type:law_frontier_colonization } } }
+		daoyu_colonization_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_frontier_colonization }
+	}
+	option = {
+		name = law_colonial_resettlement#殖民安置
+		trigger = { has_global_variable = lawgroup_colonization scope:daoyu_target_country = { not = { has_law = law_type:law_colonial_resettlement } } }
+		daoyu_colonization_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_colonial_resettlement }
+	}
+	option = {
+		name = law_colonial_exploitation#殖民剥削
+		trigger = { has_global_variable = lawgroup_colonization scope:daoyu_target_country = { not = { has_law = law_type:law_colonial_exploitation } } }
+		daoyu_colonization_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_colonial_exploitation }
+	}
+	option = {
+		name = law_no_police#无警察
+		trigger = { has_global_variable = lawgroup_policing scope:daoyu_target_country = { not = { has_law = law_type:law_no_police } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_no_police }
+	}
+	option = {
+		name = law_local_police#地方警察部队
+		trigger = { has_global_variable = lawgroup_policing scope:daoyu_target_country = { not = { has_law = law_type:law_local_police } } }
+		daoyu_tech_bureaucracy_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_local_police }
+	}
+	option = {
+		name = law_dedicated_police#专职警察部队
+		trigger = { has_global_variable = lawgroup_policing scope:daoyu_target_country = { not = { has_law = law_type:law_dedicated_police } } }
+		daoyu_law_enforcement_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_dedicated_police }
+	}
+	option = {
+		name = law_militarized_police#军事化警察部队
+		trigger = { has_global_variable = lawgroup_policing scope:daoyu_target_country = { not = { has_law = law_type:law_militarized_police } } }
+		daoyu_mass_surveillance_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_militarized_police }
+	}
+	option = {
+		name = law_no_schools#无学校
+		trigger = { has_global_variable = lawgroup_education_system scope:daoyu_target_country = { nor = { has_law = law_type:law_no_schools has_law = law_type:law_compulsory_primary_school } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_no_schools }
+	}
+	option = {
+		name = law_religious_schools#教会学校
+		trigger = { has_global_variable = lawgroup_education_system scope:daoyu_target_country = { nor = { has_law = law_type:law_religious_schools has_law = law_type:law_total_separation has_law = law_type:law_state_atheism has_law = law_type:law_serfdom } } }
+		daoyu_rationalism_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_religious_schools }
+	}
+	option = {
+		name = law_private_schools#私立学校
+		trigger = { has_global_variable = lawgroup_education_system scope:daoyu_target_country = { nor = { has_law = law_type:law_private_schools has_law = law_type:law_state_religion } } }
+		daoyu_academia_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_private_schools }
+	}
+	option = {
+		name = law_public_schools#公立学校
+		trigger = { has_global_variable = lawgroup_education_system scope:daoyu_target_country = { nor = { has_law = law_type:law_public_schools has_law = law_type:law_state_religion has_law = law_type:law_serfdom } } }
+		daoyu_empiricism_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_public_schools }
+	}
+	option = {
+		name = law_no_health_system#无卫生系统
+		trigger = { has_global_variable = lawgroup_health_system scope:daoyu_target_country = { not = { has_law = law_type:law_no_health_system } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_no_health_system }
+	}
+	option = {
+		name = law_charitable_health_system#慈善医院
+		trigger = { has_global_variable = lawgroup_health_system scope:daoyu_target_country = { not = { has_law = law_type:law_charitable_health_system } } }
+		daoyu_medical_degrees_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_charitable_health_system }
+	}
+	option = {
+		name = law_private_health_insurance#私人医疗保险
+		trigger = { has_global_variable = lawgroup_health_system scope:daoyu_target_country = { not = { has_law = law_type:law_private_health_insurance } } }
+		daoyu_pharmaceuticals_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_private_health_insurance }
+	}
+	option = {
+		name = law_public_health_insurance#公共医疗保险
+		trigger = { has_global_variable = lawgroup_health_system scope:daoyu_target_country = { not = { has_law = law_type:law_public_health_insurance } } }
+		daoyu_pharmaceuticals_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_public_health_insurance }
+	}
+	option = {
+		name = law_outlawed_dissent#异议非法
+		trigger = { has_global_variable = lawgroup_free_speech scope:daoyu_target_country = { not = { has_law = law_type:law_outlawed_dissent } } }
+		daoyu_political_agitation_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_outlawed_dissent }
+	}
+	option = {
+		name = law_censorship#出版物审查
+		trigger = { has_global_variable = lawgroup_free_speech scope:daoyu_target_country = { not = { has_law = law_type:law_censorship } } }
+		daoyu_law_enforcement_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_censorship }
+	}
+	option = {
+		name = law_right_of_assembly#集会权
+		trigger = { has_global_variable = lawgroup_free_speech scope:daoyu_target_country = { not = { has_law = law_type:law_right_of_assembly } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_right_of_assembly }
+	}
+	option = {
+		name = law_protected_speech#言论保护
+		trigger = { has_global_variable = lawgroup_free_speech scope:daoyu_target_country = { not = { has_law = law_type:law_protected_speech } } }
+		daoyu_human_rights_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_protected_speech }
+	}
+	option = {
+		name = law_no_workers_rights#无劳动者权利
+		trigger = { has_global_variable = lawgroup_labor_rights scope:daoyu_target_country = { not = { has_law = law_type:law_no_workers_rights } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_no_workers_rights }
+	}
+	option = {
+		name = law_regulatory_bodies#监管机构
+		trigger = { has_global_variable = lawgroup_labor_rights scope:daoyu_target_country = { not = { has_law = law_type:law_regulatory_bodies } } }
+		daoyu_labor_movement_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_regulatory_bodies }
+	}
+	option = {
+		name = law_worker_protections#劳动者保障
+		trigger = { has_global_variable = lawgroup_labor_rights scope:daoyu_target_country = { not = { has_law = law_type:law_worker_protections } } }
+		daoyu_human_rights_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_worker_protections }
+	}
+	option = {
+		name = law_child_labor_allowed#允许童工
+		trigger = { has_global_variable = lawgroup_childrens_rights scope:daoyu_target_country = { not = { has_law = law_type:law_child_labor_allowed } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_child_labor_allowed }
+	}
+	option = {
+		name = law_restricted_child_labor#限制童工
+		trigger = { has_global_variable = lawgroup_childrens_rights scope:daoyu_target_country = { not = { has_law = law_type:law_restricted_child_labor } } }
+		daoyu_labor_movement_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_restricted_child_labor }
+	}
+	option = {
+		name = law_compulsory_primary_school#义务小学
+		trigger = { has_global_variable = lawgroup_childrens_rights scope:daoyu_target_country = { nor = { has_law = law_type:law_compulsory_primary_school has_law = law_type:law_no_schools } } }
+		daoyu_human_rights_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_compulsory_primary_school }
+	}
+	option = {
+		name = law_no_womens_rights#法定监护
+		trigger = { has_global_variable = lawgroup_rights_of_women scope:daoyu_target_country = { not = { has_law = law_type:law_no_womens_rights } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_no_womens_rights }
+	}
+	option = {
+		name = law_women_own_property#有产妇女
+		trigger = { has_global_variable = lawgroup_rights_of_women scope:daoyu_target_country = { not = { has_law = law_type:law_women_own_property } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_women_own_property }
+	}
+	option = {
+		name = law_women_in_the_workplace#女性工作
+		trigger = { has_global_variable = lawgroup_rights_of_women scope:daoyu_target_country = { not = { has_law = law_type:law_women_in_the_workplace } } }
+		daoyu_feminism_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_women_in_the_workplace }
+	}
+	option = {
+		name = law_womens_suffrage#妇女选举权
+		trigger = {
+			has_global_variable = lawgroup_rights_of_women
+			scope:daoyu_target_country = {
+				not = { has_law = law_type:law_womens_suffrage } or = { has_law = law_type:law_census_voting has_law = law_type:law_landed_voting has_law = law_type:law_wealth_voting has_law = law_type:law_universal_suffrage has_law = law_type:law_single_party_state has_law = law_type:law_anarchy }
+			}
+		}
+		daoyu_feminism_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_womens_suffrage }
+	}
+	option = {
+		name = law_no_social_security#无社会保障
+		trigger = { has_global_variable = lawgroup_welfare scope:daoyu_target_country = { not = { has_law = law_type:law_no_social_security } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_no_social_security }
+	}
+	option = {
+		name = law_poor_laws#济贫法
+		trigger = { has_global_variable = lawgroup_welfare scope:daoyu_target_country = { not = { has_law = law_type:law_poor_laws } } }
+		daoyu_democracy_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_poor_laws }
+	}
+	option = {
+		name = law_wage_subsidies#工资补贴
+		trigger = { has_global_variable = lawgroup_welfare scope:daoyu_target_country = { not = { has_law = law_type:law_wage_subsidies } } }
+		daoyu_labor_movement_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_wage_subsidies }
+	}
+	option = {
+		name = law_old_age_pension#养老金
+		trigger = { has_global_variable = lawgroup_welfare scope:daoyu_target_country = { not = { has_law = law_type:law_old_age_pension } } }
+		daoyu_human_rights_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_old_age_pension }
+	}
+	option = {
+		name = law_no_migration_controls#无移民控制
+		trigger = { has_global_variable = lawgroup_migration scope:daoyu_target_country = { not = { has_law = law_type:law_no_migration_controls } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_no_migration_controls }
+	}
+	option = {
+		name = law_migration_controls#移民控制
+		trigger = { has_global_variable = lawgroup_migration scope:daoyu_target_country = { not = { has_law = law_type:law_migration_controls } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_migration_controls }
+	}
+	option = {
+		name = law_closed_borders#关闭边境
+		trigger = { has_global_variable = lawgroup_migration scope:daoyu_target_country = { not = { has_law = law_type:law_closed_borders } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_closed_borders }
+	}
+	option = {
+		name = law_slavery_banned#禁止蓄奴
+		trigger = { has_global_variable = lawgroup_slavery scope:daoyu_target_country = { not = { has_law = law_type:law_slavery_banned } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_slavery_banned }
+	}
+	option = {
+		name = law_colonial_slavery#殖民地奴隶制
+		trigger = { has_global_variable = lawgroup_slavery scope:daoyu_target_country = { not = { has_law = law_type:law_colonial_slavery } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_colonial_slavery }
+	}
+	option = {
+		name = law_debt_slavery#债务奴隶制
+		trigger = { has_global_variable = lawgroup_slavery scope:daoyu_target_country = { nor = { has_law = law_type:law_debt_slavery has_law = law_type:law_multicultural has_law = law_type:law_affirmative_action } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_debt_slavery }
+	}
+	option = {
+		name = law_slave_trade#奴隶贸易
+		trigger = { has_global_variable = lawgroup_slavery scope:daoyu_target_country = { nor = { has_law = law_type:law_slave_trade has_law = law_type:law_cultural_exclusion has_law = law_type:law_multicultural has_law = law_type:law_affirmative_action } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_slave_trade }
+	}
+	option = {
+		name = law_legacy_slavery#遗留奴隶制
+		trigger = { has_global_variable = lawgroup_slavery scope:daoyu_target_country = { not = { has_law = law_type:law_legacy_slavery } has_law = law_type:law_slave_trade } }
+		scope:daoyu_target_country = { activate_law = law_type:law_legacy_slavery }
+	}
+	option = {
+		name = law_guild_system#行会制度
+		trigger = { has_global_variable = lawgroup_labour_associations scope:daoyu_target_country = { nor = { has_law = law_type:law_guild_system has_law = law_type:law_laissez_faire } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_guild_system }
+	}
+	option = {
+		name = law_combination_acts#结社法
+		trigger = { has_global_variable = lawgroup_labour_associations scope:daoyu_target_country = { not = { has_law = law_type:law_combination_acts } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_combination_acts }
+	}
+	option = {
+		name = law_anti_strike_laws#反罢工法
+		trigger = { has_global_variable = lawgroup_labour_associations scope:daoyu_target_country = { not = { has_law = law_type:law_anti_strike_laws } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_anti_strike_laws }
+	}
+	option = {
+		name = law_right_to_associate#组织工会权
+		trigger = { has_global_variable = lawgroup_labour_associations scope:daoyu_target_country = { not = { has_law = law_type:law_right_to_associate } } }
+		scope:daoyu_target_country = { activate_law = law_type:law_right_to_associate }
+	}
+	option = {
+		name = law_corporatized_unions#法团化工会
+		trigger = { has_global_variable = lawgroup_labour_associations scope:daoyu_target_country = { not = { has_law = law_type:law_corporatized_unions } } }
+		daoyu_corporatism_effect = yes
+		scope:daoyu_target_country = { activate_law = law_type:law_corporatized_unions }
+	}
+	option = {
+		name = RESIGN
+		ai_chance = { base = 100 }
+	}
+	after = { daoyu_remove_law_var_effect = yes hidden_effect = { trigger_event = { id = d_law_tec.730 popup = yes } } }
+}
+#科技
+d_law_tec.800 = {
+	type = country_event
+	placement = ROOT
+	title = daoyu_cheat
+	desc = concept_technology
+	flavor = {
+		first_valid = {
+			triggered_desc = { trigger = { any_country = { is_ai = yes has_modifier = daoyu_target_country nor = { daoyu_production_era = yes daoyu_military_era = yes daoyu_society_era = yes } } } desc = daoyu_target_country_get_name }
+			triggered_desc = { trigger = { not = { any_country = { is_ai = yes has_modifier = daoyu_target_country } } } desc = TARGET_COUNTRY_NOT_VALID }
+		}
+		first_valid = { triggered_desc = { trigger = { any_country = { is_ai = yes has_modifier = daoyu_target_country nor = { daoyu_production_era = yes daoyu_military_era = yes daoyu_society_era = yes } } } desc = ACHIEVEMENT_DESC_inventive } }
+		first_valid = { desc = daoyu_line_reaks }
+		first_valid = { triggered_desc = { trigger = { nor = { daoyu_production_era = yes daoyu_military_era = yes daoyu_society_era = yes } } desc = daoyu_root_get_name } }
+		first_valid = { triggered_desc = { trigger = { nor = { daoyu_production_era = yes daoyu_military_era = yes daoyu_society_era = yes } } desc = ACHIEVEMENT_DESC_inventive } }
+		first_valid = { triggered_desc = { trigger = { nor = { daoyu_production_era = yes daoyu_military_era = yes daoyu_society_era = yes } } desc = daoyu_line_reaks } }
+		first_valid = { desc = daoyu_target_country_desc }
+	}
+	event_image = { video = "gfx/event_pictures/unspecific_airship.bk2" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/airship"
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	duration = 0
+	immediate = {
+		clear_saved_scope = daoyu_target_country
+		if = {
+			limit = { any_country = { is_ai = yes has_modifier = daoyu_target_country } }
+			random_country = { limit = { has_modifier = daoyu_target_country } save_scope_as = daoyu_target_country }
+		}
+	}
+	option = {
+		name = RELOAD#重新加载
+		hidden_effect = { trigger_event = { id = d_law_tec.800 popup = yes } }
+	}
+	option = {
+		name = daoyu_remove_target_country#重新选目标
+		trigger = { any_country = { is_ai = yes has_modifier = daoyu_target_country } }
+		random_country = { limit = { has_modifier = daoyu_target_country } remove_modifier = daoyu_target_country }
+		clear_saved_scope = daoyu_target_country
+		hidden_effect = { trigger_event = { id = d_law_tec.800 popup = yes } }
+	}
+	option = {
+		name = daoyu_modify_target_country#调整目标国家
+		trigger = { any_country = { is_ai = yes has_modifier = daoyu_target_country or = { daoyu_production_era = yes daoyu_military_era = yes daoyu_society_era = yes } } }
+		hidden_effect = { trigger_event = { id = d_law_tec.820 popup = yes } }
+	}
+	option = {
+		name = daoyu_modify_our_country#调整本国
+		trigger = { or = { daoyu_production_era = yes daoyu_military_era = yes daoyu_society_era = yes } }
+		random_country = { limit = { is_ai = yes has_modifier = daoyu_target_country } remove_modifier = daoyu_target_country }
+		add_modifier = { name = daoyu_target_country days = 1 }
+		hidden_effect = { trigger_event = { id = d_law_tec.820 popup = yes } }
+	}
+	option = {
+		name = RESIGN
+		ai_chance = { base = 100 }
+		hidden_effect = { trigger_event = { id = daoyu.10 popup = yes } }
+	}
+}
+#科技
+d_law_tec.820 = {
+	type = country_event
+	placement = ROOT
+	title = daoyu_cheat
+	desc = {
+		first_valid = {
+			triggered_desc = { trigger = { not = { has_variable = daoyu_give_all_tech }  } desc = concept_technology }
+			triggered_desc = { trigger = { has_variable = daoyu_give_all_tech } desc = CHANGE }
+		}
+		first_valid = { triggered_desc = { trigger = { has_variable = daoyu_give_all_tech } desc = MESSAGE_SETTINGS_NOTIFICATION_TYPES } }
+	}
+	flavor = {
+		first_valid = { triggered_desc = { trigger = { not = { has_variable = daoyu_give_all_tech }  } desc = daoyu_technology_desc } }
+		first_valid = { triggered_desc = { trigger = { has_variable = daoyu_give_all_tech } desc = daoyu_give_all_tech } }
+	}
+	event_image = { video = "gfx/event_pictures/unspecific_airship.bk2" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/airship"
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	duration = 0
+	immediate = {
+		if = {
+			limit = { any_country = { has_modifier = daoyu_target_country } }
+			random_country = { limit = { has_modifier = daoyu_target_country } save_scope_as = daoyu_target_country }
+		}
+	}
+	option = {
+		name = production
+		trigger = { not = { has_variable = daoyu_give_all_tech } scope:daoyu_target_country = { daoyu_production_era = yes } }
+		hidden_effect = { trigger_event = { id = d_law_tec.830 popup = yes } }
+	}
+	option = {
+		name = military
+		trigger = { not = { has_variable = daoyu_give_all_tech } scope:daoyu_target_country = { daoyu_military_era = yes } }
+		hidden_effect = { trigger_event = { id = d_law_tec.850 popup = yes } }
+	}
+	option = {
+		name = society
+		trigger = { not = { has_variable = daoyu_give_all_tech } scope:daoyu_target_country = { daoyu_society_era = yes } }
+		hidden_effect = { trigger_event = { id = d_law_tec.870 popup = yes } }
+	}
+	option = {
+		name = ALL
+		trigger = { not = { has_variable = daoyu_give_all_tech } scope:daoyu_target_country = { daoyu_production_era = yes daoyu_military_era = yes daoyu_society_era = yes } }
+		set_variable = daoyu_give_all_tech
+		hidden_effect = { trigger_event = { id = d_law_tec.820 popup = yes } }
+	}
+	option = {
+		name = CONFIRM
+		trigger = { has_variable = daoyu_give_all_tech }
+		scope:daoyu_target_country = {
+			daoyu_production_era_1 = yes daoyu_production_era_2 = yes daoyu_production_era_3 = yes daoyu_production_era_4 = yes daoyu_production_era_5 = yes
+			daoyu_military_era_1 = yes daoyu_military_era_2 = yes daoyu_military_era_3 = yes daoyu_military_era_4 = yes daoyu_military_era_5 = yes
+			daoyu_society_era_1 = yes daoyu_society_era_2 = yes daoyu_society_era_3 = yes daoyu_society_era_4 = yes daoyu_society_era_5 = yes
+		}
+		hidden_effect = { trigger_event = { id = daoyu.10 popup = yes } }
+	}
+	option = {
+		name = CANCEL
+		trigger = { has_variable = daoyu_give_all_tech }
+		remove_variable = daoyu_give_all_tech
+		ai_chance = { base = 100 }
+		hidden_effect = { trigger_event = { id = d_law_tec.820 popup = yes } }
+	}
+	option = {
+		name = RESIGN
+		trigger = { not = { has_variable = daoyu_give_all_tech } }
+		ai_chance = { base = 100 }
+		hidden_effect = { trigger_event = { id = d_law_tec.800 popup = yes } }
+	}
+}
+#生产
+d_law_tec.830 = {
+	type = country_event
+	placement = ROOT
+	title = daoyu_cheat
+	desc = production
+	flavor = concept_technology_era
+	event_image = { video = "gfx/event_pictures/unspecific_gears_pistons.bk2" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/gears_pistons"
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	duration = 0
+	immediate = { random_country = { limit = { has_modifier = daoyu_target_country } save_scope_as = daoyu_target_country } }
+	option = { name = Pre-1836 trigger = { scope:daoyu_target_country = { daoyu_production_era_1 = yes } } scope:daoyu_target_country = { daoyu_production_era_1 = yes } }
+	option = { name = 1836-1861 trigger = { scope:daoyu_target_country = { daoyu_production_era_2 = yes } } scope:daoyu_target_country = { daoyu_production_era_2 = yes } }
+	option = { name = 1862-1886 trigger = { scope:daoyu_target_country = { daoyu_production_era_3 = yes } } scope:daoyu_target_country = { daoyu_production_era_3 = yes } }
+	option = { name = 1887-1911 trigger = { scope:daoyu_target_country = { daoyu_production_era_4 = yes } } scope:daoyu_target_country = { daoyu_production_era_4 = yes } }
+	option = { name = 1911-1936 trigger = { scope:daoyu_target_country = { daoyu_production_era_5 = yes } } scope:daoyu_target_country = { daoyu_production_era_5 = yes } }
+	option = { name = ALL trigger = { scope:daoyu_target_country = { daoyu_production_era = yes } } scope:daoyu_target_country = { daoyu_production_era_1 = yes daoyu_production_era_2 = yes daoyu_production_era_3 = yes daoyu_production_era_4 = yes daoyu_production_era_5 = yes } }
+	option = { name = daoyu_single trigger = { scope:daoyu_target_country = { daoyu_production_era = yes } } set_variable = daoyu_next }
+	option = { name = RESIGN ai_chance = { base = 100 } set_variable = daoyu_return }
+	after = {
+		if = { limit = { scope:daoyu_target_country = { daoyu_production_era = no daoyu_military_era = no daoyu_society_era = no } } trigger_event = { id = daoyu.10 popup = yes } }
+		else_if = { limit = { scope:daoyu_target_country = { daoyu_production_era = no } } trigger_event = { id = d_law_tec.820 popup = yes } }
+		else_if = { limit = { has_variable = daoyu_return } remove_variable = daoyu_return trigger_event = { id = d_law_tec.820 popup = yes } }
+		else_if = { limit = { has_variable = daoyu_next } remove_variable = daoyu_next trigger_event = { id = d_law_tec.840 popup = yes } }
+		else = { trigger_event = { id = d_law_tec.830 popup = yes } }
+	}
+}
+#生产
+d_law_tec.840 = {
+	type = country_event
+	placement = ROOT
+	title = daoyu_cheat
+	desc = production
+	flavor = daoyu_technology_desc
+	event_image = { video = "gfx/event_pictures/unspecific_gears_pistons.bk2" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/gears_pistons"
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	duration = 0
+	immediate = { random_country = { limit = { has_modifier = daoyu_target_country } save_scope_as = daoyu_target_country } }
+	option = { name = sericulture trigger = { scope:daoyu_target_country = { not = { has_technology_researched = sericulture } } } scope:daoyu_target_country = { add_technology_researched = sericulture } }
+	option = { name = enclosure trigger = { scope:daoyu_target_country = { can_research = enclosure } } scope:daoyu_target_country = { add_technology_researched = enclosure } }
+	option = { name = manufacturies trigger = { scope:daoyu_target_country = { can_research = manufacturies } } scope:daoyu_target_country = { add_technology_researched = manufacturies } }
+	option = { name = shaft_mining trigger = { scope:daoyu_target_country = { can_research = shaft_mining } } scope:daoyu_target_country = { add_technology_researched = shaft_mining } }
+	option = { name = cotton_gin trigger = { scope:daoyu_target_country = { can_research = cotton_gin } } scope:daoyu_target_country = { add_technology_researched = cotton_gin } }
+	option = { name = lathe trigger = { scope:daoyu_target_country = { can_research = lathe } } scope:daoyu_target_country = { add_technology_researched = lathe } }
+	option = { name = distillation trigger = { scope:daoyu_target_country = { can_research = distillation } } scope:daoyu_target_country = { add_technology_researched = distillation } }
+	option = { name = steelworking trigger = { scope:daoyu_target_country = { can_research = steelworking } } scope:daoyu_target_country = { add_technology_researched = steelworking } }
+	option = { name = prospecting trigger = { scope:daoyu_target_country = { can_research = prospecting } } scope:daoyu_target_country = { add_technology_researched = prospecting } }
+	option = { name = crystal_glass trigger = { scope:daoyu_target_country = { can_research = crystal_glass } } scope:daoyu_target_country = { add_technology_researched = crystal_glass } }
+	option = { name = intensive_agriculture trigger = { scope:daoyu_target_country = { can_research = intensive_agriculture } } scope:daoyu_target_country = { add_technology_researched = intensive_agriculture } }
+	option = { name = fractional_distillation trigger = { scope:daoyu_target_country = { can_research = fractional_distillation } } scope:daoyu_target_country = { add_technology_researched = fractional_distillation } }
+	option = { name = canneries trigger = { scope:daoyu_target_country = { can_research = canneries } } scope:daoyu_target_country = { add_technology_researched = canneries } }
+	option = { name = watertube_boiler trigger = { scope:daoyu_target_country = { can_research = watertube_boiler } } scope:daoyu_target_country = { add_technology_researched = watertube_boiler } }
+	option = { name = atmospheric_engine trigger = { scope:daoyu_target_country = { can_research = atmospheric_engine } } scope:daoyu_target_country = { add_technology_researched = atmospheric_engine } }
+	option = { name = railways trigger = { scope:daoyu_target_country = { can_research = railways } } scope:daoyu_target_country = { add_technology_researched = railways } }
+	option = { name = chemical_bleaching trigger = { scope:daoyu_target_country = { can_research = chemical_bleaching } } scope:daoyu_target_country = { add_technology_researched = chemical_bleaching } }
+	option = { name = nitroglycerin trigger = { scope:daoyu_target_country = { can_research = nitroglycerin } } scope:daoyu_target_country = { add_technology_researched = nitroglycerin } }
+	option = { name = bessemer_process trigger = { scope:daoyu_target_country = { can_research = bessemer_process } } scope:daoyu_target_country = { add_technology_researched = bessemer_process } }
+	option = { name = baking_powder trigger = { scope:daoyu_target_country = { can_research = baking_powder } } scope:daoyu_target_country = { add_technology_researched = baking_powder } }
+	option = { name = mechanized_workshops trigger = { scope:daoyu_target_country = { can_research = mechanized_workshops } } scope:daoyu_target_country = { add_technology_researched = mechanized_workshops } }
+	option = { name = mechanical_tools trigger = { scope:daoyu_target_country = { can_research = mechanical_tools } } scope:daoyu_target_country = { add_technology_researched = mechanical_tools } }
+	option = { name = improved_fertilizer trigger = { scope:daoyu_target_country = { can_research = improved_fertilizer } } scope:daoyu_target_country = { add_technology_researched = improved_fertilizer } }
+	option = { name = steam_donkey trigger = { scope:daoyu_target_country = { can_research = steam_donkey } } scope:daoyu_target_country = { add_technology_researched = steam_donkey } }
+	option = { name = dynamite trigger = { scope:daoyu_target_country = { can_research = dynamite } } scope:daoyu_target_country = { add_technology_researched = dynamite } }
+	option = { name = rubber_mastication trigger = { scope:daoyu_target_country = { can_research = rubber_mastication } } scope:daoyu_target_country = { add_technology_researched = rubber_mastication } }
+	option = { name = rotary_valve_engine trigger = { scope:daoyu_target_country = { can_research = rotary_valve_engine } } scope:daoyu_target_country = { add_technology_researched = rotary_valve_engine } }
+	option = { name = reinforced_concrete trigger = { scope:daoyu_target_country = { can_research = reinforced_concrete } } scope:daoyu_target_country = { add_technology_researched = reinforced_concrete } }
+	option = { name = threshing_machine trigger = { scope:daoyu_target_country = { can_research = threshing_machine } } scope:daoyu_target_country = { add_technology_researched = threshing_machine } }
+	option = { name = pumpjacks trigger = { scope:daoyu_target_country = { can_research = pumpjacks } } scope:daoyu_target_country = { add_technology_researched = pumpjacks } }
+	option = { name = aniline trigger = { scope:daoyu_target_country = { can_research = aniline } } scope:daoyu_target_country = { add_technology_researched = aniline } }
+	option = { name = open_hearth_process trigger = { scope:daoyu_target_country = { can_research = open_hearth_process } } scope:daoyu_target_country = { add_technology_researched = open_hearth_process } }
+	option = { name = vulcanization trigger = { scope:daoyu_target_country = { can_research = vulcanization } } scope:daoyu_target_country = { add_technology_researched = vulcanization } }
+	option = { name = vacuum_canning trigger = { scope:daoyu_target_country = { can_research = vacuum_canning } } scope:daoyu_target_country = { add_technology_researched = vacuum_canning } }
+	option = { name = shift_work trigger = { scope:daoyu_target_country = { can_research = shift_work } } scope:daoyu_target_country = { add_technology_researched = shift_work } }
+	option = { name = steel_railway_cars trigger = { scope:daoyu_target_country = { can_research = steel_railway_cars } } scope:daoyu_target_country = { add_technology_researched = steel_railway_cars } }
+	option = { name = electrical_generation trigger = { scope:daoyu_target_country = { can_research = electrical_generation } } scope:daoyu_target_country = { add_technology_researched = electrical_generation } }
+	option = { name = mechanized_farming trigger = { scope:daoyu_target_country = { can_research = mechanized_farming } } scope:daoyu_target_country = { add_technology_researched = mechanized_farming } }
+	option = { name = art_silk trigger = { scope:daoyu_target_country = { can_research = art_silk } } scope:daoyu_target_country = { add_technology_researched = art_silk } }
+	option = { name = automatic_bottle_blowers trigger = { scope:daoyu_target_country = { can_research = automatic_bottle_blowers } } scope:daoyu_target_country = { add_technology_researched = automatic_bottle_blowers } }
+	option = { name = conveyors trigger = { scope:daoyu_target_country = { can_research = conveyors } } scope:daoyu_target_country = { add_technology_researched = conveyors } }
+	option = { name = pasteurization trigger = { scope:daoyu_target_country = { can_research = pasteurization } } scope:daoyu_target_country = { add_technology_researched = pasteurization } }
+	option = { name = electric_railway trigger = { scope:daoyu_target_country = { can_research = electric_railway } } scope:daoyu_target_country = { add_technology_researched = electric_railway } }
+	option = { name = combustion_engine trigger = { scope:daoyu_target_country = { can_research = combustion_engine } } scope:daoyu_target_country = { add_technology_researched = combustion_engine } }
+	option = { name = pneumatic_tools trigger = { scope:daoyu_target_country = { can_research = pneumatic_tools } } scope:daoyu_target_country = { add_technology_researched = pneumatic_tools } }
+	option = { name = nitrogen_fixation trigger = { scope:daoyu_target_country = { can_research = nitrogen_fixation } } scope:daoyu_target_country = { add_technology_researched = nitrogen_fixation } }
+	option = { name = electric_arc_process trigger = { scope:daoyu_target_country = { can_research = electric_arc_process } } scope:daoyu_target_country = { add_technology_researched = electric_arc_process } }
+	option = { name = steam_turbine trigger = { scope:daoyu_target_country = { can_research = steam_turbine } } scope:daoyu_target_country = { add_technology_researched = steam_turbine } }
+	option = { name = plastics trigger = { scope:daoyu_target_country = { can_research = plastics } } scope:daoyu_target_country = { add_technology_researched = plastics } }
+	option = { name = electrical_capacitors trigger = { scope:daoyu_target_country = { can_research = electrical_capacitors } } scope:daoyu_target_country = { add_technology_researched = electrical_capacitors } }
+	option = { name = radio trigger = { scope:daoyu_target_country = { can_research = radio } } scope:daoyu_target_country = { add_technology_researched = radio } }
+	option = { name = telephone trigger = { scope:daoyu_target_country = { can_research = telephone } } scope:daoyu_target_country = { add_technology_researched = telephone } }
+	option = { name = dough_rollers trigger = { scope:daoyu_target_country = { can_research = dough_rollers } } scope:daoyu_target_country = { add_technology_researched = dough_rollers } }
+	option = { name = flash_freezing trigger = { scope:daoyu_target_country = { can_research = flash_freezing } } scope:daoyu_target_country = { add_technology_researched = flash_freezing } }
+	option = { name = oil_turbine trigger = { scope:daoyu_target_country = { can_research = oil_turbine } } scope:daoyu_target_country = { add_technology_researched = oil_turbine } }
+	option = { name = arc_welding trigger = { scope:daoyu_target_country = { can_research = arc_welding } } scope:daoyu_target_country = { add_technology_researched = arc_welding } }
+	option = { name = compression_ignition trigger = { scope:daoyu_target_country = { can_research = compression_ignition } } scope:daoyu_target_country = { add_technology_researched = compression_ignition } }
+	option = {
+		name = RESIGN
+		ai_chance = { base = 100 }
+		set_variable = daoyu_return
+	}
+	after = {
+		if = { limit = { scope:daoyu_target_country = { daoyu_production_era = no daoyu_military_era = no daoyu_society_era = no } } trigger_event = { id = daoyu.10 popup = yes } }
+		else_if = { limit = { scope:daoyu_target_country = { daoyu_production_era = no } } trigger_event = { id = d_law_tec.820 popup = yes } }
+		else_if = { limit = { has_variable = daoyu_return } remove_variable = daoyu_return trigger_event = { id = d_law_tec.820 popup = yes } }
+		else = { trigger_event = { id = d_law_tec.840 popup = yes } }
+	}
+}
+#军事
+d_law_tec.850 = {
+	type = country_event
+	placement = ROOT
+	title = daoyu_cheat
+	desc = military
+	flavor = concept_technology_era
+	event_image = { video = "gfx/event_pictures/unspecific_gears_pistons.bk2" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/gears_pistons"
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	duration = 0
+	immediate = { random_country = { limit = { has_modifier = daoyu_target_country } save_scope_as = daoyu_target_country } }
+	option = { name = Pre-1836 trigger = { scope:daoyu_target_country = { daoyu_military_era_1 = yes } } scope:daoyu_target_country = { daoyu_military_era_1 = yes } }
+	option = { name = 1836-1861 trigger = { scope:daoyu_target_country = { daoyu_military_era_2 = yes } } scope:daoyu_target_country = { daoyu_military_era_2 = yes } }
+	option = { name = 1862-1886 trigger = { scope:daoyu_target_country = { daoyu_military_era_3 = yes } } scope:daoyu_target_country = { daoyu_military_era_3 = yes } }
+	option = { name = 1887-1911 trigger = { scope:daoyu_target_country = { daoyu_military_era_4 = yes } } scope:daoyu_target_country = { daoyu_military_era_4 = yes } }
+	option = { name = 1911-1936 trigger = { scope:daoyu_target_country = { daoyu_military_era_5 = yes } } scope:daoyu_target_country = { daoyu_military_era_5 = yes } }
+	option = { name = ALL trigger = { scope:daoyu_target_country = { daoyu_military_era = yes } } scope:daoyu_target_country = { daoyu_military_era_1 = yes daoyu_military_era_2 = yes daoyu_military_era_3 = yes daoyu_military_era_4 = yes daoyu_military_era_5 = yes } }
+	option = { name = daoyu_single trigger = { scope:daoyu_target_country = { daoyu_military_era = yes } } set_variable = daoyu_next }
+	option = { name = RESIGN ai_chance = { base = 100 } set_variable = daoyu_return }
+	after = {
+		if = { limit = { scope:daoyu_target_country = { daoyu_military_era = no daoyu_military_era = no daoyu_society_era = no } } trigger_event = { id = daoyu.10 popup = yes } }
+		else_if = { limit = { scope:daoyu_target_country = { daoyu_military_era = no } } trigger_event = { id = d_law_tec.820 popup = yes } }
+		else_if = { limit = { has_variable = daoyu_return } remove_variable = daoyu_return trigger_event = { id = d_law_tec.820 popup = yes } }
+		else_if = { limit = { has_variable = daoyu_next } remove_variable = daoyu_next trigger_event = { id = d_law_tec.860 popup = yes } }
+		else = { trigger_event = { id = d_law_tec.850 popup = yes } }
+	}
+}
+#军事
+d_law_tec.860 = {
+	type = country_event
+	placement = daoyu_cheat
+	title = daoyu_cheat
+	desc = military
+	flavor = daoyu_technology_desc
+	event_image = { video = "gfx/event_pictures/europenorthamerica_before_the_battle.bk2" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/before_the_battle"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 0
+	immediate = { random_country = { limit = { has_modifier = daoyu_target_country } save_scope_as = daoyu_target_country } }
+	option = { name = standing_army trigger = { scope:daoyu_target_country = { can_research = standing_army } } scope:daoyu_target_country = { add_technology_researched = standing_army } }
+	option = { name = navigation trigger = { scope:daoyu_target_country = { can_research = navigation } } scope:daoyu_target_country = { add_technology_researched = navigation } }
+	option = { name = drydocks trigger = { scope:daoyu_target_country = { can_research = drydocks } } scope:daoyu_target_country = { add_technology_researched = drydocks } }
+	option = { name = mandatory_service trigger = { scope:daoyu_target_country = { can_research = mandatory_service } } scope:daoyu_target_country = { add_technology_researched = mandatory_service } }
+	option = { name = gunsmithing trigger = { scope:daoyu_target_country = { can_research = gunsmithing } } scope:daoyu_target_country = { add_technology_researched = gunsmithing } }
+	option = { name = artillery trigger = { scope:daoyu_target_country = { can_research = artillery } } scope:daoyu_target_country = { add_technology_researched = artillery } }
+	option = { name = military_drill trigger = { scope:daoyu_target_country = { can_research = military_drill } } scope:daoyu_target_country = { add_technology_researched = military_drill } }
+	option = { name = napoleonic_warfare trigger = { scope:daoyu_target_country = { can_research = napoleonic_warfare } } scope:daoyu_target_country = { add_technology_researched = napoleonic_warfare } }
+	option = { name = admiralty trigger = { scope:daoyu_target_country = { can_research = admiralty } } scope:daoyu_target_country = { add_technology_researched = admiralty } }
+	option = { name = army_reserves trigger = { scope:daoyu_target_country = { can_research = army_reserves } } scope:daoyu_target_country = { add_technology_researched = army_reserves } }
+	option = { name = line_infantry trigger = { scope:daoyu_target_country = { can_research = line_infantry } } scope:daoyu_target_country = { add_technology_researched = line_infantry } }
+	option = { name = paddle_steamer trigger = { scope:daoyu_target_country = { can_research = paddle_steamer } } scope:daoyu_target_country = { add_technology_researched = paddle_steamer } }
+	option = { name = field_works trigger = { scope:daoyu_target_country = { can_research = field_works } } scope:daoyu_target_country = { add_technology_researched = field_works } }
+	option = { name = logistics trigger = { scope:daoyu_target_country = { can_research = logistics } } scope:daoyu_target_country = { add_technology_researched = logistics } }
+	option = { name = triage trigger = { scope:daoyu_target_country = { can_research = triage } } scope:daoyu_target_country = { add_technology_researched = triage } }
+	option = { name = shell_gun trigger = { scope:daoyu_target_country = { can_research = shell_gun } } scope:daoyu_target_country = { add_technology_researched = shell_gun } }
+	option = { name = percussion_cap trigger = { scope:daoyu_target_country = { can_research = percussion_cap } } scope:daoyu_target_country = { add_technology_researched = percussion_cap } }
+	option = { name = rifling trigger = { scope:daoyu_target_country = { can_research = rifling } } scope:daoyu_target_country = { add_technology_researched = rifling } }
+	option = { name = general_staff trigger = { scope:daoyu_target_country = { can_research = general_staff } } scope:daoyu_target_country = { add_technology_researched = general_staff } }
+	option = { name = screw_frigate trigger = { scope:daoyu_target_country = { can_research = screw_frigate } } scope:daoyu_target_country = { add_technology_researched = screw_frigate } }
+	option = { name = power_of_the_purse trigger = { scope:daoyu_target_country = { can_research = power_of_the_purse } } scope:daoyu_target_country = { add_technology_researched = power_of_the_purse } }
+	option = { name = hydraulic_cranes trigger = { scope:daoyu_target_country = { can_research = hydraulic_cranes } } scope:daoyu_target_country = { add_technology_researched = hydraulic_cranes } }
+	option = { name = modern_nursing trigger = { scope:daoyu_target_country = { can_research = modern_nursing } } scope:daoyu_target_country = { add_technology_researched = modern_nursing } }
+	option = { name = enlistment_offices trigger = { scope:daoyu_target_country = { can_research = enlistment_offices } } scope:daoyu_target_country = { add_technology_researched = enlistment_offices } }
+	option = { name = electric_telegraph trigger = { scope:daoyu_target_country = { can_research = electric_telegraph } } scope:daoyu_target_country = { add_technology_researched = electric_telegraph } }
+	option = { name = military_statistics trigger = { scope:daoyu_target_country = { can_research = military_statistics } } scope:daoyu_target_country = { add_technology_researched = military_statistics } }
+	option = { name = repeaters trigger = { scope:daoyu_target_country = { can_research = repeaters } } scope:daoyu_target_country = { add_technology_researched = repeaters } }
+	option = { name = breech_loading_artillery trigger = { scope:daoyu_target_country = { can_research = breech_loading_artillery } } scope:daoyu_target_country = { add_technology_researched = breech_loading_artillery } }
+	option = { name = handcranked_machine_gun trigger = { scope:daoyu_target_country = { can_research = handcranked_machine_gun } } scope:daoyu_target_country = { add_technology_researched = handcranked_machine_gun } }
+	option = { name = self_propelled_torpedoes trigger = { scope:daoyu_target_country = { can_research = self_propelled_torpedoes } } scope:daoyu_target_country = { add_technology_researched = self_propelled_torpedoes } }
+	option = { name = monitor_tech trigger = { scope:daoyu_target_country = { can_research = monitor_tech } } scope:daoyu_target_country = { add_technology_researched = monitor_tech } }
+	option = { name = ironclad_tech trigger = { scope:daoyu_target_country = { can_research = ironclad_tech } } scope:daoyu_target_country = { add_technology_researched = ironclad_tech } }
+	option = { name = jeune_ecole trigger = { scope:daoyu_target_country = { can_research = jeune_ecole } } scope:daoyu_target_country = { add_technology_researched = jeune_ecole } }
+	option = { name = floating_harbor trigger = { scope:daoyu_target_country = { can_research = floating_harbor } } scope:daoyu_target_country = { add_technology_researched = floating_harbor } }
+	option = { name = gantry_cranes trigger = { scope:daoyu_target_country = { can_research = gantry_cranes } } scope:daoyu_target_country = { add_technology_researched = gantry_cranes } }
+	option = { name = trench_works trigger = { scope:daoyu_target_country = { can_research = trench_works } } scope:daoyu_target_country = { add_technology_researched = trench_works } }
+	option = { name = war_propaganda trigger = { scope:daoyu_target_country = { can_research = war_propaganda } } scope:daoyu_target_country = { add_technology_researched = war_propaganda } }
+	option = { name = wargaming trigger = { scope:daoyu_target_country = { can_research = wargaming } } scope:daoyu_target_country = { add_technology_researched = wargaming } }
+	option = { name = defense_in_depth trigger = { scope:daoyu_target_country = { can_research = defense_in_depth } } scope:daoyu_target_country = { add_technology_researched = defense_in_depth } }
+	option = { name = bolt_action_rifles trigger = { scope:daoyu_target_country = { can_research = bolt_action_rifles } } scope:daoyu_target_country = { add_technology_researched = bolt_action_rifles } }
+	option = { name = automatic_machine_guns trigger = { scope:daoyu_target_country = { can_research = automatic_machine_guns } } scope:daoyu_target_country = { add_technology_researched = automatic_machine_guns } }
+	option = { name = submarine trigger = { scope:daoyu_target_country = { can_research = submarine } } scope:daoyu_target_country = { add_technology_researched = submarine } }
+	option = { name = destroyer trigger = { scope:daoyu_target_country = { can_research = destroyer } } scope:daoyu_target_country = { add_technology_researched = destroyer } }
+	option = { name = dreadnought trigger = { scope:daoyu_target_country = { can_research = dreadnought } } scope:daoyu_target_country = { add_technology_researched = dreadnought } }
+	option = { name = sea_lane_strategies trigger = { scope:daoyu_target_country = { can_research = sea_lane_strategies } } scope:daoyu_target_country = { add_technology_researched = sea_lane_strategies } }
+	option = { name = landing_craft trigger = { scope:daoyu_target_country = { can_research = landing_craft } } scope:daoyu_target_country = { add_technology_researched = landing_craft } }
+	option = { name = concrete_dockyards trigger = { scope:daoyu_target_country = { can_research = concrete_dockyards } } scope:daoyu_target_country = { add_technology_researched = concrete_dockyards } }
+	option = { name = nco_training trigger = { scope:daoyu_target_country = { can_research = nco_training } } scope:daoyu_target_country = { add_technology_researched = nco_training } }
+	option = { name = chemical_warfare trigger = { scope:daoyu_target_country = { can_research = chemical_warfare } } scope:daoyu_target_country = { add_technology_researched = chemical_warfare } }
+	option = { name = stormtroopers trigger = { scope:daoyu_target_country = { can_research = stormtroopers } } scope:daoyu_target_country = { add_technology_researched = stormtroopers } }
+	option = { name = concrete_fortifications trigger = { scope:daoyu_target_country = { can_research = concrete_fortifications } } scope:daoyu_target_country = { add_technology_researched = concrete_fortifications } }
+	option = { name = mobile_armor trigger = { scope:daoyu_target_country = { can_research = mobile_armor } } scope:daoyu_target_country = { add_technology_researched = mobile_armor } }
+	option = { name = military_aviation trigger = { scope:daoyu_target_country = { can_research = military_aviation } } scope:daoyu_target_country = { add_technology_researched = military_aviation } }
+	option = { name = flamethrowers trigger = { scope:daoyu_target_country = { can_research = flamethrowers } } scope:daoyu_target_country = { add_technology_researched = flamethrowers } }
+	option = { name = carrier_tech trigger = { scope:daoyu_target_country = { can_research = carrier_tech } } scope:daoyu_target_country = { add_technology_researched = carrier_tech } }
+	option = { name = battleship_tech trigger = { scope:daoyu_target_country = { can_research = battleship_tech } } scope:daoyu_target_country = { add_technology_researched = battleship_tech } }
+	option = { name = battlefleet_tactics trigger = { scope:daoyu_target_country = { can_research = battlefleet_tactics } } scope:daoyu_target_country = { add_technology_researched = battlefleet_tactics } }
+	option = {
+		name = RESIGN
+		ai_chance = { base = 100 }
+		set_variable = daoyu_return
+	}
+	after = {
+		if = { limit = { scope:daoyu_target_country = { daoyu_military_era = no daoyu_military_era = no daoyu_society_era = no } } trigger_event = { id = daoyu.10 popup = yes } }
+		else_if = { limit = { scope:daoyu_target_country = { daoyu_military_era = no } } trigger_event = { id = d_law_tec.820 popup = yes } }
+		else_if = { limit = { has_variable = daoyu_return } remove_variable = daoyu_return trigger_event = { id = d_law_tec.820 popup = yes } }
+		else = { trigger_event = { id = d_law_tec.860 popup = yes } }
+	}
+}
+#社会
+d_law_tec.870 = {
+	type = country_event
+	placement = ROOT
+	title = daoyu_cheat
+	desc = society
+	flavor = concept_technology_era
+	event_image = { video = "gfx/event_pictures/unspecific_gears_pistons.bk2" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/gears_pistons"
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	duration = 0
+	immediate = { random_country = { limit = { has_modifier = daoyu_target_country } save_scope_as = daoyu_target_country } }
+	option = { name = Pre-1836 trigger = { scope:daoyu_target_country = { daoyu_society_era_1 = yes } } scope:daoyu_target_country = { daoyu_society_era_1 = yes } }
+	option = { name = 1836-1861 trigger = { scope:daoyu_target_country = { daoyu_society_era_2 = yes } } scope:daoyu_target_country = { daoyu_society_era_2 = yes } }
+	option = { name = 1862-1886 trigger = { scope:daoyu_target_country = { daoyu_society_era_3 = yes } } scope:daoyu_target_country = { daoyu_society_era_3 = yes } }
+	option = { name = 1887-1911 trigger = { scope:daoyu_target_country = { daoyu_society_era_4 = yes } } scope:daoyu_target_country = { daoyu_society_era_4 = yes } }
+	option = { name = 1911-1936 trigger = { scope:daoyu_target_country = { daoyu_society_era_5 = yes } } scope:daoyu_target_country = { daoyu_society_era_5 = yes } }
+	option = { name = ALL trigger = { scope:daoyu_target_country = { daoyu_society_era = yes } } scope:daoyu_target_country = { daoyu_society_era_1 = yes daoyu_society_era_2 = yes daoyu_society_era_3 = yes daoyu_society_era_4 = yes daoyu_society_era_5 = yes } }
+	option = { name = daoyu_single trigger = { scope:daoyu_target_country = { daoyu_society_era = yes } } set_variable = daoyu_next }
+	option = { name = RESIGN ai_chance = { base = 100 } set_variable = daoyu_return }
+	after = {
+		if = { limit = { scope:daoyu_target_country = { daoyu_society_era = no daoyu_society_era = no daoyu_society_era = no } } trigger_event = { id = daoyu.10 popup = yes } }
+		else_if = { limit = { scope:daoyu_target_country = { daoyu_society_era = no } } trigger_event = { id = d_law_tec.820 popup = yes } }
+		else_if = { limit = { has_variable = daoyu_return } remove_variable = daoyu_return trigger_event = { id = d_law_tec.820 popup = yes } }
+		else_if = { limit = { has_variable = daoyu_next } remove_variable = daoyu_next trigger_event = { id = d_law_tec.880 popup = yes } }
+		else = { trigger_event = { id = d_law_tec.870 popup = yes } }
+	}
+}
+#社会
+d_law_tec.880 = {
+	type = country_event
+	placement = ROOT
+	title = daoyu_cheat
+	desc = society
+	flavor = daoyu_technology_desc
+	event_image = { video = "gfx/event_pictures/southamerica_election.bk2" }
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/election"
+	duration = 0
+	immediate = { random_country = { limit = { has_modifier = daoyu_target_country } save_scope_as = daoyu_target_country } }
+	option = { name = urbanization trigger = { scope:daoyu_target_country = { can_research = urbanization } } scope:daoyu_target_country = { add_technology_researched = urbanization } }
+	option = { name = urban_planning trigger = { scope:daoyu_target_country = { can_research = urban_planning } } scope:daoyu_target_country = { add_technology_researched = urban_planning } }
+	option = { name = rationalism trigger = { scope:daoyu_target_country = { can_research = rationalism } } scope:daoyu_target_country = { add_technology_researched = rationalism } }
+	option = { name = tech_bureaucracy trigger = { scope:daoyu_target_country = { can_research = tech_bureaucracy } } scope:daoyu_target_country = { add_technology_researched = tech_bureaucracy } }
+	option = { name = currency_standards trigger = { scope:daoyu_target_country = { can_research = currency_standards } } scope:daoyu_target_country = { add_technology_researched = currency_standards } }
+	option = { name = democracy trigger = { scope:daoyu_target_country = { can_research = democracy } } scope:daoyu_target_country = { add_technology_researched = democracy } }
+	option = { name = romanticism trigger = { scope:daoyu_target_country = { can_research = romanticism } } scope:daoyu_target_country = { add_technology_researched = romanticism } }
+	option = { name = international_trade trigger = { scope:daoyu_target_country = { can_research = international_trade } } scope:daoyu_target_country = { add_technology_researched = international_trade } }
+	option = { name = centralization trigger = { scope:daoyu_target_country = { can_research = centralization } } scope:daoyu_target_country = { add_technology_researched = centralization } }
+	option = { name = corporate_charters trigger = { scope:daoyu_target_country = { can_research = corporate_charters } } scope:daoyu_target_country = { add_technology_researched = corporate_charters } }
+	option = { name = banking trigger = { scope:daoyu_target_country = { can_research = banking } } scope:daoyu_target_country = { add_technology_researched = banking } }
+	option = { name = academia trigger = { scope:daoyu_target_country = { can_research = academia } } scope:daoyu_target_country = { add_technology_researched = academia } }
+	option = { name = colonization trigger = { scope:daoyu_target_country = { can_research = colonization } } scope:daoyu_target_country = { add_technology_researched = colonization } }
+	option = { name = international_relations trigger = { scope:daoyu_target_country = { can_research = international_relations } } scope:daoyu_target_country = { add_technology_researched = international_relations } }
+	option = { name = law_enforcement trigger = { scope:daoyu_target_country = { can_research = law_enforcement } } scope:daoyu_target_country = { add_technology_researched = law_enforcement } }
+	option = { name = stock_exchange trigger = { scope:daoyu_target_country = { can_research = stock_exchange } } scope:daoyu_target_country = { add_technology_researched = stock_exchange } }
+	option = { name = medical_degrees trigger = { scope:daoyu_target_country = { can_research = medical_degrees } } scope:daoyu_target_country = { add_technology_researched = medical_degrees } }
+	option = { name = mass_communication trigger = { scope:daoyu_target_country = { can_research = mass_communication } } scope:daoyu_target_country = { add_technology_researched = mass_communication } }
+	option = { name = empiricism trigger = { scope:daoyu_target_country = { can_research = empiricism } } scope:daoyu_target_country = { add_technology_researched = empiricism } }
+	option = { name = egalitarianism trigger = { scope:daoyu_target_country = { can_research = egalitarianism } } scope:daoyu_target_country = { add_technology_researched = egalitarianism } }
+	option = { name = pharmaceuticals trigger = { scope:daoyu_target_country = { can_research = pharmaceuticals } } scope:daoyu_target_country = { add_technology_researched = pharmaceuticals } }
+	option = { name = modern_sewerage trigger = { scope:daoyu_target_country = { can_research = modern_sewerage } } scope:daoyu_target_country = { add_technology_researched = modern_sewerage } }
+	option = { name = quinine trigger = { scope:daoyu_target_country = { can_research = quinine } } scope:daoyu_target_country = { add_technology_researched = quinine } }
+	option = { name = organized_sports trigger = { scope:daoyu_target_country = { can_research = organized_sports } } scope:daoyu_target_country = { add_technology_researched = organized_sports } }
+	option = { name = central_archives trigger = { scope:daoyu_target_country = { can_research = central_archives } } scope:daoyu_target_country = { add_technology_researched = central_archives } }
+	option = { name = central_banking trigger = { scope:daoyu_target_country = { can_research = central_banking } } scope:daoyu_target_country = { add_technology_researched = central_banking } }
+	option = { name = joint_stock_companies trigger = { scope:daoyu_target_country = { can_research = joint_stock_companies } } scope:daoyu_target_country = { add_technology_researched = joint_stock_companies } }
+	option = { name = dialectics trigger = { scope:daoyu_target_country = { can_research = dialectics } } scope:daoyu_target_country = { add_technology_researched = dialectics } }
+	option = { name = psychiatry trigger = { scope:daoyu_target_country = { can_research = psychiatry } } scope:daoyu_target_country = { add_technology_researched = psychiatry } }
+	option = { name = realism trigger = { scope:daoyu_target_country = { can_research = realism } } scope:daoyu_target_country = { add_technology_researched = realism } }
+	option = { name = nationalism trigger = { scope:daoyu_target_country = { can_research = nationalism } } scope:daoyu_target_country = { add_technology_researched = nationalism } }
+	option = { name = labor_movement trigger = { scope:daoyu_target_country = { can_research = labor_movement } } scope:daoyu_target_country = { add_technology_researched = labor_movement } }
+	option = { name = postal_savings trigger = { scope:daoyu_target_country = { can_research = postal_savings } } scope:daoyu_target_country = { add_technology_researched = postal_savings } }
+	option = { name = human_rights trigger = { scope:daoyu_target_country = { can_research = human_rights } } scope:daoyu_target_country = { add_technology_researched = human_rights } }
+	option = { name = feminism trigger = { scope:daoyu_target_country = { can_research = feminism } } scope:daoyu_target_country = { add_technology_researched = feminism } }
+	option = { name = steel_frame_buildings trigger = { scope:daoyu_target_country = { can_research = steel_frame_buildings } } scope:daoyu_target_country = { add_technology_researched = steel_frame_buildings } }
+	option = { name = civilizing_mission trigger = { scope:daoyu_target_country = { can_research = civilizing_mission } } scope:daoyu_target_country = { add_technology_researched = civilizing_mission } }
+	option = { name = anarchism trigger = { scope:daoyu_target_country = { can_research = anarchism } } scope:daoyu_target_country = { add_technology_researched = anarchism } }
+	option = { name = socialism trigger = { scope:daoyu_target_country = { can_research = socialism } } scope:daoyu_target_country = { add_technology_researched = socialism } }
+	option = { name = corporatism trigger = { scope:daoyu_target_country = { can_research = corporatism } } scope:daoyu_target_country = { add_technology_researched = corporatism } }
+	option = { name = pan-nationalism trigger = { scope:daoyu_target_country = { can_research = pan-nationalism } } scope:daoyu_target_country = { add_technology_researched = pan-nationalism } }
+	option = { name = mutual_funds trigger = { scope:daoyu_target_country = { can_research = mutual_funds } } scope:daoyu_target_country = { add_technology_researched = mutual_funds } }
+	option = { name = investment_banks trigger = { scope:daoyu_target_country = { can_research = investment_banks } } scope:daoyu_target_country = { add_technology_researched = investment_banks } }
+	option = { name = camera trigger = { scope:daoyu_target_country = { can_research = camera } } scope:daoyu_target_country = { add_technology_researched = camera } }
+	option = { name = philosophical_pragmatism trigger = { scope:daoyu_target_country = { can_research = philosophical_pragmatism } } scope:daoyu_target_country = { add_technology_researched = philosophical_pragmatism } }
+	option = { name = identification_documents trigger = { scope:daoyu_target_country = { can_research = identification_documents } } scope:daoyu_target_country = { add_technology_researched = identification_documents } }
+	option = { name = elevator trigger = { scope:daoyu_target_country = { can_research = elevator } } scope:daoyu_target_country = { add_technology_researched = elevator } }
+	option = { name = zeppelins trigger = { scope:daoyu_target_country = { can_research = zeppelins } } scope:daoyu_target_country = { add_technology_researched = zeppelins } }
+	option = { name = malaria_prevention trigger = { scope:daoyu_target_country = { can_research = malaria_prevention } } scope:daoyu_target_country = { add_technology_researched = malaria_prevention } }
+	option = { name = central_planning trigger = { scope:daoyu_target_country = { can_research = central_planning } } scope:daoyu_target_country = { add_technology_researched = central_planning } }
+	option = { name = political_agitation trigger = { scope:daoyu_target_country = { can_research = political_agitation } } scope:daoyu_target_country = { add_technology_researched = political_agitation } }
+	option = { name = international_exchange_standards trigger = { scope:daoyu_target_country = { can_research = international_exchange_standards } } scope:daoyu_target_country = { add_technology_researched = international_exchange_standards } }
+	option = { name = corporate_management trigger = { scope:daoyu_target_country = { can_research = corporate_management } } scope:daoyu_target_country = { add_technology_researched = corporate_management } }
+	option = { name = psychoanalysis trigger = { scope:daoyu_target_country = { can_research = psychoanalysis } } scope:daoyu_target_country = { add_technology_researched = psychoanalysis } }
+	option = { name = film trigger = { scope:daoyu_target_country = { can_research = film } } scope:daoyu_target_country = { add_technology_researched = film } }
+	option = { name = multilateral_alliances trigger = { scope:daoyu_target_country = { can_research = multilateral_alliances } } scope:daoyu_target_country = { add_technology_researched = multilateral_alliances } }
+	option = { name = mass_surveillance trigger = { scope:daoyu_target_country = { can_research = mass_surveillance } } scope:daoyu_target_country = { add_technology_researched = mass_surveillance } }
+	option = { name = antibiotics trigger = { scope:daoyu_target_country = { can_research = antibiotics } } scope:daoyu_target_country = { add_technology_researched = antibiotics } }
+	option = { name = mass_propaganda trigger = { scope:daoyu_target_country = { can_research = mass_propaganda } } scope:daoyu_target_country = { add_technology_researched = mass_propaganda } }
+	option = { name = modern_financial_instruments trigger = { scope:daoyu_target_country = { can_research = modern_financial_instruments } } scope:daoyu_target_country = { add_technology_researched = modern_financial_instruments } }
+	option = { name = macroeconomics trigger = { scope:daoyu_target_country = { can_research = macroeconomics } } scope:daoyu_target_country = { add_technology_researched = macroeconomics } }
+	option = { name = behaviorism trigger = { scope:daoyu_target_country = { can_research = behaviorism } } scope:daoyu_target_country = { add_technology_researched = behaviorism } }
+	option = { name = analytical_philosophy trigger = { scope:daoyu_target_country = { can_research = analytical_philosophy } } scope:daoyu_target_country = { add_technology_researched = analytical_philosophy } }
+	option = { name = paved_roads trigger = { scope:daoyu_target_country = { can_research = paved_roads } } scope:daoyu_target_country = { add_technology_researched = paved_roads } }
+	option = {
+		name = RESIGN
+		ai_chance = { base = 100 }
+		set_variable = daoyu_return
+	}
+	after = {
+		if = { limit = { scope:daoyu_target_country = { daoyu_society_era = no daoyu_society_era = no daoyu_society_era = no } } trigger_event = { id = daoyu.10 popup = yes } }
+		else_if = { limit = { scope:daoyu_target_country = { daoyu_society_era = no } } trigger_event = { id = d_law_tec.820 popup = yes } }
+		else_if = { limit = { has_variable = daoyu_return } remove_variable = daoyu_return trigger_event = { id = d_law_tec.820 popup = yes } }
+		else = { trigger_event = { id = d_law_tec.880 popup = yes } }
+	}
+}

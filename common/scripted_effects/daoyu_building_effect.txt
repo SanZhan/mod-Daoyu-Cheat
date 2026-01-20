@@ -1,0 +1,1479 @@
+daoyu_auto_single_expand_building_effcet = {
+	if = {
+		limit = {
+			or = {
+				not = { has_global_variable = daoyu_one_building_one_region_on }
+				and = { has_global_variable = daoyu_one_building_one_region_on root = { not = { any_scope_state = { has_state_trait = $BUILDING$ } } } }
+				and = { has_global_variable = daoyu_one_building_one_region_on has_state_trait = $BUILDING$ }
+			}
+		}
+		if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2 } } create_building = { building = $BUILDING$ level = 2 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3 } } create_building = { building = $BUILDING$ level = 3 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4 } } create_building = { building = $BUILDING$ level = 4 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5 } } create_building = { building = $BUILDING$ level = 5 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6 } } create_building = { building = $BUILDING$ level = 6 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7 } } create_building = { building = $BUILDING$ level = 7 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8 } } create_building = { building = $BUILDING$ level = 8 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9 } } create_building = { building = $BUILDING$ level = 9 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 10 } } create_building = { building = $BUILDING$ level = 10 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 11 } } create_building = { building = $BUILDING$ level = 11 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 12 } } create_building = { building = $BUILDING$ level = 12 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 13 } } create_building = { building = $BUILDING$ level = 13 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 14 } } create_building = { building = $BUILDING$ level = 14 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 15 } } create_building = { building = $BUILDING$ level = 15 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 16 } } create_building = { building = $BUILDING$ level = 16 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 17 } } create_building = { building = $BUILDING$ level = 17 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 18 } } create_building = { building = $BUILDING$ level = 18 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 19 } } create_building = { building = $BUILDING$ level = 19 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 20 } } create_building = { building = $BUILDING$ level = 20 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 22 } } create_building = { building = $BUILDING$ level = 22 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 24 } } create_building = { building = $BUILDING$ level = 24 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 26 } } create_building = { building = $BUILDING$ level = 26 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 28 } } create_building = { building = $BUILDING$ level = 28 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 30 } } create_building = { building = $BUILDING$ level = 30 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 32 } } create_building = { building = $BUILDING$ level = 32 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 34 } } create_building = { building = $BUILDING$ level = 34 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 36 } } create_building = { building = $BUILDING$ level = 36 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 38 } } create_building = { building = $BUILDING$ level = 38 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 40 } } create_building = { building = $BUILDING$ level = 40 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 42 } } create_building = { building = $BUILDING$ level = 42 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 44 } } create_building = { building = $BUILDING$ level = 44 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 46 } } create_building = { building = $BUILDING$ level = 46 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 48 } } create_building = { building = $BUILDING$ level = 48 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 50 } } create_building = { building = $BUILDING$ level = 50 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 55 } } create_building = { building = $BUILDING$ level = 55 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 60 } } create_building = { building = $BUILDING$ level = 60 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 65 } } create_building = { building = $BUILDING$ level = 65 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 70 } } create_building = { building = $BUILDING$ level = 70 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 75 } } create_building = { building = $BUILDING$ level = 75 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 80 } } create_building = { building = $BUILDING$ level = 80 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 85 } } create_building = { building = $BUILDING$ level = 85 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 90 } } create_building = { building = $BUILDING$ level = 90 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 95 } } create_building = { building = $BUILDING$ level = 95 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 100 } } create_building = { building = $BUILDING$ level = 100 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 110 } } create_building = { building = $BUILDING$ level = 110 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 120 } } create_building = { building = $BUILDING$ level = 120 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 130 } } create_building = { building = $BUILDING$ level = 130 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 140 } } create_building = { building = $BUILDING$ level = 140 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 150 } } create_building = { building = $BUILDING$ level = 150 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 160 } } create_building = { building = $BUILDING$ level = 160 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 170 } } create_building = { building = $BUILDING$ level = 170 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 180 } } create_building = { building = $BUILDING$ level = 180 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 190 } } create_building = { building = $BUILDING$ level = 190 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 200 } } create_building = { building = $BUILDING$ level = 200 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 210 } } create_building = { building = $BUILDING$ level = 210 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 220 } } create_building = { building = $BUILDING$ level = 220 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 230 } } create_building = { building = $BUILDING$ level = 230 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 240 } } create_building = { building = $BUILDING$ level = 240 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 250 } } create_building = { building = $BUILDING$ level = 250 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 260 } } create_building = { building = $BUILDING$ level = 260 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 270 } } create_building = { building = $BUILDING$ level = 270 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 280 } } create_building = { building = $BUILDING$ level = 280 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 290 } } create_building = { building = $BUILDING$ level = 290 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 300 } } create_building = { building = $BUILDING$ level = 300 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 310 } } create_building = { building = $BUILDING$ level = 310 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 320 } } create_building = { building = $BUILDING$ level = 320 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 330 } } create_building = { building = $BUILDING$ level = 330 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 340 } } create_building = { building = $BUILDING$ level = 340 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 350 } } create_building = { building = $BUILDING$ level = 350 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 360 } } create_building = { building = $BUILDING$ level = 360 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 370 } } create_building = { building = $BUILDING$ level = 370 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 380 } } create_building = { building = $BUILDING$ level = 380 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 390 } } create_building = { building = $BUILDING$ level = 390 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 400 } } create_building = { building = $BUILDING$ level = 400 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 420 } } create_building = { building = $BUILDING$ level = 420 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 440 } } create_building = { building = $BUILDING$ level = 440 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 460 } } create_building = { building = $BUILDING$ level = 460 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 480 } } create_building = { building = $BUILDING$ level = 480 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 500 } } create_building = { building = $BUILDING$ level = 500 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 520 } } create_building = { building = $BUILDING$ level = 520 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 540 } } create_building = { building = $BUILDING$ level = 540 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 560 } } create_building = { building = $BUILDING$ level = 560 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 580 } } create_building = { building = $BUILDING$ level = 580 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 600 } } create_building = { building = $BUILDING$ level = 600 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 620 } } create_building = { building = $BUILDING$ level = 620 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 640 } } create_building = { building = $BUILDING$ level = 640 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 660 } } create_building = { building = $BUILDING$ level = 660 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 680 } } create_building = { building = $BUILDING$ level = 680 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 700 } } create_building = { building = $BUILDING$ level = 700 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 720 } } create_building = { building = $BUILDING$ level = 720 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 740 } } create_building = { building = $BUILDING$ level = 740 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 760 } } create_building = { building = $BUILDING$ level = 760 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 780 } } create_building = { building = $BUILDING$ level = 780 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 800 } } create_building = { building = $BUILDING$ level = 800 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 820 } } create_building = { building = $BUILDING$ level = 820 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 840 } } create_building = { building = $BUILDING$ level = 840 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 860 } } create_building = { building = $BUILDING$ level = 860 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 880 } } create_building = { building = $BUILDING$ level = 880 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 900 } } create_building = { building = $BUILDING$ level = 900 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 920 } } create_building = { building = $BUILDING$ level = 920 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 940 } } create_building = { building = $BUILDING$ level = 940 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 960 } } create_building = { building = $BUILDING$ level = 960 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 980 } } create_building = { building = $BUILDING$ level = 980 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1000 } } create_building = { building = $BUILDING$ level = 1000 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1050 } } create_building = { building = $BUILDING$ level = 1050 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1100 } } create_building = { building = $BUILDING$ level = 1100 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1150 } } create_building = { building = $BUILDING$ level = 1150 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1200 } } create_building = { building = $BUILDING$ level = 1200 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1250 } } create_building = { building = $BUILDING$ level = 1250 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1300 } } create_building = { building = $BUILDING$ level = 1300 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1350 } } create_building = { building = $BUILDING$ level = 1350 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1400 } } create_building = { building = $BUILDING$ level = 1400 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1450 } } create_building = { building = $BUILDING$ level = 1450 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1500 } } create_building = { building = $BUILDING$ level = 1500 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1550 } } create_building = { building = $BUILDING$ level = 1550 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1600 } } create_building = { building = $BUILDING$ level = 1600 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1650 } } create_building = { building = $BUILDING$ level = 1650 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1700 } } create_building = { building = $BUILDING$ level = 1700 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1750 } } create_building = { building = $BUILDING$ level = 1750 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1800 } } create_building = { building = $BUILDING$ level = 1800 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1850 } } create_building = { building = $BUILDING$ level = 1850 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1900 } } create_building = { building = $BUILDING$ level = 1900 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 1950 } } create_building = { building = $BUILDING$ level = 1950 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2000 } } create_building = { building = $BUILDING$ level = 2000 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2050 } } create_building = { building = $BUILDING$ level = 2050 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2100 } } create_building = { building = $BUILDING$ level = 2100 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2150 } } create_building = { building = $BUILDING$ level = 2150 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2200 } } create_building = { building = $BUILDING$ level = 2200 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2250 } } create_building = { building = $BUILDING$ level = 2250 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2300 } } create_building = { building = $BUILDING$ level = 2300 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2350 } } create_building = { building = $BUILDING$ level = 2350 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2400 } } create_building = { building = $BUILDING$ level = 2400 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2450 } } create_building = { building = $BUILDING$ level = 2450 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2500 } } create_building = { building = $BUILDING$ level = 2500 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2550 } } create_building = { building = $BUILDING$ level = 2550 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2600 } } create_building = { building = $BUILDING$ level = 2600 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2650 } } create_building = { building = $BUILDING$ level = 2650 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2700 } } create_building = { building = $BUILDING$ level = 2700 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2750 } } create_building = { building = $BUILDING$ level = 2750 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2800 } } create_building = { building = $BUILDING$ level = 2800 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2850 } } create_building = { building = $BUILDING$ level = 2850 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2900 } } create_building = { building = $BUILDING$ level = 2900 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 2950 } } create_building = { building = $BUILDING$ level = 2950 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3000 } } create_building = { building = $BUILDING$ level = 3000 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3050 } } create_building = { building = $BUILDING$ level = 3050 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3100 } } create_building = { building = $BUILDING$ level = 3100 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3150 } } create_building = { building = $BUILDING$ level = 3150 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3200 } } create_building = { building = $BUILDING$ level = 3200 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3250 } } create_building = { building = $BUILDING$ level = 3250 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3300 } } create_building = { building = $BUILDING$ level = 3300 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3350 } } create_building = { building = $BUILDING$ level = 3350 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3400 } } create_building = { building = $BUILDING$ level = 3400 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3450 } } create_building = { building = $BUILDING$ level = 3450 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3500 } } create_building = { building = $BUILDING$ level = 3500 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3550 } } create_building = { building = $BUILDING$ level = 3550 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3600 } } create_building = { building = $BUILDING$ level = 3600 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3650 } } create_building = { building = $BUILDING$ level = 3650 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3700 } } create_building = { building = $BUILDING$ level = 3700 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3750 } } create_building = { building = $BUILDING$ level = 3750 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3800 } } create_building = { building = $BUILDING$ level = 3800 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3850 } } create_building = { building = $BUILDING$ level = 3850 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3900 } } create_building = { building = $BUILDING$ level = 3900 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 3950 } } create_building = { building = $BUILDING$ level = 3950 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4000 } } create_building = { building = $BUILDING$ level = 4000 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4050 } } create_building = { building = $BUILDING$ level = 4050 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4100 } } create_building = { building = $BUILDING$ level = 4100 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4150 } } create_building = { building = $BUILDING$ level = 4150 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4200 } } create_building = { building = $BUILDING$ level = 4200 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4250 } } create_building = { building = $BUILDING$ level = 4250 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4300 } } create_building = { building = $BUILDING$ level = 4300 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4350 } } create_building = { building = $BUILDING$ level = 4350 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4400 } } create_building = { building = $BUILDING$ level = 4400 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4450 } } create_building = { building = $BUILDING$ level = 4450 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4500 } } create_building = { building = $BUILDING$ level = 4500 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4550 } } create_building = { building = $BUILDING$ level = 4550 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4600 } } create_building = { building = $BUILDING$ level = 4600 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4650 } } create_building = { building = $BUILDING$ level = 4650 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4700 } } create_building = { building = $BUILDING$ level = 4700 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4750 } } create_building = { building = $BUILDING$ level = 4750 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4800 } } create_building = { building = $BUILDING$ level = 4800 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4850 } } create_building = { building = $BUILDING$ level = 4850 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4900 } } create_building = { building = $BUILDING$ level = 4900 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 4950 } } create_building = { building = $BUILDING$ level = 4950 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5000 } } create_building = { building = $BUILDING$ level = 5000 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5050 } } create_building = { building = $BUILDING$ level = 5050 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5100 } } create_building = { building = $BUILDING$ level = 5100 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5150 } } create_building = { building = $BUILDING$ level = 5150 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5200 } } create_building = { building = $BUILDING$ level = 5200 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5250 } } create_building = { building = $BUILDING$ level = 5250 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5300 } } create_building = { building = $BUILDING$ level = 5300 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5350 } } create_building = { building = $BUILDING$ level = 5350 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5400 } } create_building = { building = $BUILDING$ level = 5400 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5450 } } create_building = { building = $BUILDING$ level = 5450 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5500 } } create_building = { building = $BUILDING$ level = 5500 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5550 } } create_building = { building = $BUILDING$ level = 5550 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5600 } } create_building = { building = $BUILDING$ level = 5600 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5650 } } create_building = { building = $BUILDING$ level = 5650 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5700 } } create_building = { building = $BUILDING$ level = 5700 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5750 } } create_building = { building = $BUILDING$ level = 5750 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5800 } } create_building = { building = $BUILDING$ level = 5800 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5850 } } create_building = { building = $BUILDING$ level = 5850 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5900 } } create_building = { building = $BUILDING$ level = 5900 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 5950 } } create_building = { building = $BUILDING$ level = 5950 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6000 } } create_building = { building = $BUILDING$ level = 6000 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6050 } } create_building = { building = $BUILDING$ level = 6050 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6100 } } create_building = { building = $BUILDING$ level = 6100 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6150 } } create_building = { building = $BUILDING$ level = 6150 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6200 } } create_building = { building = $BUILDING$ level = 6200 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6250 } } create_building = { building = $BUILDING$ level = 6250 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6300 } } create_building = { building = $BUILDING$ level = 6300 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6350 } } create_building = { building = $BUILDING$ level = 6350 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6400 } } create_building = { building = $BUILDING$ level = 6400 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6450 } } create_building = { building = $BUILDING$ level = 6450 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6500 } } create_building = { building = $BUILDING$ level = 6500 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6550 } } create_building = { building = $BUILDING$ level = 6550 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6600 } } create_building = { building = $BUILDING$ level = 6600 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6650 } } create_building = { building = $BUILDING$ level = 6650 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6700 } } create_building = { building = $BUILDING$ level = 6700 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6750 } } create_building = { building = $BUILDING$ level = 6750 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6800 } } create_building = { building = $BUILDING$ level = 6800 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6850 } } create_building = { building = $BUILDING$ level = 6850 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6900 } } create_building = { building = $BUILDING$ level = 6900 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 6950 } } create_building = { building = $BUILDING$ level = 6950 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7000 } } create_building = { building = $BUILDING$ level = 7000 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7050 } } create_building = { building = $BUILDING$ level = 7050 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7100 } } create_building = { building = $BUILDING$ level = 7100 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7150 } } create_building = { building = $BUILDING$ level = 7150 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7200 } } create_building = { building = $BUILDING$ level = 7200 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7250 } } create_building = { building = $BUILDING$ level = 7250 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7300 } } create_building = { building = $BUILDING$ level = 7300 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7350 } } create_building = { building = $BUILDING$ level = 7350 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7400 } } create_building = { building = $BUILDING$ level = 7400 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7450 } } create_building = { building = $BUILDING$ level = 7450 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7500 } } create_building = { building = $BUILDING$ level = 7500 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7550 } } create_building = { building = $BUILDING$ level = 7550 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7600 } } create_building = { building = $BUILDING$ level = 7600 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7650 } } create_building = { building = $BUILDING$ level = 7650 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7700 } } create_building = { building = $BUILDING$ level = 7700 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7750 } } create_building = { building = $BUILDING$ level = 7750 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7800 } } create_building = { building = $BUILDING$ level = 7800 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7850 } } create_building = { building = $BUILDING$ level = 7850 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7900 } } create_building = { building = $BUILDING$ level = 7900 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 7950 } } create_building = { building = $BUILDING$ level = 7950 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8000 } } create_building = { building = $BUILDING$ level = 8000 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8050 } } create_building = { building = $BUILDING$ level = 8050 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8100 } } create_building = { building = $BUILDING$ level = 8100 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8150 } } create_building = { building = $BUILDING$ level = 8150 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8200 } } create_building = { building = $BUILDING$ level = 8200 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8250 } } create_building = { building = $BUILDING$ level = 8250 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8300 } } create_building = { building = $BUILDING$ level = 8300 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8350 } } create_building = { building = $BUILDING$ level = 8350 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8400 } } create_building = { building = $BUILDING$ level = 8400 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8450 } } create_building = { building = $BUILDING$ level = 8450 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8500 } } create_building = { building = $BUILDING$ level = 8500 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8550 } } create_building = { building = $BUILDING$ level = 8550 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8600 } } create_building = { building = $BUILDING$ level = 8600 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8650 } } create_building = { building = $BUILDING$ level = 8650 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8700 } } create_building = { building = $BUILDING$ level = 8700 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8750 } } create_building = { building = $BUILDING$ level = 8750 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8800 } } create_building = { building = $BUILDING$ level = 8800 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8850 } } create_building = { building = $BUILDING$ level = 8850 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8900 } } create_building = { building = $BUILDING$ level = 8900 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 8950 } } create_building = { building = $BUILDING$ level = 8950 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9000 } } create_building = { building = $BUILDING$ level = 9000 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9050 } } create_building = { building = $BUILDING$ level = 9050 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9100 } } create_building = { building = $BUILDING$ level = 9100 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9150 } } create_building = { building = $BUILDING$ level = 9150 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9200 } } create_building = { building = $BUILDING$ level = 9200 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9250 } } create_building = { building = $BUILDING$ level = 9250 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9300 } } create_building = { building = $BUILDING$ level = 9300 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9350 } } create_building = { building = $BUILDING$ level = 9350 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9400 } } create_building = { building = $BUILDING$ level = 9400 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9450 } } create_building = { building = $BUILDING$ level = 9450 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9500 } } create_building = { building = $BUILDING$ level = 9500 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9550 } } create_building = { building = $BUILDING$ level = 9550 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9600 } } create_building = { building = $BUILDING$ level = 9600 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9650 } } create_building = { building = $BUILDING$ level = 9650 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9700 } } create_building = { building = $BUILDING$ level = 9700 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9750 } } create_building = { building = $BUILDING$ level = 9750 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9800 } } create_building = { building = $BUILDING$ level = 9800 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9850 } } create_building = { building = $BUILDING$ level = 9850 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9900 } } create_building = { building = $BUILDING$ level = 9900 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 9950 } } create_building = { building = $BUILDING$ level = 9950 reserves = 1 } }
+		else_if = { limit = { any_scope_building = { occupancy >= 0.75 or = { weekly_profit > 1000 is_subsidized = yes } cash_reserves_ratio > 0.8 is_building_type = $BUILDING$ is_under_construction = no level < 10000 } } create_building = { building = $BUILDING$ level = 10000 reserves = 1 } }
+	}
+}
+daoyu_auto_expand_building_effcet = {
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_food_industry" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_textile_mills" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_furniture_manufacturies" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_glassworks" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_tooling_workshops" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_paper_mills" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_chemical_plants" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_explosives_factory" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_synthetics_plants" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_steel_mills" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_motor_industry" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_shipyards" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_military_shipyards" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_automotive_industry" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_electrics_industry" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_arms_industry" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_artillery_foundries" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_munition_plants" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_rye_farm" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_wheat_farm" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_rice_farm" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_maize_farm" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_millet_farm" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_livestock_ranch" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "﻿building_coal_mine" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_iron_mine" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_lead_mine" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_sulfur_mine" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_gold_mine" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_coffee_plantation" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_cotton_plantation" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_dye_plantation" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_opium_plantation" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_tea_plantation" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_tobacco_plantation" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_sugar_plantation" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_banana_plantation" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_silk_plantation" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "﻿building_logging_camp" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_rubber_plantation" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_fishing_wharf" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_whaling_station" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_oil_rig" }
+	daoyu_auto_single_expand_building_effcet = { BUILDING = "building_power_plant" }
+	#daoyu_auto_single_expand_building_effcet = { BUILDING = "building_railway" }
+}
+daoyu_auto_single_expand_building_government_administration_effcet = {
+	if = { limit = { not = { has_building = building_government_administration } } create_building = { building = building_government_administration } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 2 } } create_building = { building = building_government_administration level = 2 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 3 } } create_building = { building = building_government_administration level = 3 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 4 } } create_building = { building = building_government_administration level = 4 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 5 } } create_building = { building = building_government_administration level = 5 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 6 } } create_building = { building = building_government_administration level = 6 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 7 } } create_building = { building = building_government_administration level = 7 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 8 } } create_building = { building = building_government_administration level = 8 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 9 } } create_building = { building = building_government_administration level = 9 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 10 } } create_building = { building = building_government_administration level = 10 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 11 } } create_building = { building = building_government_administration level = 11 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 12 } } create_building = { building = building_government_administration level = 12 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 13 } } create_building = { building = building_government_administration level = 13 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 14 } } create_building = { building = building_government_administration level = 14 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 15 } } create_building = { building = building_government_administration level = 15 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 16 } } create_building = { building = building_government_administration level = 16 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 17 } } create_building = { building = building_government_administration level = 17 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 18 } } create_building = { building = building_government_administration level = 18 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 19 } } create_building = { building = building_government_administration level = 19 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 20 } } create_building = { building = building_government_administration level = 20 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 22 } } create_building = { building = building_government_administration level = 22 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 24 } } create_building = { building = building_government_administration level = 24 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 26 } } create_building = { building = building_government_administration level = 26 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 28 } } create_building = { building = building_government_administration level = 28 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 30 } } create_building = { building = building_government_administration level = 30 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 32 } } create_building = { building = building_government_administration level = 32 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 34 } } create_building = { building = building_government_administration level = 34 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 36 } } create_building = { building = building_government_administration level = 36 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 38 } } create_building = { building = building_government_administration level = 38 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 40 } } create_building = { building = building_government_administration level = 40 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 42 } } create_building = { building = building_government_administration level = 42 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 44 } } create_building = { building = building_government_administration level = 44 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 46 } } create_building = { building = building_government_administration level = 46 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 48 } } create_building = { building = building_government_administration level = 48 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 50 } } create_building = { building = building_government_administration level = 50 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 55 } } create_building = { building = building_government_administration level = 55 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 60 } } create_building = { building = building_government_administration level = 60 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 65 } } create_building = { building = building_government_administration level = 65 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 70 } } create_building = { building = building_government_administration level = 70 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 75 } } create_building = { building = building_government_administration level = 75 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 80 } } create_building = { building = building_government_administration level = 80 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 85 } } create_building = { building = building_government_administration level = 85 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 90 } } create_building = { building = building_government_administration level = 90 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 95 } } create_building = { building = building_government_administration level = 95 } }
+	else_if = { limit = { any_scope_building = { is_building_type = building_government_administration is_under_construction = no level < 100 } } create_building = { building = building_government_administration level = 100 } }
+}
+daoyu_auto_expand_building_government_administration_effcet = {
+	if = {
+		limit = { any_scope_state = { is_incorporated = yes is_homeland_of_country_cultures = root any_scope_building = { is_building_type = building_government_administration level < 10 } } }
+		every_scope_state = {
+			limit = { is_incorporated = yes is_homeland_of_country_cultures = root any_scope_building = { is_building_type = building_government_administration level < 10 } }
+			daoyu_auto_single_expand_building_government_administration_effcet = yes
+		}
+	}
+	else_if = {
+		limit = {
+			any_scope_state = { is_incorporated = yes is_homeland_of_country_cultures = root not = { any_scope_building = { is_building_type = building_government_administration level < 10 } } }
+			any_scope_state = { is_incorporated = yes not = {is_homeland_of_country_cultures = root } any_scope_building = { is_building_type = building_government_administration level < 10 } }
+		}
+		every_scope_state = {
+			limit = { is_incorporated = yes not = {is_homeland_of_country_cultures = root } any_scope_building = { is_building_type = building_government_administration level < 10 } }
+			daoyu_auto_single_expand_building_government_administration_effcet = yes
+		}
+	}
+	else_if = {
+		limit = { any_scope_state = { is_incorporated = yes is_homeland_of_country_cultures = root any_scope_building = { is_building_type = building_government_administration level < 20 } } }
+		every_scope_state = {
+			limit = { is_incorporated = yes is_homeland_of_country_cultures = root any_scope_building = { is_building_type = building_government_administration level < 20 } }
+			daoyu_auto_single_expand_building_government_administration_effcet = yes
+		}
+	}
+	else_if = {
+		limit = {
+			any_scope_state = { is_incorporated = yes is_homeland_of_country_cultures = root not = { any_scope_building = { is_building_type = building_government_administration level < 20 } } }
+			any_scope_state = { is_incorporated = yes not = {is_homeland_of_country_cultures = root } any_scope_building = { is_building_type = building_government_administration level < 20 } }
+		}
+		every_scope_state = {
+			limit = { is_incorporated = yes not = {is_homeland_of_country_cultures = root } any_scope_building = { is_building_type = building_government_administration level < 20 } }
+			daoyu_auto_single_expand_building_government_administration_effcet = yes
+		}
+	}
+	else_if = {
+		limit = { any_scope_state = { is_incorporated = yes is_homeland_of_country_cultures = root any_scope_building = { is_building_type = building_government_administration level < 30 } } }
+		every_scope_state = {
+			limit = { is_incorporated = yes is_homeland_of_country_cultures = root any_scope_building = { is_building_type = building_government_administration level < 30 } }
+			daoyu_auto_single_expand_building_government_administration_effcet = yes
+		}
+	}
+	else_if = {
+		limit = {
+			any_scope_state = { is_incorporated = yes is_homeland_of_country_cultures = root not = { any_scope_building = { is_building_type = building_government_administration level < 30 } } }
+			any_scope_state = { is_incorporated = yes not = {is_homeland_of_country_cultures = root } any_scope_building = { is_building_type = building_government_administration level < 30 } }
+		}
+		every_scope_state = {
+			limit = { is_incorporated = yes not = {is_homeland_of_country_cultures = root } any_scope_building = { is_building_type = building_government_administration level < 30 } }
+			daoyu_auto_single_expand_building_government_administration_effcet = yes
+		}
+	}
+	else_if = {
+		limit = { any_scope_state = { is_incorporated = yes is_homeland_of_country_cultures = root any_scope_building = { is_building_type = building_government_administration level < 50 } } }
+		every_scope_state = {
+			limit = { is_incorporated = yes is_homeland_of_country_cultures = root any_scope_building = { is_building_type = building_government_administration level < 50 } }
+			daoyu_auto_single_expand_building_government_administration_effcet = yes
+		}
+	}
+	else_if = {
+		limit = {
+			any_scope_state = { is_incorporated = yes is_homeland_of_country_cultures = root not = { any_scope_building = { is_building_type = building_government_administration level < 50 } } }
+			any_scope_state = { is_incorporated = yes not = {is_homeland_of_country_cultures = root } any_scope_building = { is_building_type = building_government_administration level < 50 } }
+		}
+		every_scope_state = {
+			limit = { is_incorporated = yes not = {is_homeland_of_country_cultures = root } any_scope_building = { is_building_type = building_government_administration level < 50 } }
+			daoyu_auto_single_expand_building_government_administration_effcet = yes
+		}
+	}
+	else_if = {
+		limit = { any_scope_state = { is_incorporated = yes is_homeland_of_country_cultures = root any_scope_building = { is_building_type = building_government_administration level < 75 } } }
+		every_scope_state = {
+			limit = { is_incorporated = yes is_homeland_of_country_cultures = root any_scope_building = { is_building_type = building_government_administration level < 75 } }
+			daoyu_auto_single_expand_building_government_administration_effcet = yes
+		}
+	}
+	else_if = {
+		limit = {
+			any_scope_state = { is_incorporated = yes is_homeland_of_country_cultures = root not = { any_scope_building = { is_building_type = building_government_administration level < 75 } } }
+			any_scope_state = { is_incorporated = yes not = {is_homeland_of_country_cultures = root } any_scope_building = { is_building_type = building_government_administration level < 75 } }
+		}
+		every_scope_state = {
+			limit = { is_incorporated = yes not = {is_homeland_of_country_cultures = root } any_scope_building = { is_building_type = building_government_administration level < 75 } }
+			daoyu_auto_single_expand_building_government_administration_effcet = yes
+		}
+	}
+	else_if = {
+		limit = { any_scope_state = { is_incorporated = yes is_homeland_of_country_cultures = root any_scope_building = { is_building_type = building_government_administration level < 100 } } }
+		every_scope_state = {
+			limit = { is_incorporated = yes is_homeland_of_country_cultures = root any_scope_building = { is_building_type = building_government_administration level < 100 } }
+			daoyu_auto_single_expand_building_government_administration_effcet = yes
+		}
+	}
+	else_if = {
+		limit = {
+			any_scope_state = { is_incorporated = yes is_homeland_of_country_cultures = root not = { any_scope_building = { is_building_type = building_government_administration level < 100 } } }
+			any_scope_state = { is_incorporated = yes not = {is_homeland_of_country_cultures = root } any_scope_building = { is_building_type = building_government_administration level < 100 } }
+		}
+		every_scope_state = {
+			limit = { is_incorporated = yes not = {is_homeland_of_country_cultures = root } any_scope_building = { is_building_type = building_government_administration level < 100 } }
+			daoyu_auto_single_expand_building_government_administration_effcet = yes
+		}
+	}
+	else_if = {
+		limit = { any_scope_state = { any_scope_building = { is_building_type = building_government_administration level < 100 } } }
+		every_scope_state = { limit = { any_scope_building = { is_building_type = building_government_administration level < 100 } } daoyu_auto_single_expand_building_government_administration_effcet = yes }
+	}
+}
+daoyu_building_lens_effcet = {
+	every_scope_state = { limit = { has_decree = decree_daoyu_target_state } set_variable = daoyu_$BUILDING$ }
+	hidden_effect = { trigger_event = { id = daoyu.605 popup = yes } }
+}
+daoyu_building_level_effect = {
+	every_scope_state = {
+		if = { limit = { has_variable = daoyu_building_coal_mine } create_building = { building = building_coal_mine level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_iron_mine } create_building = { building = building_iron_mine level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_lead_mine } create_building = { building = building_lead_mine level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_sulfur_mine } create_building = { building = building_sulfur_mine level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_gold_mine } create_building = { building = building_gold_mine level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_oil_rig } create_building = { building = building_oil_rig level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_logging_camp } create_building = { building = building_logging_camp level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_rubber_plantation } create_building = { building = building_rubber_plantation level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_power_plant } create_building = { building = building_power_plant level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_whaling_station } create_building = { building = building_whaling_station level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_fishing_wharf } create_building = { building = building_fishing_wharf level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_rye_farm } create_building = { building = building_rye_farm level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_rice_farm } create_building = { building = building_rice_farm level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_maize_farm } create_building = { building = building_maize_farm level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_millet_farm } create_building = { building = building_millet_farm level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_wheat_farm } create_building = { building = building_wheat_farm level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_livestock_ranch } create_building = { building = building_livestock_ranch level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_vineyard_plantation } create_building = { building = building_vineyard_plantation level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_dye_plantation } create_building = { building = building_dye_plantation level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_silk_plantation } create_building = { building = building_silk_plantation level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_cotton_plantation } create_building = { building = building_cotton_plantation level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_coffee_plantation } create_building = { building = building_coffee_plantation level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_tea_plantation } create_building = { building = building_tea_plantation level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_tobacco_plantation } create_building = { building = building_tobacco_plantation level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_sugar_plantation } create_building = { building = building_sugar_plantation level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_banana_plantation } create_building = { building = building_banana_plantation level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_opium_plantation } create_building = { building = building_opium_plantation level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_barracks } create_building = { building = building_barracks level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_naval_base } create_building = { building = building_naval_base level = $LEVEL$ } }
+		if = { limit = { has_variable = daoyu_building_construction_sector } create_building = { building = building_construction_sector level = $LEVEL$ } }
+		if = { limit = { has_variable = daoyu_building_railway } create_building = { building = building_railway level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_government_administration } create_building = { building = building_government_administration level = $LEVEL$ } }
+		if = { limit = { has_variable = daoyu_building_building_skyscraper } create_building = { building = building_skyscraper level = $LEVEL$ } }
+		if = { limit = { has_variable = daoyu_building_university } create_building = { building = building_university level = $LEVEL$ } }
+		if = { limit = { has_variable = daoyu_building_arts_academy } create_building = { building = building_arts_academy level = $LEVEL$ } }
+		if = { limit = { has_variable = daoyu_building_port } create_building = { building = building_port level = $LEVEL$ } }
+		if = { limit = { has_variable = daoyu_building_food_industry } create_building = { building = building_food_industry level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_textile_mills } create_building = { building = building_textile_mills level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_furniture_manufacturies } create_building = { building = building_furniture_manufacturies level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_glassworks } create_building = { building = building_glassworks level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_tooling_workshops } create_building = { building = building_tooling_workshops level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_paper_mills } create_building = { building = building_paper_mills level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_shipyards } create_building = { building = building_shipyards level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_military_shipyards } create_building = { building = building_military_shipyards level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_arms_industry } create_building = { building = building_arms_industry level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_artillery_foundries } create_building = { building = building_artillery_foundries level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_chemical_plants } create_building = { building = building_chemical_plants level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_explosives_factory } create_building = { building = building_explosives_factory level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_synthetics_plants } create_building = { building = building_synthetics_plants level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_steel_mills } create_building = { building = building_steel_mills level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_motor_industry } create_building = { building = building_motor_industry level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_automotive_industry } create_building = { building = building_automotive_industry level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_electrics_industry } create_building = { building = building_electrics_industry level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_munition_plants } create_building = { building = building_munition_plants level = $LEVEL$ reserves = 1 } }
+		if = { limit = { has_variable = daoyu_building_power_plant } create_building = { building = building_power_plant level = $LEVEL$ reserves = 1 } }
+	}
+	daoyu_clean_building_level_effect = yes
+}
+daoyu_clean_building_level_effect = {
+	if = {
+		limit = {
+			any_scope_state = {
+				or = {
+					has_variable = daoyu_building_coal_mine
+					has_variable = daoyu_building_iron_mine
+					has_variable = daoyu_building_lead_mine
+					has_variable = daoyu_building_sulfur_mine
+					has_variable = daoyu_building_gold_mine
+					has_variable = daoyu_building_oil_rig
+					has_variable = daoyu_building_logging_camp
+					has_variable = daoyu_building_rubber_plantation
+					has_variable = daoyu_building_power_plant
+					has_variable = daoyu_building_whaling_station
+					has_variable = daoyu_building_fishing_wharf
+				}
+			}
+		}
+		trigger_event = { id = daoyu.610 popup = yes }
+	}
+	if = {
+		limit = {
+			any_scope_state = {
+				or = {
+					has_variable = daoyu_building_rye_farm
+					has_variable = daoyu_building_rice_farm
+					has_variable = daoyu_building_maize_farm
+					has_variable = daoyu_building_millet_farm
+					has_variable = daoyu_building_wheat_farm
+					has_variable = daoyu_building_livestock_ranch
+					has_variable = daoyu_building_vineyard_plantation
+					has_variable = daoyu_building_dye_plantation
+					has_variable = daoyu_building_silk_plantation
+					has_variable = daoyu_building_cotton_plantation
+					has_variable = daoyu_building_coffee_plantation
+					has_variable = daoyu_building_tea_plantation
+					has_variable = daoyu_building_tobacco_plantation
+					has_variable = daoyu_building_sugar_plantation
+					has_variable = daoyu_building_banana_plantation
+					has_variable = daoyu_building_opium_plantation
+				}
+			}
+		}
+		trigger_event = { id = daoyu.615 popup = yes }
+	}
+	if = {
+		limit = {
+			any_scope_state = {
+				or = {
+					has_variable = daoyu_building_barracks
+					has_variable = daoyu_building_naval_base
+					has_variable = daoyu_building_construction_sector
+					has_variable = daoyu_building_government_administration
+					has_variable = daoyu_building_building_skyscraper
+					has_variable = daoyu_building_railway
+					has_variable = daoyu_building_university
+					has_variable = daoyu_building_arts_academy
+					has_variable = daoyu_building_port
+				}
+			}
+		}
+		trigger_event = { id = daoyu.620 popup = yes }
+	}
+	if = {
+		limit = {
+			any_scope_state = {
+				or = {
+					has_variable = daoyu_building_food_industry
+					has_variable = daoyu_building_textile_mills
+					has_variable = daoyu_building_furniture_manufacturies
+					has_variable = daoyu_building_glassworks
+					has_variable = daoyu_building_tooling_workshops
+					has_variable = daoyu_building_paper_mills
+					has_variable = daoyu_building_shipyards
+					has_variable = daoyu_building_military_shipyards
+					has_variable = daoyu_building_arms_industry
+					has_variable = daoyu_building_artillery_foundries
+					has_variable = daoyu_building_chemical_plants
+					has_variable = daoyu_building_explosives_factory
+					has_variable = daoyu_building_synthetics_plants
+					has_variable = daoyu_building_steel_mills
+					has_variable = daoyu_building_motor_industry
+					has_variable = daoyu_building_automotive_industry
+					has_variable = daoyu_building_electrics_industry
+					has_variable = daoyu_building_munition_plants
+					has_variable = daoyu_building_power_plant
+				}
+			}
+		}
+		trigger_event = { id = daoyu.625 popup = yes }
+	}
+	every_scope_state = {
+		remove_variable = daoyu_building_coal_mine
+		remove_variable = daoyu_building_iron_mine
+		remove_variable = daoyu_building_lead_mine
+		remove_variable = daoyu_building_sulfur_mine
+		remove_variable = daoyu_building_gold_mine
+		remove_variable = daoyu_building_oil_rig
+		remove_variable = daoyu_building_logging_camp
+		remove_variable = daoyu_building_rubber_plantation
+		remove_variable = daoyu_building_power_plant
+		remove_variable = daoyu_building_whaling_station
+		remove_variable = daoyu_building_fishing_wharf
+		remove_variable = daoyu_building_rye_farm
+		remove_variable = daoyu_building_rice_farm
+		remove_variable = daoyu_building_maize_farm
+		remove_variable = daoyu_building_millet_farm
+		remove_variable = daoyu_building_wheat_farm
+		remove_variable = daoyu_building_livestock_ranch
+		remove_variable = daoyu_building_vineyard_plantation
+		remove_variable = daoyu_building_dye_plantation
+		remove_variable = daoyu_building_silk_plantation
+		remove_variable = daoyu_building_cotton_plantation
+		remove_variable = daoyu_building_coffee_plantation
+		remove_variable = daoyu_building_tea_plantation
+		remove_variable = daoyu_building_tobacco_plantation
+		remove_variable = daoyu_building_sugar_plantation
+		remove_variable = daoyu_building_banana_plantation
+		remove_variable = daoyu_building_opium_plantation
+		remove_variable = daoyu_building_barracks
+		remove_variable = daoyu_building_naval_base
+		remove_variable = daoyu_building_construction_sector
+		remove_variable = daoyu_building_government_administration
+		remove_variable = daoyu_building_building_skyscraper
+		remove_variable = daoyu_building_railway
+		remove_variable = daoyu_building_university
+		remove_variable = daoyu_building_arts_academy
+		remove_variable = daoyu_building_port
+		remove_variable = daoyu_building_food_industry
+		remove_variable = daoyu_building_textile_mills
+		remove_variable = daoyu_building_furniture_manufacturies
+		remove_variable = daoyu_building_glassworks
+		remove_variable = daoyu_building_tooling_workshops
+		remove_variable = daoyu_building_paper_mills
+		remove_variable = daoyu_building_shipyards
+		remove_variable = daoyu_building_military_shipyards
+		remove_variable = daoyu_building_arms_industry
+		remove_variable = daoyu_building_artillery_foundries
+		remove_variable = daoyu_building_chemical_plants
+		remove_variable = daoyu_building_explosives_factory
+		remove_variable = daoyu_building_synthetics_plants
+		remove_variable = daoyu_building_steel_mills
+		remove_variable = daoyu_building_motor_industry
+		remove_variable = daoyu_building_automotive_industry
+		remove_variable = daoyu_building_electrics_industry
+		remove_variable = daoyu_building_munition_plants
+		remove_variable = daoyu_building_power_plant
+	}
+	remove_global_variable = daoyu_low_building_level
+}
+daoyu_A_R_building_state_trait_effect = {
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_coal_mine" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_iron_mine" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_lead_mine" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_sulfur_mine" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_gold_mine" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_oil_rig" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_logging_camp" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_rubber_plantation" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_power_plant" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_whaling_station" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_fishing_wharf" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_rice_farm" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_maize_farm" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_millet_farm" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_wheat_farm" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_livestock_ranch" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_vineyard_plantation" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_dye_plantation" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_silk_plantation" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_cotton_plantation" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_coffee_plantation" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_tea_plantation" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_tobacco_plantation" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_sugar_plantation" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_banana_plantation" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_opium_plantation" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_arms_industry" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_artillery_foundries" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_chemical_plants" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_explosives_factory" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_electrics_industry" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_food_industry" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_furniture_manufacturies" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_glassworks" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_motor_industry" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_munition_plants" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_paper_mills" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_rye_farm" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_shipyards" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_military_shipyards" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_steel_mills" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_synthetics_plants" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_textile_mills" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_tooling_workshops" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_automotive_industry" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_power_plant" }
+	daoyu_A_R_S_T = { STATE_TRAIT = "building_arts_academy" }
+}
+daoyu_A_R_S_T = {
+	if = {
+		limit = { has_global_variable = daoyu_add_building_state_trait }
+		if = { limit = { has_global_variable = daoyu_S_T_$STATE_TRAIT$ not = { has_state_trait = $STATE_TRAIT$ } } state_region = { add_state_trait = $STATE_TRAIT$ } }
+	}
+	else_if = {
+		limit = { has_global_variable = daoyu_remove_building_state_trait }
+		if = { limit = { has_global_variable = daoyu_S_T_$STATE_TRAIT$ has_state_trait = $STATE_TRAIT$ } state_region = { remove_state_trait = $STATE_TRAIT$ } }
+	}
+	else_if = {
+		limit = { has_global_variable = daoyu_remove_building }
+		if = { limit = { has_global_variable = daoyu_S_T_$STATE_TRAIT$ has_building = $STATE_TRAIT$ } remove_building = $STATE_TRAIT$ }
+	}
+}
+daoyu_other_building_state_trait_effect = {
+	daoyu_other_S_T = { STATE_TRAIT = "building_coal_mine" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_iron_mine" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_lead_mine" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_sulfur_mine" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_gold_mine" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_oil_rig" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_logging_camp" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_rubber_plantation" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_power_plant" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_whaling_station" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_fishing_wharf" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_rice_farm" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_maize_farm" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_millet_farm" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_wheat_farm" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_livestock_ranch" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_vineyard_plantation" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_dye_plantation" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_silk_plantation" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_cotton_plantation" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_coffee_plantation" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_tea_plantation" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_tobacco_plantation" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_sugar_plantation" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_banana_plantation" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_opium_plantation" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_arms_industry" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_artillery_foundries" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_chemical_plants" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_explosives_factory" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_electrics_industry" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_food_industry" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_furniture_manufacturies" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_glassworks" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_motor_industry" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_munition_plants" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_paper_mills" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_rye_farm" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_shipyards" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_military_shipyards" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_steel_mills" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_synthetics_plants" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_textile_mills" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_tooling_workshops" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_automotive_industry" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_power_plant" }
+	daoyu_other_S_T = { STATE_TRAIT = "building_arts_academy" }
+}
+daoyu_check_add_potential_target = {
+	set_global_variable = daoyu_check_add_potential_target
+	daoyu_other_building_state_trait_effect = yes
+	remove_global_variable = daoyu_check_add_potential_target
+}
+daoyu_check_remove_potential_target = {
+	set_global_variable = daoyu_check_remove_potential_target
+	daoyu_other_building_state_trait_effect = yes
+	remove_global_variable = daoyu_check_remove_potential_target
+}
+daoyu_remove_all_buildings_state_trait = {
+	remove_global_variable = daoyu_remove_building_state_trait
+	set_global_variable = daoyu_remove_all_buildings_state_trait
+	daoyu_other_building_state_trait_effect = yes
+	remove_global_variable = daoyu_remove_all_buildings_state_trait
+}
+daoyu_remove_building_state_trait_var = {
+	set_global_variable = daoyu_remove_building_state_trait_var
+	daoyu_other_building_state_trait_effect = yes
+	remove_global_variable = daoyu_remove_building_state_trait_var
+}
+daoyu_one_building_one_region_effect = {
+	set_global_variable = daoyu_one_building_one_region_effect
+	daoyu_other_building_state_trait_effect = yes
+	remove_global_variable = daoyu_one_building_one_region_effect
+}
+daoyu_other_S_T = {
+	if = {
+		limit = { has_global_variable = daoyu_one_building_one_region_effect }
+		if = { limit = { any_scope_state = { has_state_trait = $STATE_TRAIT$ } } every_scope_state = { limit = { has_building = $STATE_TRAIT$ not = { has_state_trait = $STATE_TRAIT$ } } remove_building = $STATE_TRAIT$ } }
+	}
+	else_if = {
+		limit = { has_global_variable = daoyu_check_add_potential_target }
+		if = { limit = { has_global_variable = daoyu_add_building_state_trait has_global_variable = daoyu_S_T_$STATE_TRAIT$ } if = { limit = { any_state = { has_state_trait = $STATE_TRAIT$ } } every_state = { limit = { has_state_trait = $STATE_TRAIT$ } remove_variable = daoyu_potential_target } } }
+	}
+	else_if = {
+		limit = { has_global_variable = daoyu_check_remove_potential_target }
+		if = { limit = { has_global_variable = daoyu_remove_building_state_trait has_global_variable = daoyu_S_T_$STATE_TRAIT$ } if = { limit = { any_state = { has_state_trait = $STATE_TRAIT$ } } every_state = { limit = { has_state_trait = $STATE_TRAIT$ } set_variable = daoyu_potential_target } } }
+	}
+	else_if = {
+		limit = { has_global_variable = daoyu_remove_all_buildings_state_trait }
+		if = { limit = { any_state = { has_state_trait = $STATE_TRAIT$ } } every_state = { limit = { has_state_trait = $STATE_TRAIT$ } state_region = { remove_state_trait = $STATE_TRAIT$ } } }
+	}
+	else_if = {
+		limit = { has_global_variable = daoyu_remove_building_state_trait_var }
+		if = { limit = { has_global_variable = daoyu_S_T_$STATE_TRAIT$ } remove_global_variable = daoyu_S_T_$STATE_TRAIT$ }
+	}
+}
+daoyu_remove_all_buildings_effect = {
+	every_state = {
+		limit = { has_variable = daoyu_remove_all_buildings }
+		if = { limit = { has_building = building_arts_academy } remove_building = building_arts_academy }
+		if = { limit = { has_building = building_construction_sector } remove_building = building_construction_sector }
+		if = { limit = { has_building = building_government_administration } remove_building = building_government_administration }
+		if = { limit = { has_building = building_port } remove_building = building_port }
+		if = { limit = { has_building = building_railway } remove_building = building_railway }
+		if = { limit = { has_building = building_university } remove_building = building_university }
+		if = { limit = { has_building = building_conscription_center } remove_building = building_conscription_center }
+		if = { limit = { has_building = building_barracks } remove_building = building_barracks }
+		if = { limit = { has_building = building_naval_base } remove_building = building_naval_base }
+		if = { limit = { has_building = building_power_plant } remove_building = building_power_plant }
+		if = { limit = { has_building = building_coal_mine } remove_building = building_coal_mine }
+		if = { limit = { has_building = building_iron_mine } remove_building = building_iron_mine }
+		if = { limit = { has_building = building_lead_mine } remove_building = building_lead_mine }
+		if = { limit = { has_building = building_sulfur_mine } remove_building = building_sulfur_mine }
+		if = { limit = { has_building = building_gold_mine } remove_building = building_gold_mine }
+		if = { limit = { has_building = building_gold_fields } remove_building = building_gold_fields }
+		if = { limit = { has_building = building_oil_rig } remove_building = building_oil_rig }
+		if = { limit = { has_building = building_logging_camp } remove_building = building_logging_camp }
+		if = { limit = { has_building = building_rubber_plantation } remove_building = building_rubber_plantation }
+		if = { limit = { has_building = building_whaling_station } remove_building = building_whaling_station }
+		if = { limit = { has_building = building_fishing_wharf } remove_building = building_fishing_wharf }
+		if = { limit = { has_building = building_rye_farm } remove_building = building_rye_farm }
+		if = { limit = { has_building = building_wheat_farm } remove_building = building_wheat_farm }
+		if = { limit = { has_building = building_rice_farm } remove_building = building_rice_farm }
+		if = { limit = { has_building = building_maize_farm } remove_building = building_maize_farm }
+		if = { limit = { has_building = building_millet_farm } remove_building = building_millet_farm }
+		if = { limit = { has_building = building_livestock_ranch } remove_building = building_livestock_ranch }
+		if = { limit = { has_building = building_vineyard_plantation } remove_building = building_vineyard_plantation }
+		if = { limit = { has_building = building_dye_plantation } remove_building = building_dye_plantation }
+		if = { limit = { has_building = building_silk_plantation } remove_building = building_silk_plantation }
+		if = { limit = { has_building = building_cotton_plantation } remove_building = building_cotton_plantation }
+		if = { limit = { has_building = building_coffee_plantation } remove_building = building_coffee_plantation }
+		if = { limit = { has_building = building_tea_plantation } remove_building = building_tea_plantation }
+		if = { limit = { has_building = building_tobacco_plantation } remove_building = building_tobacco_plantation }
+		if = { limit = { has_building = building_sugar_plantation } remove_building = building_sugar_plantation }
+		if = { limit = { has_building = building_banana_plantation } remove_building = building_banana_plantation }
+		if = { limit = { has_building = building_opium_plantation } remove_building = building_opium_plantation }
+		if = { limit = { has_building = building_food_industry } remove_building = building_food_industry }
+		if = { limit = { has_building = building_textile_mills } remove_building = building_textile_mills }
+		if = { limit = { has_building = building_furniture_manufacturies } remove_building = building_furniture_manufacturies }
+		if = { limit = { has_building = building_glassworks } remove_building = building_glassworks }
+		if = { limit = { has_building = building_tooling_workshops } remove_building = building_tooling_workshops }
+		if = { limit = { has_building = building_paper_mills } remove_building = building_paper_mills }
+		if = { limit = { has_building = building_chemical_plants } remove_building = building_chemical_plants }
+		if = { limit = { has_building = building_explosives_factory } remove_building = building_explosives_factory }
+		if = { limit = { has_building = building_synthetics_plants } remove_building = building_synthetics_plants }
+		if = { limit = { has_building = building_steel_mills } remove_building = building_steel_mills }
+		if = { limit = { has_building = building_arms_industry } remove_building = building_arms_industry }
+		if = { limit = { has_building = building_munition_plants } remove_building = building_munition_plants }
+		if = { limit = { has_building = building_artillery_foundries } remove_building = building_artillery_foundries }
+		if = { limit = { has_building = building_motor_industry } remove_building = building_motor_industry }
+		if = { limit = { has_building = building_automotive_industry } remove_building = building_automotive_industry }
+		if = { limit = { has_building = building_electrics_industry } remove_building = building_electrics_industry }
+		if = { limit = { has_building = building_shipyards } remove_building = building_shipyards }
+		if = { limit = { has_building = building_military_shipyards } remove_building = building_military_shipyards }
+		remove_variable = daoyu_remove_all_buildings
+	}
+}
+daoyu_can_nationalized_effect = {
+	daoyu_set_change_option = yes
+	hidden_effect = {
+		every_scope_building = { limit = { is_building_type = $BUILDING$ has_modifier = daoyu_preselection_building } add_modifier = { name = daoyu_potential_building days = 1 } }
+		#every_scope_building = { limit = { has_modifier = daoyu_preselection_building } remove_modifier = daoyu_preselection_building }
+	}
+	daoyu_search_current_building = yes
+}
+daoyu_remove_building_effect = {
+	daoyu_remove_single_building = { BUILDING = "building_arts_academy" ORDER = $ORDER$ }#艺术学院
+	daoyu_remove_single_building = { BUILDING = "building_construction_sector" ORDER = $ORDER$ }#建造部门
+	daoyu_remove_single_building = { BUILDING = "building_government_administration" ORDER = $ORDER$ }#政府行政机构
+	daoyu_remove_single_building = { BUILDING = "building_trade_center" ORDER = $ORDER$ }#贸易中心
+	daoyu_remove_single_building = { BUILDING = "building_port" ORDER = $ORDER$ }#港口
+	daoyu_remove_single_building = { BUILDING = "building_railway" ORDER = $ORDER$ }#铁路
+	daoyu_remove_single_building = { BUILDING = "building_university" ORDER = $ORDER$ }#大学
+	daoyu_remove_single_building = { BUILDING = "building_conscription_center" ORDER = $ORDER$ }#征兵中心
+	daoyu_remove_single_building = { BUILDING = "building_barracks" ORDER = $ORDER$ }#兵营
+	daoyu_remove_single_building = { BUILDING = "building_naval_base" ORDER = $ORDER$ }#海军基地
+	daoyu_remove_single_building = { BUILDING = "building_power_plant" ORDER = $ORDER$ }#发电厂
+	daoyu_remove_single_building = { BUILDING = "building_coal_mine" ORDER = $ORDER$ }#煤矿
+	daoyu_remove_single_building = { BUILDING = "building_iron_mine" ORDER = $ORDER$ }#铁矿
+	daoyu_remove_single_building = { BUILDING = "building_lead_mine" ORDER = $ORDER$ }#铅矿
+	daoyu_remove_single_building = { BUILDING = "building_sulfur_mine" ORDER = $ORDER$ }#硫矿
+	daoyu_remove_single_building = { BUILDING = "building_gold_mine" ORDER = $ORDER$ }#金矿
+	daoyu_remove_single_building = { BUILDING = "building_oil_rig" ORDER = $ORDER$ }#油井
+	daoyu_remove_single_building = { BUILDING = "building_logging_camp" ORDER = $ORDER$ }#伐木营地
+	daoyu_remove_single_building = { BUILDING = "building_rubber_plantation" ORDER = $ORDER$ }#橡胶种植园
+	daoyu_remove_single_building = { BUILDING = "building_whaling_station" ORDER = $ORDER$ }#捕鲸站
+	daoyu_remove_single_building = { BUILDING = "building_fishing_wharf" ORDER = $ORDER$ }#渔业码头
+	daoyu_remove_single_building = { BUILDING = "building_rye_farm" ORDER = $ORDER$ }#黑麦农场
+	daoyu_remove_single_building = { BUILDING = "building_wheat_farm" ORDER = $ORDER$ }#小麦农场
+	daoyu_remove_single_building = { BUILDING = "building_rice_farm" ORDER = $ORDER$ }#水稻农场
+	daoyu_remove_single_building = { BUILDING = "building_maize_farm" ORDER = $ORDER$ }#玉米农场
+	daoyu_remove_single_building = { BUILDING = "building_millet_farm" ORDER = $ORDER$ }#杂谷农场
+	daoyu_remove_single_building = { BUILDING = "building_livestock_ranch" ORDER = $ORDER$ }#畜牧场
+	daoyu_remove_single_building = { BUILDING = "building_vineyard_plantation" ORDER = $ORDER$ }#葡萄园
+	daoyu_remove_single_building = { BUILDING = "building_dye_plantation" ORDER = $ORDER$ }#染料作物种植园
+	daoyu_remove_single_building = { BUILDING = "building_silk_plantation" ORDER = $ORDER$ }#丝绸种植园
+	daoyu_remove_single_building = { BUILDING = "building_cotton_plantation" ORDER = $ORDER$ }#棉花种植园
+	daoyu_remove_single_building = { BUILDING = "building_coffee_plantation" ORDER = $ORDER$ }#咖啡种植园
+	daoyu_remove_single_building = { BUILDING = "building_tea_plantation" ORDER = $ORDER$ }#茶叶种植园
+	daoyu_remove_single_building = { BUILDING = "building_tobacco_plantation" ORDER = $ORDER$ }#烟草种植园
+	daoyu_remove_single_building = { BUILDING = "building_sugar_plantation" ORDER = $ORDER$ }#糖料作物种植园
+	daoyu_remove_single_building = { BUILDING = "building_banana_plantation" ORDER = $ORDER$ }#香蕉种植园
+	daoyu_remove_single_building = { BUILDING = "building_opium_plantation" ORDER = $ORDER$ }#鸦片种植园
+	daoyu_remove_single_building = { BUILDING = "building_food_industry" ORDER = $ORDER$ }#食品厂
+	daoyu_remove_single_building = { BUILDING = "building_textile_mills" ORDER = $ORDER$ }#纺织厂
+	daoyu_remove_single_building = { BUILDING = "building_furniture_manufacturies" ORDER = $ORDER$ }#家具制造厂
+	daoyu_remove_single_building = { BUILDING = "building_glassworks" ORDER = $ORDER$ }#玻璃厂
+	daoyu_remove_single_building = { BUILDING = "building_tooling_workshops" ORDER = $ORDER$ }#工艺装备工坊
+	daoyu_remove_single_building = { BUILDING = "building_paper_mills" ORDER = $ORDER$ }#造纸厂
+	daoyu_remove_single_building = { BUILDING = "building_chemical_plants" ORDER = $ORDER$ }#肥料厂
+	daoyu_remove_single_building = { BUILDING = "building_explosives_factory" ORDER = $ORDER$ }#炸药厂
+	daoyu_remove_single_building = { BUILDING = "building_synthetics_plants" ORDER = $ORDER$ }#化学合成厂
+	daoyu_remove_single_building = { BUILDING = "building_steel_mills" ORDER = $ORDER$ }#炼钢厂
+	daoyu_remove_single_building = { BUILDING = "building_arms_industry" ORDER = $ORDER$ }#武器厂
+	daoyu_remove_single_building = { BUILDING = "building_munition_plants" ORDER = $ORDER$ }#弹药厂
+	daoyu_remove_single_building = { BUILDING = "building_artillery_foundries" ORDER = $ORDER$ }#火炮铸造厂
+	daoyu_remove_single_building = { BUILDING = "building_motor_industry" ORDER = $ORDER$ }#动力机械厂
+	daoyu_remove_single_building = { BUILDING = "building_automotive_industry" ORDER = $ORDER$ }#汽车工业
+	daoyu_remove_single_building = { BUILDING = "building_electrics_industry" ORDER = $ORDER$ }#电子厂
+	daoyu_remove_single_building = { BUILDING = "building_shipyards" ORDER = $ORDER$ }#造船厂
+	daoyu_remove_single_building = { BUILDING = "building_military_shipyards" ORDER = $ORDER$ }#军用造船厂
+}
+daoyu_remove_single_building = {
+	if = { limit = { scope:daoyu_current_building_$ORDER$ = { is_building_type = $BUILDING$ } } remove_building = $BUILDING$ }
+}
+daoyu_current_building_effect = {
+	if = {
+		limit = { has_global_variable = daoyu_remove_building }
+		scope:daoyu_current_building_$ORDER$.state = { daoyu_remove_building_effect = { ORDER = $ORDER$ } }
+		if = { limit = { any_scope_building = { has_modifier = daoyu_potential_building } } set_variable = daoyu_change_option_$ORDER$ }
+		else = { random_country = { random_scope_building = { save_scope_as = daoyu_current_building_$ORDER$ } } }
+	}
+	else = { set_global_variable = daoyu_get_building_level_$ORDER$ }
+}
+daoyu_current_building_after_effect = {
+	daoyu_current_building_after_single_effect = { ORDER = 1 }
+	daoyu_current_building_after_single_effect = { ORDER = 2 }
+	daoyu_current_building_after_single_effect = { ORDER = 3 }
+	daoyu_current_building_after_single_effect = { ORDER = 4 }
+	daoyu_current_building_after_single_effect = { ORDER = 5 }
+	daoyu_current_building_after_single_effect = { ORDER = 6 }
+	daoyu_current_building_after_single_effect = { ORDER = 7 }
+	daoyu_current_building_after_single_effect = { ORDER = 8 }
+	daoyu_current_building_after_single_effect = { ORDER = 9 }
+}
+
+daoyu_production_method_effect = {
+	if = {
+		limit = {
+			any_scope_state = { any_scope_building = { is_building_type = $TYPE$ has_active_production_method = $PM$ } }
+			any_scope_state = { not = { any_scope_building = { is_building_type = $TYPE$ has_active_production_method = $PM$ } } }
+		}
+		every_scope_state = {
+			limit = { any_scope_building = { is_building_type = $TYPE$ not = { has_active_production_method = $PM$ } } }
+			activate_production_method = { building_type = $TYPE$ production_method = $PM$ }
+		}
+	}
+}
+daoyu_auto_production_method_effect = {
+	daoyu_production_method_effect = { TYPE = "building_food_industry" PM = "pm_baking_powder" }
+	daoyu_production_method_effect = { TYPE = "building_food_industry" PM = "pm_sweeteners" }
+	daoyu_production_method_effect = { TYPE = "building_food_industry" PM = "pm_vacuum_canning_principle_3" }
+	daoyu_production_method_effect = { TYPE = "building_food_industry" PM = "pm_vacuum_canning" }
+	daoyu_production_method_effect = { TYPE = "building_food_industry" PM = "pm_cannery_fish" }
+	daoyu_production_method_effect = { TYPE = "building_food_industry" PM = "pm_cannery" }
+	daoyu_production_method_effect = { TYPE = "building_food_industry" PM = "pm_patent_stills" }
+	daoyu_production_method_effect = { TYPE = "building_food_industry" PM = "pm_pot_stills" }
+	daoyu_production_method_effect = { TYPE = "building_food_industry" PM = "pm_automated_bakery" }
+	daoyu_production_method_effect = { TYPE = "building_textile_mills" PM = "pm_electric_sewing_machines" }
+	daoyu_production_method_effect = { TYPE = "building_textile_mills" PM = "pm_sewing_machines" }
+	daoyu_production_method_effect = { TYPE = "building_textile_mills" PM = "pm_dye_workshops" }
+	daoyu_production_method_effect = { TYPE = "building_textile_mills" PM = "pm_elastics" }
+	daoyu_production_method_effect = { TYPE = "building_textile_mills" PM = "pm_craftsman_sewing" }
+	daoyu_production_method_effect = { TYPE = "building_textile_mills" PM = "pm_automatic_power_looms" }
+	daoyu_production_method_effect = { TYPE = "building_textile_mills" PM = "pm_mechanized_looms" }
+	daoyu_production_method_effect = { TYPE = "building_furniture_manufacturies" PM = "pm_mechanized_workshops" }
+	daoyu_production_method_effect = { TYPE = "building_furniture_manufacturies" PM = "pm_lathe" }
+	daoyu_production_method_effect = { TYPE = "building_furniture_manufacturies" PM = "pm_precision_tools" }
+	daoyu_production_method_effect = { TYPE = "building_furniture_manufacturies" PM = "pm_luxury_furniture" }
+	daoyu_production_method_effect = { TYPE = "building_furniture_manufacturies" PM = "pm_assembly_lines_building_furniture_manufacturies" }
+	daoyu_production_method_effect = { TYPE = "building_furniture_manufacturies" PM = "pm_rotary_valve_engine_building_furniture_manufacturies" }
+	daoyu_production_method_effect = { TYPE = "building_furniture_manufacturies" PM = "pm_watertube_boiler_building_furniture_manufacturies" }
+	daoyu_production_method_effect = { TYPE = "building_glassworks" PM = "pm_houseware_plastics" }
+	daoyu_production_method_effect = { TYPE = "building_glassworks" PM = "pm_crystal_glass" }
+	daoyu_production_method_effect = { TYPE = "building_glassworks" PM = "pm_leaded_glass" }
+	daoyu_production_method_effect = { TYPE = "building_glassworks" PM = "pm_bone_china" }
+	daoyu_production_method_effect = { TYPE = "building_glassworks" PM = "pm_ceramics" }
+	daoyu_production_method_effect = { TYPE = "building_glassworks" PM = "pm_automatic_bottle_blowers" }
+	daoyu_production_method_effect = { TYPE = "building_tooling_workshops" PM = "pm_rubber_grips" }
+	daoyu_production_method_effect = { TYPE = "building_tooling_workshops" PM = "pm_steel" }
+	daoyu_production_method_effect = { TYPE = "building_tooling_workshops" PM = "pm_pig_iron" }
+	daoyu_production_method_effect = { TYPE = "building_tooling_workshops" PM = "pm_assembly_lines_building_tooling_workshops" }
+	daoyu_production_method_effect = { TYPE = "building_tooling_workshops" PM = "pm_rotary_valve_engine_building_tooling_workshops" }
+	daoyu_production_method_effect = { TYPE = "building_tooling_workshops" PM = "pm_watertube_boiler_building_tooling_workshops" }
+	daoyu_production_method_effect = { TYPE = "building_paper_mills" PM = "pm_bleached_paper" }
+	daoyu_production_method_effect = { TYPE = "building_paper_mills" PM = "pm_sulfite_pulping" }
+	daoyu_production_method_effect = { TYPE = "building_paper_mills" PM = "pm_rotary_valve_engine_building_paper_mills" }
+	daoyu_production_method_effect = { TYPE = "building_paper_mills" PM = "pm_watertube_boiler_building_paper_mills" }
+	daoyu_production_method_effect = { TYPE = "building_chemical_plants" PM = "pm_nitrogen_fixation" }
+	daoyu_production_method_effect = { TYPE = "building_chemical_plants" PM = "pm_improved_fertilizer" }
+	daoyu_production_method_effect = { TYPE = "building_explosives_factory" PM = "pm_brine_electrolysis" }
+	daoyu_production_method_effect = { TYPE = "building_explosives_factory" PM = "pm_vacuum_evaporation" }
+	daoyu_production_method_effect = { TYPE = "building_explosives_factory" PM = "pm_ammonia-soda_process" }
+	daoyu_production_method_effect = { TYPE = "building_synthetics_plants" PM = "pm_rayon" }
+	daoyu_production_method_effect = { TYPE = "building_steel_mills" PM = "pm_electric_arc_process" }
+	daoyu_production_method_effect = { TYPE = "building_steel_mills" PM = "pm_open_hearth_process" }
+	daoyu_production_method_effect = { TYPE = "building_steel_mills" PM = "pm_bessemer_process" }
+	daoyu_production_method_effect = { TYPE = "building_steel_mills" PM = "pm_rotary_valve_engine_building_steel_mills" }
+	daoyu_production_method_effect = { TYPE = "building_steel_mills" PM = "pm_watertube_boiler_building_steel_mills" }
+	daoyu_production_method_effect = { TYPE = "building_motor_industry" PM = "pm_diesel_engines" }
+	daoyu_production_method_effect = { TYPE = "building_motor_industry" PM = "pm_electric_engines" }
+	daoyu_production_method_effect = { TYPE = "building_motor_industry" PM = "pm_automobile_production" }
+	daoyu_production_method_effect = { TYPE = "building_motor_industry" PM = "pm_assembly_lines_building_motor_industry" }
+	daoyu_production_method_effect = { TYPE = "building_motor_industry" PM = "pm_rotary_valve_engine_building_motor_industry" }
+	daoyu_production_method_effect = { TYPE = "building_motor_industry" PM = "pm_watertube_boiler_building_motor_industry" }
+	daoyu_production_method_effect = { TYPE = "building_shipyards" PM = "pm_arc_welding_shipbuilding" }
+	daoyu_production_method_effect = { TYPE = "building_shipyards" PM = "pm_metal_shipbuilding" }
+	daoyu_production_method_effect = { TYPE = "building_shipyards" PM = "pm_complex_shipbuilding" }
+	daoyu_production_method_effect = { TYPE = "building_military_shipyards" PM = "pm_military_shipbuilding_steam_2" }
+	daoyu_production_method_effect = { TYPE = "building_military_shipyards" PM = "pm_military_shipbuilding_steam" }
+	daoyu_production_method_effect = { TYPE = "building_military_shipyards" PM = "pm_military_shipbuilding_wooden_2" }
+	daoyu_production_method_effect = { TYPE = "building_arms_industry" PM = "pm_bolt_action_rifles" }
+	daoyu_production_method_effect = { TYPE = "building_arms_industry" PM = "pm_repeaters" }
+	daoyu_production_method_effect = { TYPE = "building_arms_industry" PM = "pm_rifles" }
+	daoyu_production_method_effect = { TYPE = "building_arms_industry" PM = "pm_assembly_lines_building_arms_industry" }
+	daoyu_production_method_effect = { TYPE = "building_arms_industry" PM = "pm_rotary_valve_engine_building_arms_industry" }
+	daoyu_production_method_effect = { TYPE = "building_artillery_foundries" PM = "pm_recoiled_barrels" }
+	daoyu_production_method_effect = { TYPE = "building_artillery_foundries" PM = "pm_breech_loaders" }
+	daoyu_production_method_effect = { TYPE = "building_artillery_foundries" PM = "pm_smoothbores" }
+	daoyu_production_method_effect = { TYPE = "building_artillery_foundries" PM = "pm_assembly_lines_building_arms_industry" }
+	daoyu_production_method_effect = { TYPE = "building_artillery_foundries" PM = "pm_rotary_valve_engine_building_arms_industry" }
+	daoyu_production_method_effect = { TYPE = "building_munition_plants" PM = "pm_explosive_shells" }
+	daoyu_production_method_effect = { TYPE = "building_munition_plants" PM = "pm_assembly_lines_building_munition_plants" }
+	daoyu_production_method_effect = { TYPE = "building_munition_plants" PM = "pm_rotary_valve_engine_building_munition_plants" }
+	daoyu_production_method_effect = { TYPE = "building_rye_farm" PM = "pm_chemical_fertilizer" }
+	daoyu_production_method_effect = { TYPE = "building_rye_farm" PM = "pm_fertilization" }
+	daoyu_production_method_effect = { TYPE = "building_rye_farm" PM = "pm_soil_enriching_farming" }
+	daoyu_production_method_effect = { TYPE = "building_rye_farm" PM = "pm_compression_ignition_tractors" }
+	daoyu_production_method_effect = { TYPE = "building_rye_farm" PM = "pm_tractors" }
+	daoyu_production_method_effect = { TYPE = "building_rye_farm" PM = "pm_steam_threshers" }
+	daoyu_production_method_effect = { TYPE = "building_rye_farm" PM = "pm_tools" }
+	daoyu_production_method_effect = { TYPE = "building_wheat_farm" PM = "pm_chemical_fertilizer" }
+	daoyu_production_method_effect = { TYPE = "building_wheat_farm" PM = "pm_fertilization" }
+	daoyu_production_method_effect = { TYPE = "building_wheat_farm" PM = "pm_soil_enriching_farming" }
+	daoyu_production_method_effect = { TYPE = "building_wheat_farm" PM = "pm_compression_ignition_tractors" }
+	daoyu_production_method_effect = { TYPE = "building_wheat_farm" PM = "pm_tractors" }
+	daoyu_production_method_effect = { TYPE = "building_wheat_farm" PM = "pm_steam_threshers" }
+	daoyu_production_method_effect = { TYPE = "building_wheat_farm" PM = "pm_tools" }
+	daoyu_production_method_effect = { TYPE = "building_rice_farm" PM = "pm_chemical_fertilizer_building_rice_farm" }
+	daoyu_production_method_effect = { TYPE = "building_rice_farm" PM = "pm_fertilization_building_rice_farm" }
+	daoyu_production_method_effect = { TYPE = "building_rice_farm" PM = "pm_soil_enriching_farming_building_rice_farm" }
+	daoyu_production_method_effect = { TYPE = "building_rice_farm" PM = "pm_steam_threshers_building_rice_farm" }
+	daoyu_production_method_effect = { TYPE = "building_rice_farm" PM = "pm_tools_building_rice_farm" }
+	daoyu_production_method_effect = { TYPE = "building_maize_farm" PM = "pm_chemical_fertilizer" }
+	daoyu_production_method_effect = { TYPE = "building_maize_farm" PM = "pm_fertilization" }
+	daoyu_production_method_effect = { TYPE = "building_maize_farm" PM = "pm_soil_enriching_farming" }
+	daoyu_production_method_effect = { TYPE = "building_maize_farm" PM = "pm_compression_ignition_tractors" }
+	daoyu_production_method_effect = { TYPE = "building_maize_farm" PM = "pm_tractors" }
+	daoyu_production_method_effect = { TYPE = "building_maize_farm" PM = "pm_steam_threshers" }
+	daoyu_production_method_effect = { TYPE = "building_maize_farm" PM = "pm_tools" }
+	daoyu_production_method_effect = { TYPE = "building_millet_farm" PM = "pm_chemical_fertilizer" }
+	daoyu_production_method_effect = { TYPE = "building_millet_farm" PM = "pm_fertilization" }
+	daoyu_production_method_effect = { TYPE = "building_millet_farm" PM = "pm_soil_enriching_farming" }
+	daoyu_production_method_effect = { TYPE = "building_millet_farm" PM = "pm_compression_ignition_tractors" }
+	daoyu_production_method_effect = { TYPE = "building_millet_farm" PM = "pm_tractors" }
+	daoyu_production_method_effect = { TYPE = "building_millet_farm" PM = "pm_steam_threshers" }
+	daoyu_production_method_effect = { TYPE = "building_millet_farm" PM = "pm_tools" }
+	daoyu_production_method_effect = { TYPE = "building_livestock_ranch" PM = "pm_mechanized_slaughtering" }
+	daoyu_production_method_effect = { TYPE = "building_livestock_ranch" PM = "pm_slaughterhouses" }
+	daoyu_production_method_effect = { TYPE = "building_livestock_ranch" PM = "pm_butchering_tools" }
+	daoyu_production_method_effect = { TYPE = "building_livestock_ranch" PM = "pm_intensive_grazing_ranch" }
+	daoyu_production_method_effect = { TYPE = "building_livestock_ranch" PM = "pm_sheep_farms" }
+	daoyu_production_method_effect = { TYPE = "building_livestock_ranch" PM = "pm_electric_fencing" }
+	daoyu_production_method_effect = { TYPE = "building_livestock_ranch" PM = "pm_barbed_wire_fences" }
+	daoyu_production_method_effect = { TYPE = "building_livestock_ranch" PM = "pm_refrigerated_rail_cars_building_livestock_ranch" }
+	daoyu_production_method_effect = { TYPE = "building_livestock_ranch" PM = "pm_refrigerated_storage_building_livestock_ranch" }
+	daoyu_production_method_effect = { TYPE = "building_vineyard_plantation" PM = "automatic_irrigation_building_vineyard_plantation" }
+	daoyu_production_method_effect = { TYPE = "building_vineyard_plantation" PM = "pm_steam_rail_transport" }
+	daoyu_production_method_effect = { TYPE = "building_coal_mine" PM = "pm_diesel_pump_building_coal_mine" }
+	daoyu_production_method_effect = { TYPE = "building_coal_mine" PM = "pm_condensing_engine_pump_building_coal_mine" }
+	daoyu_production_method_effect = { TYPE = "building_coal_mine" PM = "pm_atmospheric_engine_pump_building_coal_mine" }
+	daoyu_production_method_effect = { TYPE = "building_coal_mine" PM = "pm_dynamite_building_coal_mine" }
+	daoyu_production_method_effect = { TYPE = "building_coal_mine" PM = "pm_nitroglycerin_building_coal_mine" }
+	daoyu_production_method_effect = { TYPE = "building_coal_mine" PM = "pm_steam_donkey_building_coal_mine" }
+	daoyu_production_method_effect = { TYPE = "building_coal_mine" PM = "pm_rail_transport_mine" }
+	daoyu_production_method_effect = { TYPE = "building_iron_mine" PM = "pm_diesel_pump_building_iron_mine" }
+	daoyu_production_method_effect = { TYPE = "building_iron_mine" PM = "pm_condensing_engine_pump_building_iron_mine" }
+	daoyu_production_method_effect = { TYPE = "building_iron_mine" PM = "pm_atmospheric_engine_pump_building_iron_mine" }
+	daoyu_production_method_effect = { TYPE = "building_iron_mine" PM = "pm_dynamite_building_iron_mine" }
+	daoyu_production_method_effect = { TYPE = "building_iron_mine" PM = "pm_nitroglycerin_building_iron_mine" }
+	daoyu_production_method_effect = { TYPE = "building_iron_mine" PM = "pm_steam_donkey_mine" }
+	daoyu_production_method_effect = { TYPE = "building_iron_mine" PM = "pm_rail_transport_mine" }
+	daoyu_production_method_effect = { TYPE = "building_lead_mine" PM = "pm_diesel_pump_building_lead_mine" }
+	daoyu_production_method_effect = { TYPE = "building_lead_mine" PM = "pm_condensing_engine_pump_building_lead_mine" }
+	daoyu_production_method_effect = { TYPE = "building_lead_mine" PM = "pm_atmospheric_engine_pump_building_lead_mine" }
+	daoyu_production_method_effect = { TYPE = "building_lead_mine" PM = "pm_dynamite_building_lead_mine" }
+	daoyu_production_method_effect = { TYPE = "building_lead_mine" PM = "pm_nitroglycerin_building_lead_mine" }
+	daoyu_production_method_effect = { TYPE = "building_lead_mine" PM = "pm_steam_donkey_mine" }
+	daoyu_production_method_effect = { TYPE = "building_lead_mine" PM = "pm_rail_transport_mine" }
+	daoyu_production_method_effect = { TYPE = "building_sulfur_mine" PM = "pm_diesel_pump_building_sulfur_mine" }
+	daoyu_production_method_effect = { TYPE = "building_sulfur_mine" PM = "pm_condensing_engine_pump_building_sulfur_mine" }
+	daoyu_production_method_effect = { TYPE = "building_sulfur_mine" PM = "pm_atmospheric_engine_pump_building_sulfur_mine" }
+	daoyu_production_method_effect = { TYPE = "building_sulfur_mine" PM = "pm_dynamite_building_sulfur_mine" }
+	daoyu_production_method_effect = { TYPE = "building_sulfur_mine" PM = "pm_nitroglycerin_building_sulfur_mine" }
+	daoyu_production_method_effect = { TYPE = "building_sulfur_mine" PM = "pm_steam_donkey_mine" }
+	daoyu_production_method_effect = { TYPE = "building_sulfur_mine" PM = "pm_rail_transport_mine" }
+	daoyu_production_method_effect = { TYPE = "building_gold_mine" PM = "pm_diesel_pump_building_gold_mine" }
+	daoyu_production_method_effect = { TYPE = "building_gold_mine" PM = "pm_condensing_engine_pump_building_gold_mine" }
+	daoyu_production_method_effect = { TYPE = "building_gold_mine" PM = "pm_atmospheric_engine_pump_building_gold_mine" }
+	daoyu_production_method_effect = { TYPE = "building_gold_mine" PM = "pm_dynamite_building_gold_mine" }
+	daoyu_production_method_effect = { TYPE = "building_gold_mine" PM = "pm_nitroglycerin_building_gold_mine" }
+	daoyu_production_method_effect = { TYPE = "building_gold_mine" PM = "pm_steam_donkey_mine" }
+	daoyu_production_method_effect = { TYPE = "building_gold_mine" PM = "pm_rail_transport_mine" }
+	daoyu_production_method_effect = { TYPE = "building_coffee_plantation" PM = "automatic_irrigation_building_coffee_plantation" }
+	daoyu_production_method_effect = { TYPE = "building_coffee_plantation" PM = "pm_steam_rail_transport" }
+	daoyu_production_method_effect = { TYPE = "building_cotton_plantation" PM = "automatic_irrigation_building_cotton_plantation" }
+	daoyu_production_method_effect = { TYPE = "building_cotton_plantation" PM = "pm_steam_rail_transport" }
+	daoyu_production_method_effect = { TYPE = "building_dye_plantation" PM = "automatic_irrigation_building_dye_plantation" }
+	daoyu_production_method_effect = { TYPE = "building_dye_plantation" PM = "pm_steam_rail_transport" }
+	daoyu_production_method_effect = { TYPE = "building_opium_plantation" PM = "automatic_irrigation_building_opium_plantation" }
+	daoyu_production_method_effect = { TYPE = "building_opium_plantation" PM = "pm_steam_rail_transport" }
+	daoyu_production_method_effect = { TYPE = "building_tea_plantation" PM = "automatic_irrigation_building_tea_plantation" }
+	daoyu_production_method_effect = { TYPE = "building_tea_plantation" PM = "pm_steam_rail_transport" }
+	daoyu_production_method_effect = { TYPE = "building_tobacco_plantation" PM = "automatic_irrigation_building_tobacco_plantation" }
+	daoyu_production_method_effect = { TYPE = "building_tobacco_plantation" PM = "pm_steam_rail_transport" }
+	daoyu_production_method_effect = { TYPE = "building_sugar_plantation" PM = "automatic_irrigation_building_sugar_plantation" }
+	daoyu_production_method_effect = { TYPE = "building_sugar_plantation" PM = "pm_steam_rail_transport" }
+	daoyu_production_method_effect = { TYPE = "building_banana_plantation" PM = "automatic_irrigation_building_banana_plantation" }
+	daoyu_production_method_effect = { TYPE = "building_banana_plantation" PM = "pm_steam_rail_transport" }
+	daoyu_production_method_effect = { TYPE = "building_silk_plantation" PM = "automatic_irrigation_building_silk_plantation" }
+	daoyu_production_method_effect = { TYPE = "building_silk_plantation" PM = "pm_steam_rail_transport" }
+	daoyu_production_method_effect = { TYPE = "building_barracks" PM = "pm_mobile_warfare_tactics" }
+	daoyu_production_method_effect = { TYPE = "building_barracks" PM = "pm_nco_incorporation" }
+	daoyu_production_method_effect = { TYPE = "building_barracks" PM = "pm_training_streamlining" }
+	daoyu_production_method_effect = { TYPE = "building_barracks" PM = "pm_advanced_tactics_training" }
+	daoyu_production_method_effect = { TYPE = "building_barracks" PM = "pm_general_training" }
+	daoyu_production_method_effect = { TYPE = "building_conscription_center" PM = "pm_mobile_warfare_tactics_conscription" }
+	daoyu_production_method_effect = { TYPE = "building_conscription_center" PM = "pm_nco_incorporation_conscription" }
+	daoyu_production_method_effect = { TYPE = "building_conscription_center" PM = "pm_training_streamlining_conscription" }
+	daoyu_production_method_effect = { TYPE = "building_conscription_center" PM = "pm_advanced_tactics_training_conscription" }
+	daoyu_production_method_effect = { TYPE = "building_conscription_center" PM = "pm_general_training_conscription" }
+	daoyu_production_method_effect = { TYPE = "building_naval_base" PM = "pm_battlefleet_tactics" }
+	daoyu_production_method_effect = { TYPE = "building_naval_base" PM = "pm_sea_lane_strategies" }
+	daoyu_production_method_effect = { TYPE = "building_naval_base" PM = "pm_jeune_ecole" }
+	daoyu_production_method_effect = { TYPE = "building_naval_base" PM = "pm_power_of_the_purse" }
+	daoyu_production_method_effect = { TYPE = "building_urban_center" PM = "pm_arcades" }
+	daoyu_production_method_effect = { TYPE = "building_urban_center" PM = "pm_covered_markets" }
+	daoyu_production_method_effect = { TYPE = "building_urban_center" PM = "pm_market_squares" }
+	daoyu_production_method_effect = { TYPE = "building_urban_center" PM = "pm_electric_streetlights" }
+	daoyu_production_method_effect = { TYPE = "building_urban_center" PM = "pm_gas_streetlights" }
+	daoyu_production_method_effect = { TYPE = "building_urban_center" PM = "pm_public_motor_carriages" }
+	daoyu_production_method_effect = { TYPE = "building_urban_center" PM = "pm_public_trams" }
+	daoyu_production_method_effect = { TYPE = "building_urban_center" PM = "pm_no_urban_clergy" }
+	daoyu_production_method_effect = { TYPE = "building_urban_center" PM = "pm_free_urban_clergy" }
+	daoyu_production_method_effect = { TYPE = "building_arts_academy" PM = "pm_film_art" }
+	daoyu_production_method_effect = { TYPE = "building_arts_academy" PM = "pm_photographic_art" }
+	daoyu_production_method_effect = { TYPE = "building_arts_academy" PM = "pm_realist_art" }
+	daoyu_production_method_effect = { TYPE = "building_arts_academy" PM = "pm_independent_artists" }
+	daoyu_production_method_effect = { TYPE = "building_arts_academy" PM = "pm_bourgeoisie_patronage" }
+	daoyu_production_method_effect = { TYPE = "building_arts_academy" PM = "pm_freedom_of_movement_no_effect" }
+	daoyu_production_method_effect = { TYPE = "building_power_plant" PM = "pm_oil-fired_plant" }
+	daoyu_production_method_effect = { TYPE = "building_power_plant" PM = "pm_coal-fired_plant" }
+	daoyu_production_method_effect = { TYPE = "building_port" PM = "pm_modern_port" }
+	daoyu_production_method_effect = { TYPE = "building_port" PM = "pm_industrial_port" }
+	daoyu_production_method_effect = { TYPE = "building_port" PM = "pm_basic_port" }
+	daoyu_production_method_effect = { TYPE = "building_government_administration" PM = "pm_switch_boards" }
+	daoyu_production_method_effect = { TYPE = "building_government_administration" PM = "pm_vertical_filing_cabinets" }
+	daoyu_production_method_effect = { TYPE = "building_government_administration" PM = "pm_horizontal_drawer_cabinets" }
+	daoyu_production_method_effect = { TYPE = "building_government_administration" PM = "pm_professional_bureaucrats" }
+	daoyu_production_method_effect = { TYPE = "building_government_administration" PM = "pm_secular_bureaucrats" }
+	daoyu_production_method_effect = { TYPE = "building_university" PM = "pm_analytical_philosophy_department" }
+	daoyu_production_method_effect = { TYPE = "building_university" PM = "pm_philosophy_department" }
+	daoyu_production_method_effect = { TYPE = "building_university" PM = "pm_secular_academia" }
+	daoyu_production_method_effect = { TYPE = "building_university" PM = "pm_freedom_of_movement_no_effect" }
+	daoyu_production_method_effect = { TYPE = "building_skyscraper" PM = "pm_skyscraper_trade_nexus" }
+	daoyu_production_method_effect = { TYPE = "building_skyscraper" PM = "pm_airship_mooring_post" }
+	daoyu_production_method_effect = { TYPE = "building_eiffel_tower" PM = "pm_monument_no_effects" }
+	daoyu_production_method_effect = { TYPE = "building_eiffel_tower" PM = "pm_monument_prestige_only" }
+	daoyu_production_method_effect = { TYPE = "building_angkor_wat" PM = "pm_monument_no_effects" }
+	daoyu_production_method_effect = { TYPE = "building_angkor_wat" PM = "pm_monument_prestige_only" }
+	daoyu_production_method_effect = { TYPE = "building_big_ben" PM = "pm_monument_no_effects" }
+	daoyu_production_method_effect = { TYPE = "building_big_ben" PM = "pm_monument_prestige_only" }
+	daoyu_production_method_effect = { TYPE = "building_forbidden_city" PM = "pm_monument_no_effects" }
+	daoyu_production_method_effect = { TYPE = "building_forbidden_city" PM = "pm_monument_prestige_only" }
+	daoyu_production_method_effect = { TYPE = "building_hagia_sophia" PM = "pm_monument_no_effects" }
+	daoyu_production_method_effect = { TYPE = "building_hagia_sophia" PM = "pm_monument_prestige_only" }
+	daoyu_production_method_effect = { TYPE = "building_mosque_of_djenne" PM = "pm_monument_no_effects" }
+	daoyu_production_method_effect = { TYPE = "building_mosque_of_djenne" PM = "pm_monument_prestige_only" }
+	daoyu_production_method_effect = { TYPE = "building_statue_of_liberty" PM = "pm_monument_no_effects" }
+	daoyu_production_method_effect = { TYPE = "building_statue_of_liberty" PM = "pm_monument_prestige_only" }
+	daoyu_production_method_effect = { TYPE = "building_vatican_city" PM = "pm_monument_no_effects" }
+	daoyu_production_method_effect = { TYPE = "building_vatican_city" PM = "pm_monument_prestige_only" }
+	daoyu_production_method_effect = { TYPE = "building_vatican_city" PM = "pm_monument_prestige_only_vatican_city" }
+	daoyu_production_method_effect = { TYPE = "building_white_house" PM = "pm_monument_no_effects" }
+	daoyu_production_method_effect = { TYPE = "building_white_house" PM = "pm_monument_prestige_only" }
+	daoyu_production_method_effect = { TYPE = "building_cristo_redentor" PM = "pm_monument_no_effects" }
+	daoyu_production_method_effect = { TYPE = "building_cristo_redentor" PM = "pm_monument_prestige_only" }
+	daoyu_production_method_effect = { TYPE = "building_power_bloc_statue" PM = "pm_monument_no_effects" }
+	daoyu_production_method_effect = { TYPE = "building_power_bloc_statue" PM = "pm_power_bloc_prestige_only" }
+	daoyu_production_method_effect = { TYPE = "building_power_bloc_statue" PM = "pm_power_bloc_statue_religious" }
+	daoyu_production_method_effect = { TYPE = "building_power_bloc_statue" PM = "pm_power_bloc_statue_trade_league" }
+	daoyu_production_method_effect = { TYPE = "building_power_bloc_statue" PM = "pm_power_bloc_statue_ideological_union" }
+	daoyu_production_method_effect = { TYPE = "building_power_bloc_statue" PM = "pm_power_bloc_statue_military_treaty" }
+	daoyu_production_method_effect = { TYPE = "building_logging_camp" PM = "pm_electric_saw_mills" }
+	daoyu_production_method_effect = { TYPE = "building_logging_camp" PM = "pm_saw_mills" }
+	daoyu_production_method_effect = { TYPE = "building_logging_camp" PM = "pm_chainsaws" }
+	daoyu_production_method_effect = { TYPE = "building_logging_camp" PM = "pm_steam_donkey_building_logging_camp" }
+	daoyu_production_method_effect = { TYPE = "building_logging_camp" PM = "pm_log_carts" }
+	daoyu_production_method_effect = { TYPE = "building_logging_camp" PM = "pm_rail_transport_building_logging_camp" }
+	daoyu_production_method_effect = { TYPE = "building_rubber_plantation" PM = "automatic_irrigation_building_rubber_plantation" }
+	daoyu_production_method_effect = { TYPE = "building_rubber_plantation" PM = "pm_steam_rail_transport" }
+	daoyu_production_method_effect = { TYPE = "building_fishing_wharf" PM = "pm_steam_trawlers" }
+	daoyu_production_method_effect = { TYPE = "building_fishing_wharf" PM = "pm_fishing_trawlers" }
+	daoyu_production_method_effect = { TYPE = "building_fishing_wharf" PM = "pm_flash_freezing_building_fishing_wharf" }
+	daoyu_production_method_effect = { TYPE = "building_fishing_wharf" PM = "pm_refrigerated_rail_cars_building_fishing_wharf" }
+	daoyu_production_method_effect = { TYPE = "building_fishing_wharf" PM = "pm_refrigerated_storage_building_fishing_wharf" }
+	daoyu_production_method_effect = { TYPE = "building_whaling_station" PM = "pm_steam_whaling_ships" }
+	daoyu_production_method_effect = { TYPE = "building_whaling_station" PM = "pm_wooden_whaling_ships" }
+	daoyu_production_method_effect = { TYPE = "building_whaling_station" PM = "pm_flash_freezing_building_whaling_station" }
+	daoyu_production_method_effect = { TYPE = "building_whaling_station" PM = "pm_refrigerated_rail_cars_building_whaling_station" }
+	daoyu_production_method_effect = { TYPE = "building_whaling_station" PM = "pm_refrigerated_storage_building_whaling_station" }
+	daoyu_production_method_effect = { TYPE = "building_oil_rig" PM = "pm_combustion_derricks" }
+	daoyu_production_method_effect = { TYPE = "building_oil_rig" PM = "pm_tanker_cars" }
+	daoyu_production_method_effect = { TYPE = "building_oil_rig" PM = "pm_rail_transport_building_oil_rig" }
+	daoyu_production_method_effect = { TYPE = "building_railway" PM = "pm_diesel_trains_principle_transport_3" }
+	daoyu_production_method_effect = { TYPE = "building_railway" PM = "pm_diesel_trains" }
+	daoyu_production_method_effect = { TYPE = "building_railway" PM = "pm_electric_trains_principle_transport_3" }
+	daoyu_production_method_effect = { TYPE = "building_railway" PM = "pm_electric_trains" }
+	daoyu_production_method_effect = { TYPE = "building_railway" PM = "pm_steam_trains_principle_transport_3" }
+	daoyu_production_method_effect = { TYPE = "building_railway" PM = "pm_steam_trains" }
+	daoyu_production_method_effect = { TYPE = "building_railway" PM = "pm_steel_passenger_carriages" }
+	daoyu_production_method_effect = { TYPE = "building_railway" PM = "pm_wooden_passenger_carriages" }
+	daoyu_production_method_effect = { TYPE = "building_trade_center" PM = "pm_trade_center_principle_external_trade_2" }
+	daoyu_production_method_effect = { TYPE = "building_trade_center" PM = "pm_trade_center_bureaucrat_ownership" }
+	daoyu_production_method_effect = { TYPE = "building_trade_center" PM = "pm_trade_center_privately_owned" }
+	daoyu_production_method_effect = { TYPE = "building_manor_house" PM = "pm_manor_house_principle_divine_economics_2" }
+	daoyu_production_method_effect = { TYPE = "building_manor_house" PM = "pm_manor_house_bureaucrat_ownership" }
+	daoyu_production_method_effect = { TYPE = "building_financial_district" PM = "pm_financial_district_principle_divine_economics_2" }
+	daoyu_production_method_effect = { TYPE = "building_financial_district" PM = "pm_financial_district_publicly_traded" }
+	daoyu_production_method_effect = { TYPE = "building_subsistence_farms" PM = "pm_home_workshops_building_subsistence_farms" }
+	daoyu_production_method_effect = { TYPE = "building_subsistence_farms" PM = "pm_serfdom" }
+	daoyu_production_method_effect = { TYPE = "building_subsistence_orchards" PM = "pm_home_workshops_building_subsistence_orchards" }
+	daoyu_production_method_effect = { TYPE = "building_subsistence_orchards" PM = "pm_serfdom_building_subsistence_orchards" }
+	daoyu_production_method_effect = { TYPE = "building_subsistence_pastures" PM = "pm_home_workshops_building_subsistence_pastures" }
+	daoyu_production_method_effect = { TYPE = "building_subsistence_pastures" PM = "pm_serfdom_building_subsistence_pastures" }
+	daoyu_production_method_effect = { TYPE = "building_subsistence_fishing_villages" PM = "pm_home_workshops_building_subsistence_fishing_villages" }
+	daoyu_production_method_effect = { TYPE = "building_subsistence_fishing_villages" PM = "pm_serfdom_building_subsistence_fishing_villages" }
+	daoyu_production_method_effect = { TYPE = "building_subsistence_rice_paddies" PM = "pm_home_workshops_building_subsistence_rice_paddies" }
+	daoyu_production_method_effect = { TYPE = "building_subsistence_rice_paddies" PM = "pm_serfdom_building_subsistence_rice_paddies" }
+	daoyu_production_method_effect = { TYPE = "building_construction_sector" PM = "pm_arc_welded_buildings" }
+	daoyu_production_method_effect = { TYPE = "building_construction_sector" PM = "pm_steel_frame_buildings" }
+	daoyu_production_method_effect = { TYPE = "building_construction_sector" PM = "pm_iron_frame_buildings" }
+}
+
+daoyu_search_current_building = {
+	if = {
+		limit = { has_global_variable = daoyu_buildings_expand }
+		every_scope_building = { limit = { daoyu_can_nationalized = yes is_under_construction = yes level > 0 private_ownership_fraction = 0 not = { has_modifier = daoyu_potential_building } } add_modifier = { name = daoyu_potential_building days = 1 } }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_ucy_nationally_owned }
+		every_scope_building = { limit = { daoyu_can_nationalized = yes is_under_construction = yes level > 0 private_ownership_fraction > 0 not = { has_modifier = daoyu_potential_building } } add_modifier = { name = daoyu_potential_building days = 1 } }
+	}
+	if = { limit = { has_variable = daoyu_change_option_1 } remove_variable = daoyu_change_option_1 random_scope_building = { limit = { has_modifier = daoyu_potential_building } remove_modifier = daoyu_potential_building save_scope_as = daoyu_current_building_1 } }
+	if = { limit = { has_variable = daoyu_change_option_2 } remove_variable = daoyu_change_option_2 random_scope_building = { limit = { has_modifier = daoyu_potential_building } remove_modifier = daoyu_potential_building save_scope_as = daoyu_current_building_2 } }
+	if = { limit = { has_variable = daoyu_change_option_3 } remove_variable = daoyu_change_option_3 random_scope_building = { limit = { has_modifier = daoyu_potential_building } remove_modifier = daoyu_potential_building save_scope_as = daoyu_current_building_3 } }
+	if = { limit = { has_variable = daoyu_change_option_4 } remove_variable = daoyu_change_option_4 random_scope_building = { limit = { has_modifier = daoyu_potential_building } remove_modifier = daoyu_potential_building save_scope_as = daoyu_current_building_4 } }
+	if = { limit = { has_variable = daoyu_change_option_5 } remove_variable = daoyu_change_option_5 random_scope_building = { limit = { has_modifier = daoyu_potential_building } remove_modifier = daoyu_potential_building save_scope_as = daoyu_current_building_5 } }
+	if = { limit = { has_variable = daoyu_change_option_6 } remove_variable = daoyu_change_option_6 random_scope_building = { limit = { has_modifier = daoyu_potential_building } remove_modifier = daoyu_potential_building save_scope_as = daoyu_current_building_6 } }
+	if = { limit = { has_variable = daoyu_change_option_7 } remove_variable = daoyu_change_option_7 random_scope_building = { limit = { has_modifier = daoyu_potential_building } remove_modifier = daoyu_potential_building save_scope_as = daoyu_current_building_7 } }
+	if = { limit = { has_variable = daoyu_change_option_8 } remove_variable = daoyu_change_option_8 random_scope_building = { limit = { has_modifier = daoyu_potential_building } remove_modifier = daoyu_potential_building save_scope_as = daoyu_current_building_8 } }
+	if = { limit = { has_variable = daoyu_change_option_9 } remove_variable = daoyu_change_option_9 random_scope_building = { limit = { has_modifier = daoyu_potential_building } remove_modifier = daoyu_potential_building save_scope_as = daoyu_current_building_9 } }
+}
+daoyu_set_change_option = {
+	remove_variable = daoyu_change_option_1
+	remove_variable = daoyu_change_option_2
+	remove_variable = daoyu_change_option_3
+	remove_variable = daoyu_change_option_4
+	remove_variable = daoyu_change_option_5
+	remove_variable = daoyu_change_option_6
+	remove_variable = daoyu_change_option_7
+	remove_variable = daoyu_change_option_8
+	remove_variable = daoyu_change_option_9
+	set_variable = daoyu_change_option_1
+	set_variable = daoyu_change_option_2
+	set_variable = daoyu_change_option_3
+	set_variable = daoyu_change_option_4
+	set_variable = daoyu_change_option_5
+	set_variable = daoyu_change_option_6
+	set_variable = daoyu_change_option_7
+	set_variable = daoyu_change_option_8
+	set_variable = daoyu_change_option_9
+}
+daoyu_create_building = {
+	if = {
+		limit = { or = { has_global_variable = daoyu_ucy_nationally_owned has_global_variable = daoyu_nationalized_buildings } }
+		random_scope_state = {
+			limit = { any_scope_building = { has_modifier = daoyu_current_building } }
+			if = {
+				limit = { any_scope_building = { is_building_type = $TYPE$ level = $LEVEL$ has_modifier = daoyu_current_building } }
+				remove_building = $TYPE$
+				create_building = { building = $TYPE$ level = $LEVEL$ reserves = 1 }
+				random_scope_building = { limit = { is_building_type = $TYPE$ } add_modifier = { name = daoyu_nationalized_buildings days = 1 } }
+			}
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_current_buildings_expand_1 }
+		if = {
+			limit = { exists = scope:daoyu_current_building_1 scope:daoyu_current_building_1 = { is_building_type = $TYPE$ } var:daoyu_current_building_1 = $LEVEL$ }
+			scope:daoyu_current_building_1.state = { create_building = { building = $TYPE$ level = $LEVEL$ reserves = 1 } } remove_global_variable = daoyu_current_buildings_expand remove_global_variable = daoyu_current_buildings_expand_1
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_current_buildings_expand_2 }
+		if = {
+			limit = { exists = scope:daoyu_current_building_2 scope:daoyu_current_building_2 = { is_building_type = $TYPE$ } var:daoyu_current_building_2 = $LEVEL$ }
+			scope:daoyu_current_building_2.state = { create_building = { building = $TYPE$ level = $LEVEL$ reserves = 1 } } remove_global_variable = daoyu_current_buildings_expand remove_global_variable = daoyu_current_buildings_expand_2
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_current_buildings_expand_3 }
+		if = {
+			limit = { exists = scope:daoyu_current_building_3 scope:daoyu_current_building_3 = { is_building_type = $TYPE$ } var:daoyu_current_building_3 = $LEVEL$ }
+			scope:daoyu_current_building_3.state = { create_building = { building = $TYPE$ level = $LEVEL$ reserves = 1 } } remove_global_variable = daoyu_current_buildings_expand remove_global_variable = daoyu_current_buildings_expand_3
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_current_buildings_expand_4 }
+		if = {
+			limit = { exists = scope:daoyu_current_building_4 scope:daoyu_current_building_4 = { is_building_type = $TYPE$ } var:daoyu_current_building_4 = $LEVEL$ }
+			scope:daoyu_current_building_4.state = { create_building = { building = $TYPE$ level = $LEVEL$ reserves = 1 } } remove_global_variable = daoyu_current_buildings_expand remove_global_variable = daoyu_current_buildings_expand_4
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_current_buildings_expand_5 }
+		if = {
+			limit = { exists = scope:daoyu_current_building_5 scope:daoyu_current_building_5 = { is_building_type = $TYPE$ } var:daoyu_current_building_5 = $LEVEL$ }
+			scope:daoyu_current_building_5.state = { create_building = { building = $TYPE$ level = $LEVEL$ reserves = 1 } } remove_global_variable = daoyu_current_buildings_expand remove_global_variable = daoyu_current_buildings_expand_5
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_current_buildings_expand_6 }
+		if = {
+			limit = { exists = scope:daoyu_current_building_6 scope:daoyu_current_building_6 = { is_building_type = $TYPE$ } var:daoyu_current_building_6 = $LEVEL$ }
+			scope:daoyu_current_building_6.state = { create_building = { building = $TYPE$ level = $LEVEL$ reserves = 1 } } remove_global_variable = daoyu_current_buildings_expand remove_global_variable = daoyu_current_buildings_expand_6
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_current_buildings_expand_7 }
+		if = {
+			limit = { exists = scope:daoyu_current_building_7 scope:daoyu_current_building_7 = { is_building_type = $TYPE$ } var:daoyu_current_building_7 = $LEVEL$ }
+			scope:daoyu_current_building_7.state = { create_building = { building = $TYPE$ level = $LEVEL$ reserves = 1 } } remove_global_variable = daoyu_current_buildings_expand remove_global_variable = daoyu_current_buildings_expand_7
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_current_buildings_expand_8 }
+		if = {
+			limit = { exists = scope:daoyu_current_building_8 scope:daoyu_current_building_8 = { is_building_type = $TYPE$ } var:daoyu_current_building_8 = $LEVEL$ }
+			scope:daoyu_current_building_8.state = { create_building = { building = $TYPE$ level = $LEVEL$ reserves = 1 } } remove_global_variable = daoyu_current_buildings_expand remove_global_variable = daoyu_current_buildings_expand_8
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_current_buildings_expand_9 }
+		if = {
+			limit = { exists = scope:daoyu_current_building_9 scope:daoyu_current_building_9 = { is_building_type = $TYPE$ } var:daoyu_current_building_9 = $LEVEL$ }
+			scope:daoyu_current_building_9.state = { create_building = { building = $TYPE$ level = $LEVEL$ reserves = 1 } } remove_global_variable = daoyu_current_buildings_expand remove_global_variable = daoyu_current_buildings_expand_9
+		}
+	}
+}
+daoyu_current_buildings_expand = {
+	set_global_variable = daoyu_current_buildings_expand
+	daoyu_num_effect = yes
+	remove_global_variable = daoyu_current_buildings_expand
+}
+daoyu_get_building_level = {
+	set_global_variable = daoyu_get_building_level
+	daoyu_num_effect = yes
+	remove_global_variable = daoyu_get_building_level
+}
+daoyu_current_building_after_single_effect = {
+	if = {
+		limit = { has_global_variable = daoyu_get_building_level_$ORDER$ }
+		if = {
+			limit = { has_global_variable = daoyu_buildings_expand }
+			daoyu_get_building_level = yes
+			change_variable = { name = daoyu_current_building_$ORDER$ add = 1 }
+			set_global_variable = daoyu_current_buildings_expand_$ORDER$
+			daoyu_current_buildings_expand = yes
+		}
+		if = {
+			limit = { or = { has_global_variable = daoyu_ucy_nationally_owned has_global_variable = daoyu_nationalized_buildings } }
+			daoyu_get_building_level = yes
+			set_variable = daoyu_change_option_$ORDER$
+			scope:daoyu_current_building_$ORDER$ = { add_modifier = { name = daoyu_current_building days = 1 } } daoyu_num_effect = yes
+		}
+	}
+}
+
+daoyu_t_c_remove_building = {
+	scope:daoyu_target_country = { every_scope_state = { limit = { has_building = $BUILDING$ } remove_building = $BUILDING$ } }
+	trigger_event = { id = daoyu.379 popup = yes }
+}

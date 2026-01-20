@@ -1,0 +1,2208 @@
+
+daoyu_determine_page_prev = {
+	if = { limit = { has_variable = daoyu_page_16 } remove_variable = daoyu_page_16 set_variable = daoyu_page_15 }
+	else_if = { limit = { has_variable = daoyu_page_15 } remove_variable = daoyu_page_15 set_variable = daoyu_page_14 }
+	else_if = { limit = { has_variable = daoyu_page_14 } remove_variable = daoyu_page_14 set_variable = daoyu_page_13 }
+	else_if = { limit = { has_variable = daoyu_page_13 } remove_variable = daoyu_page_13 set_variable = daoyu_page_12 }
+	else_if = { limit = { has_variable = daoyu_page_12 } remove_variable = daoyu_page_12 set_variable = daoyu_page_11 }
+	else_if = { limit = { has_variable = daoyu_page_11 } remove_variable = daoyu_page_11 set_variable = daoyu_page_10 }
+	else_if = { limit = { has_variable = daoyu_page_10 } remove_variable = daoyu_page_10 set_variable = daoyu_page_09 }
+	else_if = { limit = { has_variable = daoyu_page_09 } remove_variable = daoyu_page_09 set_variable = daoyu_page_08 }
+	else_if = { limit = { has_variable = daoyu_page_08 } remove_variable = daoyu_page_08 set_variable = daoyu_page_07 }
+	else_if = { limit = { has_variable = daoyu_page_07 } remove_variable = daoyu_page_07 set_variable = daoyu_page_06 }
+	else_if = { limit = { has_variable = daoyu_page_06 } remove_variable = daoyu_page_06 set_variable = daoyu_page_05 }
+	else_if = { limit = { has_variable = daoyu_page_05 } remove_variable = daoyu_page_05 set_variable = daoyu_page_04 }
+	else_if = { limit = { has_variable = daoyu_page_04 } remove_variable = daoyu_page_04 set_variable = daoyu_page_03 }
+	else_if = { limit = { has_variable = daoyu_page_03 } remove_variable = daoyu_page_03 set_variable = daoyu_page_02 }
+	else_if = { limit = { has_variable = daoyu_page_02 } remove_variable = daoyu_page_02 set_variable = daoyu_page_01 }
+}
+daoyu_determine_page_next = {
+	if = { limit = { has_variable = daoyu_page_01 } remove_variable = daoyu_page_01 set_variable = daoyu_page_02 }
+	else_if = { limit = { has_variable = daoyu_page_02 } remove_variable = daoyu_page_02 set_variable = daoyu_page_03 }
+	else_if = { limit = { has_variable = daoyu_page_03 } remove_variable = daoyu_page_03 set_variable = daoyu_page_04 }
+	else_if = { limit = { has_variable = daoyu_page_04 } remove_variable = daoyu_page_04 set_variable = daoyu_page_05 }
+	else_if = { limit = { has_variable = daoyu_page_05 } remove_variable = daoyu_page_05 set_variable = daoyu_page_06 }
+	else_if = { limit = { has_variable = daoyu_page_06 } remove_variable = daoyu_page_06 set_variable = daoyu_page_07 }
+	else_if = { limit = { has_variable = daoyu_page_07 } remove_variable = daoyu_page_07 set_variable = daoyu_page_08 }
+	else_if = { limit = { has_variable = daoyu_page_08 } remove_variable = daoyu_page_08 set_variable = daoyu_page_09 }
+	else_if = { limit = { has_variable = daoyu_page_09 } remove_variable = daoyu_page_09 set_variable = daoyu_page_10 }
+	else_if = { limit = { has_variable = daoyu_page_10 } remove_variable = daoyu_page_10 set_variable = daoyu_page_11 }
+	else_if = { limit = { has_variable = daoyu_page_11 } remove_variable = daoyu_page_11 set_variable = daoyu_page_12 }
+	else_if = { limit = { has_variable = daoyu_page_12 } remove_variable = daoyu_page_12 set_variable = daoyu_page_13 }
+	else_if = { limit = { has_variable = daoyu_page_13 } remove_variable = daoyu_page_13 set_variable = daoyu_page_14 }
+	else_if = { limit = { has_variable = daoyu_page_14 } remove_variable = daoyu_page_14 set_variable = daoyu_page_15 }
+	else_if = { limit = { has_variable = daoyu_page_15 } remove_variable = daoyu_page_15 set_variable = daoyu_page_16 }
+}
+daoyu_remove_page_num = {
+	if = { limit = { has_variable = daoyu_page_01 } remove_variable = daoyu_page_01 }
+	if = { limit = { has_variable = daoyu_page_02 } remove_variable = daoyu_page_02 }
+	if = { limit = { has_variable = daoyu_page_03 } remove_variable = daoyu_page_03 }
+	if = { limit = { has_variable = daoyu_page_04 } remove_variable = daoyu_page_04 }
+	if = { limit = { has_variable = daoyu_page_05 } remove_variable = daoyu_page_05 }
+	if = { limit = { has_variable = daoyu_page_06 } remove_variable = daoyu_page_06 }
+	if = { limit = { has_variable = daoyu_page_07 } remove_variable = daoyu_page_07 }
+	if = { limit = { has_variable = daoyu_page_08 } remove_variable = daoyu_page_08 }
+	if = { limit = { has_variable = daoyu_page_09 } remove_variable = daoyu_page_09 }
+	if = { limit = { has_variable = daoyu_page_10 } remove_variable = daoyu_page_10 }
+	if = { limit = { has_variable = daoyu_page_11 } remove_variable = daoyu_page_11 }
+	if = { limit = { has_variable = daoyu_page_12 } remove_variable = daoyu_page_12 }
+	if = { limit = { has_variable = daoyu_page_13 } remove_variable = daoyu_page_13 }
+	if = { limit = { has_variable = daoyu_page_14 } remove_variable = daoyu_page_14 }
+	if = { limit = { has_variable = daoyu_page_15 } remove_variable = daoyu_page_15 }
+	if = { limit = { has_variable = daoyu_page_16 } remove_variable = daoyu_page_16 }
+}
+daoyu_count_character_ideology_effect = {
+	set_global_variable = daoyu_count_character_ideology_effect
+	set_variable = { name = daoyu_count value = 0 }
+	daoyu_all_character_ideology_effect = yes
+	remove_global_variable = daoyu_count_character_ideology_effect
+}
+daoyu_remove_show_character_ideology_effect = {
+	remove_variable = daoyu_count
+	set_global_variable = daoyu_remove_show_character_ideology_effect
+	daoyu_all_character_ideology_effect = yes
+	remove_global_variable = daoyu_remove_show_character_ideology_effect
+}
+daoyu_all_character_ideology_effect = {
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_moderate" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_traditionalist" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_traditionalist_minoritarian" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_nihilist" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_republican_leader" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_radical" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_reformer" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_feminist" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_abolitionist" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_slaver" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_pacifist" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_jingoist_leader" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_royalist" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_social_democrat" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_communist" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_vanguardist" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_fascist" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_anarchist" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_ethno_nationalist" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_theocrat" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_market_liberal" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_luddite" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_authoritarian" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_protectionist" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_humanitarian" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_jacksonian_democrat" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_positivist" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_land_reformer" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_integralist" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_liberal_leader" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_corporatist_leader" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_humanitarian_royalist" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_despotic_utopian" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_utilitarian_leader" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_sovereignist_leader" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_utopian" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_modernizer_leader" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_orleanist" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_legitimist" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_bonapartist" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_orleanist_movement" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_legitimist_movement" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_bonapartist_movement" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_national_liberal_movement" }
+	daoyu_single_character_ideology = { IDEOLOGY = "ideology_integralist_movement" }
+}
+daoyu_single_character_ideology = {
+	if = {
+		limit = { has_global_variable = daoyu_remove_show_character_ideology_effect }
+		if = { limit = { has_variable = daoyu_show_CI_$IDEOLOGY$ } remove_variable = daoyu_show_CI_$IDEOLOGY$ }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_count_character_ideology_effect }
+		if = {
+			limit = {
+				or = {
+					and = { has_variable = daoyu_show_available any_character = { has_trait = daoyu_target_character not = { has_ideology = ideology:$IDEOLOGY$ } daoyu_$IDEOLOGY$ = yes } }
+					and = { has_variable = daoyu_show_more any_character = { has_trait = daoyu_target_character not = { has_ideology = ideology:$IDEOLOGY$ } daoyu_$IDEOLOGY$ = no } }
+				}
+			}
+			change_variable = { name = daoyu_count add = 1 }
+			if = { limit = { has_variable = daoyu_page_01 has_variable = daoyu_count var:daoyu_count <= 14 } set_variable = daoyu_show_CI_$IDEOLOGY$ }
+			if = { limit = { has_variable = daoyu_page_02 has_variable = daoyu_count var:daoyu_count > 14 var:daoyu_count <= 27 } set_variable = daoyu_show_CI_$IDEOLOGY$ }
+			if = { limit = { has_variable = daoyu_page_03 has_variable = daoyu_count var:daoyu_count > 27 var:daoyu_count <= 40 } set_variable = daoyu_show_CI_$IDEOLOGY$ }
+			if = { limit = { has_variable = daoyu_page_04 has_variable = daoyu_count var:daoyu_count > 40 } set_variable = daoyu_show_CI_$IDEOLOGY$ }
+		}
+	}
+}
+daoyu_state_modifier_remove_global_variable_effect = {
+	remove_global_variable = daoyu_state_negative_birth_rate_mult
+	remove_global_variable = daoyu_state_positive_birth_rate_mult
+	remove_global_variable = daoyu_growth_mortality
+	remove_global_variable = daoyu_migration_pull
+	remove_global_variable = daoyu_state_assimilation_mult
+	remove_global_variable = daoyu_state_colony_growth
+	remove_global_variable = daoyu_decree_road_maintenance
+	remove_global_variable = daoyu_decree_promote_social_mobility
+	remove_global_variable = daoyu_throughput_add
+	remove_global_variable = daoyu_goods_input_mult
+	remove_global_variable = daoyu_decree_enlistment_efforts
+	remove_global_variable = daoyu_building_minimum_wage_mult
+	remove_global_variable = daoyu_adventitious_options
+	every_state = { limit = { has_variable = daoyu_state_modifier } remove_variable = daoyu_state_modifier }
+}
+daoyu_state_modifier_remove_modifier_effect = {
+	hidden_effect = {
+		every_state = {
+			if = { limit = { has_modifier = daoyu_state_colony_growth } remove_modifier = daoyu_state_colony_growth }
+			if = { limit = { has_modifier = daoyu_throughput_add } remove_modifier = daoyu_throughput_add }
+			if = { limit = { has_modifier = daoyu_goods_input_mult } remove_modifier = daoyu_goods_input_mult }
+			if = { limit = { has_modifier = daoyu_decree_enlistment_efforts } remove_modifier = daoyu_decree_enlistment_efforts }
+			if = { limit = { has_modifier = daoyu_decree_promote_social_mobility } remove_modifier = daoyu_decree_promote_social_mobility }
+			if = { limit = { has_modifier = daoyu_decree_road_maintenance } remove_modifier = daoyu_decree_road_maintenance }
+			if = { limit = { has_modifier = daoyu_growth_mortality } remove_modifier = daoyu_growth_mortality }
+			if = { limit = { has_modifier = daoyu_migration_pull } remove_modifier = daoyu_migration_pull }
+			if = { limit = { has_modifier = daoyu_state_assimilation_mult } remove_modifier = daoyu_state_assimilation_mult }
+			if = { limit = { has_modifier = daoyu_state_negative_birth_rate_mult } remove_modifier = daoyu_state_negative_birth_rate_mult }
+			if = { limit = { has_modifier = daoyu_state_positive_birth_rate_mult } remove_modifier = daoyu_state_positive_birth_rate_mult }
+			if = { limit = { has_modifier = daoyu_building_minimum_wage_mult } remove_modifier = daoyu_building_minimum_wage_mult }
+		}
+	}
+}
+###
+daoyu_coe = {
+	random_military_formation = {
+		limit = { any_combat_unit = { count = $NUM$ } }
+		save_scope_as = daoyu_mf_1
+	}
+	random_military_formation = {
+		limit = { exists = scope:daoyu_mf_1 not = { this = scope:daoyu_mf_1 } any_combat_unit = { count = $NUM$ } }
+		save_scope_as = daoyu_mf_2
+	}
+	random_military_formation = {
+		limit = { exists = scope:daoyu_mf_2 nor = { this = scope:daoyu_mf_1 this = scope:daoyu_mf_2 } any_combat_unit = { count = $NUM$ } }
+		save_scope_as = daoyu_mf_3
+	}
+	random_military_formation = {
+		limit = { exists = scope:daoyu_mf_3 nor = { this = scope:daoyu_mf_1 this = scope:daoyu_mf_2 this = scope:daoyu_mf_3 } any_combat_unit = { count = $NUM$ } }
+		save_scope_as = daoyu_mf_4
+	}
+	random_military_formation = {
+		limit = { exists = scope:daoyu_mf_4 nor = { this = scope:daoyu_mf_1 this = scope:daoyu_mf_2 this = scope:daoyu_mf_3 this = scope:daoyu_mf_4 } any_combat_unit = { count = $NUM$ } }
+		save_scope_as = daoyu_mf_5
+	}
+	random_military_formation = {
+		limit = { exists = scope:daoyu_mf_5 nor = { this = scope:daoyu_mf_1 this = scope:daoyu_mf_2 this = scope:daoyu_mf_3 this = scope:daoyu_mf_4 this = scope:daoyu_mf_5 } any_combat_unit = { count = $NUM$ } }
+		save_scope_as = daoyu_mf_6
+	}
+	random_military_formation = {
+		limit = { exists = scope:daoyu_mf_6 nor = { this = scope:daoyu_mf_1 this = scope:daoyu_mf_2 this = scope:daoyu_mf_3 this = scope:daoyu_mf_4 this = scope:daoyu_mf_5 this = scope:daoyu_mf_6 } any_combat_unit = { count = $NUM$ } }
+		save_scope_as = daoyu_mf_7
+	}
+	random_military_formation = {
+		limit = { exists = scope:daoyu_mf_7 nor = { this = scope:daoyu_mf_1 this = scope:daoyu_mf_2 this = scope:daoyu_mf_3 this = scope:daoyu_mf_4 this = scope:daoyu_mf_5 this = scope:daoyu_mf_6 this = scope:daoyu_mf_7 } any_combat_unit = { count = $NUM$ } }
+		save_scope_as = daoyu_mf_8
+	}
+	random_military_formation = {
+		limit = { exists = scope:daoyu_mf_8 nor = { this = scope:daoyu_mf_1 this = scope:daoyu_mf_2 this = scope:daoyu_mf_3 this = scope:daoyu_mf_4 this = scope:daoyu_mf_5 this = scope:daoyu_mf_6 this = scope:daoyu_mf_7 this = scope:daoyu_mf_8 } any_combat_unit = { count = $NUM$ } }
+		save_scope_as = daoyu_mf_9
+	}
+	daoyu_remove_page_num = yes
+}
+dculo_remove_all_heritage = {
+	dculo_remove_heritage_group_effect = yes
+	dculo_remove_heritage_effect = yes
+}
+dculo_remove_heritage_group_effect = {
+	remove_variable = daoyu_heritage_group_central_asian
+	remove_variable = daoyu_heritage_group_east_asian
+	remove_variable = daoyu_heritage_group_western_european
+	remove_variable = daoyu_heritage_group_eastern_european
+	remove_variable = daoyu_heritage_group_indigenous_american
+	remove_variable = daoyu_heritage_group_indigenous_oceanic
+	remove_variable = daoyu_heritage_group_middle_eastern
+	remove_variable = daoyu_heritage_group_north_asian
+	remove_variable = daoyu_heritage_group_south_asian
+	remove_variable = daoyu_heritage_group_southeast_asian
+}
+dculo_remove_heritage_effect = {
+	remove_variable = daoyu_heritage_abyssinian
+	remove_variable = daoyu_heritage_african_diaspora
+	remove_variable = daoyu_heritage_afro_arab
+	remove_variable = daoyu_heritage_congolese
+	remove_variable = daoyu_heritage_darfurian
+	remove_variable = daoyu_heritage_east_african
+	remove_variable = daoyu_heritage_eastern_bantu
+	remove_variable = daoyu_heritage_guinean
+	remove_variable = daoyu_heritage_khoisan
+	remove_variable = daoyu_heritage_kordofanian
+	remove_variable = daoyu_heritage_nilotic
+	remove_variable = daoyu_heritage_sahelian
+	remove_variable = daoyu_heritage_somali
+	remove_variable = daoyu_heritage_southern_bantu
+	remove_variable = daoyu_heritage_southwest_bantu
+	remove_variable = daoyu_heritage_hazaran
+	remove_variable = daoyu_heritage_kipchak
+	remove_variable = daoyu_heritage_turkmen
+	remove_variable = daoyu_heritage_uighur
+	remove_variable = daoyu_heritage_uzbek
+	remove_variable = daoyu_heritage_han
+	remove_variable = daoyu_heritage_japanese
+	remove_variable = daoyu_heritage_korean
+	remove_variable = daoyu_heritage_miao
+	remove_variable = daoyu_heritage_tibetan
+	remove_variable = daoyu_heritage_yi
+	remove_variable = daoyu_heritage_african_settler
+	remove_variable = daoyu_heritage_albanian
+	remove_variable = daoyu_heritage_armenian
+	remove_variable = daoyu_heritage_ashkenazi
+	remove_variable = daoyu_heritage_baltic
+	remove_variable = daoyu_heritage_british
+	remove_variable = daoyu_heritage_east_slavic
+	remove_variable = daoyu_heritage_gallic
+	remove_variable = daoyu_heritage_georgian
+	remove_variable = daoyu_heritage_germanic
+	remove_variable = daoyu_heritage_greek
+	remove_variable = daoyu_heritage_iberian
+	remove_variable = daoyu_heritage_italic
+	remove_variable = daoyu_heritage_latin_american_settler
+	remove_variable = daoyu_heritage_magyar
+	remove_variable = daoyu_heritage_netherlandish
+	remove_variable = daoyu_heritage_nordic
+	remove_variable = daoyu_heritage_north_american_settler
+	remove_variable = daoyu_heritage_north_caucasian
+	remove_variable = daoyu_heritage_romanian
+	remove_variable = daoyu_heritage_sami
+	remove_variable = daoyu_heritage_south_slavic
+	remove_variable = daoyu_heritage_tatar
+	remove_variable = daoyu_heritage_volga_uralic
+	remove_variable = daoyu_heritage_west_slavic
+	remove_variable = daoyu_heritage_amazonian
+	remove_variable = daoyu_heritage_andean
+	remove_variable = daoyu_heritage_atlantic
+	remove_variable = daoyu_heritage_californian_indian
+	remove_variable = daoyu_heritage_caribbean
+	remove_variable = daoyu_heritage_circumpolar
+	remove_variable = daoyu_heritage_eastern_woodlands_indian
+	remove_variable = daoyu_heritage_great_basin_indian
+	remove_variable = daoyu_heritage_guarani
+	remove_variable = daoyu_heritage_mesoamerican
+	remove_variable = daoyu_heritage_northwest_coast_indian
+	remove_variable = daoyu_heritage_patagonian
+	remove_variable = daoyu_heritage_plains_indian
+	remove_variable = daoyu_heritage_plateau_indian
+	remove_variable = daoyu_heritage_southwest_indian
+	remove_variable = daoyu_heritage_subarctic_indian
+	remove_variable = daoyu_heritage_australian
+	remove_variable = daoyu_heritage_formosan
+	remove_variable = daoyu_heritage_melanesian
+	remove_variable = daoyu_heritage_micronesian
+	remove_variable = daoyu_heritage_polynesian
+	remove_variable = daoyu_heritage_anatolian
+	remove_variable = daoyu_heritage_arab
+	remove_variable = daoyu_heritage_berber
+	remove_variable = daoyu_heritage_iranian
+	remove_variable = daoyu_heritage_sephardic
+	remove_variable = daoyu_heritage_syriac
+	remove_variable = daoyu_heritage_ainu
+	remove_variable = daoyu_heritage_manchu
+	remove_variable = daoyu_heritage_mongolian
+	remove_variable = daoyu_heritage_siberian
+	remove_variable = daoyu_heritage_assamese
+	remove_variable = daoyu_heritage_carnatic
+	remove_variable = daoyu_heritage_central
+	remove_variable = daoyu_heritage_deccani
+	remove_variable = daoyu_heritage_gangetic
+	remove_variable = daoyu_heritage_gujarati
+	remove_variable = daoyu_heritage_himalayan
+	remove_variable = daoyu_heritage_indusine
+	remove_variable = daoyu_heritage_insular
+	remove_variable = daoyu_heritage_kashmiri
+	remove_variable = daoyu_heritage_rajasthani
+	remove_variable = daoyu_heritage_burmese
+	remove_variable = daoyu_heritage_cambodian
+	remove_variable = daoyu_heritage_eastern_highlands
+	remove_variable = daoyu_heritage_insulindian
+	remove_variable = daoyu_heritage_khmu
+	remove_variable = daoyu_heritage_tai
+	remove_variable = daoyu_heritage_vietnamese
+}
+dcc_created_effect = {
+	if = { limit = { has_global_variable = dcc_law_chiefdom not = { has_law = law_type:law_chiefdom } } activate_law = law_type:law_chiefdom }
+	if = { limit = { has_global_variable = dcc_law_monarchy not = { has_law = law_type:law_monarchy } } activate_law = law_type:law_monarchy }
+	if = { limit = { has_global_variable = dcc_law_presidential_republic not = { has_law = law_type:law_presidential_republic } } activate_law = law_type:law_presidential_republic }
+	if = { limit = { has_global_variable = dcc_law_parliamentary_republic not = { has_law = law_type:law_parliamentary_republic } } activate_law = law_type:law_parliamentary_republic }
+	if = { limit = { has_global_variable = dcc_law_theocracy not = { has_law = law_type:law_theocracy } } activate_law = law_type:law_theocracy }
+	if = { limit = { has_global_variable = dcc_law_council_republic not = { has_law = law_type:law_council_republic } } activate_law = law_type:law_council_republic }
+	remove_global_variable = dcc_law_chiefdom
+	remove_global_variable = dcc_law_monarchy
+	remove_global_variable = dcc_law_presidential_republic
+	remove_global_variable = dcc_law_parliamentary_republic
+	remove_global_variable = dcc_law_theocracy
+	remove_global_variable = dcc_law_council_republic
+	set_variable = dcc_country
+}
+daoyu_goods_effect = {
+	if = {
+		limit = { has_global_variable = daoyu_add_cultural_obsession }
+		if = {
+			limit = { any_country = { has_variable = daoyu_target_country } }
+			scope:daoyu_target_country = { every_scope_culture = { limit = { is_primary_culture_of = scope:daoyu_target_country not = { has_cultural_obsession = $GOODS$ } } hidden_effect = { add_cultural_obsession = $GOODS$ } } }
+		}
+		else_if = {
+			limit = { has_variable = daoyu_mark_target_culture_obsession exists = scope:daoyu_mark_target_culture }
+			scope:daoyu_mark_target_culture = { limit = { not = { has_cultural_obsession = $GOODS$ } } hidden_effect = { add_cultural_obsession = $GOODS$ } }
+		}
+	}
+	else_if = {
+		limit = { has_global_variable = daoyu_remove_cultural_obsession }
+		if = {
+			limit = { any_country = { has_variable = daoyu_target_country } }
+			scope:daoyu_target_country = { every_scope_culture = { limit = { is_primary_culture_of = scope:daoyu_target_country has_cultural_obsession = $GOODS$ } hidden_effect = { remove_cultural_obsession = $GOODS$ } } }
+		}
+		else_if = {
+			limit = { has_variable = daoyu_mark_target_culture_obsession exists = scope:daoyu_mark_target_culture }
+			scope:daoyu_mark_target_culture = { limit = { has_cultural_obsession = $GOODS$ } hidden_effect = { remove_cultural_obsession = $GOODS$ } }
+		}
+	}
+	else_if = { limit = { has_global_variable = daoyu_add_banned_goods } scope:daoyu_target_country = { limit = { not = { is_banning_goods = g:$GOODS$ } } add_banned_goods = g:$GOODS$ } }
+	else_if = { limit = { has_global_variable = daoyu_remove_banned_goods } scope:daoyu_target_country = { limit = { is_banning_goods = g:$GOODS$ } remove_banned_goods = g:$GOODS$ } }
+	else_if = {
+		limit = { has_global_variable = daoyu_increase_price_goods }
+		every_market = { limit = { daoyu_can_create_trade_route_trigger = { SCOPE = scope:daoyu_target_country } } owner = { create_trade_route = { goods = $GOODS$ level = 10 direction = import target = scope:daoyu_target_country.market } } }
+	}
+	else_if = {
+		limit = { has_global_variable = daoyu_decrease_price_goods }
+		every_market = { limit = { daoyu_can_create_trade_route_trigger = { SCOPE = scope:daoyu_target_country } } owner = { create_trade_route = { goods = $GOODS$ level = 10 direction = export target = scope:daoyu_target_country.market } } }
+	}
+}
+
+daoyu_interest_group_effect = {
+	scope:daoyu_target_country = { 
+		if = { limit = { has_global_variable = daoyu_add_ruling_interest_group ig:$IG$ = { is_in_government = no } } ig:$IG$ = { add_ruling_interest_group = yes } }
+		else_if = { limit = { has_global_variable = daoyu_remove_ruling_interest_group ig:$IG$ = { is_in_government = yes } } ig:$IG$ = { remove_ruling_interest_group = yes } }
+		else = { set_global_variable = daoyu_$IG$ }
+	}
+}
+daoyu_ig_var_effect = {
+	scope:daoyu_target_country = {
+		daoyu_single_ig_var_effect = { IG = "ig_armed_forces" MUN = $MUN$ }
+		daoyu_single_ig_var_effect = { IG = "ig_landowners" MUN = $MUN$ }
+		daoyu_single_ig_var_effect = { IG = "ig_devout" MUN = $MUN$ }
+		daoyu_single_ig_var_effect = { IG = "ig_industrialists" MUN = $MUN$ }
+		daoyu_single_ig_var_effect = { IG = "ig_intelligentsia" MUN = $MUN$ }
+		daoyu_single_ig_var_effect = { IG = "ig_petty_bourgeoisie" MUN = $MUN$ }
+		daoyu_single_ig_var_effect = { IG = "ig_trade_unions" MUN = $MUN$ }
+		daoyu_single_ig_var_effect = { IG = "ig_rural_folk" MUN = $MUN$ }
+	}
+}
+daoyu_single_ig_var_effect = {
+	if = {
+		limit = { has_global_variable = daoyu_interest_group_approval }
+		if = { limit = { has_global_variable = daoyu_$IG$ } scope:daoyu_target_country = { change_variable = { name = daoyu_$IG$_approval add = $MUN$ } } }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_interest_group_pol_str }
+		if = { limit = { has_global_variable = daoyu_$IG$ } scope:daoyu_target_country = { change_variable = { name = daoyu_$IG$_pol_str add = $MUN$ } } }
+	}
+}
+daoyu_ig_modifier_effect = {
+	scope:daoyu_target_country = {
+		daoyu_single_ig_modifier_effect = { IG = "ig_armed_forces" }
+		daoyu_single_ig_modifier_effect = { IG = "ig_landowners" }
+		daoyu_single_ig_modifier_effect = { IG = "ig_devout" }
+		daoyu_single_ig_modifier_effect = { IG = "ig_industrialists" }
+		daoyu_single_ig_modifier_effect = { IG = "ig_intelligentsia" }
+		daoyu_single_ig_modifier_effect = { IG = "ig_petty_bourgeoisie" }
+		daoyu_single_ig_modifier_effect = { IG = "ig_trade_unions" }
+		daoyu_single_ig_modifier_effect = { IG = "ig_rural_folk" }
+	}
+}
+daoyu_single_ig_modifier_effect = {
+	if = {
+		limit = { has_global_variable = daoyu_$IG$ }
+		if = {
+			limit = { has_global_variable = daoyu_interest_group_approval }
+			if = { limit = { is_ai = no } ig:$IG$ = { remove_modifier = daoyu_interest_group_approval add_modifier = { name = daoyu_interest_group_approval multiplier = var:daoyu_$IG$_approval } } }
+			else = { ig:$IG$ = { remove_modifier = daoyu_interest_group_approval add_modifier = { name = daoyu_interest_group_approval multiplier = scope:daoyu_target_country.var:daoyu_$IG$_approval years = 1 } } }
+		}
+		if = {
+			limit = { has_global_variable = daoyu_interest_group_pol_str }
+			if = { limit = { is_ai = no } ig:$IG$ = { remove_modifier = daoyu_interest_group_pol_str add_modifier = { name = daoyu_interest_group_pol_str multiplier = var:daoyu_$IG$_pol_str } } }
+			else = { ig:$IG$ = { remove_modifier = daoyu_interest_group_pol_str add_modifier = { name = daoyu_interest_group_pol_str multiplier = scope:daoyu_target_country.var:daoyu_$IG$_pol_str years = 1 } } }
+		}
+	}
+}
+daoyu_add_modifier_interest_group_effcet = {
+	if = {
+		limit = { has_global_variable = daoyu_interest_group_approval }
+		scope:daoyu_target_ig = { add_modifier = { name = daoyu_interest_group_approval multiplier = $MULTIPLIER$ months = -1 } }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_interest_group_pol_str }
+		scope:daoyu_target_ig = { add_modifier = { name = daoyu_interest_group_pol_str multiplier = $MULTIPLIER$ months = -1 } }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_character_health_add }
+		scope:daoyu_target_character = { add_modifier = { name = daoyu_character_health_add multiplier = $MULTIPLIER$ months = -1 } }
+	}
+}
+daoyu_count_IG_ideology_effect = {
+	set_global_variable = daoyu_count_IG_ideology_effect
+	set_variable = { name = daoyu_count value = 0 }
+	daoyu_all_IG_ideology_effect = yes
+	remove_global_variable = daoyu_count_IG_ideology_effect
+}
+daoyu_remove_show_IG_ideology_effect = {
+	remove_variable = daoyu_count
+	set_global_variable = daoyu_remove_show_IG_ideology_effect
+	daoyu_all_IG_ideology_effect = yes
+	remove_global_variable = daoyu_remove_show_IG_ideology_effect
+}
+daoyu_all_IG_ideology_effect = {
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_paternalistic" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_laissez_faire" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_individualist" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_hierarchic" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_oligarchic" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_pious" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_agrarian" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_particularist" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_isolationist" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_moralist" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_montenegrin_moralist" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_meritocratic" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_patriotic" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_loyalist" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_jingoist" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_liberal" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_anti_clerical" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_republican" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_proletarian" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_egalitarian" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_populist" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_socialist" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_reactionary" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_plutocratic" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_patriarchal" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_anti_slavery" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_pro_slavery" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_pro_slavery_colonial" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_corporatist" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_patriarchal_suffrage" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_feminist_ig" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_modernizer" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_liberal_modern" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_egalitarian_modern" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_republican_paternalistic" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_scholar_paternalistic" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_junker_paternalistic" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_papal_paternalistic" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_papal_moralist" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_confucian" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_bakufu" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_shinto_moralist" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_caudillismo" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_austrian_hegemony" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_russian_patriarch" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_orthodox_patriarch" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_buddhist_moralist" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_hindu_moralist" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_hindu_moralist_british_india" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_sikh_moralist" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_sikh_militancy" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_oriental_orthodox_patriarch" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_heavenly_kingdom_theocratic" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_agrarian_jeffersonian" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_constitutionalist" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_colonialist" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_utilitarian_millian" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_sovereignist" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_enclavist" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_malthusian" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_technocratic" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_magnatial" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_ibadi_shura" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_ibadi_imamate" }
+	daoyu_single_IG_ideology = { IDEOLOGY = "ideology_military_absolutist" }
+}
+daoyu_single_IG_ideology = {
+	if = {
+		limit = { has_global_variable = daoyu_remove_show_IG_ideology_effect }
+		if = { limit = { has_variable = daoyu_show_IGI_$IDEOLOGY$ } remove_variable = daoyu_show_IGI_$IDEOLOGY$ }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_count_IG_ideology_effect }
+		if = {
+			limit = {
+				or = {
+					and = { has_variable = daoyu_add_IG_ideology scope:daoyu_target_IG = { not = { has_ideology = ideology:$IDEOLOGY$ } } }
+					and = { has_variable = daoyu_remove_IG_ideology scope:daoyu_target_IG = { has_ideology = ideology:$IDEOLOGY$ } }
+				}
+			}
+			change_variable = { name = daoyu_count add = 1 }
+			if = { limit = { has_variable = daoyu_page_01 has_variable = daoyu_count var:daoyu_count <= 14 } set_variable = daoyu_show_IGI_$IDEOLOGY$ }
+			if = { limit = { has_variable = daoyu_page_02 has_variable = daoyu_count var:daoyu_count > 14 var:daoyu_count <= 27 } set_variable = daoyu_show_IGI_$IDEOLOGY$ }
+			if = { limit = { has_variable = daoyu_page_03 has_variable = daoyu_count var:daoyu_count > 27 var:daoyu_count <= 40 } set_variable = daoyu_show_IGI_$IDEOLOGY$ }
+			if = { limit = { has_variable = daoyu_page_04 has_variable = daoyu_count var:daoyu_count > 40 var:daoyu_count <= 53 } set_variable = daoyu_show_IGI_$IDEOLOGY$ }
+			if = { limit = { has_variable = daoyu_page_05 has_variable = daoyu_count var:daoyu_count > 53 } set_variable = daoyu_show_IGI_$IDEOLOGY$ }
+		}
+	}
+}
+daoyu_AOR_IG_ideology = {
+	if = { limit = { has_variable = daoyu_remove_IG_ideology } scope:daoyu_target_IG = { remove_ideology = $IDEOLOGY$ } }
+	else = { scope:daoyu_target_IG = { add_ideology = $IDEOLOGY$ } }
+}
+daoyu_country_prestige_effect = {
+	scope:daoyu_target_country = {
+		hidden_effect = { remove_modifier = daoyu_country_prestige_add remove_modifier = daoyu_negative_country_prestige_add }
+		if = {
+			limit = { has_variable = daoyu_country_prestige_var }
+			if = {
+				limit = { is_ai = no }
+				if = { limit = { var:daoyu_country_prestige_var > 0 } add_modifier = { name = daoyu_country_prestige_add multiplier = var:daoyu_country_prestige_var } }
+				else_if = { limit = { var:daoyu_country_prestige_var < 0 } add_modifier = { name = daoyu_negative_country_prestige_add multiplier = var:daoyu_country_prestige_var } }
+			}
+			else = {
+				if = { limit = { var:daoyu_country_prestige_var > 0 } add_modifier = { name = daoyu_country_prestige_add multiplier = scope:daoyu_target_country.var:daoyu_country_prestige_var months = 1 } }
+				else_if = { limit = { var:daoyu_country_prestige_var < 0 } add_modifier = { name = daoyu_negative_country_prestige_add multiplier = scope:daoyu_target_country.var:daoyu_country_prestige_var months = 1 } }
+			}
+		}
+	}
+}
+daoyu_state_add_modifier_effect = {
+	if = {
+		limit = { has_global_variable = daoyu_state_negative_birth_rate_mult }
+		every_scope_state = { limit = { has_variable = daoyu_state_modifier } add_modifier = { name = daoyu_state_negative_birth_rate_mult multiplier = $MULTIPLIER$ months = -1 } }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_state_positive_birth_rate_mult }
+		every_scope_state = { limit = { has_variable = daoyu_state_modifier } add_modifier = { name = daoyu_state_positive_birth_rate_mult multiplier = $MULTIPLIER$ months = -1 } }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_growth_mortality }
+		every_scope_state = { limit = { has_variable = daoyu_state_modifier } add_modifier = { name = daoyu_growth_mortality multiplier = $MULTIPLIER$ months = -1 } }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_migration_pull }
+		every_scope_state = { limit = { has_variable = daoyu_state_modifier } add_modifier = { name = daoyu_migration_pull multiplier = $MULTIPLIER$ months = -1 } }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_state_assimilation_mult }
+		every_scope_state = { limit = { has_variable = daoyu_state_modifier or = { has_assimilating_pops = yes has_converting_pops = yes } } add_modifier = { name = daoyu_state_assimilation_mult multiplier = $MULTIPLIER$ months = -1 } }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_state_colony_growth }
+		every_scope_state = { limit = { is_incorporated = no any_neighbouring_state = { owner = { is_country_type = decentralized } } } add_modifier = { name = daoyu_state_colony_growth multiplier = $MULTIPLIER$ months = -1 } }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_decree_road_maintenance }
+		every_scope_state = { limit = { has_variable = daoyu_state_modifier } add_modifier = { name = daoyu_decree_road_maintenance multiplier = $MULTIPLIER$ months = -1 } }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_decree_promote_social_mobility }
+		every_scope_state = { limit = { has_variable = daoyu_state_modifier } add_modifier = { name = daoyu_decree_promote_social_mobility multiplier = $MULTIPLIER$ months = -1 } }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_throughput_add }
+		every_scope_state = { limit = { has_variable = daoyu_state_modifier } add_modifier = { name = daoyu_throughput_add multiplier = $MULTIPLIER$ months = -1 } }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_goods_input_mult }
+		every_scope_state = { limit = { has_variable = daoyu_state_modifier } add_modifier = { name = daoyu_goods_input_mult multiplier = $MULTIPLIER$ months = -1 } }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_decree_enlistment_efforts }
+		every_scope_state = { limit = { has_variable = daoyu_state_modifier } add_modifier = { name = daoyu_decree_enlistment_efforts multiplier = $MULTIPLIER$ months = -1 } }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_building_minimum_wage_mult }
+		every_scope_state = { limit = { has_variable = daoyu_state_modifier } add_modifier = { name = daoyu_building_minimum_wage_mult multiplier = $MULTIPLIER$ months = -1 } }
+	}
+	daoyu_state_modifier_remove_global_variable_effect = yes
+}
+daoyu_migration_potential_target_effect = {
+	random_scope_pop = { limit = { culture = { has_variable = daoyu_potential_target } } culture = { remove_variable = daoyu_potential_target save_scope_as = daoyu_tcu_1 } set_global_variable = daoyu_tcu_1 }
+	random_scope_pop = { limit = { culture = { has_variable = daoyu_potential_target } } culture = { remove_variable = daoyu_potential_target save_scope_as = daoyu_tcu_2 } set_global_variable = daoyu_tcu_2 }
+	random_scope_pop = { limit = { culture = { has_variable = daoyu_potential_target } } culture = { remove_variable = daoyu_potential_target save_scope_as = daoyu_tcu_3 } set_global_variable = daoyu_tcu_3 }
+	random_scope_pop = { limit = { culture = { has_variable = daoyu_potential_target } } culture = { remove_variable = daoyu_potential_target save_scope_as = daoyu_tcu_4 } set_global_variable = daoyu_tcu_4 }
+	random_scope_pop = { limit = { culture = { has_variable = daoyu_potential_target } } culture = { remove_variable = daoyu_potential_target save_scope_as = daoyu_tcu_5 } set_global_variable = daoyu_tcu_5 }
+	random_scope_pop = { limit = { culture = { has_variable = daoyu_potential_target } } culture = { remove_variable = daoyu_potential_target save_scope_as = daoyu_tcu_6 } set_global_variable = daoyu_tcu_6 }
+	random_scope_pop = { limit = { culture = { has_variable = daoyu_potential_target } } culture = { remove_variable = daoyu_potential_target save_scope_as = daoyu_tcu_7 } set_global_variable = daoyu_tcu_7 }
+	random_scope_pop = { limit = { culture = { has_variable = daoyu_potential_target } } culture = { remove_variable = daoyu_potential_target save_scope_as = daoyu_tcu_8 } set_global_variable = daoyu_tcu_8 }
+	random_scope_pop = { limit = { culture = { has_variable = daoyu_potential_target } } culture = { remove_variable = daoyu_potential_target save_scope_as = daoyu_tcu_9 } set_global_variable = daoyu_tcu_9 }
+}
+daoyu_auto_colonizes_clean_effect = {
+	if = {
+		limit = { has_global_variable = daoyu_auto_colonizes }
+		remove_global_variable = daoyu_auto_colonizes
+		remove_global_variable = daoyu_auto_colonizes_1
+		remove_global_variable = daoyu_auto_colonizes_2
+		remove_global_variable = daoyu_auto_colonizes_5
+		remove_global_variable = daoyu_auto_colonizes_10
+		remove_global_variable = daoyu_auto_colonizes_15
+		remove_global_variable = daoyu_auto_colonizes_20
+		every_state = { limit = { has_modifier = daoyu_state_colony_growth } daoyu_remove_state_colony_growth_modifier = yes }
+	}
+}
+daoyu_remove_state_colony_growth_modifier = {
+	remove_modifier = daoyu_state_colony_growth remove_modifier = daoyu_state_colony_growth remove_modifier = daoyu_state_colony_growth remove_modifier = daoyu_state_colony_growth
+	remove_modifier = daoyu_state_colony_growth remove_modifier = daoyu_state_colony_growth remove_modifier = daoyu_state_colony_growth remove_modifier = daoyu_state_colony_growth
+	remove_modifier = daoyu_state_colony_growth remove_modifier = daoyu_state_colony_growth remove_modifier = daoyu_state_colony_growth remove_modifier = daoyu_state_colony_growth
+	remove_modifier = daoyu_state_colony_growth remove_modifier = daoyu_state_colony_growth remove_modifier = daoyu_state_colony_growth remove_modifier = daoyu_state_colony_growth
+	remove_modifier = daoyu_state_colony_growth remove_modifier = daoyu_state_colony_growth remove_modifier = daoyu_state_colony_growth remove_modifier = daoyu_state_colony_growth
+}
+daoyu_auto_throughput_add_clean_effect = {
+	if = {
+		limit = { has_global_variable = daoyu_auto_throughput_add }
+		remove_global_variable = daoyu_auto_throughput_add
+		remove_global_variable = daoyu_auto_throughput_add_1
+		remove_global_variable = daoyu_auto_throughput_add_2
+		remove_global_variable = daoyu_auto_throughput_add_5
+		remove_global_variable = daoyu_auto_throughput_add_10
+		remove_global_variable = daoyu_auto_throughput_add_15
+		remove_global_variable = daoyu_auto_throughput_add_20
+		every_state = { limit = { has_modifier = daoyu_throughput_add } remove_modifier = daoyu_throughput_add }
+	}
+}
+daoyu_auto_goods_input_mult_clean_effect = {
+	if = {
+		limit = { has_global_variable = daoyu_auto_goods_input_mult }
+		remove_global_variable = daoyu_auto_goods_input_mult
+		remove_global_variable = daoyu_auto_goods_input_mult_1
+		remove_global_variable = daoyu_auto_goods_input_mult_2
+		remove_global_variable = daoyu_auto_goods_input_mult_5
+		remove_global_variable = daoyu_auto_goods_input_mult_10
+		remove_global_variable = daoyu_auto_goods_input_mult_15
+		remove_global_variable = daoyu_auto_goods_input_mult_20
+		every_state = { limit = { has_modifier = daoyu_goods_input_mult } remove_modifier = daoyu_goods_input_mult }
+	}
+}
+daoyu_r_a_c_cu_effect = {
+	scope:daoyu_target_country = {
+		if = { limit = { has_global_variable = daoyu_r_cu } remove_primary_culture = cu:$CULTURE$ }
+		if = { limit = { has_global_variable = daoyu_a_cu } add_primary_culture = cu:$CULTURE$ }
+		if = { limit = { has_global_variable = daoyu_c_cu } every_scope_state = { every_scope_pop = { limit = { has_pop_culture = $CULTURE$ } change_pop_culture = { value = 1 target = scope:daoyu_t_cu } } } }
+	}
+}
+daoyu_religious_enforced_effect = {
+	if = {
+		limit = { has_global_variable = daoyu_target_country_convert_population }
+		scope:daoyu_target_country = {
+			if = { limit = { not = { country_has_state_religion = rel:$RELIGION$ } } set_state_religion = rel:$RELIGION$ }
+			every_scope_state = { limit = { any_scope_pop = { not = { religion = rel:$RELIGION$ } } } convert_population = { value = 1 target = rel:$RELIGION$ } }
+			every_scope_character = { limit = { not = { religion = rel:$RELIGION$ } } change_character_religion = rel:$RELIGION$ }
+		}
+	}
+	else = {
+		if = { limit = { not = { country_has_state_religion = rel:$RELIGION$ } } set_state_religion = rel:$RELIGION$ }
+		every_scope_state = { limit = { any_scope_pop = { not = { religion = rel:$RELIGION$ } } } convert_population = { value = 1 target = rel:$RELIGION$ } }
+		every_scope_character = { limit = { not = { religion = rel:$RELIGION$ } } change_character_religion = rel:$RELIGION$ }
+	}
+}
+daoyu_auto_religious_enforced_effect = {
+	set_global_variable = daoyu_auto_religious_enforced_effect
+	daoyu_religious_effect = yes
+	remove_global_variable = daoyu_auto_religious_enforced_effect
+}
+daoyu_religious_effect = {
+	daoyu_single_religious_effect = { RELIGION = "catholic" }#天主教
+	daoyu_single_religious_effect = { RELIGION = "protestant" }#新教
+	daoyu_single_religious_effect = { RELIGION = "orthodox" }#东正教
+	daoyu_single_religious_effect = { RELIGION = "oriental_orthodox" }#东方正统教会
+	daoyu_single_religious_effect = { RELIGION = "sunni" }#逊尼派
+	daoyu_single_religious_effect = { RELIGION = "shiite" }#什叶派
+	daoyu_single_religious_effect = { RELIGION = "ibadi" }#伊巴德派
+	daoyu_single_religious_effect = { RELIGION = "jewish" }#犹太教
+	daoyu_single_religious_effect = { RELIGION = "mahayana" }#大乘佛教
+	daoyu_single_religious_effect = { RELIGION = "gelugpa" }#格鲁派
+	daoyu_single_religious_effect = { RELIGION = "theravada" }#上座部佛教
+	daoyu_single_religious_effect = { RELIGION = "confucian" }#儒家
+	daoyu_single_religious_effect = { RELIGION = "hindu" }#印度教
+	daoyu_single_religious_effect = { RELIGION = "shinto" }#神道教
+	daoyu_single_religious_effect = { RELIGION = "sikh" }#锡克教
+	daoyu_single_religious_effect = { RELIGION = "animist" }#泛灵论
+	daoyu_single_religious_effect = { RELIGION = "atheist" }#无神论
+}
+daoyu_move_pop_religion_unemployed_effect = {
+	set_global_variable = daoyu_move_pop_religion_unemployed_effect
+	daoyu_religious_effect = yes
+	if = { limit = { has_global_variable = daoyu_from_665 } scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } is_employed = no } move_pop = scope:daoyu_migration_go_to } } }
+	remove_global_variable = daoyu_move_pop_religion_unemployed_effect
+}
+daoyu_move_pop_religion_slaves_effect = {
+	set_global_variable = daoyu_move_pop_religion_slaves_effect
+	daoyu_religious_effect = yes
+	remove_global_variable = daoyu_move_pop_religion_slaves_effect
+}
+daoyu_single_religious_effect = {
+	if = {
+		limit = { has_global_variable = daoyu_auto_religious_enforced_effect }
+		if = {
+			limit = { country_has_state_religion = rel:$RELIGION$ }
+			every_scope_state = { limit = { any_scope_pop = { not = { religion = rel:$RELIGION$ } } } convert_population = { value = 1 target = rel:$RELIGION$ } }
+			every_scope_character = { limit = { not = { religion = rel:$RELIGION$ } } change_character_religion = rel:$RELIGION$ }
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_one_earth_one_nation_one_religion }
+		if = {
+			limit = { any_country = { has_variable = daoyu_one_earth_one_nation_one_religion country_has_state_religion = rel:$RELIGION$ } }
+			set_state_religion = rel:$RELIGION$
+			every_scope_character = { change_character_religion = rel:$RELIGION$ }
+			every_scope_state = { convert_population = { value = 1 target = rel:$RELIGION$ } }
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_move_pop_religion_unemployed_effect }
+		if = {
+			limit = { has_global_variable = daoyu_move_pop_$RELIGION$ }
+			scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:_$RELIGION$ is_employed = no } move_pop = scope:daoyu_migration_go_to } }
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_move_pop_religion_slaves_effect }
+		if = {
+			limit = { has_global_variable = daoyu_move_pop_$RELIGION$ culture = { has_variable = daoyu_target_culture } religion = rel:$RELIGION$ is_pop_type = slaves }
+			change_poptype = pop_type:laborers move_pop = scope:daoyu_migration_go_to
+		}
+	}
+}
+daoyu_move_pop_religion_effect = {
+	if = { limit = { has_global_variable = daoyu_move_pop_catholic } scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:catholic is_pop_type = $TYPE$ } move_pop = scope:daoyu_migration_go_to } } }
+	if = { limit = { has_global_variable = daoyu_move_pop_protestant } scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:protestant is_pop_type = $TYPE$ } move_pop = scope:daoyu_migration_go_to } } }
+	if = { limit = { has_global_variable = daoyu_move_pop_orthodox } scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:orthodox is_pop_type = $TYPE$ } move_pop = scope:daoyu_migration_go_to } } }
+	if = { limit = { has_global_variable = daoyu_move_pop_oriental_orthodox } scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:oriental_orthodox is_pop_type = $TYPE$ } move_pop = scope:daoyu_migration_go_to } } }
+	if = { limit = { has_global_variable = daoyu_move_pop_sunni } scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:sunni is_pop_type = $TYPE$ } move_pop = scope:daoyu_migration_go_to } } }
+	if = { limit = { has_global_variable = daoyu_move_pop_shiite } scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:shiite is_pop_type = $TYPE$ } move_pop = scope:daoyu_migration_go_to } } }
+	if = { limit = { has_global_variable = daoyu_move_pop_ibadi } scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:ibadi is_pop_type = $TYPE$ } move_pop = scope:daoyu_migration_go_to } } }
+	if = { limit = { has_global_variable = daoyu_move_pop_jewish } scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:jewish is_pop_type = $TYPE$ } move_pop = scope:daoyu_migration_go_to } } }
+	if = { limit = { has_global_variable = daoyu_move_pop_mahayana } scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:mahayana is_pop_type = $TYPE$ } move_pop = scope:daoyu_migration_go_to } } }
+	if = { limit = { has_global_variable = daoyu_move_pop_gelugpa } scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:gelugpa is_pop_type = $TYPE$ } move_pop = scope:daoyu_migration_go_to } } }	
+	if = { limit = { has_global_variable = daoyu_move_pop_confucian } scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:confucian is_pop_type = $TYPE$ } move_pop = scope:daoyu_migration_go_to } } }
+	if = { limit = { has_global_variable = daoyu_move_pop_theravada } scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:theravada is_pop_type = $TYPE$ } move_pop = scope:daoyu_migration_go_to } } }
+	if = { limit = { has_global_variable = daoyu_move_pop_hindu } scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:hindu is_pop_type = $TYPE$ } move_pop = scope:daoyu_migration_go_to } } }
+	if = { limit = { has_global_variable = daoyu_move_pop_shinto } scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:shinto is_pop_type = $TYPE$ } move_pop = scope:daoyu_migration_go_to } } }
+	if = { limit = { has_global_variable = daoyu_move_pop_sikh } scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:sikh is_pop_type = $TYPE$ } move_pop = scope:daoyu_migration_go_to } } }
+	if = { limit = { has_global_variable = daoyu_move_pop_animist } scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:animist is_pop_type = $TYPE$ } move_pop = scope:daoyu_migration_go_to } } }
+	if = { limit = { has_global_variable = daoyu_move_pop_atheist } scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:atheist is_pop_type = $TYPE$ } move_pop = scope:daoyu_migration_go_to } } }
+	if = { limit = { has_global_variable = daoyu_from_665 } scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } is_pop_type = $TYPE$ } move_pop = scope:daoyu_migration_go_to } } }
+}
+daoyu_russification_subject_testing = {
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_01 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_02 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_03 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_04 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_05 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_06 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_07 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_08 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_09 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_10 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_11 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_12 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_13 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_14 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_15 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_16 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_17 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_18 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_19 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_1_t } } random_country = { limit = { has_variable = daoyu_p_1_t } remove_variable = daoyu_p_1_t save_scope_as = daoyu_russification_subject_20 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_01 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_02 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_03 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_04 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_05 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_06 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_07 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_08 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_09 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_10 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_11 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_12 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_13 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_14 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_15 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_16 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_17 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_18 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_19 } }
+	if = { limit = { any_country = { has_variable = daoyu_p_2_t } } random_country = { limit = { has_variable = daoyu_p_2_t } remove_variable = daoyu_p_2_t save_scope_as = daoyu_russification_su_su_20 } }
+}
+daoyu_change_ideology_same_ruler = {
+	if = { limit = { ruler = { has_ideology = ideology:$IDE$ } } every_scope_character = { limit = { not = { has_ideology = ideology:$IDE$ } } set_ideology = ideology:$IDE$ } }
+}
+
+daoyu_sort_by_chinese_or_english = {
+	if = { limit = { has_global_variable = daoyu_sort_by_chinese } set_global_variable = daoyu_sort_C_$ALPHABET$ }
+	else = { set_global_variable = daoyu_sort_E_$ALPHABET$ }
+}
+remove_daoyu_sort_global_variable = {
+	remove_global_variable = daoyu_sort_E_A
+	remove_global_variable = daoyu_sort_E_B
+	remove_global_variable = daoyu_sort_E_C
+	remove_global_variable = daoyu_sort_E_D
+	remove_global_variable = daoyu_sort_E_E
+	remove_global_variable = daoyu_sort_E_F
+	remove_global_variable = daoyu_sort_E_G
+	remove_global_variable = daoyu_sort_E_H
+	remove_global_variable = daoyu_sort_E_I
+	remove_global_variable = daoyu_sort_E_J
+	remove_global_variable = daoyu_sort_E_K
+	remove_global_variable = daoyu_sort_E_L
+	remove_global_variable = daoyu_sort_E_M
+	remove_global_variable = daoyu_sort_E_N
+	remove_global_variable = daoyu_sort_E_O
+	remove_global_variable = daoyu_sort_E_P
+	remove_global_variable = daoyu_sort_E_Q
+	remove_global_variable = daoyu_sort_E_R
+	remove_global_variable = daoyu_sort_E_S
+	remove_global_variable = daoyu_sort_E_T
+	remove_global_variable = daoyu_sort_E_U
+	remove_global_variable = daoyu_sort_E_V
+	remove_global_variable = daoyu_sort_E_W
+	remove_global_variable = daoyu_sort_E_X
+	remove_global_variable = daoyu_sort_E_Y
+	remove_global_variable = daoyu_sort_E_Z
+	remove_global_variable = daoyu_sort_C_A
+	remove_global_variable = daoyu_sort_C_B
+	remove_global_variable = daoyu_sort_C_C
+	remove_global_variable = daoyu_sort_C_D
+	remove_global_variable = daoyu_sort_C_E
+	remove_global_variable = daoyu_sort_C_F
+	remove_global_variable = daoyu_sort_C_G
+	remove_global_variable = daoyu_sort_C_H
+	remove_global_variable = daoyu_sort_C_I
+	remove_global_variable = daoyu_sort_C_J
+	remove_global_variable = daoyu_sort_C_K
+	remove_global_variable = daoyu_sort_C_L
+	remove_global_variable = daoyu_sort_C_M
+	remove_global_variable = daoyu_sort_C_N
+	remove_global_variable = daoyu_sort_C_O
+	remove_global_variable = daoyu_sort_C_P
+	remove_global_variable = daoyu_sort_C_Q
+	remove_global_variable = daoyu_sort_C_R
+	remove_global_variable = daoyu_sort_C_S
+	remove_global_variable = daoyu_sort_C_T
+	remove_global_variable = daoyu_sort_C_U
+	remove_global_variable = daoyu_sort_C_V
+	remove_global_variable = daoyu_sort_C_W
+	remove_global_variable = daoyu_sort_C_X
+	remove_global_variable = daoyu_sort_C_Y
+	remove_global_variable = daoyu_sort_C_Z
+}
+daoyu_create_country = {
+	capital = { save_scope_as = daoyu_capital }
+	create_country = { tag = $TAG$ origin = this state = scope:daoyu_capital }
+}
+dcc_create_country_or_change_tag_effect = {
+	remove_daoyu_sort_global_variable = yes
+	remove_global_variable = daoyu_sort_by_chinese
+	remove_global_variable = daoyu_sort_by_english
+	set_global_variable = dcc_create_country_or_change_tag_completed
+	if = {
+		limit = { has_global_variable = daoyu_become_a_nonexistent_country }
+		change_tag = $TAG$
+		remove_global_variable = daoyu_become_a_nonexistent_country
+	}
+	else_if = {
+		limit = { has_global_variable = dcc }
+		remove_global_variable = dcc
+		create_country = { tag = $TAG$ origin = root state = scope:dcc_capital on_created = { dcc_created_effect = yes } }
+		every_state = { limit = { has_variable = dcc_capital } remove_variable = dcc_capital }
+		random_country = { limit = { has_variable = dcc_country } remove_variable = dcc_country save_scope_as = dcc_country }
+		if = { limit = { exists = scope:dcc_country exists = scope:daoyu_tst_1 } scope:daoyu_tst_1 = { set_state_owner = scope:dcc_country } }
+		if = { limit = { exists = scope:dcc_country exists = scope:daoyu_tst_2 } scope:daoyu_tst_2 = { set_state_owner = scope:dcc_country } }
+		if = { limit = { exists = scope:dcc_country exists = scope:daoyu_tst_3 } scope:daoyu_tst_3 = { set_state_owner = scope:dcc_country } }
+		if = { limit = { exists = scope:dcc_country exists = scope:daoyu_tst_4 } scope:daoyu_tst_4 = { set_state_owner = scope:dcc_country } }
+		if = { limit = { exists = scope:dcc_country exists = scope:daoyu_tst_5 } scope:daoyu_tst_5 = { set_state_owner = scope:dcc_country } }
+		if = { limit = { exists = scope:dcc_country exists = scope:daoyu_tst_6 } scope:daoyu_tst_6 = { set_state_owner = scope:dcc_country } }
+		if = { limit = { exists = scope:dcc_country exists = scope:daoyu_tst_7 } scope:daoyu_tst_7 = { set_state_owner = scope:dcc_country } }
+		if = { limit = { exists = scope:dcc_country exists = scope:daoyu_tst_8 } scope:daoyu_tst_8 = { set_state_owner = scope:dcc_country } }
+		if = { limit = { exists = scope:dcc_country exists = scope:daoyu_tst_9 } scope:daoyu_tst_9 = { set_state_owner = scope:dcc_country } }
+		every_scope_state = { limit = { has_variable = dcc_owned } remove_variable = dcc_owned set_state_owner = scope:dcc_country }
+		if = { limit = { exists = scope:dcc_country } scope:dcc_country = { every_scope_state = { set_state_type = incorporated } } }
+		clear_saved_scope = dcc_capital
+		clear_saved_scope = dcc_country
+		clear_saved_scope = daoyu_tst_1
+		clear_saved_scope = daoyu_tst_2
+		clear_saved_scope = daoyu_tst_3
+		clear_saved_scope = daoyu_tst_4
+		clear_saved_scope = daoyu_tst_5
+		clear_saved_scope = daoyu_tst_6
+		clear_saved_scope = daoyu_tst_7
+		clear_saved_scope = daoyu_tst_8
+		clear_saved_scope = daoyu_tst_9
+	}
+}
+daoyu_set_pop_qualifications = {
+	if = {
+		limit = { has_global_variable = daoyu_all_owned_state }
+		every_scope_state = { daoyu_detect_pop_qualifications = { PERCENT = $PERCENT$ } }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_incorporated_state }
+		every_scope_state = {
+			limit = { is_incorporated = yes }
+			daoyu_detect_pop_qualifications = { PERCENT = $PERCENT$ }
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_unincorporated_state }
+		every_scope_state = {
+			limit = { is_incorporated = no }
+			daoyu_detect_pop_qualifications = { PERCENT = $PERCENT$ }
+		}
+	}
+	if = {
+		limit = { has_global_variable = daoyu_target_state }
+		every_scope_state = {
+			limit = { has_decree = decree_daoyu_target_state }
+			daoyu_detect_pop_qualifications = { PERCENT = $PERCENT$ }
+		}
+	}
+}
+daoyu_detect_pop_qualifications = {
+	if = { limit = { has_global_variable = daoyu_spq_clerks } daoyu_set_clerks_qualifications = { PERCENT = $PERCENT$ } }
+	if = { limit = { has_global_variable = daoyu_spq_machinists } daoyu_set_machinists_qualifications = { PERCENT = $PERCENT$ } }
+	if = { limit = { has_global_variable = daoyu_spq_clergymen } daoyu_set_clergymen_qualifications = { PERCENT = $PERCENT$ } }
+	if = { limit = { has_global_variable = daoyu_spq_shopkeepers } daoyu_set_shopkeepers_qualifications = { PERCENT = $PERCENT$ } }
+	if = { limit = { has_global_variable = daoyu_spq_academics } daoyu_set_academics_qualifications = { PERCENT = $PERCENT$ } }
+	if = { limit = { has_global_variable = daoyu_spq_officers } daoyu_set_officers_qualifications = { PERCENT = $PERCENT$ } }
+	if = { limit = { has_global_variable = daoyu_spq_bureaucrats } daoyu_set_bureaucrats_qualifications = { PERCENT = $PERCENT$ } }
+	if = { limit = { has_global_variable = daoyu_spq_engineers } daoyu_set_engineers_qualifications = { PERCENT = $PERCENT$ } }
+	if = { limit = { has_global_variable = daoyu_spq_capitalists } daoyu_set_capitalists_qualifications = { PERCENT = $PERCENT$ } }
+	if = { limit = { has_global_variable = daoyu_spq_aristocrats } daoyu_set_aristocrats_qualifications = { PERCENT = $PERCENT$ } }
+}
+daoyu_set_clerks_qualifications = {
+	every_scope_pop = {
+		limit = { not = { is_pop_type = clerks } strata = lower }
+		if = { limit = { has_global_variable = daoyu_qualifications_1 } set_pop_qualifications = { pop_type = clerks qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_2 pop_has_primary_culture = yes } set_pop_qualifications = { pop_type = clerks qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_3 pop_has_primary_culture = yes has_state_religion = yes } set_pop_qualifications = { pop_type = clerks qualifications = $PERCENT$ } }
+	}
+}
+daoyu_set_machinists_qualifications = {
+	every_scope_pop = {
+		limit = { not = { is_pop_type = machinists } strata = lower }
+		if = { limit = { has_global_variable = daoyu_qualifications_1 } set_pop_qualifications = { pop_type = machinists qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_2 pop_has_primary_culture = yes } set_pop_qualifications = { pop_type = machinists qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_3 pop_has_primary_culture = yes has_state_religion = yes } set_pop_qualifications = { pop_type = machinists qualifications = $PERCENT$ } }
+	}
+}
+daoyu_set_clergymen_qualifications = {
+	every_scope_pop = {
+		if = { limit = { has_global_variable = daoyu_qualifications_1 strata = lower } set_pop_qualifications = { pop_type = clergymen qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_2 strata = lower pop_has_primary_culture = yes } set_pop_qualifications = { pop_type = clergymen qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_3 strata = lower pop_has_primary_culture = yes has_state_religion = yes } set_pop_qualifications = { pop_type = clergymen qualifications = $PERCENT$ } }
+	}
+}
+daoyu_set_shopkeepers_qualifications = {
+	every_scope_pop = {
+		if = { limit = { has_global_variable = daoyu_qualifications_1 strata = lower } set_pop_qualifications = { pop_type = shopkeepers qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_2 strata = lower pop_has_primary_culture = yes } set_pop_qualifications = { pop_type = shopkeepers qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_3 strata = lower pop_has_primary_culture = yes has_state_religion = yes } set_pop_qualifications = { pop_type = shopkeepers qualifications = $PERCENT$ } }
+	}
+}
+daoyu_set_academics_qualifications = {
+	every_scope_pop = {
+		if = { limit = { has_global_variable = daoyu_qualifications_1 strata = lower } set_pop_qualifications = { pop_type = academics qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_2 strata = lower pop_has_primary_culture = yes } set_pop_qualifications = { pop_type = academics qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_3 strata = lower pop_has_primary_culture = yes has_state_religion = yes } set_pop_qualifications = { pop_type = academics qualifications = $PERCENT$ } }
+	}
+}
+daoyu_set_officers_qualifications = {
+	every_scope_pop = {
+		if = { limit = { has_global_variable = daoyu_qualifications_1 strata = lower } set_pop_qualifications = { pop_type = officers qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_2 strata = lower pop_has_primary_culture = yes } set_pop_qualifications = { pop_type = officers qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_3 strata = lower pop_has_primary_culture = yes has_state_religion = yes } set_pop_qualifications = { pop_type = officers qualifications = $PERCENT$ } }
+	}
+}
+daoyu_set_bureaucrats_qualifications = {
+	every_scope_pop = {
+		if = { limit = { has_global_variable = daoyu_qualifications_1 strata = lower } set_pop_qualifications = { pop_type = bureaucrats qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_2 strata = lower pop_has_primary_culture = yes } set_pop_qualifications = { pop_type = bureaucrats qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_3 strata = lower pop_has_primary_culture = yes has_state_religion = yes } set_pop_qualifications = { pop_type = bureaucrats qualifications = $PERCENT$ } }
+	}
+}
+daoyu_set_engineers_qualifications = {
+	every_scope_pop = {
+		if = { limit = { has_global_variable = daoyu_qualifications_1 strata = lower } set_pop_qualifications = { pop_type = engineers qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_2 strata = lower pop_has_primary_culture = yes } set_pop_qualifications = { pop_type = engineers qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_3 strata = lower pop_has_primary_culture = yes has_state_religion = yes } set_pop_qualifications = { pop_type = engineers qualifications = $PERCENT$ } }
+	}
+}
+daoyu_set_capitalists_qualifications = {
+	every_scope_pop = {
+		if = { limit = { has_global_variable = daoyu_qualifications_1 strata = middle } set_pop_qualifications = { pop_type = capitalists qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_2 strata = middle pop_has_primary_culture = yes } set_pop_qualifications = { pop_type = capitalists qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_3 strata = middle pop_has_primary_culture = yes has_state_religion = yes } set_pop_qualifications = { pop_type = capitalists qualifications = $PERCENT$ } }
+	}
+}
+daoyu_set_aristocrats_qualifications = {
+	every_scope_pop = {
+		if = { limit = { has_global_variable = daoyu_qualifications_1 strata = middle } set_pop_qualifications = { pop_type = aristocrats qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_2 strata = middle pop_has_primary_culture = yes } set_pop_qualifications = { pop_type = aristocrats qualifications = $PERCENT$ } }
+		if = { limit = { has_global_variable = daoyu_qualifications_3 strata = middle pop_has_primary_culture = yes has_state_religion = yes } set_pop_qualifications = { pop_type = aristocrats qualifications = $PERCENT$ } }
+	}
+}
+daoyu_move_capital_or_move_market = {
+	daoyu_mcomm = { REGION = "﻿STATE_SVEALAND" }
+	daoyu_mcomm = { REGION = "STATE_GOTALAND" }
+	daoyu_mcomm = { REGION = "STATE_SCANIA" }
+	daoyu_mcomm = { REGION = "STATE_NORRLAND" }
+	daoyu_mcomm = { REGION = "STATE_GOTLAND" }
+	daoyu_mcomm = { REGION = "STATE_JUTLAND" }
+	daoyu_mcomm = { REGION = "STATE_ZEALAND" }
+	daoyu_mcomm = { REGION = "STATE_WESTERN_NORWAY" }
+	daoyu_mcomm = { REGION = "STATE_NORTHERN_NORWAY" }
+	daoyu_mcomm = { REGION = "STATE_EASTERN_NORWAY" }
+	daoyu_mcomm = { REGION = "STATE_ICELAND" }
+	daoyu_mcomm = { REGION = "STATE_GREENLAND" }
+	daoyu_mcomm = { REGION = "STATE_HOME_COUNTIES" }
+	daoyu_mcomm = { REGION = "STATE_LANCASHIRE" }
+	daoyu_mcomm = { REGION = "STATE_WALES" }
+	daoyu_mcomm = { REGION = "STATE_YORKSHIRE" }
+	daoyu_mcomm = { REGION = "STATE_HIGHLANDS" }
+	daoyu_mcomm = { REGION = "STATE_MIDLANDS" }
+	daoyu_mcomm = { REGION = "STATE_EAST_ANGLIA" }
+	daoyu_mcomm = { REGION = "STATE_WEST_COUNTRY" }
+	daoyu_mcomm = { REGION = "STATE_LOWLANDS" }
+	daoyu_mcomm = { REGION = "STATE_ULSTER" }
+	daoyu_mcomm = { REGION = "STATE_MUNSTER" }
+	daoyu_mcomm = { REGION = "STATE_LEINSTER" }
+	daoyu_mcomm = { REGION = "STATE_CONNAUGHT" }
+	daoyu_mcomm = { REGION = "STATE_ILE_DE_FRANCE" }
+	daoyu_mcomm = { REGION = "STATE_PROVENCE" }
+	daoyu_mcomm = { REGION = "STATE_NORMANDY" }
+	daoyu_mcomm = { REGION = "STATE_LANGUEDOC" }
+	daoyu_mcomm = { REGION = "STATE_RHONE" }
+	daoyu_mcomm = { REGION = "STATE_FRENCH_LOW_COUNTRIES" }
+	daoyu_mcomm = { REGION = "STATE_PICARDY" }
+	daoyu_mcomm = { REGION = "STATE_ALSACE_LORRAINE" }
+	daoyu_mcomm = { REGION = "STATE_POITOU" }
+	daoyu_mcomm = { REGION = "STATE_GUYENNE" }
+	daoyu_mcomm = { REGION = "STATE_AUVERGNE_LIMOUSIN" }
+	daoyu_mcomm = { REGION = "STATE_BRITTANY" }
+	daoyu_mcomm = { REGION = "STATE_BURGUNDY" }
+	daoyu_mcomm = { REGION = "STATE_CHAMPAGNE" }
+	daoyu_mcomm = { REGION = "STATE_FRANCHE_COMTE" }
+	daoyu_mcomm = { REGION = "STATE_LORRAINE" }
+	daoyu_mcomm = { REGION = "STATE_AQUITAINE" }
+	daoyu_mcomm = { REGION = "STATE_ORLEANS" }
+	daoyu_mcomm = { REGION = "STATE_HOLLAND" }
+	daoyu_mcomm = { REGION = "STATE_FRIESLAND" }
+	daoyu_mcomm = { REGION = "STATE_GELRE" }
+	daoyu_mcomm = { REGION = "STATE_WALLONIA" }
+	daoyu_mcomm = { REGION = "STATE_FLANDERS" }
+	daoyu_mcomm = { REGION = "STATE_AUSTRIA" }
+	daoyu_mcomm = { REGION = "STATE_BOHEMIA" }
+	daoyu_mcomm = { REGION = "STATE_MORAVIA" }
+	daoyu_mcomm = { REGION = "STATE_STYRIA" }
+	daoyu_mcomm = { REGION = "STATE_TYROL" }
+	daoyu_mcomm = { REGION = "STATE_SOUTH_TYROL" }
+	daoyu_mcomm = { REGION = "STATE_POMERANIA" }
+	daoyu_mcomm = { REGION = "STATE_ELBE" }
+	daoyu_mcomm = { REGION = "STATE_EAST_SWITZERLAND" }
+	daoyu_mcomm = { REGION = "STATE_WEST_SWITZERLAND" }
+	daoyu_mcomm = { REGION = "STATE_WESTPHALIA" }
+	daoyu_mcomm = { REGION = "STATE_ANHALT" }
+	daoyu_mcomm = { REGION = "STATE_RHINELAND" }
+	daoyu_mcomm = { REGION = "STATE_NORTH_RHINE" }
+	daoyu_mcomm = { REGION = "STATE_BRANDENBURG" }
+	daoyu_mcomm = { REGION = "STATE_SCHLESWIG_HOLSTEIN" }
+	daoyu_mcomm = { REGION = "STATE_WURTTEMBERG" }
+	daoyu_mcomm = { REGION = "STATE_BADEN" }
+	daoyu_mcomm = { REGION = "STATE_HANNOVER" }
+	daoyu_mcomm = { REGION = "STATE_BRUNSWICK" }
+	daoyu_mcomm = { REGION = "STATE_BAVARIA" }
+	daoyu_mcomm = { REGION = "STATE_FRANCONIA" }
+	daoyu_mcomm = { REGION = "STATE_SAXONY" }
+	daoyu_mcomm = { REGION = "STATE_HESSE" }
+	daoyu_mcomm = { REGION = "STATE_MECKLENBURG" }
+	daoyu_mcomm = { REGION = "STATE_RUHR" }
+	daoyu_mcomm = { REGION = "STATE_MAINE_ANJOU" }
+	daoyu_mcomm = { REGION = "﻿STATE_LOMBARDY" }
+	daoyu_mcomm = { REGION = "STATE_PIEDMONT" }
+	daoyu_mcomm = { REGION = "STATE_SARDINIA" }
+	daoyu_mcomm = { REGION = "STATE_MALTA" }
+	daoyu_mcomm = { REGION = "STATE_UMBRIA" }
+	daoyu_mcomm = { REGION = "STATE_CORSICA" }
+	daoyu_mcomm = { REGION = "STATE_CAMPANIA" }
+	daoyu_mcomm = { REGION = "STATE_CALABRIA" }
+	daoyu_mcomm = { REGION = "STATE_APULIA" }
+	daoyu_mcomm = { REGION = "STATE_ABRUZZO" }
+	daoyu_mcomm = { REGION = "STATE_SAVOY" }
+	daoyu_mcomm = { REGION = "STATE_EMILIA" }
+	daoyu_mcomm = { REGION = "STATE_TUSCANY" }
+	daoyu_mcomm = { REGION = "STATE_ROMAGNA" }
+	daoyu_mcomm = { REGION = "STATE_LAZIO" }
+	daoyu_mcomm = { REGION = "STATE_VENETIA" }
+	daoyu_mcomm = { REGION = "STATE_SICILY" }
+	daoyu_mcomm = { REGION = "STATE_TOLEDO" }
+	daoyu_mcomm = { REGION = "STATE_GALICIA" }
+	daoyu_mcomm = { REGION = "STATE_ASTURIAS" }
+	daoyu_mcomm = { REGION = "STATE_CASTILE" }
+	daoyu_mcomm = { REGION = "STATE_NAVARRA" }
+	daoyu_mcomm = { REGION = "STATE_ARAGON" }
+	daoyu_mcomm = { REGION = "STATE_CATALONIA" }
+	daoyu_mcomm = { REGION = "STATE_BALEARES" }
+	daoyu_mcomm = { REGION = "STATE_ANDALUSIA" }
+	daoyu_mcomm = { REGION = "STATE_GRANADA" }
+	daoyu_mcomm = { REGION = "STATE_BADAJOZ" }
+	daoyu_mcomm = { REGION = "STATE_VALENCIA" }
+	daoyu_mcomm = { REGION = "STATE_BEIRA" }
+	daoyu_mcomm = { REGION = "STATE_ESTREMADURA" }
+	daoyu_mcomm = { REGION = "STATE_ALENTEJO" }
+	daoyu_mcomm = { REGION = "STATE_CAPE_VERDE" }
+	daoyu_mcomm = { REGION = "STATE_CANARY_ISLANDS" }
+	daoyu_mcomm = { REGION = "STATE_AZORES" }
+	daoyu_mcomm = { REGION = "STATE_MADEIRA" }
+	daoyu_mcomm = { REGION = "STATE_EASTERN_THRACE" }
+	daoyu_mcomm = { REGION = "STATE_DOBRUDJA" }
+	daoyu_mcomm = { REGION = "STATE_ALBANIA" }
+	daoyu_mcomm = { REGION = "STATE_BOSNIA" }
+	daoyu_mcomm = { REGION = "STATE_NORTHERN_THRACE" }
+	daoyu_mcomm = { REGION = "STATE_BULGARIA" }
+	daoyu_mcomm = { REGION = "STATE_SLOVENIA" }
+	daoyu_mcomm = { REGION = "STATE_DALMATIA" }
+	daoyu_mcomm = { REGION = "STATE_CROATIA" }
+	daoyu_mcomm = { REGION = "STATE_SLAVONIA" }
+	daoyu_mcomm = { REGION = "STATE_ISTRIA" }
+	daoyu_mcomm = { REGION = "STATE_MONTENEGRO" }
+	daoyu_mcomm = { REGION = "STATE_NORTHERN_SERBIA" }
+	daoyu_mcomm = { REGION = "STATE_SOUTHERN_SERBIA" }
+	daoyu_mcomm = { REGION = "STATE_CRETE" }
+	daoyu_mcomm = { REGION = "STATE_WEST_AEGEAN_ISLANDS" }
+	daoyu_mcomm = { REGION = "STATE_EAST_AEGEAN_ISLANDS" }
+	daoyu_mcomm = { REGION = "STATE_ATTICA" }
+	daoyu_mcomm = { REGION = "STATE_THESSALIA" }
+	daoyu_mcomm = { REGION = "STATE_SKOPIA" }
+	daoyu_mcomm = { REGION = "STATE_MACEDONIA" }
+	daoyu_mcomm = { REGION = "STATE_WESTERN_THRACE" }
+	daoyu_mcomm = { REGION = "STATE_IONIAN_ISLANDS" }
+	daoyu_mcomm = { REGION = "STATE_PELOPONNESE" }
+	daoyu_mcomm = { REGION = "﻿STATE_MAZOVIA" }
+	daoyu_mcomm = { REGION = "STATE_SILESIA" }
+	daoyu_mcomm = { REGION = "STATE_GREATER_POLAND" }
+	daoyu_mcomm = { REGION = "STATE_LESSER_POLAND" }
+	daoyu_mcomm = { REGION = "STATE_WEST_PRUSSIA" }
+	daoyu_mcomm = { REGION = "STATE_EAST_PRUSSIA" }
+	daoyu_mcomm = { REGION = "STATE_POSEN" }
+	daoyu_mcomm = { REGION = "STATE_WEST_GALICIA" }
+	daoyu_mcomm = { REGION = "STATE_EAST_GALICIA" }
+	daoyu_mcomm = { REGION = "STATE_CENTRAL_HUNGARY" }
+	daoyu_mcomm = { REGION = "STATE_BEKES" }
+	daoyu_mcomm = { REGION = "STATE_TRANSDANUBIA" }
+	daoyu_mcomm = { REGION = "STATE_DELVIDEK" }
+	daoyu_mcomm = { REGION = "STATE_BANAT" }
+	daoyu_mcomm = { REGION = "STATE_WEST_SLOVAKIA" }
+	daoyu_mcomm = { REGION = "STATE_EAST_SLOVAKIA" }
+	daoyu_mcomm = { REGION = "STATE_SOUTHERN_TRANSYLVANIA" }
+	daoyu_mcomm = { REGION = "STATE_NORTHERN_TRANSYLVANIA" }
+	daoyu_mcomm = { REGION = "STATE_MOLDAVIA" }
+	daoyu_mcomm = { REGION = "STATE_WALLACHIA" }
+	daoyu_mcomm = { REGION = "STATE_BESSARABIA" }
+	daoyu_mcomm = { REGION = "﻿STATE_LOWER_EGYPT" }
+	daoyu_mcomm = { REGION = "STATE_UPPER_EGYPT" }
+	daoyu_mcomm = { REGION = "STATE_MIDDLE_EGYPT" }
+	daoyu_mcomm = { REGION = "STATE_EGYPTIAN_DESERT" }
+	daoyu_mcomm = { REGION = "STATE_MATRUH" }
+	daoyu_mcomm = { REGION = "STATE_SINAI" }
+	daoyu_mcomm = { REGION = "STATE_ERITREA" }
+	daoyu_mcomm = { REGION = "STATE_DONGOLA" }
+	daoyu_mcomm = { REGION = "STATE_KORDOFAN" }
+	daoyu_mcomm = { REGION = "STATE_DARFUR" }
+	daoyu_mcomm = { REGION = "STATE_BLUE_NILE" }
+	daoyu_mcomm = { REGION = "STATE_MARRAKECH" }
+	daoyu_mcomm = { REGION = "STATE_FEZ" }
+	daoyu_mcomm = { REGION = "STATE_AL_RIF" }
+	daoyu_mcomm = { REGION = "STATE_INNER_MOROCCO" }
+	daoyu_mcomm = { REGION = "STATE_ALGIERS" }
+	daoyu_mcomm = { REGION = "STATE_CONSTANTINE" }
+	daoyu_mcomm = { REGION = "STATE_ORAN" }
+	daoyu_mcomm = { REGION = "STATE_TUNISIA" }
+	daoyu_mcomm = { REGION = "STATE_TRIPOLI" }
+	daoyu_mcomm = { REGION = "STATE_LIBYA" }
+	daoyu_mcomm = { REGION = "STATE_LIBYAN_DESERT" }
+	daoyu_mcomm = { REGION = "STATE_SAHARA" }
+	daoyu_mcomm = { REGION = "STATE_EAST_SAHARA" }
+	daoyu_mcomm = { REGION = "STATE_WEST_SAHARA" }
+	daoyu_mcomm = { REGION = "STATE_MAURITANIA" }
+	daoyu_mcomm = { REGION = "STATE_INNER_MAURITANIA" }
+	daoyu_mcomm = { REGION = "STATE_EASTERN_MALI" }
+	daoyu_mcomm = { REGION = "STATE_WESTERN_MALI" }
+	daoyu_mcomm = { REGION = "STATE_TIMBUKTU" }
+	daoyu_mcomm = { REGION = "STATE_NIGER" }
+	daoyu_mcomm = { REGION = "STATE_CHAD" }
+	daoyu_mcomm = { REGION = "﻿STATE_IVORY_COAST" }
+	daoyu_mcomm = { REGION = "STATE_WINDWARD_COAST" }
+	daoyu_mcomm = { REGION = "STATE_SENEGAL" }
+	daoyu_mcomm = { REGION = "STATE_GAMBIA" }
+	daoyu_mcomm = { REGION = "STATE_SIERRA_LEONE" }
+	daoyu_mcomm = { REGION = "STATE_VOLTA" }
+	daoyu_mcomm = { REGION = "STATE_LIBERIA" }
+	daoyu_mcomm = { REGION = "STATE_HAUSALAND" }
+	daoyu_mcomm = { REGION = "STATE_BENIN" }
+	daoyu_mcomm = { REGION = "STATE_YORUBA_STATES" }
+	daoyu_mcomm = { REGION = "STATE_NIGER_DELTA" }
+	daoyu_mcomm = { REGION = "STATE_OUTER_HAUSALAND" }
+	daoyu_mcomm = { REGION = "STATE_BORNU" }
+	daoyu_mcomm = { REGION = "STATE_NIGERIA" }
+	daoyu_mcomm = { REGION = "STATE_EAST_HAUSALAND" }
+	daoyu_mcomm = { REGION = "STATE_GUINEA" }
+	daoyu_mcomm = { REGION = "STATE_GHANA" }
+	daoyu_mcomm = { REGION = "STATE_TOGO" }
+	daoyu_mcomm = { REGION = "STATE_DAHOMEY" }
+	daoyu_mcomm = { REGION = "STATE_LINDI" }
+	daoyu_mcomm = { REGION = "STATE_ZANZIBAR" }
+	daoyu_mcomm = { REGION = "STATE_TANGANYIKA" }
+	daoyu_mcomm = { REGION = "STATE_KENYA" }
+	daoyu_mcomm = { REGION = "STATE_RIFT_VALLEY" }
+	daoyu_mcomm = { REGION = "STATE_OROMIA" }
+	daoyu_mcomm = { REGION = "STATE_AMHARA" }
+	daoyu_mcomm = { REGION = "STATE_GONDER" }
+	daoyu_mcomm = { REGION = "STATE_KAZEMBE" }
+	daoyu_mcomm = { REGION = "STATE_SOMALILAND" }
+	daoyu_mcomm = { REGION = "STATE_SOUTH_MADAGASCAR" }
+	daoyu_mcomm = { REGION = "STATE_NORTH_MADAGASCAR" }
+	daoyu_mcomm = { REGION = "STATE_UGANDA" }
+	daoyu_mcomm = { REGION = "STATE_EQUATORIA" }
+	daoyu_mcomm = { REGION = "STATE_MOCAMBIQUE" }
+	daoyu_mcomm = { REGION = "STATE_WADDAI" }
+	daoyu_mcomm = { REGION = "STATE_NORTH_CAMEROON" }
+	daoyu_mcomm = { REGION = "STATE_SOUTH_CAMEROON" }
+	daoyu_mcomm = { REGION = "STATE_UBANGI_SHARI" }
+	daoyu_mcomm = { REGION = "STATE_CONGO" }
+	daoyu_mcomm = { REGION = "STATE_CONGO_ORIENTALE" }
+	daoyu_mcomm = { REGION = "STATE_KASAI" }
+	daoyu_mcomm = { REGION = "STATE_BAS_CONGO" }
+	daoyu_mcomm = { REGION = "STATE_EQUATEUR" }
+	daoyu_mcomm = { REGION = "STATE_NORTH_ANGOLA" }
+	daoyu_mcomm = { REGION = "STATE_SOUTH_ANGOLA" }
+	daoyu_mcomm = { REGION = "STATE_EAST_ANGOLA" }
+	daoyu_mcomm = { REGION = "STATE_KATANGA" }
+	daoyu_mcomm = { REGION = "STATE_GABON" }
+	daoyu_mcomm = { REGION = "STATE_ZAMBIA" }
+	daoyu_mcomm = { REGION = "STATE_ZAMBEZIA" }
+	daoyu_mcomm = { REGION = "STATE_ZAMBEZI" }
+	daoyu_mcomm = { REGION = "STATE_NAMAQUALAND" }
+	daoyu_mcomm = { REGION = "STATE_HEREROLAND" }
+	daoyu_mcomm = { REGION = "STATE_ZULULAND" }
+	daoyu_mcomm = { REGION = "STATE_VRYSTAAT" }
+	daoyu_mcomm = { REGION = "STATE_TRANSVAAL" }
+	daoyu_mcomm = { REGION = "STATE_EASTERN_CAPE" }
+	daoyu_mcomm = { REGION = "STATE_CAPE_COLONY" }
+	daoyu_mcomm = { REGION = "STATE_NORTHERN_CAPE" }
+	daoyu_mcomm = { REGION = "STATE_BOTSWANA" }
+	daoyu_mcomm = { REGION = "STATE_LOURENCO_MARQUES" }
+	daoyu_mcomm = { REGION = "﻿STATE_DISTRICT_OF_COLUMBIA" }
+	daoyu_mcomm = { REGION = "STATE_LOUISIANA" }
+	daoyu_mcomm = { REGION = "STATE_NEW_YORK" }
+	daoyu_mcomm = { REGION = "STATE_VIRGINIA" }
+	daoyu_mcomm = { REGION = "STATE_ALASKA" }
+	daoyu_mcomm = { REGION = "STATE_WASHINGTON" }
+	daoyu_mcomm = { REGION = "STATE_OREGON" }
+	daoyu_mcomm = { REGION = "STATE_IDAHO" }
+	daoyu_mcomm = { REGION = "STATE_COLORADO" }
+	daoyu_mcomm = { REGION = "STATE_WYOMING" }
+	daoyu_mcomm = { REGION = "STATE_MONTANA" }
+	daoyu_mcomm = { REGION = "STATE_NORTH_DAKOTA" }
+	daoyu_mcomm = { REGION = "STATE_SOUTH_DAKOTA" }
+	daoyu_mcomm = { REGION = "STATE_NEBRASKA" }
+	daoyu_mcomm = { REGION = "STATE_KANSAS" }
+	daoyu_mcomm = { REGION = "STATE_OKLAHOMA" }
+	daoyu_mcomm = { REGION = "STATE_ARKANSAS" }
+	daoyu_mcomm = { REGION = "STATE_MISSOURI" }
+	daoyu_mcomm = { REGION = "STATE_IOWA" }
+	daoyu_mcomm = { REGION = "STATE_MINNESOTA" }
+	daoyu_mcomm = { REGION = "STATE_WISCONSIN" }
+	daoyu_mcomm = { REGION = "STATE_INDIANA" }
+	daoyu_mcomm = { REGION = "STATE_MICHIGAN" }
+	daoyu_mcomm = { REGION = "STATE_OHIO" }
+	daoyu_mcomm = { REGION = "STATE_KENTUCKY" }
+	daoyu_mcomm = { REGION = "STATE_TENNESSEE" }
+	daoyu_mcomm = { REGION = "STATE_MISSISSIPPI" }
+	daoyu_mcomm = { REGION = "STATE_ALABAMA" }
+	daoyu_mcomm = { REGION = "STATE_FLORIDA" }
+	daoyu_mcomm = { REGION = "STATE_GEORGIA" }
+	daoyu_mcomm = { REGION = "STATE_WEST_VIRGINIA" }
+	daoyu_mcomm = { REGION = "STATE_MARYLAND" }
+	daoyu_mcomm = { REGION = "STATE_DELAWARE" }
+	daoyu_mcomm = { REGION = "STATE_PENNSYLVANIA" }
+	daoyu_mcomm = { REGION = "STATE_NEW_JERSEY" }
+	daoyu_mcomm = { REGION = "STATE_ILLINOIS" }
+	daoyu_mcomm = { REGION = "STATE_RHODE_ISLAND" }
+	daoyu_mcomm = { REGION = "STATE_CONNECTICUT" }
+	daoyu_mcomm = { REGION = "STATE_MASSACHUSETTS" }
+	daoyu_mcomm = { REGION = "STATE_NEW_HAMPSHIRE" }
+	daoyu_mcomm = { REGION = "STATE_VERMONT" }
+	daoyu_mcomm = { REGION = "STATE_MAINE" }
+	daoyu_mcomm = { REGION = "STATE_NORTH_CAROLINA" }
+	daoyu_mcomm = { REGION = "STATE_UTAH" }
+	daoyu_mcomm = { REGION = "STATE_SOUTH_CAROLINA" }
+	daoyu_mcomm = { REGION = "STATE_HAWAIIAN_ISLANDS" }
+	daoyu_mcomm = { REGION = "STATE_ONTARIO" }
+	daoyu_mcomm = { REGION = "STATE_NEW_BRUNSWICK" }
+	daoyu_mcomm = { REGION = "STATE_QUEBEC" }
+	daoyu_mcomm = { REGION = "STATE_NEWFOUNDLAND" }
+	daoyu_mcomm = { REGION = "STATE_ALBERTA" }
+	daoyu_mcomm = { REGION = "STATE_BRITISH_COLUMBIA" }
+	daoyu_mcomm = { REGION = "STATE_SASKATCHEWAN" }
+	daoyu_mcomm = { REGION = "STATE_MANITOBA" }
+	daoyu_mcomm = { REGION = "STATE_YUKON_TERRITORY" }
+	daoyu_mcomm = { REGION = "STATE_NORTHWEST_TERRITORIES" }
+	daoyu_mcomm = { REGION = "STATE_NUNAVUT" }
+	daoyu_mcomm = { REGION = "STATE_BERMUDA" }
+	daoyu_mcomm = { REGION = "STATE_TEXAS" }
+	daoyu_mcomm = { REGION = "STATE_NEVADA" }
+	daoyu_mcomm = { REGION = "STATE_ARIZONA" }
+	daoyu_mcomm = { REGION = "STATE_NEW_MEXICO" }
+	daoyu_mcomm = { REGION = "STATE_CALIFORNIA" }
+	daoyu_mcomm = { REGION = "STATE_SONORA" }
+	daoyu_mcomm = { REGION = "STATE_CHIHUAHUA" }
+	daoyu_mcomm = { REGION = "STATE_RIO_GRANDE" }
+	daoyu_mcomm = { REGION = "STATE_DURANGO" }
+	daoyu_mcomm = { REGION = "STATE_SINALOA" }
+	daoyu_mcomm = { REGION = "STATE_BAJIO" }
+	daoyu_mcomm = { REGION = "STATE_YUCATAN" }
+	daoyu_mcomm = { REGION = "STATE_MEXICO" }
+	daoyu_mcomm = { REGION = "STATE_VERACRUZ" }
+	daoyu_mcomm = { REGION = "STATE_GUERRERO" }
+	daoyu_mcomm = { REGION = "STATE_OAXACA" }
+	daoyu_mcomm = { REGION = "STATE_JALISCO" }
+	daoyu_mcomm = { REGION = "STATE_ZACATECAS" }
+	daoyu_mcomm = { REGION = "STATE_CHIAPAS" }
+	daoyu_mcomm = { REGION = "STATE_BAJA_CALIFORNIA" }
+	daoyu_mcomm = { REGION = "﻿STATE_SAN_SALVADOR" }
+	daoyu_mcomm = { REGION = "STATE_GUATEMALA" }
+	daoyu_mcomm = { REGION = "STATE_HONDURAS" }
+	daoyu_mcomm = { REGION = "STATE_NICARAGUA" }
+	daoyu_mcomm = { REGION = "STATE_COSTA_RICA" }
+	daoyu_mcomm = { REGION = "STATE_PANAMA" }
+	daoyu_mcomm = { REGION = "STATE_HAITI" }
+	daoyu_mcomm = { REGION = "STATE_SANTO_DOMINGO" }
+	daoyu_mcomm = { REGION = "STATE_PUERTO_RICO" }
+	daoyu_mcomm = { REGION = "STATE_BAHAMAS" }
+	daoyu_mcomm = { REGION = "STATE_WEST_INDIES" }
+	daoyu_mcomm = { REGION = "STATE_JAMAICA" }
+	daoyu_mcomm = { REGION = "STATE_CUBA" }
+	daoyu_mcomm = { REGION = "﻿STATE_ECUADOR" }
+	daoyu_mcomm = { REGION = "STATE_GUAYANA" }
+	daoyu_mcomm = { REGION = "STATE_ZULIA" }
+	daoyu_mcomm = { REGION = "STATE_MIRANDA" }
+	daoyu_mcomm = { REGION = "STATE_BOLIVAR" }
+	daoyu_mcomm = { REGION = "STATE_ANTIOQUIA" }
+	daoyu_mcomm = { REGION = "STATE_GUAVIARE" }
+	daoyu_mcomm = { REGION = "STATE_CUNDINAMARCA" }
+	daoyu_mcomm = { REGION = "STATE_CAUCA" }
+	daoyu_mcomm = { REGION = "STATE_PASTAZA" }
+	daoyu_mcomm = { REGION = "STATE_TARAPACA" }
+	daoyu_mcomm = { REGION = "STATE_ANTOFAGASTA" }
+	daoyu_mcomm = { REGION = "STATE_SANTA_CRUZ" }
+	daoyu_mcomm = { REGION = "STATE_LA_PAZ" }
+	daoyu_mcomm = { REGION = "STATE_POTOSI" }
+	daoyu_mcomm = { REGION = "STATE_CAJAMARCA" }
+	daoyu_mcomm = { REGION = "STATE_LIMA" }
+	daoyu_mcomm = { REGION = "STATE_ICA" }
+	daoyu_mcomm = { REGION = "STATE_AREQUIPA" }
+	daoyu_mcomm = { REGION = "STATE_URUGUAY" }
+	daoyu_mcomm = { REGION = "STATE_JUJUY" }
+	daoyu_mcomm = { REGION = "STATE_ALTO_PARAGUAY" }
+	daoyu_mcomm = { REGION = "STATE_BAJO_PARAGUAY" }
+	daoyu_mcomm = { REGION = "STATE_BUENOS_AIRES" }
+	daoyu_mcomm = { REGION = "STATE_PATAGONIA" }
+	daoyu_mcomm = { REGION = "STATE_RIO_NEGRO" }
+	daoyu_mcomm = { REGION = "STATE_LA_PAMPA" }
+	daoyu_mcomm = { REGION = "STATE_SANTA_FE" }
+	daoyu_mcomm = { REGION = "STATE_CORRIENTES" }
+	daoyu_mcomm = { REGION = "STATE_TUCUMAN" }
+	daoyu_mcomm = { REGION = "STATE_CHACO" }
+	daoyu_mcomm = { REGION = "STATE_SANTIAGO" }
+	daoyu_mcomm = { REGION = "STATE_LOS_RIOS" }
+	daoyu_mcomm = { REGION = "STATE_ARAUCANIA" }
+	daoyu_mcomm = { REGION = "STATE_SOUTH_ATLANTIC_ISLANDS" }
+	daoyu_mcomm = { REGION = "STATE_PARA" }
+	daoyu_mcomm = { REGION = "STATE_MARANHAO" }
+	daoyu_mcomm = { REGION = "STATE_AMAZONAS" }
+	daoyu_mcomm = { REGION = "STATE_ACRE" }
+	daoyu_mcomm = { REGION = "STATE_GOIAS" }
+	daoyu_mcomm = { REGION = "STATE_MATO_GROSSO" }
+	daoyu_mcomm = { REGION = "STATE_RIO_GRANDE_DO_SUL" }
+	daoyu_mcomm = { REGION = "STATE_PARANA" }
+	daoyu_mcomm = { REGION = "STATE_SANTA_CATARINA" }
+	daoyu_mcomm = { REGION = "STATE_SAO_PAULO" }
+	daoyu_mcomm = { REGION = "STATE_MINAS_GERAIS" }
+	daoyu_mcomm = { REGION = "STATE_RIO_DE_JANEIRO" }
+	daoyu_mcomm = { REGION = "STATE_BAHIA" }
+	daoyu_mcomm = { REGION = "STATE_RIO_GRANDE_DO_NORTE" }
+	daoyu_mcomm = { REGION = "STATE_CEARA" }
+	daoyu_mcomm = { REGION = "STATE_PIAUI" }
+	daoyu_mcomm = { REGION = "STATE_PARAIBA" }
+	daoyu_mcomm = { REGION = "STATE_PERNAMBUCO" }
+	daoyu_mcomm = { REGION = "﻿STATE_NEJD" }
+	daoyu_mcomm = { REGION = "STATE_OMAN" }
+	daoyu_mcomm = { REGION = "STATE_ABU_DHABI" }
+	daoyu_mcomm = { REGION = "STATE_YEMEN" }
+	daoyu_mcomm = { REGION = "STATE_HEDJAZ" }
+	daoyu_mcomm = { REGION = "STATE_HAIL" }
+	daoyu_mcomm = { REGION = "STATE_CYPRUS" }
+	daoyu_mcomm = { REGION = "STATE_TRANSJORDAN" }
+	daoyu_mcomm = { REGION = "STATE_PALESTINE" }
+	daoyu_mcomm = { REGION = "STATE_LEBANON" }
+	daoyu_mcomm = { REGION = "STATE_SYRIA" }
+	daoyu_mcomm = { REGION = "STATE_ALEPPO" }
+	daoyu_mcomm = { REGION = "STATE_BAGHDAD" }
+	daoyu_mcomm = { REGION = "STATE_MOSUL" }
+	daoyu_mcomm = { REGION = "STATE_DEIR_EZ_ZOR" }
+	daoyu_mcomm = { REGION = "STATE_BASRA" }
+	daoyu_mcomm = { REGION = "STATE_FARS" }
+	daoyu_mcomm = { REGION = "STATE_LARISTAN" }
+	daoyu_mcomm = { REGION = "STATE_KERMAN" }
+	daoyu_mcomm = { REGION = "STATE_SISTAN" }
+	daoyu_mcomm = { REGION = "STATE_KHORASAN" }
+	daoyu_mcomm = { REGION = "STATE_KHUZESTAN" }
+	daoyu_mcomm = { REGION = "STATE_ISFAHAN" }
+	daoyu_mcomm = { REGION = "STATE_MAZANDARAN" }
+	daoyu_mcomm = { REGION = "STATE_IRAKAJEMI" }
+	daoyu_mcomm = { REGION = "STATE_SEMNAN" }
+	daoyu_mcomm = { REGION = "STATE_TABRIZ" }
+	daoyu_mcomm = { REGION = "STATE_URMIA" }
+	daoyu_mcomm = { REGION = "STATE_LURISTAN" }
+	daoyu_mcomm = { REGION = "STATE_PERSIAN_KURDISTAN" }
+	daoyu_mcomm = { REGION = "STATE_HUDAVENDIGAR" }
+	daoyu_mcomm = { REGION = "STATE_AYDIN" }
+	daoyu_mcomm = { REGION = "STATE_KONYA" }
+	daoyu_mcomm = { REGION = "STATE_KASTAMONU" }
+	daoyu_mcomm = { REGION = "STATE_DIYARBAKIR" }
+	daoyu_mcomm = { REGION = "STATE_ADANA" }
+	daoyu_mcomm = { REGION = "STATE_TRABZON" }
+	daoyu_mcomm = { REGION = "STATE_ERZURUM" }
+	daoyu_mcomm = { REGION = "STATE_ANKARA" }
+	daoyu_mcomm = { REGION = "STATE_KARS" }
+	daoyu_mcomm = { REGION = "﻿STATE_DAGESTAN" }
+	daoyu_mcomm = { REGION = "STATE_KUBAN" }
+	daoyu_mcomm = { REGION = "STATE_ARMENIA" }
+	daoyu_mcomm = { REGION = "STATE_AZERBAIJAN" }
+	daoyu_mcomm = { REGION = "STATE_GREATER_CAUCASUS" }
+	daoyu_mcomm = { REGION = "STATE_SAMARA" }
+	daoyu_mcomm = { REGION = "STATE_TARTARIA" }
+	daoyu_mcomm = { REGION = "STATE_ASTRAKHAN" }
+	daoyu_mcomm = { REGION = "STATE_UZBEKIA" }
+	daoyu_mcomm = { REGION = "STATE_TAJIKISTAN" }
+	daoyu_mcomm = { REGION = "STATE_KIRGHIZIA" }
+	daoyu_mcomm = { REGION = "STATE_TURKMENIA" }
+	daoyu_mcomm = { REGION = "STATE_PASHTUNISTAN" }
+	daoyu_mcomm = { REGION = "STATE_CENTRAL_HIGHLANDS" }
+	daoyu_mcomm = { REGION = "STATE_NORTHERN_BALUCHISTAN" }
+	daoyu_mcomm = { REGION = "STATE_HERAT" }
+	daoyu_mcomm = { REGION = "STATE_BALKH" }
+	daoyu_mcomm = { REGION = "STATE_QUETTA" }
+	daoyu_mcomm = { REGION = "STATE_KANDAHAR" }
+	daoyu_mcomm = { REGION = "STATE_KABUL" }
+	daoyu_mcomm = { REGION = "STATE_BALUCHISTAN" }
+	daoyu_mcomm = { REGION = "STATE_LHASA" }
+	daoyu_mcomm = { REGION = "STATE_NGARI" }
+	daoyu_mcomm = { REGION = "STATE_HIMALAYAS" }
+	daoyu_mcomm = { REGION = "STATE_EASTERN_HIMALAYAS" }
+	daoyu_mcomm = { REGION = "﻿STATE_BIHAR" }
+	daoyu_mcomm = { REGION = "STATE_WEST_BENGAL" }
+	daoyu_mcomm = { REGION = "STATE_EAST_BENGAL" }
+	daoyu_mcomm = { REGION = "STATE_ASSAM" }
+	daoyu_mcomm = { REGION = "STATE_DELHI" }
+	daoyu_mcomm = { REGION = "STATE_AWADH" }
+	daoyu_mcomm = { REGION = "STATE_AGRA" }
+	daoyu_mcomm = { REGION = "STATE_GUJARAT" }
+	daoyu_mcomm = { REGION = "STATE_BUNDELKHAND" }
+	daoyu_mcomm = { REGION = "STATE_MALWA" }
+	daoyu_mcomm = { REGION = "STATE_KASHMIR" }
+	daoyu_mcomm = { REGION = "STATE_PUNJAB" }
+	daoyu_mcomm = { REGION = "STATE_HILL_PUNJAB" }
+	daoyu_mcomm = { REGION = "STATE_CENTRAL_PROVINCES" }
+	daoyu_mcomm = { REGION = "STATE_SINDH" }
+	daoyu_mcomm = { REGION = "STATE_RAJPUTANA" }
+	daoyu_mcomm = { REGION = "STATE_CEYLON" }
+	daoyu_mcomm = { REGION = "STATE_INDIAN_OCEAN_TERRITORY" }
+	daoyu_mcomm = { REGION = "STATE_ORISSA" }
+	daoyu_mcomm = { REGION = "STATE_CIRCARS" }
+	daoyu_mcomm = { REGION = "STATE_MYSORE" }
+	daoyu_mcomm = { REGION = "STATE_TRAVANCORE" }
+	daoyu_mcomm = { REGION = "STATE_MADRAS" }
+	daoyu_mcomm = { REGION = "STATE_KURNOOL" }
+	daoyu_mcomm = { REGION = "STATE_HYDERABAD" }
+	daoyu_mcomm = { REGION = "STATE_BOMBAY" }
+	daoyu_mcomm = { REGION = "# Burma" }
+	daoyu_mcomm = { REGION = "STATE_TENASSERIM" }
+	daoyu_mcomm = { REGION = "STATE_KACHIN" }
+	daoyu_mcomm = { REGION = "STATE_SHAN_STATES" }
+	daoyu_mcomm = { REGION = "STATE_MANDALAY" }
+	daoyu_mcomm = { REGION = "STATE_PEGU" }
+	daoyu_mcomm = { REGION = "STATE_ARAKAN" }
+	daoyu_mcomm = { REGION = "﻿STATE_DZUNGARIA" }
+	daoyu_mcomm = { REGION = "STATE_TIANSHAN" }
+	daoyu_mcomm = { REGION = "STATE_SICHUAN" }
+	daoyu_mcomm = { REGION = "STATE_YUNNAN" }
+	daoyu_mcomm = { REGION = "STATE_GUIZHOU" }
+	daoyu_mcomm = { REGION = "STATE_SHAOZHOU" }
+	daoyu_mcomm = { REGION = "STATE_ALXA" }
+	daoyu_mcomm = { REGION = "STATE_HINGGAN" }
+	daoyu_mcomm = { REGION = "STATE_GUANGXI" }
+	daoyu_mcomm = { REGION = "STATE_BEIJING" }
+	daoyu_mcomm = { REGION = "STATE_SHENGJING" }
+	daoyu_mcomm = { REGION = "STATE_OUTER_MANCHURIA" }
+	daoyu_mcomm = { REGION = "STATE_SOUTHERN_MANCHURIA" }
+	daoyu_mcomm = { REGION = "STATE_NORTHERN_MANCHURIA" }
+	daoyu_mcomm = { REGION = "STATE_SHANXI" }
+	daoyu_mcomm = { REGION = "STATE_NINGXIA" }
+	daoyu_mcomm = { REGION = "STATE_GANSU" }
+	daoyu_mcomm = { REGION = "STATE_XIAN" }
+	daoyu_mcomm = { REGION = "STATE_QINGHAI" }
+	daoyu_mcomm = { REGION = "STATE_CHONGQING" }
+	daoyu_mcomm = { REGION = "STATE_GUANGDONG" }
+	daoyu_mcomm = { REGION = "STATE_FUJIAN" }
+	daoyu_mcomm = { REGION = "STATE_ZHEJIANG" }
+	daoyu_mcomm = { REGION = "STATE_JIANGSU" }
+	daoyu_mcomm = { REGION = "STATE_NANJING" }
+	daoyu_mcomm = { REGION = "STATE_HENAN" }
+	daoyu_mcomm = { REGION = "STATE_ZHILI" }
+	daoyu_mcomm = { REGION = "STATE_JIANGXI" }
+	daoyu_mcomm = { REGION = "STATE_SOUTHERN_ANHUI" }
+	daoyu_mcomm = { REGION = "STATE_NORTHERN_ANHUI" }
+	daoyu_mcomm = { REGION = "STATE_WESTERN_HUBEI" }
+	daoyu_mcomm = { REGION = "STATE_EASTERN_HUBEI" }
+	daoyu_mcomm = { REGION = "STATE_HUNAN" }
+	daoyu_mcomm = { REGION = "STATE_FORMOSA" }
+	daoyu_mcomm = { REGION = "STATE_SHANDONG" }
+	daoyu_mcomm = { REGION = "STATE_SUZHOU" }
+	daoyu_mcomm = { REGION = "STATE_ULIASTAI" }
+	daoyu_mcomm = { REGION = "STATE_URGA" }
+	daoyu_mcomm = { REGION = "STATE_CAMBODIA" }
+	daoyu_mcomm = { REGION = "STATE_BANGKOK" }
+	daoyu_mcomm = { REGION = "STATE_TONKIN" }
+	daoyu_mcomm = { REGION = "STATE_ANNAM" }
+	daoyu_mcomm = { REGION = "STATE_MEKONG" }
+	daoyu_mcomm = { REGION = "STATE_LAOS" }
+	daoyu_mcomm = { REGION = "STATE_CHIANG_MAI" }
+	daoyu_mcomm = { REGION = "STATE_NAKHON_RATCHASIMA" }
+	daoyu_mcomm = { REGION = "STATE_SAKHALIN" }
+	daoyu_mcomm = { REGION = "STATE_HOKKAIDO" }
+	daoyu_mcomm = { REGION = "STATE_TOHOKU" }
+	daoyu_mcomm = { REGION = "STATE_KANTO" }
+	daoyu_mcomm = { REGION = "STATE_CHUBU" }
+	daoyu_mcomm = { REGION = "STATE_KANSAI" }
+	daoyu_mcomm = { REGION = "STATE_KYUSHU" }
+	daoyu_mcomm = { REGION = "STATE_RYUKYU_ISLANDS" }
+	daoyu_mcomm = { REGION = "STATE_CHUGOKU" }
+	daoyu_mcomm = { REGION = "STATE_SHIKOKU" }
+	daoyu_mcomm = { REGION = "STATE_SEOUL" }
+	daoyu_mcomm = { REGION = "STATE_BUSAN" }
+	daoyu_mcomm = { REGION = "STATE_YANGHO" }
+	daoyu_mcomm = { REGION = "STATE_SARIWON" }
+	daoyu_mcomm = { REGION = "STATE_PYONGYANG" }
+	daoyu_mcomm = { REGION = "﻿STATE_MALAYA" }
+	daoyu_mcomm = { REGION = "STATE_NORTH_BORNEO" }
+	daoyu_mcomm = { REGION = "STATE_WEST_BORNEO" }
+	daoyu_mcomm = { REGION = "STATE_EAST_BORNEO" }
+	daoyu_mcomm = { REGION = "STATE_WEST_JAVA" }
+	daoyu_mcomm = { REGION = "STATE_EAST_JAVA" }
+	daoyu_mcomm = { REGION = "STATE_CENTRAL_JAVA" }
+	daoyu_mcomm = { REGION = "STATE_NORTH_SUMATRA" }
+	daoyu_mcomm = { REGION = "STATE_SOUTH_SUMATRA" }
+	daoyu_mcomm = { REGION = "STATE_ACEH" }
+	daoyu_mcomm = { REGION = "STATE_WESTERN_NEW_GUINEA" }
+	daoyu_mcomm = { REGION = "STATE_MOLUCCAS" }
+	daoyu_mcomm = { REGION = "STATE_CELEBES" }
+	daoyu_mcomm = { REGION = "STATE_EASTERN_NEW_GUINEA" }
+	daoyu_mcomm = { REGION = "STATE_SUNDA_ISLANDS" }
+	daoyu_mcomm = { REGION = "STATE_MINDANAO" }
+	daoyu_mcomm = { REGION = "STATE_LUZON" }
+	daoyu_mcomm = { REGION = "STATE_VISAYAS" }
+	daoyu_mcomm = { REGION = "STATE_WEST_MICRONESIA" }
+	daoyu_mcomm = { REGION = "STATE_EAST_MICRONESIA" }
+	daoyu_mcomm = { REGION = "STATE_SOLOMON_ISLANDS" }
+	daoyu_mcomm = { REGION = "STATE_NAURU" }
+	daoyu_mcomm = { REGION = "STATE_FIJI" }
+	daoyu_mcomm = { REGION = "STATE_VANUATU" }
+	daoyu_mcomm = { REGION = "STATE_KANAK" }
+	daoyu_mcomm = { REGION = "STATE_BOUGAINVILLE" }
+	daoyu_mcomm = { REGION = "STATE_TAHITI" }
+	daoyu_mcomm = { REGION = "STATE_TONGA" }
+	daoyu_mcomm = { REGION = "﻿STATE_NEW_SOUTH_WALES" }
+	daoyu_mcomm = { REGION = "STATE_VICTORIA" }
+	daoyu_mcomm = { REGION = "STATE_TASMANIA" }
+	daoyu_mcomm = { REGION = "STATE_QUEENSLAND" }
+	daoyu_mcomm = { REGION = "STATE_SOUTH_AUSTRALIA" }
+	daoyu_mcomm = { REGION = "STATE_WESTERN_AUSTRALIA" }
+	daoyu_mcomm = { REGION = "STATE_NORTHERN_TERRITORY" }
+	daoyu_mcomm = { REGION = "STATE_NORTH_ISLAND" }
+	daoyu_mcomm = { REGION = "STATE_SOUTH_ISLAND" }
+	daoyu_mcomm = { REGION = "﻿STATE_URAL" }
+	daoyu_mcomm = { REGION = "STATE_TOMSK" }
+	daoyu_mcomm = { REGION = "STATE_TUVA" }
+	daoyu_mcomm = { REGION = "STATE_TOBOLSK" }
+	daoyu_mcomm = { REGION = "STATE_UPPER_YENISEYSK" }
+	daoyu_mcomm = { REGION = "STATE_OB" }
+	daoyu_mcomm = { REGION = "STATE_CHUKOTKA" }
+	daoyu_mcomm = { REGION = "STATE_KAMCHATKA" }
+	daoyu_mcomm = { REGION = "STATE_OKHOTSK" }
+	daoyu_mcomm = { REGION = "STATE_YAKUTSK" }
+	daoyu_mcomm = { REGION = "STATE_TRANS_BAIKAL" }
+	daoyu_mcomm = { REGION = "STATE_IRKUTSK" }
+	daoyu_mcomm = { REGION = "﻿STATE_TALINN" }
+	daoyu_mcomm = { REGION = "STATE_TARTU" }
+	daoyu_mcomm = { REGION = "STATE_RIGA" }
+	daoyu_mcomm = { REGION = "STATE_COURLAND" }
+	daoyu_mcomm = { REGION = "STATE_KAUNAS" }
+	daoyu_mcomm = { REGION = "STATE_VILNIUS" }
+	daoyu_mcomm = { REGION = "STATE_KUOPIO" }
+	daoyu_mcomm = { REGION = "STATE_UUSIMAA" }
+	daoyu_mcomm = { REGION = "STATE_WEST_KARELIA" }
+	daoyu_mcomm = { REGION = "STATE_ALAND" }
+	daoyu_mcomm = { REGION = "STATE_OSTROBOTHNIA" }
+	daoyu_mcomm = { REGION = "STATE_OULU" }
+	daoyu_mcomm = { REGION = "STATE_EAST_KARELIA" }
+	daoyu_mcomm = { REGION = "STATE_KOLA" }
+	daoyu_mcomm = { REGION = "STATE_INGRIA" }
+	daoyu_mcomm = { REGION = "STATE_MOSCOW" }
+	daoyu_mcomm = { REGION = "STATE_BREST" }
+	daoyu_mcomm = { REGION = "STATE_VOLHYNIA" }
+	daoyu_mcomm = { REGION = "STATE_KIEV" }
+	daoyu_mcomm = { REGION = "STATE_ORYOL" }
+	daoyu_mcomm = { REGION = "STATE_SMOLENSK" }
+	daoyu_mcomm = { REGION = "STATE_MOGILEV" }
+	daoyu_mcomm = { REGION = "STATE_ARKHANGELSK" }
+	daoyu_mcomm = { REGION = "STATE_NOVGOROD" }
+	daoyu_mcomm = { REGION = "STATE_CRIMEA" }
+	daoyu_mcomm = { REGION = "STATE_KHARKOV" }
+	daoyu_mcomm = { REGION = "STATE_KURSK" }
+	daoyu_mcomm = { REGION = "STATE_TVER" }
+	daoyu_mcomm = { REGION = "STATE_CHERSON" }
+	daoyu_mcomm = { REGION = "STATE_GALICH" }
+	daoyu_mcomm = { REGION = "STATE_MINSK" }
+	daoyu_mcomm = { REGION = "STATE_ROSTOV" }
+	daoyu_mcomm = { REGION = "STATE_PERM" }
+	daoyu_mcomm = { REGION = "STATE_KAZAN" }
+	daoyu_mcomm = { REGION = "STATE_URALSK" }
+	daoyu_mcomm = { REGION = "STATE_KHIVA" }
+	daoyu_mcomm = { REGION = "STATE_SEMIRECHE" }
+	daoyu_mcomm = { REGION = "STATE_JETISY" }
+	daoyu_mcomm = { REGION = "STATE_AKMOLINSK" }
+	daoyu_mcomm = { REGION = "STATE_FERGANA" }
+	daoyu_mcomm = { REGION = "STATE_MERZ" }
+	daoyu_mcomm = { REGION = "STATE_SYRDARYA" }
+	daoyu_mcomm = { REGION = "STATE_AKTOBE" }
+	daoyu_mcomm = { REGION = "STATE_KALMYKIA" }
+	daoyu_mcomm = { REGION = "STATE_NORTH_CAUCASUS" }
+	daoyu_mcomm = { REGION = "STATE_TAURIDA" }
+	daoyu_mcomm = { REGION = "STATE_TAMBOV" }
+	daoyu_mcomm = { REGION = "STATE_RYAZAN" }
+	daoyu_mcomm = { REGION = "STATE_VITEBSK" }
+	daoyu_mcomm = { REGION = "STATE_PSKOV" }
+	daoyu_mcomm = { REGION = "STATE_YAROSLAVL" }
+	daoyu_mcomm = { REGION = "STATE_NIZHNY_NOVGOROD" }
+	daoyu_mcomm = { REGION = "STATE_VYATKA" }
+	daoyu_mcomm = { REGION = "STATE_UFA" }
+	daoyu_mcomm = { REGION = "STATE_SURGUT" }
+	daoyu_mcomm = { REGION = "STATE_KRASNOYARSK" }
+	daoyu_mcomm = { REGION = "STATE_ALTAI" }
+	daoyu_mcomm = { REGION = "STATE_BURYATIA" }
+	daoyu_mcomm = { REGION = "STATE_KOLYMA" }
+	daoyu_mcomm = { REGION = "STATE_AMUR" }
+	daoyu_mcomm = { REGION = "STATE_CHELYABINSK" }
+	daoyu_mcomm = { REGION = "STATE_ELIZAVETPOL" }
+	daoyu_mcomm = { REGION = "STATE_STAVROPOL" }
+	daoyu_mcomm = { REGION = "STATE_CHUVASHIA" }
+	daoyu_mcomm = { REGION = "STATE_CHERNIHIV" }
+	daoyu_mcomm = { REGION = "STATE_NENETSIA" }
+}
+daoyu_mcomm = {
+	if = {
+		limit = { s:$REGION$ = { any_scope_state = { has_decree = decree_daoyu_target_state is_incorporated = yes } } }
+		if = { limit = { has_global_variable = daoyu_move_capital } set_capital = $REGION$ }
+		if = { limit = { has_global_variable = daoyu_move_market } set_market_capital = $REGION$ }
+	}
+}
+daoyu_remove_personality_traits = {
+	remove_trait = direct
+	remove_trait = persistent
+	remove_trait = cautious
+	remove_trait = arrogant
+	remove_trait = bigoted
+	remove_trait = reckless
+	remove_trait = tactful
+	remove_trait = ambitious
+	remove_trait = imperious
+	remove_trait = wrathful
+	remove_trait = reserved
+	remove_trait = cruel
+	remove_trait = meticulous
+	remove_trait = charismatic
+	remove_trait = romantic
+	remove_trait = brave
+	remove_trait = innovative
+	remove_trait = hedonist
+	remove_trait = pious
+	remove_trait = imposing
+	remove_trait = honorable
+	remove_trait = ruthless
+	remove_trait = compliant
+	remove_trait = aesthete
+}
+daoyu_add_military_modifier = {
+	if = {
+		limit = { has_global_variable = daoyu_character_health_add }
+		if = { limit = { has_variable = daoyu_generals_orders } every_scope_general = { limit = { is_ruler = no } add_modifier = { name = daoyu_character_health_add months = -1 multiplier = $MULTIPLIER$ } } }
+		else_if = { limit = { has_variable = daoyu_admirals_orders } every_scope_admiral = { limit = { is_ruler = no } add_modifier = { name = daoyu_character_health_add months = -1 multiplier = $MULTIPLIER$ } } }
+		else = {
+			random_character = { limit = { has_trait = daoyu_target_character has_role = general } add_modifier = { name = daoyu_character_health_add months = -1 multiplier = $MULTIPLIER$ } }
+			random_character = { limit = { has_trait = daoyu_target_character has_role = admiral } add_modifier = { name = daoyu_character_health_add months = -1 multiplier = $MULTIPLIER$ } }
+		}
+	}
+	else = {
+		if = { limit = { has_variable = daoyu_generals_orders } every_scope_general = { limit = { is_ruler = no } add_modifier = { name = daoyu_general_modifier months = -1 multiplier = $MULTIPLIER$ } } }
+		else_if = { limit = { has_variable = daoyu_admirals_orders } every_scope_admiral = { limit = { is_ruler = no } add_modifier = { name = daoyu_admiral_modifier months = -1 multiplier = $MULTIPLIER$ } } }
+		else = {
+			random_character = { limit = { has_trait = daoyu_target_character has_role = general } add_modifier = { name = daoyu_general_modifier months = -1 multiplier = $MULTIPLIER$ } }
+			random_character = { limit = { has_trait = daoyu_target_character has_role = admiral } add_modifier = { name = daoyu_admiral_modifier months = -1 multiplier = $MULTIPLIER$ } }
+		}
+	}
+}
+daoyu_add_or_remove_principle = {
+	if = {
+		limit = { has_global_variable = daoyu_remove_principle }
+		power_bloc = {
+			if = { limit = { has_principle = principle:principle_$PRI$_1 } remove_principle = principle_$PRI$_1 }
+			if = { limit = { has_principle = principle:principle_$PRI$_2 } remove_principle = principle_$PRI$_2 }
+			if = { limit = { has_principle = principle:principle_$PRI$_3 } remove_principle = principle_$PRI$_3 }
+		}
+	}
+	else = { power_bloc = { add_principle = principle_$PRI$_3 } }
+}
+daoyu_upgrade_principle = {
+	power_bloc = {
+		if = {
+			limit = { or = { has_principle = principle:principle_$PRI$_1 has_principle = principle:principle_$PRI$_2 } }
+			remove_principle = principle_$PRI$_1 remove_principle = principle_$PRI$_2 add_principle = principle_$PRI$_3
+		}
+	}
+}
+daoyu_create_power_bloc = {
+	if = { limit = { has_variable = daoyu_sovereign_empire } create_power_bloc = { name = $NAME$ identity = identity_sovereign_empire } }
+	if = { limit = { has_variable = daoyu_military_treaty_organization } create_power_bloc = { name = $NAME$ identity = identity_military_treaty_organization } }
+	if = { limit = { has_variable = daoyu_ideological_union } create_power_bloc = { name = $NAME$ identity = identity_ideological_union } }
+	if = { limit = { has_variable = daoyu_religious } create_power_bloc = { name = $NAME$ identity = identity_religious } }
+}
+
+
+daoyu_one_earth_one_nation_one_religion_effect = {
+	daoyu_religious_effect = yes
+	if = { limit = { has_global_variable = daoyu_one_country_one_nation_one_religion } remove_global_variable = daoyu_one_country_one_nation_one_religion }
+	daoyu_remove_all_primary_culture_effect = yes
+	add_primary_culture = scope:daoyu_only_one_culture
+	every_scope_character = { change_character_culture = scope:daoyu_only_one_culture }
+	every_scope_state = {
+		every_scope_pop = { if = { limit = { not = { has_pop_culture = scope:daoyu_only_one_culture } } change_pop_culture = { value = 1 target = scope:daoyu_only_one_culture } } }
+	}
+	set_variable = daoyu_one_earth_one_nation_one_religion
+	if = {
+		limit = { any_country = { not = { has_variable = daoyu_one_earth_one_nation_one_religion } } }
+		random_country = { limit = { not = { has_variable = daoyu_one_earth_one_nation_one_religion } } trigger_event = { id = daoyu.509 days = 1 } }
+	}
+	else = {
+		every_state = {
+			every_scope_pop = { if = { limit = { pop_has_primary_culture = no } change_pop_culture = { value = 1 target = scope:daoyu_only_one_culture } } }
+		}
+		every_country = { limit = { has_variable = daoyu_one_earth_one_nation_one_religion } remove_variable = daoyu_one_earth_one_nation_one_religion }
+		remove_global_variable = daoyu_one_earth_one_nation_one_religion
+	}
+}
+daoyu_auto_unemployed_effcet = {
+	every_scope_state = {
+		limit = { any_scope_pop = { is_employed = no } }
+		every_scope_pop = {
+			limit = { is_employed = no }
+			change_pop_culture = { value = 1 target = cu:daoyu_nonexistent }
+		}
+	}
+	kill_population_percent = {
+		percent = 1
+		culture = cu:daoyu_nonexistent
+	}
+}
+daoyu_change_je_variable = {
+	daoyu_change_variable = { VAR = "je_communism_2_var" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "abolishing_monarchy_var" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "autocracy_var" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "survey_suez_taken" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "survey_panama_taken" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "caudillo_var" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "shogunate_var" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "pedropoints" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "isabel_points" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "sick_man_separatist_var" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "strike_timer_var" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "acw_progress_var" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "je_acw_wild_west_var" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "je_assassination_var" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "coup_var" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "prohibition_laws_var" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "rennes_retrial_var" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "french_dynastic_primary_progress_var" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "nihilism_progress_var" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "coffee_with_milk_progress" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "positivism_progress_var" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "romanian_union_var" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "national_identity_progress_var" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "opium_wars_completion_tracker" PROGRESS = $PROGRESS$ }
+	daoyu_change_variable = { VAR = "china_warlord_explosion" PROGRESS = $PROGRESS$ }
+	hidden_effect = { trigger_event = { id = daoyu.145 popup = yes } }
+}
+daoyu_change_variable = {
+	if = { limit = { has_variable = daoyu_$VAR$ } change_variable = { name = $VAR$ add = $PROGRESS$ } }
+}
+daoyu_ig_add_or_remove_lobby_member = {
+	if = {
+		limit = { has_variable = daoyu_add_lobby_member }
+		scope:daoyu_target_country = {
+			random_interest_group = {
+				limit = { is_member_of_any_lobby = no is_interest_group_type = $IG$ }
+				scope:daoyu_target_political_lobby = { add_lobby_member = prev }
+			}
+		}
+	}
+	if = {
+		limit = { has_variable = daoyu_remove_lobby_member }
+		scope:daoyu_target_political_lobby = {
+			random_lobby_member = {
+				limit = { is_interest_group_type = $IG$ }
+				scope:daoyu_target_political_lobby = { remove_lobby_member = PREV }
+			}
+		}
+	}
+}
+daoyu_remove_all_country_modifier_effect = {
+	hidden_effect = {
+		set_global_variable = daoyu_remove_all_country_modifiers
+		daoyu_all_country_modifiers_effect = { MULTIPLIER = 0 }
+		remove_global_variable = daoyu_remove_all_country_modifiers
+	}
+}
+daoyu_remove_single_country_modifiers = {
+	hidden_effect = {
+		set_global_variable = daoyu_remove_single_country_modifiers
+		daoyu_all_country_modifiers_effect = { MULTIPLIER = 0 }
+		remove_global_variable = daoyu_remove_single_country_modifiers
+	}
+}
+daoyu_remove_country_modifiers_flag = {
+	set_global_variable = daoyu_remove_country_modifiers_flag
+	daoyu_all_country_modifiers_effect = { MULTIPLIER = 0 }
+	remove_global_variable = daoyu_remove_country_modifiers_flag
+}
+daoyu_add_or_remove_single_modifiers = {
+	if = {
+		limit = { has_global_variable = daoyu_remove_single_country_modifiers }
+		if = { limit = { has_global_variable = daoyu_$BUFFVAR$ has_modifier = daoyu_$BUFFVAR$ } remove_modifier = daoyu_$BUFFVAR$ }
+		if = { limit = { has_global_variable = daoyu_$BUFFVAR$ has_modifier = daoyu_negative_$BUFFVAR$ } remove_modifier = daoyu_negative_$BUFFVAR$ }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_remove_all_country_modifiers }
+		if = { limit = { has_modifier = daoyu_$BUFFVAR$ } remove_modifier = daoyu_$BUFFVAR$ }
+		if = { limit = { has_modifier = daoyu_negative_$BUFFVAR$ } remove_modifier = daoyu_negative_$BUFFVAR$ }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_remove_country_modifiers_flag }
+		if = { limit = { has_global_variable = daoyu_$BUFFVAR$ } remove_global_variable = daoyu_$BUFFVAR$ }
+	}
+	if = {
+		limit = { has_global_variable = daoyu_add_country_modifiers }
+		if = { limit = { has_global_variable = daoyu_negative has_global_variable = daoyu_$BUFFVAR$ } add_modifier = { name = daoyu_negative_$BUFFVAR$ multiplier = $MULTIPLIER$ months = -1 } remove_global_variable = daoyu_add_country_modifiers remove_global_variable = daoyu_negative }
+		else_if = { limit = { has_global_variable = daoyu_$BUFFVAR$ } add_modifier = { name = daoyu_$BUFFVAR$ multiplier = $MULTIPLIER$ months = -1 } remove_global_variable = daoyu_add_country_modifiers }
+	}
+}
+daoyu_all_country_modifiers_effect = {
+	daoyu_add_or_remove_single_modifiers = { BUFFVAR = country_legitimacy_base_add MULTIPLIER = $MULTIPLIER$ }
+	daoyu_add_or_remove_single_modifiers = { BUFFVAR = country_diplomatic_play_maneuvers_add MULTIPLIER = $MULTIPLIER$ }
+	daoyu_add_or_remove_single_modifiers = { BUFFVAR = country_gold_reserve_limit_mult MULTIPLIER = $MULTIPLIER$ }
+	daoyu_add_or_remove_single_modifiers = { BUFFVAR = state_tax_capacity_add MULTIPLIER = $MULTIPLIER$ }
+	daoyu_add_or_remove_single_modifiers = { BUFFVAR = country_tech_spread_mult MULTIPLIER = $MULTIPLIER$ }
+	daoyu_add_or_remove_single_modifiers = { BUFFVAR = country_bureaucracy_add MULTIPLIER = $MULTIPLIER$ }
+	daoyu_add_or_remove_single_modifiers = { BUFFVAR = country_authority_add MULTIPLIER = $MULTIPLIER$ }
+	daoyu_add_or_remove_single_modifiers = { BUFFVAR = country_influence_add MULTIPLIER = $MULTIPLIER$ }
+	daoyu_add_or_remove_single_modifiers = { BUFFVAR = state_working_adult_ratio_add MULTIPLIER = $MULTIPLIER$ }
+	daoyu_add_or_remove_single_modifiers = { BUFFVAR = tariff_import_add MULTIPLIER = $MULTIPLIER$ }
+	daoyu_add_or_remove_single_modifiers = { BUFFVAR = tariff_export_add MULTIPLIER = $MULTIPLIER$ }
+	daoyu_add_or_remove_single_modifiers = { BUFFVAR = country_convoys_capacity_add MULTIPLIER = $MULTIPLIER$ }
+	daoyu_add_or_remove_single_modifiers = { BUFFVAR = country_construction_add MULTIPLIER = $MULTIPLIER$ }
+	daoyu_add_or_remove_single_modifiers = { BUFFVAR = mobilization_cost_mult MULTIPLIER = $MULTIPLIER$ }
+	daoyu_add_or_remove_single_modifiers = { BUFFVAR = military_drill MULTIPLIER = $MULTIPLIER$ }
+}
+daoyu_remove_create_character_flag = {
+	remove_global_variable = daoyu_create_general
+	remove_global_variable = daoyu_create_admiral
+	remove_global_variable = daoyu_create_politician
+	remove_global_variable = daoyu_create_agitator
+	remove_global_variable = daoyu_create_ruler
+	remove_global_variable = daoyu_create_heir
+}
+daoyu_create_character = {
+	random_country = {
+		limit = { has_variable = daoyu_target_country }
+		if = {
+			limit = { has_global_variable = daoyu_create_general }
+			create_character = { age = 20 is_general = yes ig_leader = no noble = no interest_group = $IG$ traits = { daoyu_target_character wrathful } }
+		}
+		else_if = {
+			limit = { has_global_variable = daoyu_create_admiral }
+			create_character = { age = 20 is_admiral = yes ig_leader = no noble = no interest_group = $IG$ traits = { daoyu_target_character wrathful } }
+		}
+		else_if = {
+			limit = { has_global_variable = daoyu_create_character_male }
+			if = {
+				limit = { has_global_variable = daoyu_create_politician }
+				if = { limit = { has_global_variable = daoyu_noble } create_character = { age = 35 ig_leader = yes noble = yes interest_group = $IG$ traits = { daoyu_target_character } } }
+				else = { create_character = { age = 35 ig_leader = yes noble = no interest_group = $IG$ traits = { daoyu_target_character } } }
+			}
+			else_if = {
+				limit = { has_global_variable = daoyu_create_agitator }
+				if = { limit = { has_global_variable = daoyu_noble } create_character = { age = 35 is_agitator = yes noble = yes interest_group = $IG$ traits = { daoyu_target_character } } }
+				else = { create_character = { age = 35 is_agitator = yes noble = no interest_group = $IG$ traits = { daoyu_target_character } } }
+			}
+			else_if = {
+				limit = { has_global_variable = daoyu_create_ruler }
+				hidden_effect = { every_scope_character = { limit = { or = { is_ruler = yes is_heir = yes } } kill_character = { hidden = yes } } }
+				if = { limit = { has_global_variable = daoyu_noble } create_character = { age = 35 ruler = yes ig_leader = yes noble = yes interest_group = $IG$ traits = { daoyu_target_character } } }
+				else = { create_character = { age = 35 ruler = yes ig_leader = yes noble = no interest_group = $IG$ traits = { daoyu_target_character } } }
+			}
+			else_if = {
+				limit = { has_global_variable = daoyu_create_heir }
+				hidden_effect = { random_scope_character = { limit = { is_heir = yes } kill_character = { hidden = yes } } }
+				if = {
+					limit = { any_scope_character = { is_ruler = yes age >= 35 } }
+					if = { limit = { has_global_variable = daoyu_noble } create_character = { age = 16 heir = yes noble = yes interest_group = $IG$ traits = { daoyu_target_character } } }
+					else = { create_character = { age = 16 heir = yes noble = no interest_group = $IG$ traits = { daoyu_target_character } } }
+				}
+				if = {
+					limit = { any_scope_character = { is_ruler = yes age >= 19 age < 35 } }
+					if = { limit = { has_global_variable = daoyu_noble } create_character = { age = 0 heir = yes noble = yes interest_group = $IG$ traits = { daoyu_target_character trait_child } } }
+					else = { create_character = { age = 0 heir = yes noble = no interest_group = $IG$ traits = { daoyu_target_character trait_child } } }
+				}
+			}
+			random_scope_character = { limit = { has_trait = daoyu_target_character } save_scope_as = daoyu_target_character }
+		}
+		else = {
+			if = {
+				limit = { has_global_variable = daoyu_create_politician }
+				if = { limit = { has_global_variable = daoyu_noble } create_character = { age = 28 female = yes ig_leader = yes noble = yes interest_group = $IG$ traits = { daoyu_target_character } } }
+				else = { create_character = { age = 28 female = yes ig_leader = yes noble = no interest_group = $IG$ traits = { daoyu_target_character } } }
+			}
+			else_if = {
+				limit = { has_global_variable = daoyu_create_agitator }
+				if = { limit = { has_global_variable = daoyu_noble } create_character = { age = 28 female = yes is_agitator = yes noble = yes interest_group = $IG$ traits = { daoyu_target_character } } }
+				else = { create_character = { age = 28 female = yes is_agitator = yes noble = no interest_group = $IG$ traits = { daoyu_target_character } } }
+			}
+			else_if = {
+				limit = { has_global_variable = daoyu_create_ruler }
+				hidden_effect = { every_scope_character = { limit = { or = { is_ruler = yes is_heir = yes } } kill_character = { hidden = yes } } }
+				if = {
+					limit = { coa_monarchy_trigger = yes }
+					if = { limit = { has_global_variable = daoyu_noble } create_character = { age = 18 female = yes ruler = yes ig_leader = yes noble = yes interest_group = $IG$ traits = { daoyu_target_character } } }
+					else = { create_character = { age = 18 female = yes ruler = yes ig_leader = yes noble = no interest_group = $IG$ traits = { daoyu_target_character } } }
+				}
+				else = {
+					if = { limit = { has_global_variable = daoyu_noble } create_character = { age = 35 female = yes ruler = yes ig_leader = yes noble = yes interest_group = $IG$ traits = { daoyu_target_character } } }
+					else = { create_character = { age = 35 female = yes ruler = yes ig_leader = yes noble = no interest_group = $IG$ traits = { daoyu_target_character } } }
+				}
+			}
+			else_if = {
+				limit = { has_global_variable = daoyu_create_heir }
+				hidden_effect = { random_scope_character = { limit = { is_heir = yes } kill_character = { hidden = yes } } }
+				if = {
+					limit = { any_scope_character = { is_ruler = yes age >= 35 } }
+					if = { limit = { has_global_variable = daoyu_noble } create_character = { age = 16 female = yes heir = yes noble = yes interest_group = $IG$ traits = { daoyu_target_character } } }
+					else = { create_character = { age = 16 female = yes heir = yes noble = no interest_group = $IG$ traits = { daoyu_target_character } } }
+				}
+				if = {
+					limit = { any_scope_character = { is_ruler = yes age >= 19 age < 35 } }
+					if = { limit = { has_global_variable = daoyu_noble } create_character = { age = 0 female = yes heir = yes noble = yes interest_group = $IG$ traits = { daoyu_target_character trait_child } } }
+					else = { create_character = { age = 0 female = yes heir = yes noble = no interest_group = $IG$ traits = { daoyu_target_character trait_child } } }
+				}
+			}
+			random_scope_character = { limit = { has_trait = daoyu_target_character } save_scope_as = daoyu_target_character }
+		}
+		remove_global_variable = daoyu_noble
+	}
+}
+daoyu_return_my_vassal_state_effect = {
+	if = {
+		limit = { exists = scope:daoyu_target_country exists = scope:daoyu_target_vassal exists = scope:daoyu_tst_$ORDER$ scope:daoyu_tst_$ORDER$ = { owner = scope:daoyu_target_country } }
+		random_diplomatic_play = {
+			limit = { initiator_is = scope:daoyu_target_vassal target_is = scope:daoyu_target_country has_play_goal = return_state }
+			add_war_goal = { holder = scope:daoyu_target_vassal target_state = scope:daoyu_tst_$ORDER$ type = return_state }
+		}
+	}
+}
+daoyu_disabled_movement = {
+	if = {
+		limit = { has_global_variable = daoyu_disabled_$TYPE$ any_political_movement = { is_political_movement_type = $TYPE$ } }
+		random_political_movement = { limit = { is_political_movement_type = $TYPE$ } remove_modifier = daoyu_political_movement_ADD remove_modifier = daoyu_political_movement_SUB add_modifier = { name = daoyu_political_movement_SUB months = -1 multiplier = 1000 } }
+		random_political_movement = { limit = { is_political_movement_type = $TYPE$ } remove_modifier = daoyu_political_movement_radicalism_ADD remove_modifier = daoyu_political_movement_radicalism_SUB add_modifier = { name = daoyu_political_movement_radicalism_SUB months = -1 multiplier = 1000 } }
+	}
+}
+daoyu_political_movement_buff = {
+	if = {
+		limit = { exists = scope:daoyu_political_movement }
+		if = {
+			limit = { has_variable = daoyu_political_movement_attraction }
+			scope:daoyu_political_movement = {
+				if = { limit = { has_modifier = daoyu_political_movement_ADD } remove_modifier = daoyu_political_movement_ADD }
+				if = { limit = { has_modifier = daoyu_political_movement_SUB } remove_modifier = daoyu_political_movement_SUB }
+				add_modifier = { name = daoyu_political_movement_$MOD$ months = -1 multiplier = $MUN$ }
+			}
+			remove_variable = daoyu_political_movement_attraction
+		}
+		if = {
+			limit = { has_variable = daoyu_political_movement_activism }
+			scope:daoyu_political_movement = {
+				if = { limit = { has_modifier = daoyu_political_movement_radicalism_ADD } remove_modifier = daoyu_political_movement_radicalism_ADD }
+				if = { limit = { has_modifier = daoyu_political_movement_radicalism_SUB } remove_modifier = daoyu_political_movement_radicalism_SUB }
+				add_modifier = { name = daoyu_political_movement_radicalism_$MOD$ months = -1 multiplier = $MUN$ }
+			}
+			remove_variable = daoyu_political_movement_activism
+		}
+	}
+}
+daoyu_remove_company = {
+	random_country = {
+		limit = { has_modifier = daoyu_target_country }
+		random_company = {
+			limit = { is_company_type = company_type:$COM$ }
+			remove_owned_country = prev
+		}
+		remove_company = company_type:$COM$
+	}
+}
+daoyu_111 = { trigger_event = { id = daoyu.10 popup = yes } }
+daoyu_add_military_access_effect = {
+	custom_tooltip = {
+		text = daoyu_add_military_access_effect
+		create_treaty = {
+			first_country = scope:daoyu_add_military_access
+			second_country = scope:target_country is_draft = no binding_period = { years = $YEARS$ }
+			articles_to_create = { { article = military_access source_country = scope:target_country target_country = scope:daoyu_add_military_access } }
+		}
+	}
+}
+#1.9.0不适用
+#daoyu_auto_single_trade_route_pricier_effcet = {
+#	if = {
+#		limit = { any_market = { mg:$GOODS$ = { market_goods_production >= 10 market_goods_cheaper > $FLOOR$ market_goods_cheaper <= $CEILING$ } daoyu_can_create_trade_route_trigger = { SCOPE = root } } }
+#		random_market = {
+#			limit = { mg:$GOODS$ = { market_goods_production >= 10 market_goods_cheaper > $FLOOR$ market_goods_cheaper <= $CEILING$ }
+#			daoyu_can_create_trade_route_trigger = { SCOPE = root } } owner = { create_trade_route = { goods = $GOODS$ level = 10 direction = export target = root.market } }
+#		}
+#	}
+#}
+#daoyu_auto_single_trade_route_cheaper_effcet = {
+#	if = {
+#		limit = { any_market = { mg:$GOODS$ = { market_goods_pricier > $FLOOR$ market_goods_pricier <= $CEILING$ } daoyu_can_create_trade_route_trigger = { SCOPE = root } } }
+#		random_market = { limit = { mg:$GOODS$ = { market_goods_pricier > $FLOOR$ market_goods_pricier <= $CEILING$ } daoyu_can_create_trade_route_trigger = { SCOPE = root } } owner = { create_trade_route = { goods = $GOODS$ level = 10 direction = import target = root.market } } }
+#	}
+#}
+#daoyu_auto_single_trade_route_effcet = {
+#	if = {
+#		limit = { any_country = { leading_producer_of = g:$GOODS$ } }
+#		if = {
+#			limit = { or = { has_law = law_type:law_protectionism has_law = law_type:law_mercantilism } }
+#			if = { limit = { any_market = { owner = root mg:$GOODS$ = { market_goods_pricier > 0.25 } } } set_tariffs_import_priority = g:$GOODS$ }
+#			else_if = { limit = { any_market = { owner = root mg:$GOODS$ = { market_goods_cheaper > 0.25 } } } set_tariffs_export_priority = g:$GOODS$ }
+#			else_if = { limit = { any_market = { owner = root mg:$GOODS$ = { market_goods_pricier <= 0.1 market_goods_cheaper <= 0.1 } } } set_tariffs_no_priority = g:$GOODS$ }
+#		}
+#		if = {
+#			limit = { any_market = { owner = root mg:$GOODS$ = { market_goods_pricier > 0.25 } } }
+#			daoyu_auto_single_trade_route_pricier_effcet = { FLOOR = 0.75 CEILING = 1 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_pricier_effcet = { FLOOR = 0.7 CEILING = 0.75 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_pricier_effcet = { FLOOR = 0.65 CEILING = 0.7 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_pricier_effcet = { FLOOR = 0.6 CEILING = 0.65 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_pricier_effcet = { FLOOR = 0.55 CEILING = 0.6 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_pricier_effcet = { FLOOR = 0.5 CEILING = 0.55 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_pricier_effcet = { FLOOR = 0.45 CEILING = 0.5 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_pricier_effcet = { FLOOR = 0.4 CEILING = 0.45 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_pricier_effcet = { FLOOR = 0.35 CEILING = 0.4 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_pricier_effcet = { FLOOR = 0.3 CEILING = 0.35 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_pricier_effcet = { FLOOR = 0.25 CEILING = 0.3 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_pricier_effcet = { FLOOR = 0.2 CEILING = 0.25 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_pricier_effcet = { FLOOR = 0.15 CEILING = 0.2 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_pricier_effcet = { FLOOR = 0.1 CEILING = 0.15 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_pricier_effcet = { FLOOR = 0.05 CEILING = 0.1 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_pricier_effcet = { FLOOR = 0 CEILING = 0.05 GOODS = $GOODS$ }
+#		}
+#		if = {
+#			limit = { any_market = { owner = root mg:$GOODS$ = { market_goods_cheaper > 0.25 } } }
+#			daoyu_auto_single_trade_route_cheaper_effcet = { FLOOR = 0.75 CEILING = 1 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_cheaper_effcet = { FLOOR = 0.7 CEILING = 0.75 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_cheaper_effcet = { FLOOR = 0.65 CEILING = 0.7 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_cheaper_effcet = { FLOOR = 0.6 CEILING = 0.65 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_cheaper_effcet = { FLOOR = 0.55 CEILING = 0.6 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_cheaper_effcet = { FLOOR = 0.5 CEILING = 0.55 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_cheaper_effcet = { FLOOR = 0.45 CEILING = 0.5 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_cheaper_effcet = { FLOOR = 0.4 CEILING = 0.45 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_cheaper_effcet = { FLOOR = 0.35 CEILING = 0.4 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_cheaper_effcet = { FLOOR = 0.3 CEILING = 0.35 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_cheaper_effcet = { FLOOR = 0.25 CEILING = 0.3 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_cheaper_effcet = { FLOOR = 0.2 CEILING = 0.25 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_cheaper_effcet = { FLOOR = 0.15 CEILING = 0.2 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_cheaper_effcet = { FLOOR = 0.1 CEILING = 0.15 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_cheaper_effcet = { FLOOR = 0.05 CEILING = 0.1 GOODS = $GOODS$ }
+#			daoyu_auto_single_trade_route_cheaper_effcet = { FLOOR = 0 CEILING = 0.05 GOODS = $GOODS$ }
+#		}
+#	}
+#}
+#daoyu_auto_trade_route_effcet = {
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "silk" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "groceries" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "coffee" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "furniture" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "tools" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "clippers" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "ammunition" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "wood" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "dye" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "fruit" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "oil" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "artillery" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "explosives" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "liquor" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "tobacco" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "coal" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "glass" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "porcelain" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "sulfur" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "hardwood" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "sugar" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "paper" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "fabric" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "meat" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "fertilizer" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "fine_art" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "tea" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "wine" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "clothes" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "grain" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "small_arms" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "steel" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "iron" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "lead" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "manowars" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "luxury_clothes" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "luxury_furniture" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "fish" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "opium" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "engines" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "tanks" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "radios" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "rubber" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "automobiles" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "telephones" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "steamers" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "ironclads" }
+#	daoyu_auto_single_trade_route_effcet = { GOODS = "aeroplanes" }
+#}

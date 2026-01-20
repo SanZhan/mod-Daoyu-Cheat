@@ -1,0 +1,13 @@
+{
+  "name" : "Daoyu Cheat - Achievement Available Cheat Tool",
+  "id" : "weiqingyu1982@126.com",
+  "version" : "2025.10.10",
+  "supported_game_version" : "1.12.*",
+  "short_description" : "Daoyu Cheat",
+  "thumbnail" : "thumbnail.png",
+  "tags" : ["Events"],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

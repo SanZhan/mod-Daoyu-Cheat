@@ -1,0 +1,138 @@
+daoyu_target_country = {
+	groups = { general }
+	requires_approval = no
+	should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+	potential = {
+		has_global_variable = daoyu_on
+		scope:target_country = { is_ai = yes }
+		is_ai = no
+	}
+	possible = {
+		custom_tooltip = { text = daoyu_quit_diplomatic_actions nor = { has_global_variable = daoyu_declare_war has_global_variable = daoyu_from_diplomatic_actions } }
+		custom_tooltip = { text = daoyu_quit_target_country_remove_building not = { has_global_variable = daoyu_target_country_remove_building } }
+	}
+	accept_effect = {
+		if = {
+			limit = { any_state = { owner = { is_ai = yes has_modifier = daoyu_target_country } } }
+			random_state = { limit = { owner = { is_ai = yes has_modifier = daoyu_target_country } } owner = { remove_modifier = daoyu_target_country } }
+		}
+		
+		if = { limit = { scope:target_country = { has_modifier = daoyu_add_military_access } } scope:target_country = { remove_modifier = daoyu_add_military_access } }
+		scope:target_country = {
+			add_modifier = { name = daoyu_target_country days = 1 } save_scope_as = daoyu_target_country
+		}
+		if = {
+			limit = { any_state = { owner = { is_ai = yes has_modifier = daoyu_add_military_access } } }
+			trigger_event = { id = daoyu.399 popup = yes }
+		}
+	}
+	ai = { propose_score = { value = 0 } will_propose = { always = no } }
+}
+daoyu_instant_diplomatic_action = {
+	groups = { general }
+	requires_approval = no
+	potential = {
+		has_global_variable = daoyu_instant_diplomatic_actions_on
+		scope:target_country = { is_ai = yes }
+		is_ai = no
+		or = {
+			and = { has_global_variable = daoyu_declare_war scope:target_country = { not = { has_variable = daoyu_declare_war_initiator } } }
+			not = { has_global_variable = daoyu_declare_war }
+		}
+	}
+	possible = {
+		custom_tooltip = { text = daoyu_quit_diplomatic_actions not = { has_global_variable = daoyu_from_diplomatic_actions } }
+		custom_tooltip = { text = daoyu_quit_target_country_remove_building not = { has_global_variable = daoyu_target_country_remove_building } }
+	}
+	accept_effect = {
+		if = {
+			limit = { has_global_variable = daoyu_declare_war }
+			every_country = { limit = { has_modifier = daoyu_target_country } remove_modifier = daoyu_target_country }
+			scope:target_country = { add_modifier = { name = daoyu_target_country days = 1 } } trigger_event = { id = daoyu.375 popup = yes }
+		}
+		else = {
+			set_global_variable = daoyu_from_diplomatic_actions
+			if = { limit = { any_country = { has_modifier = daoyu_target_country } } random_country = { limit = { has_modifier = daoyu_target_country } remove_modifier = daoyu_target_country } }
+			scope:target_country = { add_modifier = { name = daoyu_target_country days = 1 } save_scope_as = daoyu_target_country }
+			trigger_event = { id = daoyu.370 popup = yes }
+		}
+	}
+	ai = { propose_score = { value = 0 } will_propose = { always = no } }
+}
+daoyu_join_power_bloc = {
+	groups = { general }
+	requires_approval = no
+	potential = {
+		has_global_variable = daoyu_instant_diplomatic_actions_on
+		scope:target_country = { is_ai = yes not = { is_country_type = decentralized } }
+		is_ai = no
+	}
+	possible = {
+		custom_tooltip = { text = daoyu_quit_diplomatic_actions nor = { has_global_variable = daoyu_declare_war has_global_variable = daoyu_from_diplomatic_actions } }
+		custom_tooltip = { text = daoyu_quit_target_country_remove_building not = { has_global_variable = daoyu_target_country_remove_building } }
+		or = {
+			and = { root = { is_in_power_bloc = no } scope:target_country = { is_in_power_bloc = yes } }
+			and = { root = { is_in_power_bloc = yes is_power_bloc_leader = yes } scope:target_country = { is_in_power_bloc = no } }
+		}
+	}
+	accept_effect = {
+		if = {
+			limit = { or = { scope:target_country = { is_in_power_bloc = yes is_power_bloc_leader = yes } root = { is_in_power_bloc = yes is_power_bloc_leader = yes } } }
+			if = { limit = { any_country = { has_modifier = daoyu_target_country } } random_country = { limit = { has_modifier = daoyu_target_country } remove_modifier = daoyu_target_country } }
+			scope:target_country = { add_modifier = { name = daoyu_target_country days = 1 } }
+			scope:target_country = { save_scope_as = daoyu_target_country }
+		}
+		else_if = {
+			limit = { scope:target_country = { is_in_power_bloc = yes is_power_bloc_leader = no } }
+			if = { limit = { any_country = { has_modifier = daoyu_target_country } } random_country = { limit = { has_modifier = daoyu_target_country } remove_modifier = daoyu_target_country } }
+			random_country = {
+				limit = { is_in_power_bloc = yes is_power_bloc_leader = yes is_in_same_power_bloc = scope:target_country }
+				add_modifier = { name = daoyu_target_country days = 1 }
+				save_scope_as = daoyu_target_country
+			}
+		}
+		set_global_variable = daoyu_from_diplomatic_actions
+		trigger_event = { id = daoyu.130 popup = yes }
+	}
+}
+daoyu_target_country_remove_building = {
+	groups = { general }
+	requires_approval = no
+	potential = {
+		has_global_variable = daoyu_instant_diplomatic_actions_on
+		scope:target_country = { is_ai = yes }
+		is_ai = no
+	}
+	possible = {
+		custom_tooltip = { text = daoyu_quit_diplomatic_actions nor = { has_global_variable = daoyu_declare_war has_global_variable = daoyu_from_diplomatic_actions } }
+		custom_tooltip = { text = daoyu_quit_target_country_remove_building not = { has_global_variable = daoyu_target_country_remove_building } }
+	}
+	accept_effect = {
+		every_country = { limit = { has_modifier = daoyu_target_country } remove_modifier = daoyu_target_country }
+		scope:target_country = { add_modifier = { name = daoyu_target_country days = 1 } } trigger_event = { id = daoyu.379 popup = yes }
+	}
+	ai = { propose_score = { value = 0 } will_propose = { always = no } }
+}
+daoyu_add_military_access = {
+	groups = { general }
+	requires_approval = no
+	should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+	potential = {
+		has_global_variable = daoyu_on
+		scope:target_country = { is_ai = yes not = { has_modifier = daoyu_add_military_access } }
+		is_ai = no
+	}
+	accept_effect = {
+		if = { limit = { scope:target_country = { has_modifier = daoyu_target_country } } scope:target_country = { remove_modifier = daoyu_target_country } }
+		if = {
+			limit = { any_state = { owner = { is_ai = yes has_modifier = daoyu_add_military_access } } }
+			random_state = { limit = { owner = { is_ai = yes has_modifier = daoyu_add_military_access } } owner = { remove_modifier = daoyu_add_military_access } }
+		}
+		scope:target_country = {
+			add_modifier = { name = daoyu_add_military_access days = 1 save_scope_as = daoyu_add_military_access }
+		}
+	}
+	ai = { propose_score = { value = 0 } will_propose = { always = no } }
+}

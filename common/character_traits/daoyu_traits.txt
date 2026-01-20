@@ -1,0 +1,65 @@
+﻿daoyu_potential_target = {
+	type = condition
+	texture = "gfx/interface/icons/character_trait_icons/alcoholic.dds"
+	possible = { age > 999 }
+}
+daoyu_potential_target_character = {
+	type = condition
+	texture = "gfx/interface/icons/character_trait_icons/alcoholic.dds"
+	possible = { age > 999 }
+}
+daoyu_target_character = {
+	type = condition
+	texture = "gfx/interface/icons/character_trait_icons/alcoholic.dds"
+	possible = { age > 999 }
+}
+daoyu_tool_man = {
+	type = condition
+	texture = "gfx/interface/icons/character_trait_icons/alcoholic.dds"
+	possible = { age > 999 }
+}
+daoyu_betrayal_will_die = {
+	type = condition
+	texture = "gfx/interface/icons/character_trait_icons/expensive_tastes.dds"
+	character_modifier = {
+		character_health_add = 1
+	}
+	command_modifier = {
+		#unit_offense_add = 20
+		#unit_defense_add = 20
+	}
+	possible = { age > 999 }
+}
+daoyu_shot_in_the_right_ear = {
+	type = condition
+	texture = "gfx/interface/icons/character_trait_icons/daoyu_shot_in_the_right_ear.dds"
+	character_modifier = {
+		character_popularity_add = 100
+	}
+	country_modifier = {
+		interest_group_ig_rural_folk_approval_add = 20
+		country_improve_relations_speed_mult = -0.2
+		political_movement_radicalism_mult = 0.2
+	}
+	agitator_modifier = {
+		interest_group_pop_attraction_mult = 0.2
+	}
+	interest_group_modifier = {
+		interest_group_pop_attraction_mult = 0.2
+		interest_group_approval_add = 5
+	}
+	possible = { age > 999 }
+}
+daoyu_entrepreneur = {
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/daoyu_entrepreneur.dds"
+	character_modifier = {
+		character_popularity_add = 100
+	}
+	executive_modifier = {
+		building_goods_input_mult = -0.5
+		building_economy_of_scale_level_cap_add = 50
+		building_throughput_add = 0.5
+	}
+	possible = { age > 999 }
+}

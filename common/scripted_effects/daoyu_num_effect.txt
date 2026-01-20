@@ -1,0 +1,206 @@
+daoyu_unit_count_effect = {
+	set_variable = { name = daoyu_unit_count_var value = 0 }
+	daoyu_num_effect = yes
+}
+daoyu_unit_count_clean_effect = {
+	set_variable = daoyu_unit_count_clean
+	daoyu_num_effect = yes
+	remove_variable = daoyu_unit_count_clean
+	remove_variable = daoyu_unit_count_var
+}
+daoyu_s_num = {
+	if = {
+		limit = { has_variable = daoyu_unit_count_clean has_variable = daoyu_unit_count_$NUM$ }
+		remove_variable = daoyu_unit_count_$NUM$
+	}
+	if = {
+		limit = { has_variable = daoyu_unit_count_var }
+		if = {
+			limit = { has_global_variable = daoyu_filter_fleet any_military_formation = { owner = root percent > 0 filter = { is_fleet = yes } any_combat_unit = { count = $NUM$ } } }
+			change_variable = { name = daoyu_unit_count_var add = 1 }
+			if = { limit = { has_variable = daoyu_page_01 var:daoyu_unit_count_var <= 19 } set_variable = daoyu_unit_count_$NUM$ }
+			if = { limit = { has_variable = daoyu_page_02 var:daoyu_unit_count_var > 19 var:daoyu_unit_count_var <= 37 } set_variable = daoyu_unit_count_$NUM$ }
+			if = { limit = { has_variable = daoyu_page_03 var:daoyu_unit_count_var > 37 var:daoyu_unit_count_var <= 55 } set_variable = daoyu_unit_count_$NUM$ }
+			if = { limit = { has_variable = daoyu_page_04 var:daoyu_unit_count_var > 55 var:daoyu_unit_count_var <= 73 } set_variable = daoyu_unit_count_$NUM$ }
+			if = { limit = { has_variable = daoyu_page_05 var:daoyu_unit_count_var > 73 } set_variable = daoyu_unit_count_$NUM$ }
+		}
+		if = {
+			limit = { has_global_variable = daoyu_filter_army any_military_formation = { owner = root percent > 0 filter = { is_army = yes } any_combat_unit = { count = $NUM$ } } }
+			change_variable = { name = daoyu_unit_count_var add = 1 }
+			if = { limit = { has_variable = daoyu_page_01 var:daoyu_unit_count_var <= 19 } set_variable = daoyu_unit_count_$NUM$ }
+			if = { limit = { has_variable = daoyu_page_02 var:daoyu_unit_count_var > 19 var:daoyu_unit_count_var <= 37 } set_variable = daoyu_unit_count_$NUM$ }
+			if = { limit = { has_variable = daoyu_page_03 var:daoyu_unit_count_var > 37 var:daoyu_unit_count_var <= 55 } set_variable = daoyu_unit_count_$NUM$ }
+			if = { limit = { has_variable = daoyu_page_04 var:daoyu_unit_count_var > 55 var:daoyu_unit_count_var <= 73 } set_variable = daoyu_unit_count_$NUM$ }
+			if = { limit = { has_variable = daoyu_page_05 var:daoyu_unit_count_var > 73 } set_variable = daoyu_unit_count_$NUM$ }
+		}
+	}
+	if = {
+		limit = { or = { has_global_variable = daoyu_current_buildings_expand has_global_variable = daoyu_ucy_nationally_owned has_global_variable = daoyu_nationalized_buildings } not = { has_global_variable = daoyu_get_building_level } }
+		daoyu_create_building = { TYPE = "building_arts_academy" LEVEL = $NUM$ }#艺术学院
+		daoyu_create_building = { TYPE = "building_barracks" LEVEL = $NUM$ }#兵营
+		daoyu_create_building = { TYPE = "building_construction_sector" LEVEL = $NUM$ }#建造部门
+		daoyu_create_building = { TYPE = "building_government_administration" LEVEL = $NUM$ }#政府行政机构
+		daoyu_create_building = { TYPE = "building_naval_base" LEVEL = $NUM$ }#海军基地
+		daoyu_create_building = { TYPE = "building_port" LEVEL = $NUM$ }#港口
+		daoyu_create_building = { TYPE = "building_railway" LEVEL = $NUM$ }#铁路
+		daoyu_create_building = { TYPE = "building_trade_center" LEVEL = $NUM$ }#贸易中心
+		daoyu_create_building = { TYPE = "building_university" LEVEL = $NUM$ }#大学
+		daoyu_create_building = { TYPE = "building_urban_center" LEVEL = $NUM$ }#城镇中心
+		daoyu_create_building = { TYPE = "building_coal_mine" LEVEL = $NUM$ }#煤矿
+		daoyu_create_building = { TYPE = "building_iron_mine" LEVEL = $NUM$ }#铁矿
+		daoyu_create_building = { TYPE = "building_lead_mine" LEVEL = $NUM$ }#铅矿
+		daoyu_create_building = { TYPE = "building_sulfur_mine" LEVEL = $NUM$ }#硫矿
+		daoyu_create_building = { TYPE = "building_gold_mine" LEVEL = $NUM$ }#金矿
+		daoyu_create_building = { TYPE = "building_oil_rig" LEVEL = $NUM$ }#油井
+		daoyu_create_building = { TYPE = "building_logging_camp" LEVEL = $NUM$ }#伐木营地
+		daoyu_create_building = { TYPE = "building_rubber_plantation" LEVEL = $NUM$ }#橡胶种植园
+		daoyu_create_building = { TYPE = "building_whaling_station" LEVEL = $NUM$ }#捕鲸站
+		daoyu_create_building = { TYPE = "building_fishing_wharf" LEVEL = $NUM$ }#渔业码头
+		daoyu_create_building = { TYPE = "building_rye_farm" LEVEL = $NUM$ }#黑麦农场
+		daoyu_create_building = { TYPE = "building_wheat_farm" LEVEL = $NUM$ }#小麦农场
+		daoyu_create_building = { TYPE = "building_rice_farm" LEVEL = $NUM$ }#水稻农场
+		daoyu_create_building = { TYPE = "building_maize_farm" LEVEL = $NUM$ }#玉米农场
+		daoyu_create_building = { TYPE = "building_millet_farm" LEVEL = $NUM$ }#杂谷农场
+		daoyu_create_building = { TYPE = "building_livestock_ranch" LEVEL = $NUM$ }#畜牧场
+		daoyu_create_building = { TYPE = "building_vineyard_plantation" LEVEL = $NUM$ }#葡萄园
+		daoyu_create_building = { TYPE = "building_dye_plantation" LEVEL = $NUM$ }#染料作物种植园
+		daoyu_create_building = { TYPE = "building_silk_plantation" LEVEL = $NUM$ }#丝绸种植园
+		daoyu_create_building = { TYPE = "building_cotton_plantation" LEVEL = $NUM$ }#棉花种植园
+		daoyu_create_building = { TYPE = "building_coffee_plantation" LEVEL = $NUM$ }#咖啡种植园
+		daoyu_create_building = { TYPE = "building_tea_plantation" LEVEL = $NUM$ }#茶叶种植园
+		daoyu_create_building = { TYPE = "building_tobacco_plantation" LEVEL = $NUM$ }#烟草种植园
+		daoyu_create_building = { TYPE = "building_sugar_plantation" LEVEL = $NUM$ }#糖料作物种植园
+		daoyu_create_building = { TYPE = "building_banana_plantation" LEVEL = $NUM$ }#香蕉种植园
+		daoyu_create_building = { TYPE = "building_opium_plantation" LEVEL = $NUM$ }#鸦片种植园
+		daoyu_create_building = { TYPE = "building_food_industry" LEVEL = $NUM$ }#食品厂
+		daoyu_create_building = { TYPE = "building_textile_mills" LEVEL = $NUM$ }#纺织厂
+		daoyu_create_building = { TYPE = "building_furniture_manufacturies" LEVEL = $NUM$ }#家具制造厂
+		daoyu_create_building = { TYPE = "building_glassworks" LEVEL = $NUM$ }#玻璃厂
+		daoyu_create_building = { TYPE = "building_tooling_workshops" LEVEL = $NUM$ }#工艺装备工坊
+		daoyu_create_building = { TYPE = "building_paper_mills" LEVEL = $NUM$ }#造纸厂
+		daoyu_create_building = { TYPE = "building_chemical_plants" LEVEL = $NUM$ }#肥料厂
+		daoyu_create_building = { TYPE = "building_explosives_factory" LEVEL = $NUM$ }#炸药厂
+		daoyu_create_building = { TYPE = "building_synthetics_plants" LEVEL = $NUM$ }#化学合成厂
+		daoyu_create_building = { TYPE = "building_steel_mills" LEVEL = $NUM$ }#炼钢厂
+		daoyu_create_building = { TYPE = "building_arms_industry" LEVEL = $NUM$ }#武器厂
+		daoyu_create_building = { TYPE = "building_munition_plants" LEVEL = $NUM$ }#弹药厂
+		daoyu_create_building = { TYPE = "building_artillery_foundries" LEVEL = $NUM$ }#火炮铸造厂
+		daoyu_create_building = { TYPE = "building_motor_industry" LEVEL = $NUM$ }#动力机械厂
+		daoyu_create_building = { TYPE = "building_automotive_industry" LEVEL = $NUM$ }#汽车工业
+		daoyu_create_building = { TYPE = "building_power_plant" LEVEL = $NUM$ }#发电厂
+		daoyu_create_building = { TYPE = "building_electrics_industry" LEVEL = $NUM$ }#电子厂
+		daoyu_create_building = { TYPE = "building_shipyards" LEVEL = $NUM$ }#造船厂
+		daoyu_create_building = { TYPE = "building_military_shipyards" LEVEL = $NUM$ }#军用造船厂
+	}
+	if = { limit = { has_global_variable = daoyu_get_building_level_1 } if = { limit = { scope:daoyu_current_building_1 = { level = $NUM$ } } set_variable = { name = daoyu_current_building_1 value = $NUM$ } remove_global_variable = daoyu_get_building_level_1 } }
+	if = { limit = { has_global_variable = daoyu_get_building_level_2 } if = { limit = { scope:daoyu_current_building_2 = { level = $NUM$ } } set_variable = { name = daoyu_current_building_2 value = $NUM$ } remove_global_variable = daoyu_get_building_level_2 } }
+	if = { limit = { has_global_variable = daoyu_get_building_level_3 } if = { limit = { scope:daoyu_current_building_3 = { level = $NUM$ } } set_variable = { name = daoyu_current_building_3 value = $NUM$ } remove_global_variable = daoyu_get_building_level_3 } }
+	if = { limit = { has_global_variable = daoyu_get_building_level_4 } if = { limit = { scope:daoyu_current_building_4 = { level = $NUM$ } } set_variable = { name = daoyu_current_building_4 value = $NUM$ } remove_global_variable = daoyu_get_building_level_4 } }
+	if = { limit = { has_global_variable = daoyu_get_building_level_5 } if = { limit = { scope:daoyu_current_building_5 = { level = $NUM$ } } set_variable = { name = daoyu_current_building_5 value = $NUM$ } remove_global_variable = daoyu_get_building_level_5 } }
+	if = { limit = { has_global_variable = daoyu_get_building_level_6 } if = { limit = { scope:daoyu_current_building_6 = { level = $NUM$ } } set_variable = { name = daoyu_current_building_6 value = $NUM$ } remove_global_variable = daoyu_get_building_level_6 } }
+	if = { limit = { has_global_variable = daoyu_get_building_level_7 } if = { limit = { scope:daoyu_current_building_7 = { level = $NUM$ } } set_variable = { name = daoyu_current_building_7 value = $NUM$ } remove_global_variable = daoyu_get_building_level_7 } }
+	if = { limit = { has_global_variable = daoyu_get_building_level_8 } if = { limit = { scope:daoyu_current_building_8 = { level = $NUM$ } } set_variable = { name = daoyu_current_building_8 value = $NUM$ } remove_global_variable = daoyu_get_building_level_8 } }
+	if = { limit = { has_global_variable = daoyu_get_building_level_9 } if = { limit = { scope:daoyu_current_building_9 = { level = $NUM$ } } set_variable = { name = daoyu_current_building_9 value = $NUM$ } remove_global_variable = daoyu_get_building_level_9 } }
+}
+daoyu_num_effect = {
+	daoyu_s_num = { NUM = "1" } daoyu_s_num = { NUM = "2" } daoyu_s_num = { NUM = "3" } daoyu_s_num = { NUM = "4" } daoyu_s_num = { NUM = "5" } daoyu_s_num = { NUM = "6" } daoyu_s_num = { NUM = "7" } daoyu_s_num = { NUM = "8" } daoyu_s_num = { NUM = "9" }
+	daoyu_s_num = { NUM = "10" } daoyu_s_num = { NUM = "11" } daoyu_s_num = { NUM = "12" } daoyu_s_num = { NUM = "13" } daoyu_s_num = { NUM = "14" } daoyu_s_num = { NUM = "15" } daoyu_s_num = { NUM = "16" } daoyu_s_num = { NUM = "17" } daoyu_s_num = { NUM = "18" } daoyu_s_num = { NUM = "19" }
+	daoyu_s_num = { NUM = "20" } daoyu_s_num = { NUM = "21" } daoyu_s_num = { NUM = "22" } daoyu_s_num = { NUM = "23" } daoyu_s_num = { NUM = "24" } daoyu_s_num = { NUM = "25" } daoyu_s_num = { NUM = "26" } daoyu_s_num = { NUM = "27" } daoyu_s_num = { NUM = "28" } daoyu_s_num = { NUM = "29" }
+	daoyu_s_num = { NUM = "30" } daoyu_s_num = { NUM = "31" } daoyu_s_num = { NUM = "32" } daoyu_s_num = { NUM = "33" } daoyu_s_num = { NUM = "34" } daoyu_s_num = { NUM = "35" } daoyu_s_num = { NUM = "36" } daoyu_s_num = { NUM = "37" } daoyu_s_num = { NUM = "38" } daoyu_s_num = { NUM = "39" }
+	daoyu_s_num = { NUM = "40" } daoyu_s_num = { NUM = "41" } daoyu_s_num = { NUM = "42" } daoyu_s_num = { NUM = "43" } daoyu_s_num = { NUM = "44" } daoyu_s_num = { NUM = "45" } daoyu_s_num = { NUM = "46" } daoyu_s_num = { NUM = "47" } daoyu_s_num = { NUM = "48" } daoyu_s_num = { NUM = "49" }
+	daoyu_s_num = { NUM = "50" } daoyu_s_num = { NUM = "51" } daoyu_s_num = { NUM = "52" } daoyu_s_num = { NUM = "53" } daoyu_s_num = { NUM = "54" } daoyu_s_num = { NUM = "55" } daoyu_s_num = { NUM = "56" } daoyu_s_num = { NUM = "57" } daoyu_s_num = { NUM = "58" } daoyu_s_num = { NUM = "59" }
+	daoyu_s_num = { NUM = "60" } daoyu_s_num = { NUM = "61" } daoyu_s_num = { NUM = "62" } daoyu_s_num = { NUM = "63" } daoyu_s_num = { NUM = "64" } daoyu_s_num = { NUM = "65" } daoyu_s_num = { NUM = "66" } daoyu_s_num = { NUM = "67" } daoyu_s_num = { NUM = "68" } daoyu_s_num = { NUM = "69" }
+	daoyu_s_num = { NUM = "70" } daoyu_s_num = { NUM = "71" } daoyu_s_num = { NUM = "72" } daoyu_s_num = { NUM = "73" } daoyu_s_num = { NUM = "74" } daoyu_s_num = { NUM = "75" } daoyu_s_num = { NUM = "76" } daoyu_s_num = { NUM = "77" } daoyu_s_num = { NUM = "78" } daoyu_s_num = { NUM = "79" }
+	daoyu_s_num = { NUM = "80" } daoyu_s_num = { NUM = "81" } daoyu_s_num = { NUM = "82" } daoyu_s_num = { NUM = "83" } daoyu_s_num = { NUM = "84" } daoyu_s_num = { NUM = "85" } daoyu_s_num = { NUM = "86" } daoyu_s_num = { NUM = "87" } daoyu_s_num = { NUM = "88" } daoyu_s_num = { NUM = "89" }
+	daoyu_s_num = { NUM = "90" } daoyu_s_num = { NUM = "91" } daoyu_s_num = { NUM = "92" } daoyu_s_num = { NUM = "93" } daoyu_s_num = { NUM = "94" } daoyu_s_num = { NUM = "95" } daoyu_s_num = { NUM = "96" } daoyu_s_num = { NUM = "97" } daoyu_s_num = { NUM = "98" } daoyu_s_num = { NUM = "99" }
+	daoyu_s_num = { NUM = "100" } daoyu_s_num = { NUM = "101" } daoyu_s_num = { NUM = "102" } daoyu_s_num = { NUM = "103" } daoyu_s_num = { NUM = "104" } daoyu_s_num = { NUM = "105" } daoyu_s_num = { NUM = "106" } daoyu_s_num = { NUM = "107" } daoyu_s_num = { NUM = "108" } daoyu_s_num = { NUM = "109" }
+	daoyu_s_num = { NUM = "110" } daoyu_s_num = { NUM = "111" } daoyu_s_num = { NUM = "112" } daoyu_s_num = { NUM = "113" } daoyu_s_num = { NUM = "114" } daoyu_s_num = { NUM = "115" } daoyu_s_num = { NUM = "116" } daoyu_s_num = { NUM = "117" } daoyu_s_num = { NUM = "118" } daoyu_s_num = { NUM = "119" }
+	daoyu_s_num = { NUM = "120" } daoyu_s_num = { NUM = "121" } daoyu_s_num = { NUM = "122" } daoyu_s_num = { NUM = "123" } daoyu_s_num = { NUM = "124" } daoyu_s_num = { NUM = "125" } daoyu_s_num = { NUM = "126" } daoyu_s_num = { NUM = "127" } daoyu_s_num = { NUM = "128" } daoyu_s_num = { NUM = "129" }
+	daoyu_s_num = { NUM = "130" } daoyu_s_num = { NUM = "131" } daoyu_s_num = { NUM = "132" } daoyu_s_num = { NUM = "133" } daoyu_s_num = { NUM = "134" } daoyu_s_num = { NUM = "135" } daoyu_s_num = { NUM = "136" } daoyu_s_num = { NUM = "137" } daoyu_s_num = { NUM = "138" } daoyu_s_num = { NUM = "139" }
+	daoyu_s_num = { NUM = "140" } daoyu_s_num = { NUM = "141" } daoyu_s_num = { NUM = "142" } daoyu_s_num = { NUM = "143" } daoyu_s_num = { NUM = "144" } daoyu_s_num = { NUM = "145" } daoyu_s_num = { NUM = "146" } daoyu_s_num = { NUM = "147" } daoyu_s_num = { NUM = "148" } daoyu_s_num = { NUM = "149" }
+	daoyu_s_num = { NUM = "150" } daoyu_s_num = { NUM = "151" } daoyu_s_num = { NUM = "152" } daoyu_s_num = { NUM = "153" } daoyu_s_num = { NUM = "154" } daoyu_s_num = { NUM = "155" } daoyu_s_num = { NUM = "156" } daoyu_s_num = { NUM = "157" } daoyu_s_num = { NUM = "158" } daoyu_s_num = { NUM = "159" }
+	daoyu_s_num = { NUM = "160" } daoyu_s_num = { NUM = "161" } daoyu_s_num = { NUM = "162" } daoyu_s_num = { NUM = "163" } daoyu_s_num = { NUM = "164" } daoyu_s_num = { NUM = "165" } daoyu_s_num = { NUM = "166" } daoyu_s_num = { NUM = "167" } daoyu_s_num = { NUM = "168" } daoyu_s_num = { NUM = "169" }
+	daoyu_s_num = { NUM = "170" } daoyu_s_num = { NUM = "171" } daoyu_s_num = { NUM = "172" } daoyu_s_num = { NUM = "173" } daoyu_s_num = { NUM = "174" } daoyu_s_num = { NUM = "175" } daoyu_s_num = { NUM = "176" } daoyu_s_num = { NUM = "177" } daoyu_s_num = { NUM = "178" } daoyu_s_num = { NUM = "179" }
+	daoyu_s_num = { NUM = "180" } daoyu_s_num = { NUM = "181" } daoyu_s_num = { NUM = "182" } daoyu_s_num = { NUM = "183" } daoyu_s_num = { NUM = "184" } daoyu_s_num = { NUM = "185" } daoyu_s_num = { NUM = "186" } daoyu_s_num = { NUM = "187" } daoyu_s_num = { NUM = "188" } daoyu_s_num = { NUM = "189" }
+	daoyu_s_num = { NUM = "190" } daoyu_s_num = { NUM = "191" } daoyu_s_num = { NUM = "192" } daoyu_s_num = { NUM = "193" } daoyu_s_num = { NUM = "194" } daoyu_s_num = { NUM = "195" } daoyu_s_num = { NUM = "196" } daoyu_s_num = { NUM = "197" } daoyu_s_num = { NUM = "198" } daoyu_s_num = { NUM = "199" }
+	#daoyu_s_num = { NUM = "200" } daoyu_s_num = { NUM = "201" } daoyu_s_num = { NUM = "202" } daoyu_s_num = { NUM = "203" } daoyu_s_num = { NUM = "204" } daoyu_s_num = { NUM = "205" } daoyu_s_num = { NUM = "206" } daoyu_s_num = { NUM = "207" } daoyu_s_num = { NUM = "208" } daoyu_s_num = { NUM = "209" }
+	#daoyu_s_num = { NUM = "210" } daoyu_s_num = { NUM = "211" } daoyu_s_num = { NUM = "212" } daoyu_s_num = { NUM = "213" } daoyu_s_num = { NUM = "214" } daoyu_s_num = { NUM = "215" } daoyu_s_num = { NUM = "216" } daoyu_s_num = { NUM = "217" } daoyu_s_num = { NUM = "218" } daoyu_s_num = { NUM = "219" }
+	#daoyu_s_num = { NUM = "220" } daoyu_s_num = { NUM = "221" } daoyu_s_num = { NUM = "222" } daoyu_s_num = { NUM = "223" } daoyu_s_num = { NUM = "224" } daoyu_s_num = { NUM = "225" } daoyu_s_num = { NUM = "226" } daoyu_s_num = { NUM = "227" } daoyu_s_num = { NUM = "228" } daoyu_s_num = { NUM = "229" }
+	#daoyu_s_num = { NUM = "230" } daoyu_s_num = { NUM = "231" } daoyu_s_num = { NUM = "232" } daoyu_s_num = { NUM = "233" } daoyu_s_num = { NUM = "234" } daoyu_s_num = { NUM = "235" } daoyu_s_num = { NUM = "236" } daoyu_s_num = { NUM = "237" } daoyu_s_num = { NUM = "238" } daoyu_s_num = { NUM = "239" }
+	#daoyu_s_num = { NUM = "240" } daoyu_s_num = { NUM = "241" } daoyu_s_num = { NUM = "242" } daoyu_s_num = { NUM = "243" } daoyu_s_num = { NUM = "244" } daoyu_s_num = { NUM = "245" } daoyu_s_num = { NUM = "246" } daoyu_s_num = { NUM = "247" } daoyu_s_num = { NUM = "248" } daoyu_s_num = { NUM = "249" }
+	#daoyu_s_num = { NUM = "250" } daoyu_s_num = { NUM = "251" } daoyu_s_num = { NUM = "252" } daoyu_s_num = { NUM = "253" } daoyu_s_num = { NUM = "254" } daoyu_s_num = { NUM = "255" } daoyu_s_num = { NUM = "256" } daoyu_s_num = { NUM = "257" } daoyu_s_num = { NUM = "258" } daoyu_s_num = { NUM = "259" }
+	#daoyu_s_num = { NUM = "260" } daoyu_s_num = { NUM = "261" } daoyu_s_num = { NUM = "262" } daoyu_s_num = { NUM = "263" } daoyu_s_num = { NUM = "264" } daoyu_s_num = { NUM = "265" } daoyu_s_num = { NUM = "266" } daoyu_s_num = { NUM = "267" } daoyu_s_num = { NUM = "268" } daoyu_s_num = { NUM = "269" }
+	#daoyu_s_num = { NUM = "270" } daoyu_s_num = { NUM = "271" } daoyu_s_num = { NUM = "272" } daoyu_s_num = { NUM = "273" } daoyu_s_num = { NUM = "274" } daoyu_s_num = { NUM = "275" } daoyu_s_num = { NUM = "276" } daoyu_s_num = { NUM = "277" } daoyu_s_num = { NUM = "278" } daoyu_s_num = { NUM = "279" }
+	#daoyu_s_num = { NUM = "280" } daoyu_s_num = { NUM = "281" } daoyu_s_num = { NUM = "282" } daoyu_s_num = { NUM = "283" } daoyu_s_num = { NUM = "284" } daoyu_s_num = { NUM = "285" } daoyu_s_num = { NUM = "286" } daoyu_s_num = { NUM = "287" } daoyu_s_num = { NUM = "288" } daoyu_s_num = { NUM = "289" }
+	#daoyu_s_num = { NUM = "290" } daoyu_s_num = { NUM = "291" } daoyu_s_num = { NUM = "292" } daoyu_s_num = { NUM = "293" } daoyu_s_num = { NUM = "294" } daoyu_s_num = { NUM = "295" } daoyu_s_num = { NUM = "296" } daoyu_s_num = { NUM = "297" } daoyu_s_num = { NUM = "298" } daoyu_s_num = { NUM = "299" }
+	#daoyu_s_num = { NUM = "300" } daoyu_s_num = { NUM = "301" } daoyu_s_num = { NUM = "302" } daoyu_s_num = { NUM = "303" } daoyu_s_num = { NUM = "304" } daoyu_s_num = { NUM = "305" } daoyu_s_num = { NUM = "306" } daoyu_s_num = { NUM = "307" } daoyu_s_num = { NUM = "308" } daoyu_s_num = { NUM = "309" }
+	#daoyu_s_num = { NUM = "310" } daoyu_s_num = { NUM = "311" } daoyu_s_num = { NUM = "312" } daoyu_s_num = { NUM = "313" } daoyu_s_num = { NUM = "314" } daoyu_s_num = { NUM = "315" } daoyu_s_num = { NUM = "316" } daoyu_s_num = { NUM = "317" } daoyu_s_num = { NUM = "318" } daoyu_s_num = { NUM = "319" }
+	#daoyu_s_num = { NUM = "320" } daoyu_s_num = { NUM = "321" } daoyu_s_num = { NUM = "322" } daoyu_s_num = { NUM = "323" } daoyu_s_num = { NUM = "324" } daoyu_s_num = { NUM = "325" } daoyu_s_num = { NUM = "326" } daoyu_s_num = { NUM = "327" } daoyu_s_num = { NUM = "328" } daoyu_s_num = { NUM = "329" }
+	#daoyu_s_num = { NUM = "330" } daoyu_s_num = { NUM = "331" } daoyu_s_num = { NUM = "332" } daoyu_s_num = { NUM = "333" } daoyu_s_num = { NUM = "334" } daoyu_s_num = { NUM = "335" } daoyu_s_num = { NUM = "336" } daoyu_s_num = { NUM = "337" } daoyu_s_num = { NUM = "338" } daoyu_s_num = { NUM = "339" }
+	#daoyu_s_num = { NUM = "340" } daoyu_s_num = { NUM = "341" } daoyu_s_num = { NUM = "342" } daoyu_s_num = { NUM = "343" } daoyu_s_num = { NUM = "344" } daoyu_s_num = { NUM = "345" } daoyu_s_num = { NUM = "346" } daoyu_s_num = { NUM = "347" } daoyu_s_num = { NUM = "348" } daoyu_s_num = { NUM = "349" }
+	#daoyu_s_num = { NUM = "350" } daoyu_s_num = { NUM = "351" } daoyu_s_num = { NUM = "352" } daoyu_s_num = { NUM = "353" } daoyu_s_num = { NUM = "354" } daoyu_s_num = { NUM = "355" } daoyu_s_num = { NUM = "356" } daoyu_s_num = { NUM = "357" } daoyu_s_num = { NUM = "358" } daoyu_s_num = { NUM = "359" }
+	#daoyu_s_num = { NUM = "360" } daoyu_s_num = { NUM = "361" } daoyu_s_num = { NUM = "362" } daoyu_s_num = { NUM = "363" } daoyu_s_num = { NUM = "364" } daoyu_s_num = { NUM = "365" } daoyu_s_num = { NUM = "366" } daoyu_s_num = { NUM = "367" } daoyu_s_num = { NUM = "368" } daoyu_s_num = { NUM = "369" }
+	#daoyu_s_num = { NUM = "370" } daoyu_s_num = { NUM = "371" } daoyu_s_num = { NUM = "372" } daoyu_s_num = { NUM = "373" } daoyu_s_num = { NUM = "374" } daoyu_s_num = { NUM = "375" } daoyu_s_num = { NUM = "376" } daoyu_s_num = { NUM = "377" } daoyu_s_num = { NUM = "378" } daoyu_s_num = { NUM = "379" }
+	#daoyu_s_num = { NUM = "380" } daoyu_s_num = { NUM = "381" } daoyu_s_num = { NUM = "382" } daoyu_s_num = { NUM = "383" } daoyu_s_num = { NUM = "384" } daoyu_s_num = { NUM = "385" } daoyu_s_num = { NUM = "386" } daoyu_s_num = { NUM = "387" } daoyu_s_num = { NUM = "388" } daoyu_s_num = { NUM = "389" }
+	#daoyu_s_num = { NUM = "390" } daoyu_s_num = { NUM = "391" } daoyu_s_num = { NUM = "392" } daoyu_s_num = { NUM = "393" } daoyu_s_num = { NUM = "394" } daoyu_s_num = { NUM = "395" } daoyu_s_num = { NUM = "396" } daoyu_s_num = { NUM = "397" } daoyu_s_num = { NUM = "398" } daoyu_s_num = { NUM = "399" }
+	#daoyu_s_num = { NUM = "400" } daoyu_s_num = { NUM = "401" } daoyu_s_num = { NUM = "402" } daoyu_s_num = { NUM = "403" } daoyu_s_num = { NUM = "404" } daoyu_s_num = { NUM = "405" } daoyu_s_num = { NUM = "406" } daoyu_s_num = { NUM = "407" } daoyu_s_num = { NUM = "408" } daoyu_s_num = { NUM = "409" }
+	#daoyu_s_num = { NUM = "410" } daoyu_s_num = { NUM = "411" } daoyu_s_num = { NUM = "412" } daoyu_s_num = { NUM = "413" } daoyu_s_num = { NUM = "414" } daoyu_s_num = { NUM = "415" } daoyu_s_num = { NUM = "416" } daoyu_s_num = { NUM = "417" } daoyu_s_num = { NUM = "418" } daoyu_s_num = { NUM = "419" }
+	#daoyu_s_num = { NUM = "420" } daoyu_s_num = { NUM = "421" } daoyu_s_num = { NUM = "422" } daoyu_s_num = { NUM = "423" } daoyu_s_num = { NUM = "424" } daoyu_s_num = { NUM = "425" } daoyu_s_num = { NUM = "426" } daoyu_s_num = { NUM = "427" } daoyu_s_num = { NUM = "428" } daoyu_s_num = { NUM = "429" }
+	#daoyu_s_num = { NUM = "430" } daoyu_s_num = { NUM = "431" } daoyu_s_num = { NUM = "432" } daoyu_s_num = { NUM = "433" } daoyu_s_num = { NUM = "434" } daoyu_s_num = { NUM = "435" } daoyu_s_num = { NUM = "436" } daoyu_s_num = { NUM = "437" } daoyu_s_num = { NUM = "438" } daoyu_s_num = { NUM = "439" }
+	#daoyu_s_num = { NUM = "440" } daoyu_s_num = { NUM = "441" } daoyu_s_num = { NUM = "442" } daoyu_s_num = { NUM = "443" } daoyu_s_num = { NUM = "444" } daoyu_s_num = { NUM = "445" } daoyu_s_num = { NUM = "446" } daoyu_s_num = { NUM = "447" } daoyu_s_num = { NUM = "448" } daoyu_s_num = { NUM = "449" }
+	#daoyu_s_num = { NUM = "450" } daoyu_s_num = { NUM = "451" } daoyu_s_num = { NUM = "452" } daoyu_s_num = { NUM = "453" } daoyu_s_num = { NUM = "454" } daoyu_s_num = { NUM = "455" } daoyu_s_num = { NUM = "456" } daoyu_s_num = { NUM = "457" } daoyu_s_num = { NUM = "458" } daoyu_s_num = { NUM = "459" }
+	#daoyu_s_num = { NUM = "460" } daoyu_s_num = { NUM = "461" } daoyu_s_num = { NUM = "462" } daoyu_s_num = { NUM = "463" } daoyu_s_num = { NUM = "464" } daoyu_s_num = { NUM = "465" } daoyu_s_num = { NUM = "466" } daoyu_s_num = { NUM = "467" } daoyu_s_num = { NUM = "468" } daoyu_s_num = { NUM = "469" }
+	#daoyu_s_num = { NUM = "470" } daoyu_s_num = { NUM = "471" } daoyu_s_num = { NUM = "472" } daoyu_s_num = { NUM = "473" } daoyu_s_num = { NUM = "474" } daoyu_s_num = { NUM = "475" } daoyu_s_num = { NUM = "476" } daoyu_s_num = { NUM = "477" } daoyu_s_num = { NUM = "478" } daoyu_s_num = { NUM = "479" }
+	#daoyu_s_num = { NUM = "480" } daoyu_s_num = { NUM = "481" } daoyu_s_num = { NUM = "482" } daoyu_s_num = { NUM = "483" } daoyu_s_num = { NUM = "484" } daoyu_s_num = { NUM = "485" } daoyu_s_num = { NUM = "486" } daoyu_s_num = { NUM = "487" } daoyu_s_num = { NUM = "488" } daoyu_s_num = { NUM = "489" }
+	#daoyu_s_num = { NUM = "490" } daoyu_s_num = { NUM = "491" } daoyu_s_num = { NUM = "492" } daoyu_s_num = { NUM = "493" } daoyu_s_num = { NUM = "494" } daoyu_s_num = { NUM = "495" } daoyu_s_num = { NUM = "496" } daoyu_s_num = { NUM = "497" } daoyu_s_num = { NUM = "498" } daoyu_s_num = { NUM = "499" }
+	#daoyu_s_num = { NUM = "500" } daoyu_s_num = { NUM = "501" } daoyu_s_num = { NUM = "502" } daoyu_s_num = { NUM = "503" } daoyu_s_num = { NUM = "504" } daoyu_s_num = { NUM = "505" } daoyu_s_num = { NUM = "506" } daoyu_s_num = { NUM = "507" } daoyu_s_num = { NUM = "508" } daoyu_s_num = { NUM = "509" }
+	#daoyu_s_num = { NUM = "510" } daoyu_s_num = { NUM = "511" } daoyu_s_num = { NUM = "512" } daoyu_s_num = { NUM = "513" } daoyu_s_num = { NUM = "514" } daoyu_s_num = { NUM = "515" } daoyu_s_num = { NUM = "516" } daoyu_s_num = { NUM = "517" } daoyu_s_num = { NUM = "518" } daoyu_s_num = { NUM = "519" }
+	#daoyu_s_num = { NUM = "520" } daoyu_s_num = { NUM = "521" } daoyu_s_num = { NUM = "522" } daoyu_s_num = { NUM = "523" } daoyu_s_num = { NUM = "524" } daoyu_s_num = { NUM = "525" } daoyu_s_num = { NUM = "526" } daoyu_s_num = { NUM = "527" } daoyu_s_num = { NUM = "528" } daoyu_s_num = { NUM = "529" }
+	#daoyu_s_num = { NUM = "530" } daoyu_s_num = { NUM = "531" } daoyu_s_num = { NUM = "532" } daoyu_s_num = { NUM = "533" } daoyu_s_num = { NUM = "534" } daoyu_s_num = { NUM = "535" } daoyu_s_num = { NUM = "536" } daoyu_s_num = { NUM = "537" } daoyu_s_num = { NUM = "538" } daoyu_s_num = { NUM = "539" }
+	#daoyu_s_num = { NUM = "540" } daoyu_s_num = { NUM = "541" } daoyu_s_num = { NUM = "542" } daoyu_s_num = { NUM = "543" } daoyu_s_num = { NUM = "544" } daoyu_s_num = { NUM = "545" } daoyu_s_num = { NUM = "546" } daoyu_s_num = { NUM = "547" } daoyu_s_num = { NUM = "548" } daoyu_s_num = { NUM = "549" }
+	#daoyu_s_num = { NUM = "550" } daoyu_s_num = { NUM = "551" } daoyu_s_num = { NUM = "552" } daoyu_s_num = { NUM = "553" } daoyu_s_num = { NUM = "554" } daoyu_s_num = { NUM = "555" } daoyu_s_num = { NUM = "556" } daoyu_s_num = { NUM = "557" } daoyu_s_num = { NUM = "558" } daoyu_s_num = { NUM = "559" }
+	#daoyu_s_num = { NUM = "560" } daoyu_s_num = { NUM = "561" } daoyu_s_num = { NUM = "562" } daoyu_s_num = { NUM = "563" } daoyu_s_num = { NUM = "564" } daoyu_s_num = { NUM = "565" } daoyu_s_num = { NUM = "566" } daoyu_s_num = { NUM = "567" } daoyu_s_num = { NUM = "568" } daoyu_s_num = { NUM = "569" }
+	#daoyu_s_num = { NUM = "570" } daoyu_s_num = { NUM = "571" } daoyu_s_num = { NUM = "572" } daoyu_s_num = { NUM = "573" } daoyu_s_num = { NUM = "574" } daoyu_s_num = { NUM = "575" } daoyu_s_num = { NUM = "576" } daoyu_s_num = { NUM = "577" } daoyu_s_num = { NUM = "578" } daoyu_s_num = { NUM = "579" }
+	#daoyu_s_num = { NUM = "580" } daoyu_s_num = { NUM = "581" } daoyu_s_num = { NUM = "582" } daoyu_s_num = { NUM = "583" } daoyu_s_num = { NUM = "584" } daoyu_s_num = { NUM = "585" } daoyu_s_num = { NUM = "586" } daoyu_s_num = { NUM = "587" } daoyu_s_num = { NUM = "588" } daoyu_s_num = { NUM = "589" }
+	#daoyu_s_num = { NUM = "590" } daoyu_s_num = { NUM = "591" } daoyu_s_num = { NUM = "592" } daoyu_s_num = { NUM = "593" } daoyu_s_num = { NUM = "594" } daoyu_s_num = { NUM = "595" } daoyu_s_num = { NUM = "596" } daoyu_s_num = { NUM = "597" } daoyu_s_num = { NUM = "598" } daoyu_s_num = { NUM = "599" }
+	#daoyu_s_num = { NUM = "600" } daoyu_s_num = { NUM = "601" } daoyu_s_num = { NUM = "602" } daoyu_s_num = { NUM = "603" } daoyu_s_num = { NUM = "604" } daoyu_s_num = { NUM = "605" } daoyu_s_num = { NUM = "606" } daoyu_s_num = { NUM = "607" } daoyu_s_num = { NUM = "608" } daoyu_s_num = { NUM = "609" }
+	#daoyu_s_num = { NUM = "610" } daoyu_s_num = { NUM = "611" } daoyu_s_num = { NUM = "612" } daoyu_s_num = { NUM = "613" } daoyu_s_num = { NUM = "614" } daoyu_s_num = { NUM = "615" } daoyu_s_num = { NUM = "616" } daoyu_s_num = { NUM = "617" } daoyu_s_num = { NUM = "618" } daoyu_s_num = { NUM = "619" }
+	#daoyu_s_num = { NUM = "620" } daoyu_s_num = { NUM = "621" } daoyu_s_num = { NUM = "622" } daoyu_s_num = { NUM = "623" } daoyu_s_num = { NUM = "624" } daoyu_s_num = { NUM = "625" } daoyu_s_num = { NUM = "626" } daoyu_s_num = { NUM = "627" } daoyu_s_num = { NUM = "628" } daoyu_s_num = { NUM = "629" }
+	#daoyu_s_num = { NUM = "630" } daoyu_s_num = { NUM = "631" } daoyu_s_num = { NUM = "632" } daoyu_s_num = { NUM = "633" } daoyu_s_num = { NUM = "634" } daoyu_s_num = { NUM = "635" } daoyu_s_num = { NUM = "636" } daoyu_s_num = { NUM = "637" } daoyu_s_num = { NUM = "638" } daoyu_s_num = { NUM = "639" }
+	#daoyu_s_num = { NUM = "640" } daoyu_s_num = { NUM = "641" } daoyu_s_num = { NUM = "642" } daoyu_s_num = { NUM = "643" } daoyu_s_num = { NUM = "644" } daoyu_s_num = { NUM = "645" } daoyu_s_num = { NUM = "646" } daoyu_s_num = { NUM = "647" } daoyu_s_num = { NUM = "648" } daoyu_s_num = { NUM = "649" }
+	#daoyu_s_num = { NUM = "650" } daoyu_s_num = { NUM = "651" } daoyu_s_num = { NUM = "652" } daoyu_s_num = { NUM = "653" } daoyu_s_num = { NUM = "654" } daoyu_s_num = { NUM = "655" } daoyu_s_num = { NUM = "656" } daoyu_s_num = { NUM = "657" } daoyu_s_num = { NUM = "658" } daoyu_s_num = { NUM = "659" }
+	#daoyu_s_num = { NUM = "660" } daoyu_s_num = { NUM = "661" } daoyu_s_num = { NUM = "662" } daoyu_s_num = { NUM = "663" } daoyu_s_num = { NUM = "664" } daoyu_s_num = { NUM = "665" } daoyu_s_num = { NUM = "666" } daoyu_s_num = { NUM = "667" } daoyu_s_num = { NUM = "668" } daoyu_s_num = { NUM = "669" }
+	#daoyu_s_num = { NUM = "670" } daoyu_s_num = { NUM = "671" } daoyu_s_num = { NUM = "672" } daoyu_s_num = { NUM = "673" } daoyu_s_num = { NUM = "674" } daoyu_s_num = { NUM = "675" } daoyu_s_num = { NUM = "676" } daoyu_s_num = { NUM = "677" } daoyu_s_num = { NUM = "678" } daoyu_s_num = { NUM = "679" }
+	#daoyu_s_num = { NUM = "680" } daoyu_s_num = { NUM = "681" } daoyu_s_num = { NUM = "682" } daoyu_s_num = { NUM = "683" } daoyu_s_num = { NUM = "684" } daoyu_s_num = { NUM = "685" } daoyu_s_num = { NUM = "686" } daoyu_s_num = { NUM = "687" } daoyu_s_num = { NUM = "688" } daoyu_s_num = { NUM = "689" }
+	#daoyu_s_num = { NUM = "690" } daoyu_s_num = { NUM = "691" } daoyu_s_num = { NUM = "692" } daoyu_s_num = { NUM = "693" } daoyu_s_num = { NUM = "694" } daoyu_s_num = { NUM = "695" } daoyu_s_num = { NUM = "696" } daoyu_s_num = { NUM = "697" } daoyu_s_num = { NUM = "698" } daoyu_s_num = { NUM = "699" }
+	#daoyu_s_num = { NUM = "700" } daoyu_s_num = { NUM = "701" } daoyu_s_num = { NUM = "702" } daoyu_s_num = { NUM = "703" } daoyu_s_num = { NUM = "704" } daoyu_s_num = { NUM = "705" } daoyu_s_num = { NUM = "706" } daoyu_s_num = { NUM = "707" } daoyu_s_num = { NUM = "708" } daoyu_s_num = { NUM = "709" }
+	#daoyu_s_num = { NUM = "710" } daoyu_s_num = { NUM = "711" } daoyu_s_num = { NUM = "712" } daoyu_s_num = { NUM = "713" } daoyu_s_num = { NUM = "714" } daoyu_s_num = { NUM = "715" } daoyu_s_num = { NUM = "716" } daoyu_s_num = { NUM = "717" } daoyu_s_num = { NUM = "718" } daoyu_s_num = { NUM = "719" }
+	#daoyu_s_num = { NUM = "720" } daoyu_s_num = { NUM = "721" } daoyu_s_num = { NUM = "722" } daoyu_s_num = { NUM = "723" } daoyu_s_num = { NUM = "724" } daoyu_s_num = { NUM = "725" } daoyu_s_num = { NUM = "726" } daoyu_s_num = { NUM = "727" } daoyu_s_num = { NUM = "728" } daoyu_s_num = { NUM = "729" }
+	#daoyu_s_num = { NUM = "730" } daoyu_s_num = { NUM = "731" } daoyu_s_num = { NUM = "732" } daoyu_s_num = { NUM = "733" } daoyu_s_num = { NUM = "734" } daoyu_s_num = { NUM = "735" } daoyu_s_num = { NUM = "736" } daoyu_s_num = { NUM = "737" } daoyu_s_num = { NUM = "738" } daoyu_s_num = { NUM = "739" }
+	#daoyu_s_num = { NUM = "740" } daoyu_s_num = { NUM = "741" } daoyu_s_num = { NUM = "742" } daoyu_s_num = { NUM = "743" } daoyu_s_num = { NUM = "744" } daoyu_s_num = { NUM = "745" } daoyu_s_num = { NUM = "746" } daoyu_s_num = { NUM = "747" } daoyu_s_num = { NUM = "748" } daoyu_s_num = { NUM = "749" }
+	#daoyu_s_num = { NUM = "750" } daoyu_s_num = { NUM = "751" } daoyu_s_num = { NUM = "752" } daoyu_s_num = { NUM = "753" } daoyu_s_num = { NUM = "754" } daoyu_s_num = { NUM = "755" } daoyu_s_num = { NUM = "756" } daoyu_s_num = { NUM = "757" } daoyu_s_num = { NUM = "758" } daoyu_s_num = { NUM = "759" }
+	#daoyu_s_num = { NUM = "760" } daoyu_s_num = { NUM = "761" } daoyu_s_num = { NUM = "762" } daoyu_s_num = { NUM = "763" } daoyu_s_num = { NUM = "764" } daoyu_s_num = { NUM = "765" } daoyu_s_num = { NUM = "766" } daoyu_s_num = { NUM = "767" } daoyu_s_num = { NUM = "768" } daoyu_s_num = { NUM = "769" }
+	#daoyu_s_num = { NUM = "770" } daoyu_s_num = { NUM = "771" } daoyu_s_num = { NUM = "772" } daoyu_s_num = { NUM = "773" } daoyu_s_num = { NUM = "774" } daoyu_s_num = { NUM = "775" } daoyu_s_num = { NUM = "776" } daoyu_s_num = { NUM = "777" } daoyu_s_num = { NUM = "778" } daoyu_s_num = { NUM = "779" }
+	#daoyu_s_num = { NUM = "780" } daoyu_s_num = { NUM = "781" } daoyu_s_num = { NUM = "782" } daoyu_s_num = { NUM = "783" } daoyu_s_num = { NUM = "784" } daoyu_s_num = { NUM = "785" } daoyu_s_num = { NUM = "786" } daoyu_s_num = { NUM = "787" } daoyu_s_num = { NUM = "788" } daoyu_s_num = { NUM = "789" }
+	#daoyu_s_num = { NUM = "790" } daoyu_s_num = { NUM = "791" } daoyu_s_num = { NUM = "792" } daoyu_s_num = { NUM = "793" } daoyu_s_num = { NUM = "794" } daoyu_s_num = { NUM = "795" } daoyu_s_num = { NUM = "796" } daoyu_s_num = { NUM = "797" } daoyu_s_num = { NUM = "798" } daoyu_s_num = { NUM = "799" }
+	#daoyu_s_num = { NUM = "800" } daoyu_s_num = { NUM = "801" } daoyu_s_num = { NUM = "802" } daoyu_s_num = { NUM = "803" } daoyu_s_num = { NUM = "804" } daoyu_s_num = { NUM = "805" } daoyu_s_num = { NUM = "806" } daoyu_s_num = { NUM = "807" } daoyu_s_num = { NUM = "808" } daoyu_s_num = { NUM = "809" }
+	#daoyu_s_num = { NUM = "810" } daoyu_s_num = { NUM = "811" } daoyu_s_num = { NUM = "812" } daoyu_s_num = { NUM = "813" } daoyu_s_num = { NUM = "814" } daoyu_s_num = { NUM = "815" } daoyu_s_num = { NUM = "816" } daoyu_s_num = { NUM = "817" } daoyu_s_num = { NUM = "818" } daoyu_s_num = { NUM = "819" }
+	#daoyu_s_num = { NUM = "820" } daoyu_s_num = { NUM = "821" } daoyu_s_num = { NUM = "822" } daoyu_s_num = { NUM = "823" } daoyu_s_num = { NUM = "824" } daoyu_s_num = { NUM = "825" } daoyu_s_num = { NUM = "826" } daoyu_s_num = { NUM = "827" } daoyu_s_num = { NUM = "828" } daoyu_s_num = { NUM = "829" }
+	#daoyu_s_num = { NUM = "830" } daoyu_s_num = { NUM = "831" } daoyu_s_num = { NUM = "832" } daoyu_s_num = { NUM = "833" } daoyu_s_num = { NUM = "834" } daoyu_s_num = { NUM = "835" } daoyu_s_num = { NUM = "836" } daoyu_s_num = { NUM = "837" } daoyu_s_num = { NUM = "838" } daoyu_s_num = { NUM = "839" }
+	#daoyu_s_num = { NUM = "840" } daoyu_s_num = { NUM = "841" } daoyu_s_num = { NUM = "842" } daoyu_s_num = { NUM = "843" } daoyu_s_num = { NUM = "844" } daoyu_s_num = { NUM = "845" } daoyu_s_num = { NUM = "846" } daoyu_s_num = { NUM = "847" } daoyu_s_num = { NUM = "848" } daoyu_s_num = { NUM = "849" }
+	#daoyu_s_num = { NUM = "850" } daoyu_s_num = { NUM = "851" } daoyu_s_num = { NUM = "852" } daoyu_s_num = { NUM = "853" } daoyu_s_num = { NUM = "854" } daoyu_s_num = { NUM = "855" } daoyu_s_num = { NUM = "856" } daoyu_s_num = { NUM = "857" } daoyu_s_num = { NUM = "858" } daoyu_s_num = { NUM = "859" }
+	#daoyu_s_num = { NUM = "860" } daoyu_s_num = { NUM = "861" } daoyu_s_num = { NUM = "862" } daoyu_s_num = { NUM = "863" } daoyu_s_num = { NUM = "864" } daoyu_s_num = { NUM = "865" } daoyu_s_num = { NUM = "866" } daoyu_s_num = { NUM = "867" } daoyu_s_num = { NUM = "868" } daoyu_s_num = { NUM = "869" }
+	#daoyu_s_num = { NUM = "870" } daoyu_s_num = { NUM = "871" } daoyu_s_num = { NUM = "872" } daoyu_s_num = { NUM = "873" } daoyu_s_num = { NUM = "874" } daoyu_s_num = { NUM = "875" } daoyu_s_num = { NUM = "876" } daoyu_s_num = { NUM = "877" } daoyu_s_num = { NUM = "878" } daoyu_s_num = { NUM = "879" }
+	#daoyu_s_num = { NUM = "880" } daoyu_s_num = { NUM = "881" } daoyu_s_num = { NUM = "882" } daoyu_s_num = { NUM = "883" } daoyu_s_num = { NUM = "884" } daoyu_s_num = { NUM = "885" } daoyu_s_num = { NUM = "886" } daoyu_s_num = { NUM = "887" } daoyu_s_num = { NUM = "888" } daoyu_s_num = { NUM = "889" }
+	#daoyu_s_num = { NUM = "890" } daoyu_s_num = { NUM = "891" } daoyu_s_num = { NUM = "892" } daoyu_s_num = { NUM = "893" } daoyu_s_num = { NUM = "894" } daoyu_s_num = { NUM = "895" } daoyu_s_num = { NUM = "896" } daoyu_s_num = { NUM = "897" } daoyu_s_num = { NUM = "898" } daoyu_s_num = { NUM = "899" }
+	#daoyu_s_num = { NUM = "900" } daoyu_s_num = { NUM = "901" } daoyu_s_num = { NUM = "902" } daoyu_s_num = { NUM = "903" } daoyu_s_num = { NUM = "904" } daoyu_s_num = { NUM = "905" } daoyu_s_num = { NUM = "906" } daoyu_s_num = { NUM = "907" } daoyu_s_num = { NUM = "908" } daoyu_s_num = { NUM = "909" }
+	#daoyu_s_num = { NUM = "910" } daoyu_s_num = { NUM = "911" } daoyu_s_num = { NUM = "912" } daoyu_s_num = { NUM = "913" } daoyu_s_num = { NUM = "914" } daoyu_s_num = { NUM = "915" } daoyu_s_num = { NUM = "916" } daoyu_s_num = { NUM = "917" } daoyu_s_num = { NUM = "918" } daoyu_s_num = { NUM = "919" }
+	#daoyu_s_num = { NUM = "920" } daoyu_s_num = { NUM = "921" } daoyu_s_num = { NUM = "922" } daoyu_s_num = { NUM = "923" } daoyu_s_num = { NUM = "924" } daoyu_s_num = { NUM = "925" } daoyu_s_num = { NUM = "926" } daoyu_s_num = { NUM = "927" } daoyu_s_num = { NUM = "928" } daoyu_s_num = { NUM = "929" }
+	#daoyu_s_num = { NUM = "930" } daoyu_s_num = { NUM = "931" } daoyu_s_num = { NUM = "932" } daoyu_s_num = { NUM = "933" } daoyu_s_num = { NUM = "934" } daoyu_s_num = { NUM = "935" } daoyu_s_num = { NUM = "936" } daoyu_s_num = { NUM = "937" } daoyu_s_num = { NUM = "938" } daoyu_s_num = { NUM = "939" }
+	#daoyu_s_num = { NUM = "940" } daoyu_s_num = { NUM = "941" } daoyu_s_num = { NUM = "942" } daoyu_s_num = { NUM = "943" } daoyu_s_num = { NUM = "944" } daoyu_s_num = { NUM = "945" } daoyu_s_num = { NUM = "946" } daoyu_s_num = { NUM = "947" } daoyu_s_num = { NUM = "948" } daoyu_s_num = { NUM = "949" }
+	#daoyu_s_num = { NUM = "950" } daoyu_s_num = { NUM = "951" } daoyu_s_num = { NUM = "952" } daoyu_s_num = { NUM = "953" } daoyu_s_num = { NUM = "954" } daoyu_s_num = { NUM = "955" } daoyu_s_num = { NUM = "956" } daoyu_s_num = { NUM = "957" } daoyu_s_num = { NUM = "958" } daoyu_s_num = { NUM = "959" }
+	#daoyu_s_num = { NUM = "960" } daoyu_s_num = { NUM = "961" } daoyu_s_num = { NUM = "962" } daoyu_s_num = { NUM = "963" } daoyu_s_num = { NUM = "964" } daoyu_s_num = { NUM = "965" } daoyu_s_num = { NUM = "966" } daoyu_s_num = { NUM = "967" } daoyu_s_num = { NUM = "968" } daoyu_s_num = { NUM = "969" }
+	#daoyu_s_num = { NUM = "970" } daoyu_s_num = { NUM = "971" } daoyu_s_num = { NUM = "972" } daoyu_s_num = { NUM = "973" } daoyu_s_num = { NUM = "974" } daoyu_s_num = { NUM = "975" } daoyu_s_num = { NUM = "976" } daoyu_s_num = { NUM = "977" } daoyu_s_num = { NUM = "978" } daoyu_s_num = { NUM = "979" }
+	#daoyu_s_num = { NUM = "980" } daoyu_s_num = { NUM = "981" } daoyu_s_num = { NUM = "982" } daoyu_s_num = { NUM = "983" } daoyu_s_num = { NUM = "984" } daoyu_s_num = { NUM = "985" } daoyu_s_num = { NUM = "986" } daoyu_s_num = { NUM = "987" } daoyu_s_num = { NUM = "988" } daoyu_s_num = { NUM = "989" }
+	#daoyu_s_num = { NUM = "990" } daoyu_s_num = { NUM = "991" } daoyu_s_num = { NUM = "992" } daoyu_s_num = { NUM = "993" } daoyu_s_num = { NUM = "994" } daoyu_s_num = { NUM = "995" } daoyu_s_num = { NUM = "996" } daoyu_s_num = { NUM = "997" } daoyu_s_num = { NUM = "998" } daoyu_s_num = { NUM = "999" }
+}

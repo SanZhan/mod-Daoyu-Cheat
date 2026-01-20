@@ -1,0 +1,10 @@
+decree_daoyu_target_state = {
+	texture = "gfx/interface/icons/decree/decree_daoyu_target.dds"
+	cost = 0
+	country_trigger = {
+		has_global_variable = daoyu_on
+	}
+	state_trigger = {
+		not = { has_variable = daoyu_clear_target_state }
+	}
+}

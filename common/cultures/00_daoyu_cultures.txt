@@ -1,0 +1,11 @@
+﻿daoyu_nonexistent = {
+	color= hsv{ 0.10 0.44 0.35 }
+	religion = catholic
+	traits = { }
+	male_common_first_names = { daoyu }
+	female_common_first_names = { daoyu }
+	noble_last_names = { daoyu }
+	common_last_names = { daoyu }
+	ethnicities = { 1 = indian }
+	graphics = south_asian
+}
