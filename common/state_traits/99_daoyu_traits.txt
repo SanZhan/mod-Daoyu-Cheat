@@ -1,4 +1,4 @@
-﻿building_food_industry = { icon = "gfx/interface/icons/building_icons/food_industry.dds" }
+building_food_industry = { icon = "gfx/interface/icons/building_icons/food_industry.dds" }
 building_textile_mills = { icon = "gfx/interface/icons/building_icons/textile_industry.dds" }
 building_furniture_manufacturies = { icon = "gfx/interface/icons/building_icons/furniture_manufacturies.dds" }
 building_glassworks = { icon = "gfx/interface/icons/building_icons/glassworks.dds" }
@@ -14,9 +14,9 @@ building_military_shipyards = { icon = "gfx/interface/icons/building_icons/milit
 building_war_machine_industry = { icon = "gfx/interface/icons/building_icons/vehicles_industry.dds" }
 building_electrics_industry = { icon = "gfx/interface/icons/building_icons/electrics_industry.dds" }
 building_arms_industry = { icon = "gfx/interface/icons/building_icons/arms_industry.dds" }
-building_artillery_foundries = { icon = "gfx/interface/icons/building_icons/unused/foundries.dds" }
-building_munition_plants = { icon = "gfx/interface/icons/building_icons/munition_plants.dds" }
-building_rye_farm = { icon = "gfx/interface/icons/building_icons/rye_farm.dds" }
+# building_artillery_foundries = { icon = "gfx/interface/icons/building_icons/unused/foundries.dds" } # Commented out due to invalid state trait
+# building_munition_plants = { icon = "gfx/interface/icons/building_icons/munition_plants.dds" } # Commented out due to invalid state trait
+# building_vineyard_plantation = { icon = "gfx/interface/icons/building_icons/vineyards.dds" } # Commented out due to invalid state trait
 building_wheat_farm = { icon = "gfx/interface/icons/building_icons/wheat_farm.dds" }
 building_rice_farm = { icon = "gfx/interface/icons/building_icons/rice_farm.dds" }
 building_maize_farm = { icon = "gfx/interface/icons/building_icons/maize_farm.dds" }
@@ -42,5 +42,58 @@ building_fishing_wharf = { icon = "gfx/interface/icons/building_icons/fishing_wh
 building_whaling_station = { icon = "gfx/interface/icons/building_icons/whaling_station.dds" }
 building_oil_rig = { icon = "gfx/interface/icons/building_icons/oil_rig.dds" }
 building_power_plant = { icon = "gfx/interface/icons/building_icons/power_plant.dds" }
-building_vineyard_plantation = { icon = "gfx/interface/icons/building_icons/vineyards.dds" }
+# building_vineyard_plantation = { icon = "gfx/interface/icons/building_icons/vineyards.dds" } # Commented out due to invalid state trait
 building_arts_academy = { icon = "gfx/interface/icons/building_icons/building_arts_academy.dds" }
+
+# Placeholder state traits to satisfy references from game logs
+# These are minimal definitions (icon only) to avoid "Invalid trait in state region" errors.
+state_trait_gotakanal_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_di_reno_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_grand_canal_of_china = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_saint_lawrence_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_naviglio_grande = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_brahestad_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_tigre_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_copenhagen_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_castilla_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_regent_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_liverpool_anchester_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_bosphorus_srait = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_peter_the_great_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_llangollen_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_moscow_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_erie_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_caledonian_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_hooghly_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_valencia_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_birmingham_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_kherson_kursk_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_alabama_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_vistula_oder_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_hopewell_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_belfast_shannon_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_bangkok_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_red_river_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_tokyo_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_saint_martin_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_kyoto_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_du_nord_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_lausanne_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_osaka_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_nagasaki_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_de_berry_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_karolyi_pecs_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_amsterdam_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_zeeland_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_venlo_mechelen_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_ciliwung_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_bangka_strait_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_habsburg_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_bohemian_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_oldenburg_hamburg_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_rhine_nau_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_fernofo_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_rhine_main_danube_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_naviglio_di_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+state_trait_bristol_chichester_canal = { icon = "gfx/interface/icons/building_icons/waterway.dds" }
+

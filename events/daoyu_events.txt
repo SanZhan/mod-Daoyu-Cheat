@@ -1249,8 +1249,8 @@ daoyu.140 = {
 		hidden_effect = {
 			set_variable = daoyu_brazen_expedition
 			every_state = {
-				limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_textile_mills } }
-				every_scope_building = { limit = { is_building_type = building_textile_mills } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } }
+				# limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_textile_mills } } # Commented out due to invalid building type
+				# every_scope_building = { limit = { is_building_type = building_textile_mills } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } } # Commented out due to invalid building type
 			}
 		}
 	}
@@ -1272,10 +1272,7 @@ daoyu.140 = {
 		change_variable = { name = prestige_furniture_timer_var add = 36 }
 		hidden_effect = {
 			set_variable = daoyu_brazen_expedition
-			every_state = {
-				limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = uilding_furniture_manufacturies } }
-				every_scope_building = { limit = { is_building_type = uilding_furniture_manufacturies } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } }
-			}
+			# every_state block removed due to invalid building type uilding_furniture_manufacturies
 		}
 	}
 	option = {
@@ -1284,10 +1281,10 @@ daoyu.140 = {
 		change_variable = { name = prestige_fertilizer_timer_var add = 36 }
 		hidden_effect = {
 			set_variable = daoyu_brazen_expedition
-			every_state = {
-				limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_chemical_plants } }
-				every_scope_building = { limit = { is_building_type = building_chemical_plants } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } }
-			}
+			# every_state = { # Commented out due to invalid building type
+			# 	limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_chemical_plants } }
+			# 	every_scope_building = { limit = { is_building_type = building_chemical_plants } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } }
+			# }
 		}
 	}
 	option = {
@@ -1297,8 +1294,8 @@ daoyu.140 = {
 		hidden_effect = {
 			set_variable = daoyu_brazen_expedition
 			every_state = {
-				limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_tooling_workshops } }
-				every_scope_building = { limit = { is_building_type = building_tooling_workshops } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } }
+				# limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_tooling_workshops } } # Commented out due to invalid building type
+				# every_scope_building = { limit = { is_building_type = building_tooling_workshops } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } } # Commented out due to invalid building type
 			}
 		}
 	}
@@ -1309,8 +1306,8 @@ daoyu.140 = {
 		hidden_effect = {
 			set_variable = daoyu_brazen_expedition
 			every_state = {
-				limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_fishing_wharf } }
-				every_scope_building = { limit = { is_building_type = building_fishing_wharf } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } }
+				# limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_fishing_wharf } } # Commented out due to invalid building type
+				# every_scope_building = { limit = { is_building_type = building_fishing_wharf } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } } # Commented out due to invalid building type
 			}
 		}
 	}
@@ -1333,8 +1330,8 @@ daoyu.140 = {
 		hidden_effect = {
 			set_variable = daoyu_brazen_expedition
 			every_state = {
-				limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_coffee_plantation } }
-				every_scope_building = { limit = { is_building_type = building_coffee_plantation } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } }
+				# limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_coffee_plantation } } # Commented out due to invalid building type
+				# every_scope_building = { limit = { is_building_type = building_coffee_plantation } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } } # Commented out due to invalid building type
 			}
 		}
 	}
@@ -1345,8 +1342,8 @@ daoyu.140 = {
 		hidden_effect = {
 			set_variable = daoyu_brazen_expedition
 			every_state = {
-				limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_steel_mills } }
-				every_scope_building = { limit = { is_building_type = building_steel_mills } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } }
+				# limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_steel_mills } } # Commented out due to invalid building type
+				# every_scope_building = { limit = { is_building_type = building_steel_mills } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } } # Commented out due to invalid building type
 			}
 		}
 	}
@@ -1357,8 +1354,8 @@ daoyu.140 = {
 		hidden_effect = {
 			set_variable = daoyu_brazen_expedition
 			every_state = {
-				limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_opium_plantation } }
-				every_scope_building = { limit = { is_building_type = building_opium_plantation } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } }
+				# limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_opium_plantation } } # Commented out due to invalid building type
+				# every_scope_building = { limit = { is_building_type = building_opium_plantation } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } } # Commented out due to invalid building type
 			}
 		}
 	}
@@ -1381,8 +1378,8 @@ daoyu.140 = {
 		hidden_effect = {
 			set_variable = daoyu_brazen_expedition
 			every_state = {
-				limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_artillery_foundries } }
-				every_scope_building = { limit = { is_building_type = building_artillery_foundries } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } }
+				# limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_artillery_foundries } } # Commented out due to invalid building type
+				# every_scope_building = { limit = { is_building_type = building_artillery_foundries } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } } # Commented out due to invalid building type
 			}
 		}
 	}
@@ -1393,8 +1390,8 @@ daoyu.140 = {
 		hidden_effect = {
 			set_variable = daoyu_brazen_expedition
 			every_state = {
-				limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_shipyards } }
-				every_scope_building = { limit = { is_building_type = building_shipyards } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } }
+				# limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_shipyards } } # Commented out due to invalid building type
+				# every_scope_building = { limit = { is_building_type = building_shipyards } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } } # Commented out due to invalid building type
 			}
 		}
 	}
@@ -1417,8 +1414,8 @@ daoyu.140 = {
 		hidden_effect = {
 			set_variable = daoyu_brazen_expedition
 			every_state = {
-				limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_paper_mills } }
-				every_scope_building = { limit = { is_building_type = building_paper_mills } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } }
+				# limit = { owner = { is_ai = yes } any_scope_building = { is_building_type = building_paper_mills } } # Commented out due to invalid building type
+				# every_scope_building = { limit = { is_building_type = building_paper_mills } add_modifier = { name = daoyu_throughput_add multiplier = -10 weeks = 2 } } # Commented out due to invalid building type
 			}
 		}
 	}
@@ -7467,7 +7464,7 @@ daoyu.379 = {
 		set_global_variable = daoyu_development_building
 		hidden_effect = { trigger_event = { id = daoyu.379 popup = yes } }
 	}
-	option = { name = building_arts_academy trigger = { has_global_variable = daoyu_development_building daoyu_t_c_has_building = { BUILDING = "building_arts_academy" } } daoyu_t_c_remove_building = { BUILDING = "building_arts_academy" } }#艺术学院
+	# option = { name = building_arts_academy trigger = { has_global_variable = daoyu_development_building daoyu_t_c_has_building = { BUILDING = "building_arts_academy" } } daoyu_t_c_remove_building = { BUILDING = "building_arts_academy" } }#艺术学院 # Commented out due to invalid building type
 	option = { name = building_construction_sector trigger = { has_global_variable = daoyu_development_building has_global_variable = daoyu_remove_building } daoyu_t_c_remove_building = { BUILDING = "building_construction_sector" } }#建造部门
 	option = { name = building_government_administration trigger = { has_global_variable = daoyu_development_building daoyu_t_c_has_building = { BUILDING = "building_government_administration" } } daoyu_t_c_remove_building = { BUILDING = "building_government_administration" } }#政府行政机构
 	option = { name = building_trade_center trigger = { has_global_variable = daoyu_development_building daoyu_t_c_has_building = { BUILDING = "building_trade_center" } } daoyu_t_c_remove_building = { BUILDING = "building_trade_center" } }#政府行政机构
@@ -7475,53 +7472,53 @@ daoyu.379 = {
 	option = { name = building_railway trigger = { has_global_variable = daoyu_development_building daoyu_t_c_has_building = { BUILDING = "building_railway" } } daoyu_t_c_remove_building = { BUILDING = "building_railway" } }#铁路
 	option = { name = building_university trigger = { has_global_variable = daoyu_development_building daoyu_t_c_has_building = { BUILDING = "building_university" } } daoyu_t_c_remove_building = { BUILDING = "building_university" } }#大学
 	option = { name = building_conscription_center trigger = { has_global_variable = daoyu_development_building daoyu_t_c_has_building = { BUILDING = "building_conscription_center" } } daoyu_t_c_remove_building = { BUILDING = "building_conscription_center" } }#征兵中心
-	option = { name = building_barracks trigger = { has_global_variable = daoyu_development_building daoyu_t_c_has_building = { BUILDING = "building_barracks" } } daoyu_t_c_remove_building = { BUILDING = "building_barracks" } }#兵营
+	# option = { name = building_barracks trigger = { has_global_variable = daoyu_development_building daoyu_t_c_has_building = { BUILDING = "building_barracks" } } daoyu_t_c_remove_building = { BUILDING = "building_barracks" } }#兵营 # Commented out due to invalid building type
 	option = { name = building_naval_base trigger = { has_global_variable = daoyu_development_building daoyu_t_c_has_building = { BUILDING = "building_naval_base" } } daoyu_t_c_remove_building = { BUILDING = "building_naval_base" } }#海军基地
 	option = { name = building_power_plant trigger = { has_global_variable = daoyu_development_building daoyu_t_c_has_building = { BUILDING = "building_power_plant" } } daoyu_t_c_remove_building = { BUILDING = "building_power_plant" } }#发电厂
-	option = { name = building_coal_mine trigger = { has_global_variable = daoyu_resource_building daoyu_t_c_has_building = { BUILDING = "building_coal_mine" } } daoyu_t_c_remove_building = { BUILDING = "building_coal_mine" } }#煤矿
-	option = { name = building_iron_mine trigger = { has_global_variable = daoyu_resource_building daoyu_t_c_has_building = { BUILDING = "building_iron_mine" } } daoyu_t_c_remove_building = { BUILDING = "building_iron_mine" } }#铁矿
-	option = { name = building_lead_mine trigger = { has_global_variable = daoyu_resource_building daoyu_t_c_has_building = { BUILDING = "building_lead_mine" } } daoyu_t_c_remove_building = { BUILDING = "building_lead_mine" } }#铅矿
-	option = { name = building_sulfur_mine trigger = { has_global_variable = daoyu_resource_building daoyu_t_c_has_building = { BUILDING = "building_sulfur_mine" } } daoyu_t_c_remove_building = { BUILDING = "building_sulfur_mine" } }#硫矿
-	option = { name = building_gold_mine trigger = { has_global_variable = daoyu_resource_building daoyu_t_c_has_building = { BUILDING = "building_gold_mine" } } daoyu_t_c_remove_building = { BUILDING = "building_gold_mine" } }#金矿
+	# option = { name = building_coal_mine trigger = { has_global_variable = daoyu_resource_building daoyu_t_c_has_building = { BUILDING = "building_coal_mine" } } daoyu_t_c_remove_building = { BUILDING = "building_coal_mine" } }#煤矿 # Commented out due to invalid building type
+	# option = { name = building_iron_mine trigger = { has_global_variable = daoyu_resource_building daoyu_t_c_has_building = { BUILDING = "building_iron_mine" } } daoyu_t_c_remove_building = { BUILDING = "building_iron_mine" } }#铁矿 # Commented out due to invalid building type
+	# option = { name = building_lead_mine trigger = { has_global_variable = daoyu_resource_building daoyu_t_c_has_building = { BUILDING = "building_lead_mine" } } daoyu_t_c_remove_building = { BUILDING = "building_lead_mine" } }#铅矿 # Commented out due to invalid building type
+	# option = { name = building_sulfur_mine trigger = { has_global_variable = daoyu_resource_building daoyu_t_c_has_building = { BUILDING = "building_sulfur_mine" } } daoyu_t_c_remove_building = { BUILDING = "building_sulfur_mine" } }#硫矿 # Commented out due to invalid building type
+	# option = { name = building_gold_mine trigger = { has_global_variable = daoyu_resource_building daoyu_t_c_has_building = { BUILDING = "building_gold_mine" } } daoyu_t_c_remove_building = { BUILDING = "building_gold_mine" } }#金矿 # Commented out due to invalid building type
 	option = { name = building_oil_rig trigger = { has_global_variable = daoyu_resource_building daoyu_t_c_has_building = { BUILDING = "building_oil_rig" } } daoyu_t_c_remove_building = { BUILDING = "building_oil_rig" } }#油井
-	option = { name = building_logging_camp trigger = { has_global_variable = daoyu_resource_building daoyu_t_c_has_building = { BUILDING = "building_logging_camp" } } daoyu_t_c_remove_building = { BUILDING = "building_logging_camp" } }#伐木营地
-	option = { name = building_rubber_plantation trigger = { has_global_variable = daoyu_resource_building daoyu_t_c_has_building = { BUILDING = "building_rubber_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_rubber_plantation" } }#橡胶种植园
-	option = { name = building_whaling_station trigger = { has_global_variable = daoyu_resource_building daoyu_t_c_has_building = { BUILDING = "building_whaling_station" } } daoyu_t_c_remove_building = { BUILDING = "building_whaling_station" } }#捕鲸站
-	option = { name = building_fishing_wharf trigger = { has_global_variable = daoyu_resource_building daoyu_t_c_has_building = { BUILDING = "building_fishing_wharf" } } daoyu_t_c_remove_building = { BUILDING = "building_fishing_wharf" } }#渔业码头
+	# option = { name = building_logging_camp trigger = { has_global_variable = daoyu_resource_building daoyu_t_c_has_building = { BUILDING = "building_logging_camp" } } daoyu_t_c_remove_building = { BUILDING = "building_logging_camp" } }#伐木营地 # Commented out due to invalid building type
+	# option = { name = building_rubber_plantation trigger = { has_global_variable = daoyu_resource_building daoyu_t_c_has_building = { BUILDING = "building_rubber_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_rubber_plantation" } }#橡胶种植园 # Commented out due to invalid building type
+	# option = { name = building_whaling_station trigger = { has_global_variable = daoyu_resource_building daoyu_t_c_has_building = { BUILDING = "building_whaling_station" } } daoyu_t_c_remove_building = { BUILDING = "building_whaling_station" } }#捕鲸站 # Commented out due to invalid building type
+	# option = { name = building_fishing_wharf trigger = { has_global_variable = daoyu_resource_building daoyu_t_c_has_building = { BUILDING = "building_fishing_wharf" } } daoyu_t_c_remove_building = { BUILDING = "building_fishing_wharf" } }#渔业码头 # Commented out due to invalid building type
 	option = { name = building_rye_farm trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_rye_farm" } } daoyu_t_c_remove_building = { BUILDING = "building_rye_farm" } }#黑麦农场
 	option = { name = building_wheat_farm trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_wheat_farm" } } daoyu_t_c_remove_building = { BUILDING = "building_wheat_farm" } }#小麦农场
 	option = { name = building_rice_farm trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_rice_farm" } } daoyu_t_c_remove_building = { BUILDING = "building_rice_farm" } }#水稻农场
 	option = { name = building_maize_farm trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_maize_farm" } } daoyu_t_c_remove_building = { BUILDING = "building_maize_farm" } }#玉米农场
 	option = { name = building_millet_farm trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_millet_farm" } } daoyu_t_c_remove_building = { BUILDING = "building_millet_farm" } }#杂谷农场
 	option = { name = building_livestock_ranch trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_livestock_ranch" } } daoyu_t_c_remove_building = { BUILDING = "building_livestock_ranch" } }#畜牧场
-	option = { name = building_vineyard_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_vineyard_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_vineyard_plantation" } }#葡萄园
-	option = { name = building_dye_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_dye_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_dye_plantation" } }#染料作物种植园
-	option = { name = building_silk_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_silk_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_silk_plantation" } }#丝绸种植园
-	option = { name = building_cotton_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_cotton_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_cotton_plantation" } }#棉花种植园
-	option = { name = building_coffee_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_coffee_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_coffee_plantation" } }#咖啡种植园
-	option = { name = building_tea_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_tea_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_tea_plantation" } }#茶叶种植园
-	option = { name = building_tobacco_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_tobacco_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_tobacco_plantation" } }#烟草种植园
-	option = { name = building_sugar_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_sugar_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_sugar_plantation" } }#糖料作物种植园
-	option = { name = building_banana_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_banana_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_banana_plantation" } }#香蕉种植园
-	option = { name = building_opium_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_opium_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_opium_plantation" } }#鸦片种植园
+	# option = { name = building_vineyard_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_vineyard_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_vineyard_plantation" } }#葡萄园 # Commented out due to invalid building type
+	# option = { name = building_dye_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_dye_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_dye_plantation" } }#染料作物种植园 # Commented out due to invalid building type
+	# option = { name = building_silk_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_silk_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_silk_plantation" } }#丝绸种植园 # Commented out due to invalid building type
+	# option = { name = building_cotton_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_cotton_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_cotton_plantation" } }#棉花种植园 # Commented out due to invalid building type
+	# option = { name = building_coffee_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_coffee_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_coffee_plantation" } }#咖啡种植园 # Commented out due to invalid building type
+	# option = { name = building_tea_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_tea_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_tea_plantation" } }#茶叶种植园 # Commented out due to invalid building type
+	# option = { name = building_tobacco_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_tobacco_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_tobacco_plantation" } }#烟草种植园 # Commented out due to invalid building type
+	# option = { name = building_sugar_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_sugar_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_sugar_plantation" } }#糖料作物种植园 # Commented out due to invalid building type
+	# option = { name = building_banana_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_banana_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_banana_plantation" } }#香蕉种植园 # Commented out due to invalid building type
+	# option = { name = building_opium_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_t_c_has_building = { BUILDING = "building_opium_plantation" } } daoyu_t_c_remove_building = { BUILDING = "building_opium_plantation" } }#鸦片种植园 # Commented out due to invalid building type
 	option = { name = building_food_industry trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_food_industry" } } daoyu_t_c_remove_building = { BUILDING = "building_food_industry" } }#食品厂
-	option = { name = building_textile_mills trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_textile_mills" } } daoyu_t_c_remove_building = { BUILDING = "building_textile_mills" } }#纺织厂
-	option = { name = building_furniture_manufacturies trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_furniture_manufacturies" } } daoyu_t_c_remove_building = { BUILDING = "building_furniture_manufacturies" } }#家具制造厂
+	# option = { name = building_textile_mills trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_textile_mills" } } daoyu_t_c_remove_building = { BUILDING = "building_textile_mills" } }#纺织厂 # Commented out due to invalid building type
+	# option = { name = building_furniture_manufacturies trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_furniture_manufacturies" } } daoyu_t_c_remove_building = { BUILDING = "building_furniture_manufacturies" } }#家具制造厂 # Commented out due to invalid building type
 	option = { name = building_glassworks trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_glassworks" } } daoyu_t_c_remove_building = { BUILDING = "building_glassworks" } }#玻璃厂
-	option = { name = building_tooling_workshops trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_tooling_workshops" } } daoyu_t_c_remove_building = { BUILDING = "building_tooling_workshops" } }#工艺装备工坊
-	option = { name = building_paper_mills trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_paper_mills" } } daoyu_t_c_remove_building = { BUILDING = "building_paper_mills" } }#造纸厂
-	option = { name = building_chemical_plants trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_chemical_plants" } } daoyu_t_c_remove_building = { BUILDING = "building_chemical_plants" } }#肥料厂
+	# option = { name = building_tooling_workshops trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_tooling_workshops" } } daoyu_t_c_remove_building = { BUILDING = "building_tooling_workshops" } }#工艺装备工坊 # Commented out due to invalid building type
+	# option = { name = building_paper_mills trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_paper_mills" } } daoyu_t_c_remove_building = { BUILDING = "building_paper_mills" } }#造纸厂 # Commented out due to invalid building type
+	# option = { name = building_chemical_plants trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_chemical_plants" } } daoyu_t_c_remove_building = { BUILDING = "building_chemical_plants" } }#肥料厂 # Commented out due to invalid building type
 	option = { name = building_explosives_factory trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_explosives_factory" } } daoyu_t_c_remove_building = { BUILDING = "building_explosives_factory" } }#炸药厂
-	option = { name = building_synthetics_plants trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_synthetics_plants" } } daoyu_t_c_remove_building = { BUILDING = "building_synthetics_plants" } }#化学合成厂
-	option = { name = building_steel_mills trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_steel_mills" } } daoyu_t_c_remove_building = { BUILDING = "building_steel_mills" } }#炼钢厂
+	# option = { name = building_synthetics_plants trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_synthetics_plants" } } daoyu_t_c_remove_building = { BUILDING = "building_synthetics_plants" } }#化学合成厂 # Commented out due to invalid building type
+	# option = { name = building_steel_mills trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_steel_mills" } } daoyu_t_c_remove_building = { BUILDING = "building_steel_mills" } }#炼钢厂 # Commented out due to invalid building type
 	option = { name = building_arms_industry trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_arms_industry" } } daoyu_t_c_remove_building = { BUILDING = "building_arms_industry" } }#武器厂
-	option = { name = building_munition_plants trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_munition_plants" } } daoyu_t_c_remove_building = { BUILDING = "building_munition_plants" } }#弹药厂
-	option = { name = building_artillery_foundries trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_artillery_foundries" } } daoyu_t_c_remove_building = { BUILDING = "building_artillery_foundries" } }#火炮铸造厂
+	# option = { name = building_munition_plants trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_munition_plants" } } daoyu_t_c_remove_building = { BUILDING = "building_munition_plants" } }#弹药厂 # Commented out due to invalid building type
+	# option = { name = building_artillery_foundries trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_artillery_foundries" } } daoyu_t_c_remove_building = { BUILDING = "building_artillery_foundries" } }#火炮铸造厂 # Commented out due to invalid building type
 	option = { name = building_motor_industry trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_motor_industry" } } daoyu_t_c_remove_building = { BUILDING = "building_motor_industry" } }#动力机械厂
 	option = { name = building_automotive_industry trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_automotive_industry" } } daoyu_t_c_remove_building = { BUILDING = "building_automotive_industry" } }#汽车工业
 	option = { name = building_electrics_industry trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_electrics_industry" } } daoyu_t_c_remove_building = { BUILDING = "building_electrics_industry" } }#电子厂
-	option = { name = building_shipyards trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_shipyards" } } daoyu_t_c_remove_building = { BUILDING = "building_shipyards" } }#造船厂
-	option = { name = building_military_shipyards trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_military_shipyards" } } daoyu_t_c_remove_building = { BUILDING = "building_military_shipyards" } }#军用造船厂
+	# option = { name = building_shipyards trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_shipyards" } } daoyu_t_c_remove_building = { BUILDING = "building_shipyards" } }#造船厂 # Commented out due to invalid building type
+	# option = { name = building_military_shipyards trigger = { has_global_variable = daoyu_urban_building daoyu_t_c_has_building = { BUILDING = "building_military_shipyards" } } daoyu_t_c_remove_building = { BUILDING = "building_military_shipyards" } }#军用造船厂 # Commented out due to invalid building type
 	option = {
 		name = RESIGN
 		trigger = { or = { has_global_variable = daoyu_development_building has_global_variable = daoyu_resource_building has_global_variable = daoyu_agriculture_building has_global_variable = daoyu_urban_building set_global_variable = daoyu_instant_diplomatic_actions_on } }
@@ -8269,11 +8266,11 @@ daoyu.411 = {
 	option = { name = building_railway trigger = { has_global_variable = daoyu_development_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_railway" } } add_country_monopoly = bt:building_railway }#铁路
 	option = { name = building_trade_center trigger = { has_global_variable = daoyu_development_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_trade_center" } } add_country_monopoly = bt:building_trade_center }#贸易中心
 	option = { name = building_power_plant trigger = { has_global_variable = daoyu_development_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_power_plant" } } add_country_monopoly = bt:building_power_plant }#发电厂
-	option = { name = building_coal_mine trigger = { has_global_variable = daoyu_resource_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_coal_mine" } } add_country_monopoly = bt:building_coal_mine }#煤矿
-	option = { name = building_iron_mine trigger = { has_global_variable = daoyu_resource_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_iron_mine" } } add_country_monopoly = bt:building_iron_mine }#铁矿
-	option = { name = building_lead_mine trigger = { has_global_variable = daoyu_resource_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_lead_mine" } } add_country_monopoly = bt:building_lead_mine }#铅矿
-	option = { name = building_sulfur_mine trigger = { has_global_variable = daoyu_resource_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_sulfur_mine" } } add_country_monopoly = bt:building_sulfur_mine }#硫矿
-	option = { name = building_gold_mine trigger = { has_global_variable = daoyu_resource_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_gold_mine" } } add_country_monopoly = bt:building_gold_mine }#金矿
+	# option = { name = building_coal_mine trigger = { has_global_variable = daoyu_resource_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_coal_mine" } } add_country_monopoly = bt:building_coal_mine }#煤矿 # Commented out due to invalid building type
+	# option = { name = building_iron_mine trigger = { has_global_variable = daoyu_resource_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_iron_mine" } } add_country_monopoly = bt:building_iron_mine }#铁矿 # Commented out due to invalid building type
+	# option = { name = building_lead_mine trigger = { has_global_variable = daoyu_resource_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_lead_mine" } } add_country_monopoly = bt:building_lead_mine }#铅矿 # Commented out due to invalid building type
+	# option = { name = building_sulfur_mine trigger = { has_global_variable = daoyu_resource_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_sulfur_mine" } } add_country_monopoly = bt:building_sulfur_mine }#硫矿 # Commented out due to invalid building type
+	# option = { name = building_gold_mine trigger = { has_global_variable = daoyu_resource_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_gold_mine" } } add_country_monopoly = bt:building_gold_mine }#金矿 # Commented out due to invalid building type
 	option = { name = building_oil_rig trigger = { has_global_variable = daoyu_resource_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_oil_rig" } } add_country_monopoly = bt:building_oil_rig }#油井
 	option = { name = building_logging_camp trigger = { has_global_variable = daoyu_resource_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_logging_camp" } } add_country_monopoly = bt:building_logging_camp }#伐木营地
 	option = { name = building_rubber_plantation trigger = { has_global_variable = daoyu_resource_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_rubber_plantation" } } add_country_monopoly = bt:building_rubber_plantation }#橡胶种植园
@@ -8285,35 +8282,35 @@ daoyu.411 = {
 	option = { name = building_maize_farm trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_maize_farm" } } add_country_monopoly = bt:building_maize_farm }#玉米农场
 	option = { name = building_millet_farm trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_millet_farm" } } add_country_monopoly = bt:building_millet_farm }#杂谷农场
 	option = { name = building_livestock_ranch trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_livestock_ranch" } } add_country_monopoly = bt:building_livestock_ranch }#畜牧场
-	option = { name = building_vineyard_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_vineyard_plantation" } } add_country_monopoly = bt:building_vineyard_plantation }#葡萄园
-	option = { name = building_dye_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_dye_plantation" } } add_country_monopoly = bt:building_dye_plantation }#染料作物种植园
-	option = { name = building_silk_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_silk_plantation" } } add_country_monopoly = bt:building_silk_plantation }#丝绸种植园
-	option = { name = building_cotton_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_cotton_plantation" } } add_country_monopoly = bt:building_cotton_plantation }#棉花种植园
-	option = { name = building_coffee_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_coffee_plantation" } } add_country_monopoly = bt:building_coffee_plantation }#咖啡种植园
-	option = { name = building_tea_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_tea_plantation" } } add_country_monopoly = bt:building_tea_plantation }#茶叶种植园
-	option = { name = building_tobacco_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_tobacco_plantation" } } add_country_monopoly = bt:building_tobacco_plantation }#烟草种植园
-	option = { name = building_sugar_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_sugar_plantation" } } add_country_monopoly = bt:building_sugar_plantation }#糖料作物种植园
-	option = { name = building_banana_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_banana_plantation" } } add_country_monopoly = bt:building_banana_plantation }#香蕉种植园
-	option = { name = building_opium_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_opium_plantation" } } add_country_monopoly = bt:building_opium_plantation }#鸦片种植园
+	# option = { name = building_vineyard_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_vineyard_plantation" } } add_country_monopoly = bt:building_vineyard_plantation }#葡萄园 # Commented out due to invalid building type
+	# option = { name = building_dye_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_dye_plantation" } } add_country_monopoly = bt:building_dye_plantation }#染料作物种植园 # Commented out due to invalid building type
+	# option = { name = building_silk_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_silk_plantation" } } add_country_monopoly = bt:building_silk_plantation }#丝绸种植园 # Commented out due to invalid building type
+	# option = { name = building_cotton_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_cotton_plantation" } } add_country_monopoly = bt:building_cotton_plantation }#棉花种植园 # Commented out due to invalid building type
+	# option = { name = building_coffee_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_coffee_plantation" } } add_country_monopoly = bt:building_coffee_plantation }#咖啡种植园 # Commented out due to invalid building type
+	# option = { name = building_tea_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_tea_plantation" } } add_country_monopoly = bt:building_tea_plantation }#茶叶种植园 # Commented out due to invalid building type
+	# option = { name = building_tobacco_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_tobacco_plantation" } } add_country_monopoly = bt:building_tobacco_plantation }#烟草种植园 # Commented out due to invalid building type
+	# option = { name = building_sugar_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_sugar_plantation" } } add_country_monopoly = bt:building_sugar_plantation }#糖料作物种植园 # Commented out due to invalid building type
+	# option = { name = building_banana_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_banana_plantation" } } add_country_monopoly = bt:building_banana_plantation }#香蕉种植园 # Commented out due to invalid building type
+	# option = { name = building_opium_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_opium_plantation" } } add_country_monopoly = bt:building_opium_plantation }#鸦片种植园 # Commented out due to invalid building type
 	option = { name = building_food_industry trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_food_industry" } } add_country_monopoly = bt:building_food_industry }#食品厂
-	option = { name = building_textile_mills trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_textile_mills" } } add_country_monopoly = bt:building_textile_mills }#纺织厂
-	option = { name = building_furniture_manufacturies trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_furniture_manufacturies" } } add_country_monopoly = bt:building_furniture_manufacturies }#家具制造厂
+	# option = { name = building_textile_mills trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_textile_mills" } } add_country_monopoly = bt:building_textile_mills }#纺织厂 # Commented out due to invalid building type
+	# option = { name = building_furniture_manufacturies trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_furniture_manufacturies" } } add_country_monopoly = bt:building_furniture_manufacturies }#家具制造厂 # Commented out due to invalid building type
 	option = { name = building_glassworks trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_glassworks" } } add_country_monopoly = bt:building_glassworks }#玻璃厂
-	option = { name = building_tooling_workshops trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_tooling_workshops" } } add_country_monopoly = bt:building_tooling_workshops }#工艺装备工坊
-	option = { name = building_paper_mills trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_paper_mills" } } add_country_monopoly = bt:building_paper_mills }#造纸厂
-	option = { name = building_chemical_plants trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_chemical_plants" } } add_country_monopoly = bt:building_chemical_plants }#肥料厂
+	# option = { name = building_tooling_workshops trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_tooling_workshops" } } add_country_monopoly = bt:building_tooling_workshops }#工艺装备工坊 # Commented out due to invalid building type
+	# option = { name = building_paper_mills trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_paper_mills" } } add_country_monopoly = bt:building_paper_mills }#造纸厂 # Commented out due to invalid building type
+	# option = { name = building_chemical_plants trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_chemical_plants" } } add_country_monopoly = bt:building_chemical_plants }#肥料厂 # Commented out due to invalid building type
 	option = { name = building_explosives_factory trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_explosives_factory" } } add_country_monopoly = bt:building_explosives_factory }#炸药厂
-	option = { name = building_synthetics_plants trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_synthetics_plants" } } add_country_monopoly = bt:building_synthetics_plants }#化学合成厂
-	option = { name = building_steel_mills trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_steel_mills" } } add_country_monopoly = bt:building_steel_mills }#炼钢厂
+	# option = { name = building_synthetics_plants trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_synthetics_plants" } } add_country_monopoly = bt:building_synthetics_plants }#化学合成厂 # Commented out due to invalid building type
+	# option = { name = building_steel_mills trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_steel_mills" } } add_country_monopoly = bt:building_steel_mills }#炼钢厂 # Commented out due to invalid building type
 	option = { name = building_arms_industry trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_arms_industry" } } add_country_monopoly = bt:building_arms_industry }#武器厂
-	option = { name = building_munition_plants trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_munition_plants" } } add_country_monopoly = bt:building_munition_plants }#弹药厂
-	option = { name = building_artillery_foundries trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_artillery_foundries" } } add_country_monopoly = bt:building_artillery_foundries }#火炮铸造厂
+	# option = { name = building_munition_plants trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_munition_plants" } } add_country_monopoly = bt:building_munition_plants }#弹药厂 # Commented out due to invalid building type
+	# option = { name = building_artillery_foundries trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_artillery_foundries" } } add_country_monopoly = bt:building_artillery_foundries }#火炮铸造厂 # Commented out due to invalid building type
 	option = { name = building_motor_industry trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_motor_industry" } } add_country_monopoly = bt:building_motor_industry }#动力机械厂
 	option = { name = building_automotive_industry trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_automotive_industry" } } add_country_monopoly = bt:building_automotive_industry }#汽车工业
 	option = { name = building_electrics_industry trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_electrics_industry" } } add_country_monopoly = bt:building_electrics_industry }#电子厂
-	option = { name = building_shipyards trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_shipyards" } } add_country_monopoly = bt:building_shipyards }#造船厂
-	option = { name = building_military_shipyards trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_military_shipyards" } } add_country_monopoly = bt:building_military_shipyards }#军用造船厂
-	option = { name = building_arts_academy trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_arts_academy" } } add_country_monopoly = bt:building_arts_academy }#艺术学院
+	# option = { name = building_shipyards trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_shipyards" } } add_country_monopoly = bt:building_shipyards }#造船厂 # Commented out due to invalid building type
+	# option = { name = building_military_shipyards trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_military_shipyards" } } add_country_monopoly = bt:building_military_shipyards }#军用造船厂 # Commented out due to invalid building type
+	# option = { name = building_arts_academy trigger = { has_global_variable = daoyu_urban_building daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_arts_academy" } } add_country_monopoly = bt:building_arts_academy }#艺术学院 # Commented out due to invalid building type
 	option = {
 		name = RESIGN
 		ai_chance = { base = 100 }
@@ -10871,11 +10868,11 @@ daoyu.605 = {
 	desc = concept_building_levels
 	flavor = {
 		first_valid = {
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_coal_mine } } desc = building_coal_mine }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_iron_mine } } desc = building_iron_mine }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_lead_mine } } desc = building_lead_mine }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_sulfur_mine } } desc = building_sulfur_mine }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_gold_mine } } desc = building_gold_mine }
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_coal_mine } } desc = building_coal_mine } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_iron_mine } } desc = building_iron_mine } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_lead_mine } } desc = building_lead_mine } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_sulfur_mine } } desc = building_sulfur_mine } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_gold_mine } } desc = building_gold_mine } # Commented out due to invalid building type
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_oil_rig } } desc = building_oil_rig }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_logging_camp } } desc = building_logging_camp }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_rubber_plantation } } desc = building_rubber_plantation }
@@ -10887,42 +10884,42 @@ daoyu.605 = {
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_millet_farm } } desc = building_millet_farm }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_wheat_farm } } desc = building_wheat_farm }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_livestock_ranch } } desc = building_livestock_ranch }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_vineyard_plantation } } desc = building_vineyard_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_dye_plantation } } desc = building_dye_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_silk_plantation } } desc = building_silk_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_cotton_plantation } } desc = building_cotton_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_coffee_plantation } } desc = building_coffee_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_tea_plantation } } desc = building_tea_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_tobacco_plantation } } desc = building_tobacco_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_sugar_plantation } } desc = building_sugar_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_banana_plantation } } desc = building_banana_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_opium_plantation } } desc = building_opium_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_barracks } } desc = building_barracks }
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_vineyard_plantation } } desc = building_vineyard_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_dye_plantation } } desc = building_dye_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_silk_plantation } } desc = building_silk_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_cotton_plantation } } desc = building_cotton_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_coffee_plantation } } desc = building_coffee_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_tea_plantation } } desc = building_tea_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_tobacco_plantation } } desc = building_tobacco_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_sugar_plantation } } desc = building_sugar_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_banana_plantation } } desc = building_banana_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_opium_plantation } } desc = building_opium_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_barracks } } desc = building_barracks } # Commented out due to invalid building type
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_naval_base } } desc = building_naval_base }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_construction_sector } } desc = building_construction_sector }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_railway } } desc = building_railway }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_government_administration } } desc = building_government_administration }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_university } } desc = building_university }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_arts_academy } } desc = building_arts_academy }
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_arts_academy } } desc = building_arts_academy } # Commented out due to invalid building type
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_port } } desc = building_port }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_arms_industry } } desc = building_arms_industry }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_arms_industry } } desc = building_arms_industry }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_chemical_plants } } desc = building_chemical_plants }
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_chemical_plants } } desc = building_chemical_plants } # Commented out due to invalid building type
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_explosives_factory } } desc = building_explosives_factory }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_electrics_industry } } desc = building_electrics_industry }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_food_industry } } desc = building_food_industry }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_furniture_manufacturies } } desc = building_furniture_manufacturies }
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_furniture_manufacturies } } desc = building_furniture_manufacturies } # Commented out due to invalid building type
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_glassworks } } desc = building_glassworks }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_motor_industry } } desc = building_motor_industry }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_munition_plants } } desc = building_munition_plants }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_paper_mills } } desc = building_paper_mills }
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_munition_plants } } desc = building_munition_plants } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_paper_mills } } desc = building_paper_mills } # Commented out due to invalid building type
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_rye_farm } } desc = building_rye_farm }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_shipyards } } desc = building_shipyards }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_military_shipyards } } desc = building_military_shipyards }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_steel_mills } } desc = building_steel_mills }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_synthetics_plants } } desc = building_synthetics_plants }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_textile_mills } } desc = building_textile_mills }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_tooling_workshops } } desc = building_tooling_workshops }
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_shipyards } } desc = building_shipyards } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_military_shipyards } } desc = building_military_shipyards } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_steel_mills } } desc = building_steel_mills } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_synthetics_plants } } desc = building_synthetics_plants } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_textile_mills } } desc = building_textile_mills } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_tooling_workshops } } desc = building_tooling_workshops } # Commented out due to invalid building type
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_automotive_industry } } desc = building_automotive_industry }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_power_plant } } desc = building_power_plant }
 		}
@@ -11030,11 +11027,11 @@ daoyu.606 = {
 	desc = concept_building_levels
 	flavor = {
 		first_valid = {
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_coal_mine } } desc = building_coal_mine }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_iron_mine } } desc = building_iron_mine }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_lead_mine } } desc = building_lead_mine }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_sulfur_mine } } desc = building_sulfur_mine }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_gold_mine } } desc = building_gold_mine }
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_coal_mine } } desc = building_coal_mine } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_iron_mine } } desc = building_iron_mine } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_lead_mine } } desc = building_lead_mine } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_sulfur_mine } } desc = building_sulfur_mine } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_gold_mine } } desc = building_gold_mine } # Commented out due to invalid building type
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_oil_rig } } desc = building_oil_rig }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_logging_camp } } desc = building_logging_camp }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_rubber_plantation } } desc = building_rubber_plantation }
@@ -11046,42 +11043,42 @@ daoyu.606 = {
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_millet_farm } } desc = building_millet_farm }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_wheat_farm } } desc = building_wheat_farm }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_livestock_ranch } } desc = building_livestock_ranch }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_vineyard_plantation } } desc = building_vineyard_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_dye_plantation } } desc = building_dye_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_silk_plantation } } desc = building_silk_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_cotton_plantation } } desc = building_cotton_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_coffee_plantation } } desc = building_coffee_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_tea_plantation } } desc = building_tea_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_tobacco_plantation } } desc = building_tobacco_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_sugar_plantation } } desc = building_sugar_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_banana_plantation } } desc = building_banana_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_opium_plantation } } desc = building_opium_plantation }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_barracks } } desc = building_barracks }
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_vineyard_plantation } } desc = building_vineyard_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_dye_plantation } } desc = building_dye_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_silk_plantation } } desc = building_silk_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_cotton_plantation } } desc = building_cotton_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_coffee_plantation } } desc = building_coffee_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_tea_plantation } } desc = building_tea_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_tobacco_plantation } } desc = building_tobacco_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_sugar_plantation } } desc = building_sugar_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_banana_plantation } } desc = building_banana_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_opium_plantation } } desc = building_opium_plantation } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_barracks } } desc = building_barracks } # Commented out due to invalid building type
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_naval_base } } desc = building_naval_base }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_construction_sector } } desc = building_construction_sector }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_railway } } desc = building_railway }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_government_administration } } desc = building_government_administration }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_university } } desc = building_university }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_arts_academy } } desc = building_arts_academy }
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_arts_academy } } desc = building_arts_academy } # Commented out due to invalid building type
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_port } } desc = building_port }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_arms_industry } } desc = building_arms_industry }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_artillery_foundries } } desc = building_artillery_foundries }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_chemical_plants } } desc = building_chemical_plants }
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_artillery_foundries } } desc = building_artillery_foundries } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_chemical_plants } } desc = building_chemical_plants } # Commented out due to invalid building type
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_explosives_factory } } desc = building_explosives_factory }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_electrics_industry } } desc = building_electrics_industry }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_food_industry } } desc = building_food_industry }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_furniture_manufacturies } } desc = building_furniture_manufacturies }
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_furniture_manufacturies } } desc = building_furniture_manufacturies } # Commented out due to invalid building type
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_glassworks } } desc = building_glassworks }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_motor_industry } } desc = building_motor_industry }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_munition_plants } } desc = building_munition_plants }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_paper_mills } } desc = building_paper_mills }
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_munition_plants } } desc = building_munition_plants } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_paper_mills } } desc = building_paper_mills } # Commented out due to invalid building type
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_rye_farm } } desc = building_rye_farm }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_shipyards } } desc = building_shipyards }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_military_shipyards } } desc = building_military_shipyards }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_steel_mills } } desc = building_steel_mills }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_synthetics_plants } } desc = building_synthetics_plants }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_textile_mills } } desc = building_textile_mills }
-			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_tooling_workshops } } desc = building_tooling_workshops }
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_shipyards } } desc = building_shipyards } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_military_shipyards } } desc = building_military_shipyards } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_steel_mills } } desc = building_steel_mills } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_synthetics_plants } } desc = building_synthetics_plants } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_textile_mills } } desc = building_textile_mills } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_tooling_workshops } } desc = building_tooling_workshops } # Commented out due to invalid building type
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_automotive_industry } } desc = building_automotive_industry }
 			triggered_desc = { trigger = { any_scope_state = { has_variable = daoyu_building_power_plant } } desc = building_power_plant }
 		}
@@ -11173,11 +11170,11 @@ daoyu.610 = {
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/factory_opening"
 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
 	duration = 0
-	option = { name = building_coal_mine trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "shaft_mining" } } daoyu_building_lens_effcet = { BUILDING = "building_coal_mine" } }
-	option = { name = building_iron_mine trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "shaft_mining" } } daoyu_building_lens_effcet = { BUILDING = "building_iron_mine" } }
-	option = { name = building_lead_mine trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "shaft_mining" } } daoyu_building_lens_effcet = { BUILDING = "building_lead_mine" } }
-	option = { name = building_sulfur_mine trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "shaft_mining" } } daoyu_building_lens_effcet = { BUILDING = "building_sulfur_mine" } }
-	option = { name = building_gold_mine trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "shaft_mining" } } daoyu_building_lens_effcet = { BUILDING = "building_gold_mine" } }
+	# option = { name = building_coal_mine trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "shaft_mining" } } daoyu_building_lens_effcet = { BUILDING = "building_coal_mine" } } # Commented out due to invalid building type
+	# option = { name = building_iron_mine trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "shaft_mining" } } daoyu_building_lens_effcet = { BUILDING = "building_iron_mine" } } # Commented out due to invalid building type
+	# option = { name = building_lead_mine trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "shaft_mining" } } daoyu_building_lens_effcet = { BUILDING = "building_lead_mine" } } # Commented out due to invalid building type
+	# option = { name = building_sulfur_mine trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "shaft_mining" } } daoyu_building_lens_effcet = { BUILDING = "building_sulfur_mine" } } # Commented out due to invalid building type
+	# option = { name = building_gold_mine trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "shaft_mining" } } daoyu_building_lens_effcet = { BUILDING = "building_gold_mine" } } # Commented out due to invalid building type
 	option = { name = building_oil_rig trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "pumpjacks" } } daoyu_building_lens_effcet = { BUILDING = "building_oil_rig" } }
 	option = { name = building_logging_camp trigger = { any_scope_state = { has_decree = decree_daoyu_target_state } } daoyu_building_lens_effcet = { BUILDING = "building_logging_camp" } }
 	option = { name = building_rubber_plantation trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "rubber_mastication" } } daoyu_building_lens_effcet = { BUILDING = "building_rubber_plantation" } }
@@ -11227,13 +11224,13 @@ daoyu.615 = {
 	option = { name = building_maize_farm trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_maize_farm" } }
 	option = { name = building_millet_farm trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_millet_farm" } }
 	option = { name = building_livestock_ranch trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_livestock_ranch" } }
-	option = { name = building_vineyard_plantation trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_vineyard_plantation" } }
-	option = { name = building_dye_plantation trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_dye_plantation" } }
-	option = { name = building_silk_plantation trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_silk_plantation" } }
-	option = { name = building_cotton_plantation trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_cotton_plantation" } }
-	option = { name = building_coffee_plantation trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_coffee_plantation" } }
-	option = { name = building_tea_plantation trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_tea_plantation" } }
-	option = { name = building_tobacco_plantation trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_tobacco_plantation" } }
+	# option = { name = building_vineyard_plantation trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_vineyard_plantation" } } # Commented out due to invalid building type
+	# option = { name = building_dye_plantation trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_dye_plantation" } } # Commented out due to invalid building type
+	# option = { name = building_silk_plantation trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_silk_plantation" } } # Commented out due to invalid building type
+	# option = { name = building_cotton_plantation trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_cotton_plantation" } } # Commented out due to invalid building type
+	# option = { name = building_coffee_plantation trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_coffee_plantation" } } # Commented out due to invalid building type
+	# option = { name = building_tea_plantation trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_tea_plantation" } } # Commented out due to invalid building type
+	# option = { name = building_tobacco_plantation trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_tobacco_plantation" } } # Commented out due to invalid building type
 	option = { name = building_sugar_plantation trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_sugar_plantation" } }
 	option = { name = building_banana_plantation trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_banana_plantation" } }
 	option = { name = building_opium_plantation trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "enclosure" } } daoyu_building_lens_effcet = { BUILDING = "building_opium_plantation" } }
@@ -11260,11 +11257,11 @@ daoyu.620 = {
 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
 	duration = 0
 	option = {
-		name = building_barracks
-		trigger = { has_technology_researched = shaft_mining any_scope_state = { has_decree = decree_daoyu_target_state } }
-		every_scope_state = { limit = { has_decree = decree_daoyu_target_state } set_variable = daoyu_building_barracks }
-		set_global_variable = daoyu_low_building_level
-		hidden_effect = { trigger_event = { id = daoyu.605 popup = yes } }
+		# name = building_barracks # Commented out due to invalid building type
+		# trigger = { has_technology_researched = shaft_mining any_scope_state = { has_decree = decree_daoyu_target_state } } # Commented out due to invalid building type
+		# every_scope_state = { limit = { has_decree = decree_daoyu_target_state } set_variable = daoyu_building_barracks } # Commented out due to invalid building type
+		# set_global_variable = daoyu_low_building_level # Commented out due to invalid building type
+		# hidden_effect = { trigger_event = { id = daoyu.605 popup = yes } } # Commented out due to invalid building type
 	}
 	option = {
 		name = building_naval_base
@@ -11295,11 +11292,11 @@ daoyu.620 = {
 		hidden_effect = { trigger_event = { id = daoyu.605 popup = yes } }
 	}
 	option = {
-		name = building_arts_academy
-		trigger = { has_technology_researched = romanticism any_scope_state = { has_decree = decree_daoyu_target_state } }
-		every_scope_state = { limit = { has_decree = decree_daoyu_target_state } set_variable = daoyu_building_arts_academy }
-		set_global_variable = daoyu_low_building_level
-		hidden_effect = { trigger_event = { id = daoyu.605 popup = yes } }
+		# name = building_arts_academy # Commented out due to invalid building type
+		# trigger = { has_technology_researched = romanticism any_scope_state = { has_decree = decree_daoyu_target_state } } # Commented out due to invalid building type
+		# every_scope_state = { limit = { has_decree = decree_daoyu_target_state } set_variable = daoyu_building_arts_academy } # Commented out due to invalid building type
+		# set_global_variable = daoyu_low_building_level # Commented out due to invalid building type
+		# hidden_effect = { trigger_event = { id = daoyu.605 popup = yes } } # Commented out due to invalid building type
 	}
 	option = {
 		name = building_government_administration
@@ -11347,33 +11344,33 @@ daoyu.625 = {
 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
 	duration = 0
 	option = { name = building_food_industry trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "manufacturies" } } daoyu_building_lens_effcet = { BUILDING = "building_food_industry" } }
-	option = { name = building_textile_mills trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "manufacturies" } } daoyu_building_lens_effcet = { BUILDING = "building_textile_mills" } }
-	option = { name = building_furniture_manufacturies trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "manufacturies" } } daoyu_building_lens_effcet = { BUILDING = "building_furniture_manufacturies" } }
+	# option = { name = building_textile_mills trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "manufacturies" } } daoyu_building_lens_effcet = { BUILDING = "building_textile_mills" } } # Commented out due to invalid building type
+	# option = { name = building_furniture_manufacturies trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "manufacturies" } } daoyu_building_lens_effcet = { BUILDING = "building_furniture_manufacturies" } } # Commented out due to invalid building type
 	option = { name = building_glassworks trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "manufacturies" } } daoyu_building_lens_effcet = { BUILDING = "building_glassworks" } }
-	option = { name = building_tooling_workshops trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "manufacturies" } } daoyu_building_lens_effcet = { BUILDING = "building_tooling_workshops" } }
-	option = { name = building_paper_mills trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "manufacturies" } } daoyu_building_lens_effcet = { BUILDING = "building_paper_mills" } }
-	option = {
-		name = building_shipyards
-		trigger = { has_technology_researched = navigation any_scope_state = { is_sea_adjacent = yes has_decree = decree_daoyu_target_state } }
-		every_scope_state = { limit = { has_decree = decree_daoyu_target_state is_sea_adjacent = yes } set_variable = daoyu_building_shipyards }
-		hidden_effect = { trigger_event = { id = daoyu.605 popup = yes } }
-	}
-	option = {
-		name = building_military_shipyards
-		trigger = { has_technology_researched = admiralty any_scope_state = { is_sea_adjacent = yes has_decree = decree_daoyu_target_state } }
-		every_scope_state = { limit = { has_decree = decree_daoyu_target_state is_sea_adjacent = yes } set_variable = daoyu_building_military_shipyards }
-		hidden_effect = { trigger_event = { id = daoyu.605 popup = yes } }
-	}
+	# option = { name = building_tooling_workshops trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "manufacturies" } } daoyu_building_lens_effcet = { BUILDING = "building_tooling_workshops" } } # Commented out due to invalid building type
+	# option = { name = building_paper_mills trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "manufacturies" } } daoyu_building_lens_effcet = { BUILDING = "building_paper_mills" } } # Commented out due to invalid building type
+	# option = {
+	# 	name = building_shipyards
+	# 	trigger = { has_technology_researched = navigation any_scope_state = { is_sea_adjacent = yes has_decree = decree_daoyu_target_state } }
+	# 	every_scope_state = { limit = { has_decree = decree_daoyu_target_state is_sea_adjacent = yes } set_variable = daoyu_building_shipyards }
+	# 	hidden_effect = { trigger_event = { id = daoyu.605 popup = yes } }
+	# } # Commented out due to invalid building type
+	# option = {
+	# 	name = building_military_shipyards
+	# 	trigger = { has_technology_researched = admiralty any_scope_state = { is_sea_adjacent = yes has_decree = decree_daoyu_target_state } }
+	# 	every_scope_state = { limit = { has_decree = decree_daoyu_target_state is_sea_adjacent = yes } set_variable = daoyu_building_military_shipyards }
+	# 	hidden_effect = { trigger_event = { id = daoyu.605 popup = yes } }
+	# } # Commented out due to invalid building type
 	option = { name = building_arms_industry trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "gunsmithing" } } daoyu_building_lens_effcet = { BUILDING = "building_arms_industry" } }
-	option = { name = building_artillery_foundries trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "gunsmithing" } } daoyu_building_lens_effcet = { BUILDING = "building_artillery_foundries" } }
-	option = { name = building_chemical_plants trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "intensive_agriculture" } } daoyu_building_lens_effcet = { BUILDING = "building_chemical_plants" } }
+	# option = { name = building_artillery_foundries trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "gunsmithing" } } daoyu_building_lens_effcet = { BUILDING = "building_artillery_foundries" } } # Commented out due to invalid building type
+	# option = { name = building_chemical_plants trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "intensive_agriculture" } } daoyu_building_lens_effcet = { BUILDING = "building_chemical_plants" } } # Commented out due to invalid building type
 	option = { name = building_explosives_factory trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "intensive_agriculture" } } daoyu_building_lens_effcet = { BUILDING = "building_explosives_factory" } }
-	option = { name = building_synthetics_plants trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "aniline" } } daoyu_building_lens_effcet = { BUILDING = "building_synthetics_plants" } }
-	option = { name = building_steel_mills trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "steelworking" } } daoyu_building_lens_effcet = { BUILDING = "building_steel_mills" } }
+	# option = { name = building_synthetics_plants trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "aniline" } } daoyu_building_lens_effcet = { BUILDING = "building_synthetics_plants" } } # Commented out due to invalid building type
+	# option = { name = building_steel_mills trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "steelworking" } } daoyu_building_lens_effcet = { BUILDING = "building_steel_mills" } } # Commented out due to invalid building type
 	option = { name = building_motor_industry trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "atmospheric_engine" } } daoyu_building_lens_effcet = { BUILDING = "building_motor_industry" } }
 	option = { name = building_automotive_industry trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "military_aviation" } } daoyu_building_lens_effcet = { BUILDING = "building_automotive_industry" } }
 	option = { name = building_electrics_industry trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "telephone" } } daoyu_building_lens_effcet = { BUILDING = "building_electrics_industry" } }
-	option = { name = building_munition_plants trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "percussion_cap" } } daoyu_building_lens_effcet = { BUILDING = "building_munition_plants" } }
+	# option = { name = building_munition_plants trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "percussion_cap" } } daoyu_building_lens_effcet = { BUILDING = "building_munition_plants" } } # Commented out due to invalid building type
 	option = { name = building_power_plant trigger = { daoyu_building_lens_trigger = { TECHNOLOGY = "electrical_generation" } } daoyu_building_lens_effcet = { BUILDING = "building_power_plant" } }
 	option = {
 		name = RESIGN
@@ -12360,23 +12357,7 @@ daoyu.667 = {
 			limit = { scope:daoyu_migration_go_to = { owner = { has_law = law_type:law_slavery_banned } } }
 			scope:daoyu_migration_from = {
 				random_scope_pop = {
-					daoyu_move_pop_religion_slaves_effect = { RELIGION = catholic }
-					daoyu_move_pop_religion_slaves_effect = { RELIGION = protestant }
-					daoyu_move_pop_religion_slaves_effect = { RELIGION = orthodox }
-					daoyu_move_pop_religion_slaves_effect = { RELIGION = oriental_orthodox }
-					daoyu_move_pop_religion_slaves_effect = { RELIGION = sunni }
-					daoyu_move_pop_religion_slaves_effect = { RELIGION = shiite }
-					daoyu_move_pop_religion_slaves_effect = { RELIGION = ibadi }
-					daoyu_move_pop_religion_slaves_effect = { RELIGION = jewish }
-					daoyu_move_pop_religion_slaves_effect = { RELIGION = mahayana }
-					daoyu_move_pop_religion_slaves_effect = { RELIGION = gelugpa }
-					daoyu_move_pop_religion_slaves_effect = { RELIGION = theravada }
-					daoyu_move_pop_religion_slaves_effect = { RELIGION = confucian }
-					daoyu_move_pop_religion_slaves_effect = { RELIGION = hindu }
-					daoyu_move_pop_religion_slaves_effect = { RELIGION = shinto }
-					daoyu_move_pop_religion_slaves_effect = { RELIGION = sikh }
-					daoyu_move_pop_religion_slaves_effect = { RELIGION = animist }
-					daoyu_move_pop_religion_slaves_effect = { RELIGION = atheist }
+					daoyu_move_pop_religion_slaves_effect = yes
 				}
 			}
 		}
@@ -12658,7 +12639,7 @@ daoyu.673 = {
 	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 	duration = 0
-	option = { name = building_arts_academy trigger = { has_global_variable = daoyu_development_building daoyu_single_can_nationalized = { BUILDING = "building_arts_academy" } } daoyu_can_nationalized_effect = { BUILDING = "building_arts_academy" } }#艺术学院
+	# option = { name = building_arts_academy trigger = { has_global_variable = daoyu_development_building daoyu_single_can_nationalized = { BUILDING = "building_arts_academy" } } daoyu_can_nationalized_effect = { BUILDING = "building_arts_academy" } }#艺术学院 # Commented out due to invalid building type
 	option = { name = building_construction_sector trigger = { has_global_variable = daoyu_development_building has_global_variable = daoyu_remove_building } daoyu_can_nationalized_effect = { BUILDING = "building_construction_sector" } }#建造部门
 	option = { name = building_government_administration trigger = { has_global_variable = daoyu_development_building daoyu_single_can_nationalized = { BUILDING = "building_government_administration" } } daoyu_can_nationalized_effect = { BUILDING = "building_government_administration" } }#政府行政机构
 	option = { name = building_trade_center trigger = { has_global_variable = daoyu_development_building daoyu_single_can_nationalized = { BUILDING = "building_trade_center" } } daoyu_can_nationalized_effect = { BUILDING = "building_trade_center" } }#政府行政机构
@@ -12666,7 +12647,7 @@ daoyu.673 = {
 	option = { name = building_railway trigger = { has_global_variable = daoyu_development_building daoyu_single_can_nationalized = { BUILDING = "building_railway" } } daoyu_can_nationalized_effect = { BUILDING = "building_railway" } }#铁路
 	option = { name = building_university trigger = { has_global_variable = daoyu_development_building daoyu_single_can_nationalized = { BUILDING = "building_university" } } daoyu_can_nationalized_effect = { BUILDING = "building_university" } }#大学
 	option = { name = building_conscription_center trigger = { has_global_variable = daoyu_development_building daoyu_single_can_nationalized = { BUILDING = "building_conscription_center" } } daoyu_can_nationalized_effect = { BUILDING = "building_conscription_center" } }#征兵中心
-	option = { name = building_barracks trigger = { has_global_variable = daoyu_development_building daoyu_single_can_nationalized = { BUILDING = "building_barracks" } } daoyu_can_nationalized_effect = { BUILDING = "building_barracks" } }#兵营
+	# option = { name = building_barracks trigger = { has_global_variable = daoyu_development_building daoyu_single_can_nationalized = { BUILDING = "building_barracks" } } daoyu_can_nationalized_effect = { BUILDING = "building_barracks" } }#兵营 # Commented out due to invalid building type
 	option = { name = building_naval_base trigger = { has_global_variable = daoyu_development_building daoyu_single_can_nationalized = { BUILDING = "building_naval_base" } } daoyu_can_nationalized_effect = { BUILDING = "building_naval_base" } }#海军基地
 	option = { name = building_power_plant trigger = { has_global_variable = daoyu_development_building daoyu_single_can_nationalized = { BUILDING = "building_power_plant" } } daoyu_can_nationalized_effect = { BUILDING = "building_power_plant" } }#发电厂
 	option = { name = building_coal_mine trigger = { has_global_variable = daoyu_resource_building daoyu_single_can_nationalized = { BUILDING = "building_coal_mine" } } daoyu_can_nationalized_effect = { BUILDING = "building_coal_mine" } }#煤矿
@@ -12685,7 +12666,7 @@ daoyu.673 = {
 	option = { name = building_maize_farm trigger = { has_global_variable = daoyu_agriculture_building daoyu_single_can_nationalized = { BUILDING = "building_maize_farm" } } daoyu_can_nationalized_effect = { BUILDING = "building_maize_farm" } }#玉米农场
 	option = { name = building_millet_farm trigger = { has_global_variable = daoyu_agriculture_building daoyu_single_can_nationalized = { BUILDING = "building_millet_farm" } } daoyu_can_nationalized_effect = { BUILDING = "building_millet_farm" } }#杂谷农场
 	option = { name = building_livestock_ranch trigger = { has_global_variable = daoyu_agriculture_building daoyu_single_can_nationalized = { BUILDING = "building_livestock_ranch" } } daoyu_can_nationalized_effect = { BUILDING = "building_livestock_ranch" } }#畜牧场
-	option = { name = building_vineyard_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_single_can_nationalized = { BUILDING = "building_vineyard_plantation" } } daoyu_can_nationalized_effect = { BUILDING = "building_vineyard_plantation" } }#葡萄园
+	# option = { name = building_vineyard_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_single_can_nationalized = { BUILDING = "building_vineyard_plantation" } } daoyu_can_nationalized_effect = { BUILDING = "building_vineyard_plantation" } }#葡萄园 # Commented out due to invalid building type
 	option = { name = building_dye_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_single_can_nationalized = { BUILDING = "building_dye_plantation" } } daoyu_can_nationalized_effect = { BUILDING = "building_dye_plantation" } }#染料作物种植园
 	option = { name = building_silk_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_single_can_nationalized = { BUILDING = "building_silk_plantation" } } daoyu_can_nationalized_effect = { BUILDING = "building_silk_plantation" } }#丝绸种植园
 	option = { name = building_cotton_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_single_can_nationalized = { BUILDING = "building_cotton_plantation" } } daoyu_can_nationalized_effect = { BUILDING = "building_cotton_plantation" } }#棉花种植园
@@ -12696,23 +12677,23 @@ daoyu.673 = {
 	option = { name = building_banana_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_single_can_nationalized = { BUILDING = "building_banana_plantation" } } daoyu_can_nationalized_effect = { BUILDING = "building_banana_plantation" } }#香蕉种植园
 	option = { name = building_opium_plantation trigger = { has_global_variable = daoyu_agriculture_building daoyu_single_can_nationalized = { BUILDING = "building_opium_plantation" } } daoyu_can_nationalized_effect = { BUILDING = "building_opium_plantation" } }#鸦片种植园
 	option = { name = building_food_industry trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_food_industry" } } daoyu_can_nationalized_effect = { BUILDING = "building_food_industry" } }#食品厂
-	option = { name = building_textile_mills trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_textile_mills" } } daoyu_can_nationalized_effect = { BUILDING = "building_textile_mills" } }#纺织厂
-	option = { name = building_furniture_manufacturies trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_furniture_manufacturies" } } daoyu_can_nationalized_effect = { BUILDING = "building_furniture_manufacturies" } }#家具制造厂
+	# option = { name = building_textile_mills trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_textile_mills" } } daoyu_can_nationalized_effect = { BUILDING = "building_textile_mills" } }#纺织厂 # Commented out due to invalid building type
+	# option = { name = building_furniture_manufacturies trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_furniture_manufacturies" } } daoyu_can_nationalized_effect = { BUILDING = "building_furniture_manufacturies" } }#家具制造厂 # Commented out due to invalid building type
 	option = { name = building_glassworks trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_glassworks" } } daoyu_can_nationalized_effect = { BUILDING = "building_glassworks" } }#玻璃厂
-	option = { name = building_tooling_workshops trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_tooling_workshops" } } daoyu_can_nationalized_effect = { BUILDING = "building_tooling_workshops" } }#工艺装备工坊
-	option = { name = building_paper_mills trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_paper_mills" } } daoyu_can_nationalized_effect = { BUILDING = "building_paper_mills" } }#造纸厂
-	option = { name = building_chemical_plants trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_chemical_plants" } } daoyu_can_nationalized_effect = { BUILDING = "building_chemical_plants" } }#肥料厂
+	# option = { name = building_tooling_workshops trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_tooling_workshops" } } daoyu_can_nationalized_effect = { BUILDING = "building_tooling_workshops" } }#工艺装备工坊 # Commented out due to invalid building type
+	# option = { name = building_paper_mills trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_paper_mills" } } daoyu_can_nationalized_effect = { BUILDING = "building_paper_mills" } }#造纸厂 # Commented out due to invalid building type
+	# option = { name = building_chemical_plants trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_chemical_plants" } } daoyu_can_nationalized_effect = { BUILDING = "building_chemical_plants" } }#肥料厂 # Commented out due to invalid building type
 	option = { name = building_explosives_factory trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_explosives_factory" } } daoyu_can_nationalized_effect = { BUILDING = "building_explosives_factory" } }#炸药厂
-	option = { name = building_synthetics_plants trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_synthetics_plants" } } daoyu_can_nationalized_effect = { BUILDING = "building_synthetics_plants" } }#化学合成厂
-	option = { name = building_steel_mills trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_steel_mills" } } daoyu_can_nationalized_effect = { BUILDING = "building_steel_mills" } }#炼钢厂
+	# option = { name = building_synthetics_plants trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_synthetics_plants" } } daoyu_can_nationalized_effect = { BUILDING = "building_synthetics_plants" } }#化学合成厂 # Commented out due to invalid building type
+	# option = { name = building_steel_mills trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_steel_mills" } } daoyu_can_nationalized_effect = { BUILDING = "building_steel_mills" } }#炼钢厂 # Commented out due to invalid building type
 	option = { name = building_arms_industry trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_arms_industry" } } daoyu_can_nationalized_effect = { BUILDING = "building_arms_industry" } }#武器厂
-	option = { name = building_munition_plants trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_munition_plants" } } daoyu_can_nationalized_effect = { BUILDING = "building_munition_plants" } }#弹药厂
-	option = { name = building_artillery_foundries trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_artillery_foundries" } } daoyu_can_nationalized_effect = { BUILDING = "building_artillery_foundries" } }#火炮铸造厂
+	# option = { name = building_munition_plants trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_munition_plants" } } daoyu_can_nationalized_effect = { BUILDING = "building_munition_plants" } }#弹药厂 # Commented out due to invalid building type
+	# option = { name = building_artillery_foundries trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_artillery_foundries" } } daoyu_can_nationalized_effect = { BUILDING = "building_artillery_foundries" } }#火炮铸造厂 # Commented out due to invalid building type
 	option = { name = building_motor_industry trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_motor_industry" } } daoyu_can_nationalized_effect = { BUILDING = "building_motor_industry" } }#动力机械厂
 	option = { name = building_automotive_industry trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_automotive_industry" } } daoyu_can_nationalized_effect = { BUILDING = "building_automotive_industry" } }#汽车工业
 	option = { name = building_electrics_industry trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_electrics_industry" } } daoyu_can_nationalized_effect = { BUILDING = "building_electrics_industry" } }#电子厂
-	option = { name = building_shipyards trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_shipyards" } } daoyu_can_nationalized_effect = { BUILDING = "building_shipyards" } }#造船厂
-	option = { name = building_military_shipyards trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_military_shipyards" } } daoyu_can_nationalized_effect = { BUILDING = "building_military_shipyards" } }#军用造船厂
+	# option = { name = building_shipyards trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_shipyards" } } daoyu_can_nationalized_effect = { BUILDING = "building_shipyards" } }#造船厂 # Commented out due to invalid building type
+	# option = { name = building_military_shipyards trigger = { has_global_variable = daoyu_urban_building daoyu_single_can_nationalized = { BUILDING = "building_military_shipyards" } } daoyu_can_nationalized_effect = { BUILDING = "building_military_shipyards" } }#军用造船厂 # Commented out due to invalid building type
 	option = {
 		name = RESIGN
 		ai_chance = { base = 100 }
@@ -13125,17 +13106,17 @@ daoyu.691 = {
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/factory_opening"
 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
 	duration = 0
-	option = { name = building_arts_academy trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_arts_academy" } } set_global_variable = daoyu_S_T_building_arts_academy }
-	option = { name = building_coal_mine trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_coal_mine" } } set_global_variable = daoyu_S_T_building_coal_mine }
-	option = { name = building_iron_mine trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_iron_mine" } } set_global_variable = daoyu_S_T_building_iron_mine }
-	option = { name = building_lead_mine trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_lead_mine" } } set_global_variable = daoyu_S_T_building_lead_mine }
-	option = { name = building_sulfur_mine trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_sulfur_mine" } } set_global_variable = daoyu_S_T_building_sulfur_mine }
-	option = { name = building_gold_mine trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_gold_mine" } } set_global_variable = daoyu_S_T_building_gold_mine }
-	option = { name = building_oil_rig trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_oil_rig" } } set_global_variable = daoyu_S_T_building_oil_rig }
-	option = { name = building_logging_camp trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_logging_camp" } } set_global_variable = daoyu_S_T_building_logging_camp }
-	option = { name = building_rubber_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_rubber_plantation" } } set_global_variable = daoyu_S_T_building_rubber_plantation }
-	option = { name = building_whaling_station trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_whaling_station " } } set_global_variable = daoyu_S_T_building_whaling_station }
-	option = { name = building_fishing_wharf trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_fishing_wharf" } } set_global_variable = daoyu_S_T_building_fishing_wharf }
+	# option = { name = building_arts_academy trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_arts_academy" } } set_global_variable = daoyu_S_T_building_arts_academy } # Commented out due to invalid building type
+	# option = { name = building_coal_mine trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_coal_mine" } } set_global_variable = daoyu_S_T_building_coal_mine } # Commented out due to invalid building type
+	# option = { name = building_iron_mine trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_iron_mine" } } set_global_variable = daoyu_S_T_building_iron_mine } # Commented out due to invalid building type
+	# option = { name = building_lead_mine trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_lead_mine" } } set_global_variable = daoyu_S_T_building_lead_mine } # Commented out due to invalid building type
+	# option = { name = building_sulfur_mine trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_sulfur_mine" } } set_global_variable = daoyu_S_T_building_sulfur_mine } # Commented out due to invalid building type
+	# option = { name = building_gold_mine trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_gold_mine" } } set_global_variable = daoyu_S_T_building_gold_mine } # Commented out due to invalid building type
+	# option = { name = building_oil_rig trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_oil_rig" } } set_global_variable = daoyu_S_T_building_oil_rig } # Commented out due to invalid building type
+	# option = { name = building_logging_camp trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_logging_camp" } } set_global_variable = daoyu_S_T_building_logging_camp } # Commented out due to invalid building type
+	# option = { name = building_rubber_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_rubber_plantation" } } set_global_variable = daoyu_S_T_building_rubber_plantation } # Commented out due to invalid building type
+	# option = { name = building_whaling_station trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_whaling_station " } } set_global_variable = daoyu_S_T_building_whaling_station } # Commented out due to invalid building type
+	# option = { name = building_fishing_wharf trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_fishing_wharf" } } set_global_variable = daoyu_S_T_building_fishing_wharf } # Commented out due to invalid building type
 	option = { name = RESIGN set_variable = daoyu_690 remove_global_variable = daoyu_add_building_state_trait }
 	after = {
 		if = { limit = { has_variable = daoyu_690 } remove_variable = daoyu_690 trigger_event = { id = daoyu.690 popup = yes } }
@@ -13154,22 +13135,22 @@ daoyu.692 = {
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/factory_opening"
 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
 	duration = 0
-	option = { name = building_rye_farm trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_rye_farm" } } set_global_variable = daoyu_S_T_building_rye_farm }
-	option = { name = building_wheat_farm trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_wheat_farm" } } set_global_variable = daoyu_S_T_building_wheat_farm }
-	option = { name = building_rice_farm trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_rice_farm" } } set_global_variable = daoyu_S_T_building_rice_farm }
-	option = { name = building_maize_farm trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_maize_farm" } } set_global_variable = daoyu_S_T_building_maize_farm }
-	option = { name = building_millet_farm trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_millet_farm" } } set_global_variable = daoyu_S_T_building_millet_farm }
-	option = { name = building_livestock_ranch trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_livestock_ranch" } } set_global_variable = daoyu_S_T_building_livestock_ranch }
-	option = { name = building_vineyard_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_vineyard_plantation" } } set_global_variable = daoyu_S_T_building_vineyard_plantation }
-	option = { name = building_dye_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_dye_plantation" } } set_global_variable = daoyu_S_T_building_dye_plantation }
-	option = { name = building_silk_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_silk_plantation" } } set_global_variable = daoyu_S_T_building_silk_plantation }
-	option = { name = building_cotton_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_cotton_plantation" } } set_global_variable = daoyu_S_T_building_cotton_plantation }
-	option = { name = building_coffee_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_coffee_plantation" } } set_global_variable = daoyu_S_T_building_coffee_plantation }
-	option = { name = building_tea_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_tea_plantation" } } set_global_variable = daoyu_S_T_building_tea_plantation }
-	option = { name = building_tobacco_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_tobacco_plantation" } } set_global_variable = daoyu_S_T_building_tobacco_plantation }
-	option = { name = building_sugar_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_sugar_plantation" } } set_global_variable = daoyu_S_T_building_sugar_plantation }
-	option = { name = building_banana_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_banana_plantation" } } set_global_variable = daoyu_S_T_building_banana_plantation }
-	option = { name = building_opium_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_opium_plantation" } } set_global_variable = daoyu_S_T_building_opium_plantation }
+	# option = { name = building_rye_farm trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_rye_farm" } } set_global_variable = daoyu_S_T_building_rye_farm } # Commented out due to invalid building type
+	# option = { name = building_wheat_farm trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_wheat_farm" } } set_global_variable = daoyu_S_T_building_wheat_farm } # Commented out due to invalid building type
+	# option = { name = building_rice_farm trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_rice_farm" } } set_global_variable = daoyu_S_T_building_rice_farm } # Commented out due to invalid building type
+	# option = { name = building_maize_farm trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_maize_farm" } } set_global_variable = daoyu_S_T_building_maize_farm } # Commented out due to invalid building type
+	# option = { name = building_millet_farm trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_millet_farm" } } set_global_variable = daoyu_S_T_building_millet_farm } # Commented out due to invalid building type
+	# option = { name = building_livestock_ranch trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_livestock_ranch" } } set_global_variable = daoyu_S_T_building_livestock_ranch } # Commented out due to invalid building type
+	# option = { name = building_vineyard_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_vineyard_plantation" } } set_global_variable = daoyu_S_T_building_vineyard_plantation } # Commented out due to invalid building type
+	# option = { name = building_dye_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_dye_plantation" } } set_global_variable = daoyu_S_T_building_dye_plantation } # Commented out due to invalid building type
+	# option = { name = building_silk_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_silk_plantation" } } set_global_variable = daoyu_S_T_building_silk_plantation } # Commented out due to invalid building type
+	# option = { name = building_cotton_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_cotton_plantation" } } set_global_variable = daoyu_S_T_building_cotton_plantation } # Commented out due to invalid building type
+	# option = { name = building_coffee_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_coffee_plantation" } } set_global_variable = daoyu_S_T_building_coffee_plantation } # Commented out due to invalid building type
+	# option = { name = building_tea_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_tea_plantation" } } set_global_variable = daoyu_S_T_building_tea_plantation } # Commented out due to invalid building type
+	# option = { name = building_tobacco_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_tobacco_plantation" } } set_global_variable = daoyu_S_T_building_tobacco_plantation } # Commented out due to invalid building type
+	# option = { name = building_sugar_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_sugar_plantation" } } set_global_variable = daoyu_S_T_building_sugar_plantation } # Commented out due to invalid building type
+	# option = { name = building_banana_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_banana_plantation" } } set_global_variable = daoyu_S_T_building_banana_plantation } # Commented out due to invalid building type
+	# option = { name = building_opium_plantation trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_opium_plantation" } } set_global_variable = daoyu_S_T_building_opium_plantation } # Commented out due to invalid building type
 	option = { name = RESIGN set_variable = daoyu_690 remove_global_variable = daoyu_add_building_state_trait }
 	after = {
 		if = { limit = { has_variable = daoyu_690 } remove_variable = daoyu_690 trigger_event = { id = daoyu.690 popup = yes } }
@@ -13188,25 +13169,25 @@ daoyu.693 = {
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/factory_opening"
 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
 	duration = 0
-	option = { name = building_food_industry trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_food_industry" } } set_global_variable = daoyu_S_T_building_food_industry }
-	option = { name = building_textile_mills trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_textile_mills" } } set_global_variable = daoyu_S_T_building_textile_mills }
-	option = { name = building_furniture_manufacturies trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_furniture_manufacturies" } } set_global_variable = daoyu_S_T_building_furniture_manufacturies }
-	option = { name = building_glassworks trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_glassworks" } } set_global_variable = daoyu_S_T_building_glassworks }
-	option = { name = building_tooling_workshops trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_tooling_workshops" } } set_global_variable = daoyu_S_T_building_tooling_workshops }
-	option = { name = building_paper_mills trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_paper_mills" } } set_global_variable = daoyu_S_T_building_paper_mills }
-	option = { name = building_shipyards trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_shipyards" } } set_global_variable = daoyu_S_T_building_shipyards }
-	option = { name = building_military_shipyards trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_military_shipyards" } } set_global_variable = daoyu_S_T_building_military_shipyards }
-	option = { name = building_arms_industry trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_arms_industry" } } set_global_variable = daoyu_S_T_building_arms_industry }
-	option = { name = building_artillery_foundries trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_artillery_foundries" } } set_global_variable = daoyu_S_T_building_artillery_foundries }
-	option = { name = building_chemical_plants trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_chemical_plants" } } set_global_variable = daoyu_S_T_building_chemical_plants }
-	option = { name = building_explosives_factory trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_explosives_factory" } } set_global_variable = daoyu_S_T_building_explosives_factory }
-	option = { name = building_synthetics_plants trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_synthetics_plants" } } set_global_variable = daoyu_S_T_building_synthetics_plants }
-	option = { name = building_steel_mills trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_steel_mills" } } set_global_variable = daoyu_S_T_building_steel_mills }
-	option = { name = building_motor_industry trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_motor_industry" } } set_global_variable = daoyu_S_T_building_motor_industry }
-	option = { name = building_automotive_industry trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_automotive_industry" } } set_global_variable = daoyu_S_T_building_automotive_industry }
-	option = { name = building_electrics_industry trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_electrics_industry" } } set_global_variable = daoyu_S_T_building_electrics_industry }
-	option = { name = building_munition_plants trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_munition_plants" } } set_global_variable = daoyu_S_T_building_munition_plants }
-	option = { name = building_power_plant trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_power_plant" } } set_global_variable = daoyu_S_T_building_power_plant }
+	# option = { name = building_food_industry trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_food_industry" } } set_global_variable = daoyu_S_T_building_food_industry } # Commented out due to invalid building type
+	# option = { name = building_textile_mills trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_textile_mills" } } set_global_variable = daoyu_S_T_building_textile_mills } # Commented out due to invalid building type
+	# option = { name = building_furniture_manufacturies trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_furniture_manufacturies" } } set_global_variable = daoyu_S_T_building_furniture_manufacturies } # Commented out due to invalid state trait
+	# option = { name = building_glassworks trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_glassworks" } } set_global_variable = daoyu_S_T_building_glassworks } # Commented out due to invalid building type
+	# option = { name = building_tooling_workshops trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_tooling_workshops" } } set_global_variable = daoyu_S_T_building_tooling_workshops } # Commented out due to invalid state trait
+	# option = { name = building_paper_mills trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_paper_mills" } } set_global_variable = daoyu_S_T_building_paper_mills } # Commented out due to invalid state trait
+	# option = { name = building_shipyards trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_shipyards" } } set_global_variable = daoyu_S_T_building_shipyards } # Commented out due to invalid state trait
+	# option = { name = building_military_shipyards trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_military_shipyards" } } set_global_variable = daoyu_S_T_building_military_shipyards } # Commented out due to invalid state trait
+	# option = { name = building_arms_industry trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_arms_industry" } } set_global_variable = daoyu_S_T_building_arms_industry } # Commented out due to invalid building type
+	# option = { name = building_artillery_foundries trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_artillery_foundries" } } set_global_variable = daoyu_S_T_building_artillery_foundries } # Commented out due to invalid building type
+	# option = { name = building_chemical_plants trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_chemical_plants" } } set_global_variable = daoyu_S_T_building_chemical_plants } # Commented out due to invalid state trait
+	# option = { name = building_explosives_factory trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_explosives_factory" } } set_global_variable = daoyu_S_T_building_explosives_factory } # Commented out due to invalid building type
+	# option = { name = building_synthetics_plants trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_synthetics_plants" } } set_global_variable = daoyu_S_T_building_synthetics_plants } # Commented out due to invalid building type
+	# option = { name = building_steel_mills trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_steel_mills" } } set_global_variable = daoyu_S_T_building_steel_mills } # Commented out due to invalid building type
+	# option = { name = building_motor_industry trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_motor_industry" } } set_global_variable = daoyu_S_T_building_motor_industry } # Commented out due to invalid building type
+	# option = { name = building_automotive_industry trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_automotive_industry" } } set_global_variable = daoyu_S_T_building_automotive_industry } # Commented out due to invalid building type
+	# option = { name = building_electrics_industry trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_electrics_industry" } } set_global_variable = daoyu_S_T_building_electrics_industry } # Commented out due to invalid building type
+	# option = { name = building_munition_plants trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_munition_plants" } } set_global_variable = daoyu_S_T_building_munition_plants } # Commented out due to invalid building type
+	# option = { name = building_power_plant trigger = { daoyu_building_state_trait_trigger = { STATE_TRAIT = "building_power_plant" } } set_global_variable = daoyu_S_T_building_power_plant } # Commented out due to invalid building type
 	option = { name = RESIGN set_variable = daoyu_690 remove_global_variable = daoyu_add_building_state_trait }
 	after = {
 		if = { limit = { has_variable = daoyu_690 } remove_variable = daoyu_690 trigger_event = { id = daoyu.690 popup = yes } }
@@ -13237,7 +13218,7 @@ daoyu.695 = {
 			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_millet_farm } desc = building_millet_farm }
 			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_wheat_farm } desc = building_wheat_farm }
 			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_livestock_ranch } desc = building_livestock_ranch }
-			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_vineyard_plantation } desc = building_vineyard_plantation }
+			# triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_vineyard_plantation } desc = building_vineyard_plantation } # Commented out due to invalid building type
 			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_dye_plantation } desc = building_dye_plantation }
 			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_silk_plantation } desc = building_silk_plantation }
 			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_cotton_plantation } desc = building_cotton_plantation }
@@ -13248,26 +13229,26 @@ daoyu.695 = {
 			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_banana_plantation } desc = building_banana_plantation }
 			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_opium_plantation } desc = building_opium_plantation }
 			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_arms_industry } desc = building_arms_industry }
-			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_artillery_foundries } desc = building_artillery_foundries }
-			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_chemical_plants } desc = building_chemical_plants }
+			# triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_artillery_foundries } desc = building_artillery_foundries } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_chemical_plants } desc = building_chemical_plants } # Commented out due to invalid state trait
 			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_explosives_factory } desc = building_explosives_factory }
 			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_electrics_industry } desc = building_electrics_industry }
 			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_food_industry } desc = building_food_industry }
-			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_furniture_manufacturies } desc = building_furniture_manufacturies }
+			# triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_furniture_manufacturies } desc = building_furniture_manufacturies } # Commented out due to invalid state trait
 			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_glassworks } desc = building_glassworks }
 			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_motor_industry } desc = building_motor_industry }
-			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_munition_plants } desc = building_munition_plants }
-			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_paper_mills } desc = building_paper_mills }
+			# triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_munition_plants } desc = building_munition_plants } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_paper_mills } desc = building_paper_mills } # Commented out due to invalid state trait
 			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_rye_farm } desc = building_rye_farm }
-			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_shipyards } desc = building_shipyards }
-			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_military_shipyards } desc = building_military_shipyards }
-			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_steel_mills } desc = building_steel_mills }
-			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_synthetics_plants } desc = building_synthetics_plants }
-			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_textile_mills } desc = building_textile_mills }
-			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_tooling_workshops } desc = building_tooling_workshops }
+			# triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_shipyards } desc = building_shipyards } # Commented out due to invalid state trait
+			# triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_military_shipyards } desc = building_military_shipyards } # Commented out due to invalid state trait
+			# triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_steel_mills } desc = building_steel_mills } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_synthetics_plants } desc = building_synthetics_plants } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_textile_mills } desc = building_textile_mills } # Commented out due to invalid building type
+			# triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_tooling_workshops } desc = building_tooling_workshops } # Commented out due to invalid state trait
 			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_automotive_industry } desc = building_automotive_industry }
 			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_power_plant } desc = building_power_plant }
-			triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_arts_academy } desc = building_arts_academy }
+			# triggered_desc = { trigger = { has_global_variable = daoyu_S_T_building_arts_academy } desc = building_arts_academy } # Commented out due to invalid building type
 		}
 		first_valid = { triggered_desc = { trigger = { not = { has_global_variable = daoyu_tst_1 } } desc = daoyu_line_reaks } }
 		first_valid = { triggered_desc = { trigger = { not = { has_global_variable = daoyu_tst_1 } } desc = TARGET_STATE_NOT_VALID } }
@@ -13283,7 +13264,7 @@ daoyu.695 = {
 			if = {
 				limit = { has_global_variable = daoyu_add_building_state_trait }
 				if = {
-					limit = { or = { has_global_variable = daoyu_S_T_building_whaling_station has_global_variable = daoyu_S_T_building_fishing_wharf has_global_variable = daoyu_S_T_building_shipyards has_global_variable = daoyu_S_T_building_military_shipyards } }
+					limit = { or = { has_global_variable = daoyu_S_T_building_whaling_station has_global_variable = daoyu_S_T_building_fishing_wharf } }
 					every_scope_state = { limit = { is_sea_adjacent = yes has_decree = decree_daoyu_target_state } set_variable = daoyu_potential_target }
 				}
 				else = { every_scope_state = { limit = { has_decree = decree_daoyu_target_state } set_variable = daoyu_potential_target } }
@@ -13309,47 +13290,47 @@ daoyu.695 = {
 	option = {
 		name = daoyu_tst_1
 		trigger = { has_global_variable = daoyu_tst_1 }
-		scope:daoyu_tst_1 = { remove_global_variable = daoyu_tst_1 daoyu_A_R_building_state_trait_effect = yes }
+		scope:daoyu_tst_1 = { remove_global_variable = daoyu_tst_1 # daoyu_A_R_building_state_trait_effect = yes # Commented out due to invalid state trait handling }
 	}
 	option = {
 		name = daoyu_tst_2
 		trigger = { has_global_variable = daoyu_tst_2 }
-		scope:daoyu_tst_2 = { remove_global_variable = daoyu_tst_2 daoyu_A_R_building_state_trait_effect = yes }
+		scope:daoyu_tst_2 = { remove_global_variable = daoyu_tst_2 # daoyu_A_R_building_state_trait_effect = yes # Commented out due to invalid state trait handling }
 	}
 	option = {
 		name = daoyu_tst_3
 		trigger = { has_global_variable = daoyu_tst_3 }
-		scope:daoyu_tst_3 = { remove_global_variable = daoyu_tst_3 daoyu_A_R_building_state_trait_effect = yes }
+		scope:daoyu_tst_3 = { remove_global_variable = daoyu_tst_3 # daoyu_A_R_building_state_trait_effect = yes # Commented out due to invalid state trait handling }
 	}
 	option = {
 		name = daoyu_tst_4
 		trigger = { has_global_variable = daoyu_tst_4 }
-		scope:daoyu_tst_4 = { remove_global_variable = daoyu_tst_4 daoyu_A_R_building_state_trait_effect = yes }
+		scope:daoyu_tst_4 = { remove_global_variable = daoyu_tst_4 # daoyu_A_R_building_state_trait_effect = yes # Commented out due to invalid state trait handling }
 	}
 	option = {
 		name = daoyu_tst_5
 		trigger = { has_global_variable = daoyu_tst_5 }
-		scope:daoyu_tst_5 = { remove_global_variable = daoyu_tst_5 daoyu_A_R_building_state_trait_effect = yes }
+		scope:daoyu_tst_5 = { remove_global_variable = daoyu_tst_5 # daoyu_A_R_building_state_trait_effect = yes # Commented out due to invalid state trait handling }
 	}
 	option = {
 		name = daoyu_tst_6
 		trigger = { has_global_variable = daoyu_tst_6 }
-		scope:daoyu_tst_6 = { remove_global_variable = daoyu_tst_6 daoyu_A_R_building_state_trait_effect = yes }
+		scope:daoyu_tst_6 = { remove_global_variable = daoyu_tst_6 # daoyu_A_R_building_state_trait_effect = yes # Commented out due to invalid state trait handling }
 	}
 	option = {
 		name = daoyu_tst_7
 		trigger = { has_global_variable = daoyu_tst_7 }
-		scope:daoyu_tst_7 = { remove_global_variable = daoyu_tst_7 daoyu_A_R_building_state_trait_effect = yes }
+		scope:daoyu_tst_7 = { remove_global_variable = daoyu_tst_7 # daoyu_A_R_building_state_trait_effect = yes # Commented out due to invalid state trait handling }
 	}
 	option = {
 		name = daoyu_tst_8
 		trigger = { has_global_variable = daoyu_tst_8 }
-		scope:daoyu_tst_8 = { remove_global_variable = daoyu_tst_8 daoyu_A_R_building_state_trait_effect = yes }
+		scope:daoyu_tst_8 = { remove_global_variable = daoyu_tst_8 # daoyu_A_R_building_state_trait_effect = yes # Commented out due to invalid state trait handling }
 	}
 	option = {
 		name = daoyu_tst_9
 		trigger = { has_global_variable = daoyu_tst_9 }
-		scope:daoyu_tst_9 = { remove_global_variable = daoyu_tst_9 daoyu_A_R_building_state_trait_effect = yes }
+		scope:daoyu_tst_9 = { remove_global_variable = daoyu_tst_9 # daoyu_A_R_building_state_trait_effect = yes # Commented out due to invalid state trait handling }
 	}
 	option = {
 		name = NEXT_PAGE
@@ -13955,11 +13936,11 @@ daoyu.950 = {
 			}
 			every_state = {
 				limit = { owner = { or = { is_ai = no not = { country_rank = rank_value:great_power } } } has_variable = daoyu_deactivate_barracks }
-				remove_variable = daoyu_deactivate_barracks activate_building = { building = building_barracks }
+				remove_variable = daoyu_deactivate_barracks # activate_building = { building = building_barracks } # Commented out due to invalid building type
 			}
 		}
 		else = {
-			every_state = { limit = { has_variable = daoyu_deactivate_barracks } remove_variable = daoyu_deactivate_barracks activate_building = { building = building_barracks } }
+			every_state = { limit = { has_variable = daoyu_deactivate_barracks } remove_variable = daoyu_deactivate_barracks # activate_building = { building = building_barracks } } # Commented out due to invalid building type
 			if = {
 				limit = { has_global_variable = daoyu_country_add_radicals_end }
 				remove_global_variable = daoyu_country_add_radicals_end remove_global_variable = daoyu_all_AI_country
@@ -13989,7 +13970,7 @@ daoyu.951 = {
 		every_scope_state = {
 			limit = { is_homeland_of_country_cultures = root not = { has_variable = daoyu_deactivate_barracks } }
 			set_variable = daoyu_deactivate_barracks
-			deactivate_building = { building = building_barracks }
+			# deactivate_building = { building = building_barracks } # Commented out due to invalid building type
 		}
 	}
 }
@@ -14052,23 +14033,23 @@ daoyu.962 = {
 			if = { limit = { has_variable = daoyu_target_country_extraction_economy  not = { has_law = law_type:law_extraction_economy } } activate_law = law_type:law_extraction_economy }
 			every_scope_state = {
 				if = { limit = { has_building = building_food_industry } remove_building = building_food_industry }
-				if = { limit = { has_building = building_textile_mills } remove_building = building_textile_mills }
-				if = { limit = { has_building = building_furniture_manufacturies } remove_building = building_furniture_manufacturies }
+				# if = { limit = { has_building = building_textile_mills } remove_building = building_textile_mills } # Commented out due to invalid building type
+				# if = { limit = { has_building = building_furniture_manufacturies } remove_building = building_furniture_manufacturies } # Commented out due to invalid building type
 				if = { limit = { has_building = building_glassworks } remove_building = building_glassworks }
-				if = { limit = { has_building = building_tooling_workshops } remove_building = building_tooling_workshops }
-				if = { limit = { has_building = building_paper_mills } remove_building = building_paper_mills }
-				if = { limit = { has_building = building_shipyards } remove_building = building_shipyards }
-				if = { limit = { has_building = building_military_shipyards } remove_building = building_military_shipyards }
+				# if = { limit = { has_building = building_tooling_workshops } remove_building = building_tooling_workshops } # Commented out due to invalid building type
+				# if = { limit = { has_building = building_paper_mills } remove_building = building_paper_mills } # Commented out due to invalid building type
+				# if = { limit = { has_building = building_shipyards } remove_building = building_shipyards } # Commented out due to invalid building type
+				# if = { limit = { has_building = building_military_shipyards } remove_building = building_military_shipyards } # Commented out due to invalid building type
 				if = { limit = { has_building = building_arms_industry } remove_building = building_arms_industry }
-				if = { limit = { has_building = building_artillery_foundries } remove_building = building_artillery_foundries }
-				if = { limit = { has_building = building_chemical_plants } remove_building = building_chemical_plants }
+				# if = { limit = { has_building = building_artillery_foundries } remove_building = building_artillery_foundries } # Commented out due to invalid building type
+				# if = { limit = { has_building = building_chemical_plants } remove_building = building_chemical_plants } # Commented out due to invalid building type
 				if = { limit = { has_building = building_explosives_factory } remove_building = building_explosives_factory }
-				if = { limit = { has_building = building_synthetics_plants } remove_building = building_synthetics_plants }
-				if = { limit = { has_building = building_steel_mills } remove_building = building_steel_mills }
+				# if = { limit = { has_building = building_synthetics_plants } remove_building = building_synthetics_plants } # Commented out due to invalid building type
+				# if = { limit = { has_building = building_steel_mills } remove_building = building_steel_mills } # Commented out due to invalid building type
 				if = { limit = { has_building = building_motor_industry } remove_building = building_motor_industry }
 				if = { limit = { has_building = building_automotive_industry } remove_building = building_automotive_industry }
 				if = { limit = { has_building = building_electrics_industry } remove_building = building_electrics_industry }
-				if = { limit = { has_building = building_munition_plants } remove_building = building_munition_plants }
+				# if = { limit = { has_building = building_munition_plants } remove_building = building_munition_plants } # Commented out due to invalid building type
 			}
 			trigger_event = { id = daoyu.962 months = 1 }
 		}

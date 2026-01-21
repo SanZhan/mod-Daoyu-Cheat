@@ -1,46 +1,6 @@
-namespace = dculo
-#传承
-dculo.10 = {
-	type = country_event
-	placement = root
-	title = daoyu_cheat
-	desc = SELECT
-	flavor = concept_discrimination_trait_groups_short
-	event_image = { video = "gfx/event_pictures/middleeast_islam.bk2" }
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/middleeast/islam"
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
-	duration = 0heritage_group_african
-	option = { name = heritage_group_african set_variable = daoyu_heritage_group_african }
-	option = { name = heritage_group_central_asian set_variable = daoyu_heritage_group_central_asian }
-	option = { name = heritage_group_east_asian set_variable = daoyu_heritage_group_east_asian }
-	option = { name = daoyu_heritage_group_eastern_european set_variable = daoyu_heritage_group_eastern_european }
-	option = { name = daoyu_heritage_group_western_european set_variable = daoyu_heritage_group_western_european }
-	option = { name = heritage_group_indigenous_american set_variable = daoyu_heritage_group_indigenous_american }
-	option = { name = heritage_group_indigenous_oceanic set_variable = daoyu_heritage_group_indigenous_oceanic }
-	option = { name = heritage_group_middle_eastern set_variable = daoyu_heritage_group_middle_eastern }
-	option = { name = heritage_group_north_asian set_variable = daoyu_heritage_group_north_asian }
-	option = { name = heritage_group_south_asian set_variable = daoyu_heritage_group_south_asian }
-	option = { name = heritage_group_southeast_asian set_variable = daoyu_heritage_group_southeast_asian }
-	option = {
-		name = RESIGN
-		ai_chance = { base = 100 }
-		set_variable = daoyu_return
-		remove_global_variable = daoyu_mark_target_culture_begin
-		dculo_remove_heritage_group_effect = yes
-		dculo_remove_heritage_effect = yes
-		default_option = yes
+	flavor = {
+		first_valid = { desc = daoyu_line_reaks }
 	}
-	after = {
-		if = {
-			limit = { has_variable = daoyu_return }
-			remove_variable = daoyu_return
-			if = {
-				limit = { has_global_variable = daoyu_new_culture_for_name }
-				remove_global_variable = daoyu_new_culture_for_name
-				trigger_event = { id = daoyu.272 popup = yes }
-			}
-			else_if = {
 				limit = { has_global_variable = daoyu_one_earth_one_nation_one_religion }
 				remove_global_variable = daoyu_one_earth_one_nation_one_religion
 				trigger_event = { id = daoyu.501 popup = yes }
@@ -4260,7 +4220,7 @@ daoyu_company.1 = {
 	desc = daoyu_remove_company#解散公司
 	flavor = {
 		first_valid = { triggered_desc = { trigger = { not = { any_state = { owner = { is_ai = yes has_modifier = daoyu_target_country } } } } desc = TARGET_COUNTRY_NOT_VALID } }
-		first_valid = { triggered_desc = { trigger = { any_country = { has_modifier = daoyu_target_country } daoyu_has_any_company = no } desc = TARGET_COUNTRY_NOT_VALID } }
+		# first_valid = { triggered_desc = { trigger = { any_country = { has_modifier = daoyu_target_country } daoyu_has_any_company = no } desc = TARGET_COUNTRY_NOT_VALID } } # Commented out due to undefined trigger daoyu_has_any_company
 		first_valid = { desc = daoyu_line_reaks }
 		first_valid = { desc = daoyu_target_country_desc }
 	}
@@ -4287,42 +4247,42 @@ daoyu_company.1 = {
 		trigger = { exists = scope:daoyu_target_country any_state = { owner = { has_modifier = daoyu_target_country } } }
 		random_country = { limit = { has_modifier = daoyu_target_country } remove_modifier = daoyu_target_country }
 	}
-	option = { name = company_misr trigger = { daoyu_has_company = { COM = "company_misr" } } daoyu_remove_company = { COM = "company_misr" } }
-	option = { name = company_egyptian_rail trigger = { daoyu_has_company = { COM = "company_egyptian_rail" } } daoyu_remove_company = { COM = "company_egyptian_rail" } }
-	option = { name = company_suez_company trigger = { daoyu_has_company = { COM = "company_suez_company" } } daoyu_remove_company = { COM = "company_suez_company" } }
-	option = { name = company_fundidora_monterrey trigger = { daoyu_has_company = { COM = "company_fundidora_monterrey" } } daoyu_remove_company = { COM = "company_fundidora_monterrey" } }
-	option = { name = company_el_aguila trigger = { daoyu_has_company = { COM = "company_el_aguila" } } daoyu_remove_company = { COM = "company_el_aguila" } }
-	option = { name = company_csfa trigger = { daoyu_has_company = { COM = "company_csfa" } } daoyu_remove_company = { COM = "company_csfa" } }
-	option = { name = company_caribbean_petroleum trigger = { daoyu_has_company = { COM = "company_caribbean_petroleum" } } daoyu_remove_company = { COM = "company_caribbean_petroleum" } }
-	option = { name = company_bunge_born trigger = { daoyu_has_company = { COM = "company_bunge_born" } } daoyu_remove_company = { COM = "company_bunge_born" } }
-	option = { name = company_la_rosada trigger = { daoyu_has_company = { COM = "company_la_rosada" } } daoyu_remove_company = { COM = "company_la_rosada" } }
-	option = { name = company_famae trigger = { daoyu_has_company = { COM = "company_famae" } } daoyu_remove_company = { COM = "company_famae" } }
-	option = { name = company_peruvian_amazon trigger = { daoyu_has_company = { COM = "company_peruvian_amazon" } } daoyu_remove_company = { COM = "company_peruvian_amazon" } }
-	option = { name = company_kablin trigger = { daoyu_has_company = { COM = "company_kablin" } } daoyu_remove_company = { COM = "company_kablin" } }
-	option = { name = company_hbc trigger = { daoyu_has_company = { COM = "company_hbc" } } daoyu_remove_company = { COM = "company_hbc" } }
-	option = { name = company_panama_company trigger = { daoyu_has_company = { COM = "company_panama_company" } } daoyu_remove_company = { COM = "company_panama_company" } }
-	option = { name = company_east_india_company trigger = { daoyu_has_company = { COM = "company_east_india_company" } } daoyu_remove_company = { COM = "company_east_india_company" } }
-	option = { name = company_imperial_arsenal trigger = { daoyu_has_company = { COM = "company_imperial_arsenal" } } daoyu_remove_company = { COM = "company_imperial_arsenal" } }
-	option = { name = company_ottoman_tobacco_regie trigger = { daoyu_has_company = { COM = "company_ottoman_tobacco_regie" } } daoyu_remove_company = { COM = "company_ottoman_tobacco_regie" } }
-	option = { name = company_allatini_mills trigger = { daoyu_has_company = { COM = "company_allatini_mills" } } daoyu_remove_company = { COM = "company_allatini_mills" } }
-	option = { name = company_orient_express trigger = { daoyu_has_company = { COM = "company_orient_express" } } daoyu_remove_company = { COM = "company_orient_express" } }
-	option = { name = company_great_indian_railway trigger = { daoyu_has_company = { COM = "company_great_indian_railway" } } daoyu_remove_company = { COM = "company_great_indian_railway" } }
-	option = { name = company_tata trigger = { daoyu_has_company = { COM = "company_tata" } } daoyu_remove_company = { COM = "company_tata" } }
-	option = { name = company_sunhwaguk trigger = { daoyu_has_company = { COM = "company_sunhwaguk" } } daoyu_remove_company = { COM = "company_sunhwaguk" } }
-	option = { name = company_nam_dinh trigger = { daoyu_has_company = { COM = "company_nam_dinh" } } daoyu_remove_company = { COM = "company_nam_dinh" } }
-	option = { name = company_imperial_tobacco trigger = { daoyu_has_company = { COM = "company_imperial_tobacco" } } daoyu_remove_company = { COM = "company_imperial_tobacco" } }
-	option = { name = company_san_miguel trigger = { daoyu_has_company = { COM = "company_san_miguel" } } daoyu_remove_company = { COM = "company_san_miguel" } }
-	option = { name = company_william_sandford trigger = { daoyu_has_company = { COM = "company_william_sandford" } } daoyu_remove_company = { COM = "company_william_sandford" } }
-	option = { name = company_b_grimm trigger = { daoyu_has_company = { COM = "company_b_grimm" } } daoyu_remove_company = { COM = "company_b_grimm" } }
-	option = { name = company_skoda trigger = { daoyu_has_company = { COM = "company_skoda" } } daoyu_remove_company = { COM = "company_skoda" } }
-	option = { name = company_mav trigger = { daoyu_has_company = { COM = "company_mav" } } daoyu_remove_company = { COM = "company_mav" } }
-	option = { name = company_manfred_weiss trigger = { daoyu_has_company = { COM = "company_manfred_weiss" } } daoyu_remove_company = { COM = "company_manfred_weiss" } }
-	option = { name = company_galician_carpathian_oil trigger = { daoyu_has_company = { COM = "company_galician_carpathian_oil" } } daoyu_remove_company = { COM = "company_galician_carpathian_oil" } }
-	option = { name = company_oevg trigger = { daoyu_has_company = { COM = "company_oevg" } } daoyu_remove_company = { COM = "company_oevg" } }
-	option = { name = company_kaiping_mining trigger = { daoyu_has_company = { COM = "company_kaiping_mining" } } daoyu_remove_company = { COM = "company_kaiping_mining" } }
-	option = { name = company_hanyang_arsenal trigger = { daoyu_has_company = { COM = "company_hanyang_arsenal" } } daoyu_remove_company = { COM = "company_hanyang_arsenal" } }
-	option = { name = company_foochow_arsenal trigger = { daoyu_has_company = { COM = "company_foochow_arsenal" } } daoyu_remove_company = { COM = "company_foochow_arsenal" } }
-	option = { name = company_jingdezhen trigger = { daoyu_has_company = { COM = "company_jingdezhen" } } daoyu_remove_company = { COM = "company_jingdezhen" } }
+	# option = { name = company_misr trigger = { daoyu_has_company = { COM = "company_misr" } } daoyu_remove_company = { COM = "company_misr" } }
+	# option = { name = company_egyptian_rail trigger = { daoyu_has_company = { COM = "company_egyptian_rail" } } daoyu_remove_company = { COM = "company_egyptian_rail" } }
+	# option = { name = company_suez_company trigger = { daoyu_has_company = { COM = "company_suez_company" } } daoyu_remove_company = { COM = "company_suez_company" } }
+	# option = { name = company_fundidora_monterrey trigger = { daoyu_has_company = { COM = "company_fundidora_monterrey" } } daoyu_remove_company = { COM = "company_fundidora_monterrey" } }
+	# option = { name = company_el_aguila trigger = { daoyu_has_company = { COM = "company_el_aguila" } } daoyu_remove_company = { COM = "company_el_aguila" } }
+	# option = { name = company_csfa trigger = { daoyu_has_company = { COM = "company_csfa" } } daoyu_remove_company = { COM = "company_csfa" } }
+	# option = { name = company_caribbean_petroleum trigger = { daoyu_has_company = { COM = "company_caribbean_petroleum" } } daoyu_remove_company = { COM = "company_caribbean_petroleum" } }
+	# option = { name = company_bunge_born trigger = { daoyu_has_company = { COM = "company_bunge_born" } } daoyu_remove_company = { COM = "company_bunge_born" } }
+	# option = { name = company_la_rosada trigger = { daoyu_has_company = { COM = "company_la_rosada" } } daoyu_remove_company = { COM = "company_la_rosada" } }
+	# option = { name = company_famae trigger = { daoyu_has_company = { COM = "company_famae" } } daoyu_remove_company = { COM = "company_famae" } }
+	# option = { name = company_peruvian_amazon trigger = { daoyu_has_company = { COM = "company_peruvian_amazon" } } daoyu_remove_company = { COM = "company_peruvian_amazon" } }
+	# option = { name = company_kablin trigger = { daoyu_has_company = { COM = "company_kablin" } } daoyu_remove_company = { COM = "company_kablin" } }
+	# option = { name = company_hbc trigger = { daoyu_has_company = { COM = "company_hbc" } } daoyu_remove_company = { COM = "company_hbc" } }
+	# option = { name = company_panama_company trigger = { daoyu_has_company = { COM = "company_panama_company" } } daoyu_remove_company = { COM = "company_panama_company" } }
+	# option = { name = company_east_india_company trigger = { daoyu_has_company = { COM = "company_east_india_company" } } daoyu_remove_company = { COM = "company_east_india_company" } }
+	# option = { name = company_imperial_arsenal trigger = { daoyu_has_company = { COM = "company_imperial_arsenal" } } daoyu_remove_company = { COM = "company_imperial_arsenal" } }
+	# option = { name = company_ottoman_tobacco_regie trigger = { daoyu_has_company = { COM = "company_ottoman_tobacco_regie" } } daoyu_remove_company = { COM = "company_ottoman_tobacco_regie" } }
+	# option = { name = company_allatini_mills trigger = { daoyu_has_company = { COM = "company_allatini_mills" } } daoyu_remove_company = { COM = "company_allatini_mills" } }
+	# option = { name = company_orient_express trigger = { daoyu_has_company = { COM = "company_orient_express" } } daoyu_remove_company = { COM = "company_orient_express" } }
+	# option = { name = company_great_indian_railway trigger = { daoyu_has_company = { COM = "company_great_indian_railway" } } daoyu_remove_company = { COM = "company_great_indian_railway" } }
+	# option = { name = company_tata trigger = { daoyu_has_company = { COM = "company_tata" } } daoyu_remove_company = { COM = "company_tata" } }
+	# option = { name = company_sunhwaguk trigger = { daoyu_has_company = { COM = "company_sunhwaguk" } } daoyu_remove_company = { COM = "company_sunhwaguk" } }
+	# option = { name = company_nam_dinh trigger = { daoyu_has_company = { COM = "company_nam_dinh" } } daoyu_remove_company = { COM = "company_nam_dinh" } }
+	# option = { name = company_imperial_tobacco trigger = { daoyu_has_company = { COM = "company_imperial_tobacco" } } daoyu_remove_company = { COM = "company_imperial_tobacco" } }
+	# option = { name = company_san_miguel trigger = { daoyu_has_company = { COM = "company_san_miguel" } } daoyu_remove_company = { COM = "company_san_miguel" } }
+	# option = { name = company_william_sandford trigger = { daoyu_has_company = { COM = "company_william_sandford" } } daoyu_remove_company = { COM = "company_william_sandford" } }
+	# option = { name = company_b_grimm trigger = { daoyu_has_company = { COM = "company_b_grimm" } } daoyu_remove_company = { COM = "company_b_grimm" } }
+	# option = { name = company_skoda trigger = { daoyu_has_company = { COM = "company_skoda" } } daoyu_remove_company = { COM = "company_skoda" } }
+	# option = { name = company_mav trigger = { daoyu_has_company = { COM = "company_mav" } } daoyu_remove_company = { COM = "company_mav" } }
+	# option = { name = company_manfred_weiss trigger = { daoyu_has_company = { COM = "company_manfred_weiss" } } daoyu_remove_company = { COM = "company_manfred_weiss" } }
+	# option = { name = company_galician_carpathian_oil trigger = { daoyu_has_company = { COM = "company_galician_carpathian_oil" } } daoyu_remove_company = { COM = "company_galician_carpathian_oil" } }
+	# option = { name = company_oevg trigger = { daoyu_has_company = { COM = "company_oevg" } } daoyu_remove_company = { COM = "company_oevg" } }
+	# option = { name = company_kaiping_mining trigger = { daoyu_has_company = { COM = "company_kaiping_mining" } } daoyu_remove_company = { COM = "company_kaiping_mining" } }
+	# option = { name = company_hanyang_arsenal trigger = { daoyu_has_company = { COM = "company_hanyang_arsenal" } } daoyu_remove_company = { COM = "company_hanyang_arsenal" } }
+	# option = { name = company_foochow_arsenal trigger = { daoyu_has_company = { COM = "company_foochow_arsenal" } } daoyu_remove_company = { COM = "company_foochow_arsenal" } }
+	# option = { name = company_jingdezhen trigger = { daoyu_has_company = { COM = "company_jingdezhen" } } daoyu_remove_company = { COM = "company_jingdezhen" } }
 	option = { name = company_sao_paulo_railway trigger = { daoyu_has_company = { COM = "company_sao_paulo_railway" } } daoyu_remove_company = { COM = "company_sao_paulo_railway" } }
 	option = { name = company_estaleiro_maua trigger = { daoyu_has_company = { COM = "company_estaleiro_maua" } } daoyu_remove_company = { COM = "company_estaleiro_maua" } }
 	option = { name = company_pernambuco_textiles trigger = { daoyu_has_company = { COM = "company_pernambuco_textiles" } } daoyu_remove_company = { COM = "company_pernambuco_textiles" } }

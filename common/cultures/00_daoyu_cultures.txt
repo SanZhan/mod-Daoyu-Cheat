@@ -1,5 +1,7 @@
 ﻿daoyu_nonexistent = {
 	color= hsv{ 0.10 0.44 0.35 }
+	heritage = heritage_generic
+	language = language_generic
 	religion = catholic
 	traits = { }
 	male_common_first_names = { daoyu }

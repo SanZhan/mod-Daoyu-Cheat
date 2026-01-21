@@ -36,8 +36,8 @@ daoyu_s_num = {
 	}
 	if = {
 		limit = { or = { has_global_variable = daoyu_current_buildings_expand has_global_variable = daoyu_ucy_nationally_owned has_global_variable = daoyu_nationalized_buildings } not = { has_global_variable = daoyu_get_building_level } }
-		daoyu_create_building = { TYPE = "building_arts_academy" LEVEL = $NUM$ }#艺术学院
-		daoyu_create_building = { TYPE = "building_barracks" LEVEL = $NUM$ }#兵营
+		# daoyu_create_building = { TYPE = "building_arts_academy" LEVEL = $NUM$ }#艺术学院 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_barracks" LEVEL = $NUM$ }#兵营 # Commented out due to invalid building type
 		daoyu_create_building = { TYPE = "building_construction_sector" LEVEL = $NUM$ }#建造部门
 		daoyu_create_building = { TYPE = "building_government_administration" LEVEL = $NUM$ }#政府行政机构
 		daoyu_create_building = { TYPE = "building_naval_base" LEVEL = $NUM$ }#海军基地
@@ -46,51 +46,51 @@ daoyu_s_num = {
 		daoyu_create_building = { TYPE = "building_trade_center" LEVEL = $NUM$ }#贸易中心
 		daoyu_create_building = { TYPE = "building_university" LEVEL = $NUM$ }#大学
 		daoyu_create_building = { TYPE = "building_urban_center" LEVEL = $NUM$ }#城镇中心
-		daoyu_create_building = { TYPE = "building_coal_mine" LEVEL = $NUM$ }#煤矿
-		daoyu_create_building = { TYPE = "building_iron_mine" LEVEL = $NUM$ }#铁矿
-		daoyu_create_building = { TYPE = "building_lead_mine" LEVEL = $NUM$ }#铅矿
-		daoyu_create_building = { TYPE = "building_sulfur_mine" LEVEL = $NUM$ }#硫矿
-		daoyu_create_building = { TYPE = "building_gold_mine" LEVEL = $NUM$ }#金矿
+		# daoyu_create_building = { TYPE = "building_coal_mine" LEVEL = $NUM$ }#煤矿 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_iron_mine" LEVEL = $NUM$ }#铁矿 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_lead_mine" LEVEL = $NUM$ }#铅矿 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_sulfur_mine" LEVEL = $NUM$ }#硫矿 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_gold_mine" LEVEL = $NUM$ }#金矿 # Commented out due to invalid building type
 		daoyu_create_building = { TYPE = "building_oil_rig" LEVEL = $NUM$ }#油井
-		daoyu_create_building = { TYPE = "building_logging_camp" LEVEL = $NUM$ }#伐木营地
-		daoyu_create_building = { TYPE = "building_rubber_plantation" LEVEL = $NUM$ }#橡胶种植园
-		daoyu_create_building = { TYPE = "building_whaling_station" LEVEL = $NUM$ }#捕鲸站
-		daoyu_create_building = { TYPE = "building_fishing_wharf" LEVEL = $NUM$ }#渔业码头
+		# daoyu_create_building = { TYPE = "building_logging_camp" LEVEL = $NUM$ }#伐木营地 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_rubber_plantation" LEVEL = $NUM$ }#橡胶种植园 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_whaling_station" LEVEL = $NUM$ }#捕鲸站 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_fishing_wharf" LEVEL = $NUM$ }#渔业码头 # Commented out due to invalid building type
 		daoyu_create_building = { TYPE = "building_rye_farm" LEVEL = $NUM$ }#黑麦农场
 		daoyu_create_building = { TYPE = "building_wheat_farm" LEVEL = $NUM$ }#小麦农场
 		daoyu_create_building = { TYPE = "building_rice_farm" LEVEL = $NUM$ }#水稻农场
 		daoyu_create_building = { TYPE = "building_maize_farm" LEVEL = $NUM$ }#玉米农场
 		daoyu_create_building = { TYPE = "building_millet_farm" LEVEL = $NUM$ }#杂谷农场
 		daoyu_create_building = { TYPE = "building_livestock_ranch" LEVEL = $NUM$ }#畜牧场
-		daoyu_create_building = { TYPE = "building_vineyard_plantation" LEVEL = $NUM$ }#葡萄园
-		daoyu_create_building = { TYPE = "building_dye_plantation" LEVEL = $NUM$ }#染料作物种植园
-		daoyu_create_building = { TYPE = "building_silk_plantation" LEVEL = $NUM$ }#丝绸种植园
-		daoyu_create_building = { TYPE = "building_cotton_plantation" LEVEL = $NUM$ }#棉花种植园
-		daoyu_create_building = { TYPE = "building_coffee_plantation" LEVEL = $NUM$ }#咖啡种植园
-		daoyu_create_building = { TYPE = "building_tea_plantation" LEVEL = $NUM$ }#茶叶种植园
-		daoyu_create_building = { TYPE = "building_tobacco_plantation" LEVEL = $NUM$ }#烟草种植园
-		daoyu_create_building = { TYPE = "building_sugar_plantation" LEVEL = $NUM$ }#糖料作物种植园
-		daoyu_create_building = { TYPE = "building_banana_plantation" LEVEL = $NUM$ }#香蕉种植园
-		daoyu_create_building = { TYPE = "building_opium_plantation" LEVEL = $NUM$ }#鸦片种植园
+		# daoyu_create_building = { TYPE = "building_vineyard_plantation" LEVEL = $NUM$ }#葡萄园 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_dye_plantation" LEVEL = $NUM$ }#染料作物种植园 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_silk_plantation" LEVEL = $NUM$ }#丝绸种植园 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_cotton_plantation" LEVEL = $NUM$ }#棉花种植园 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_coffee_plantation" LEVEL = $NUM$ }#咖啡种植园 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_tea_plantation" LEVEL = $NUM$ }#茶叶种植园 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_tobacco_plantation" LEVEL = $NUM$ }#烟草种植园 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_sugar_plantation" LEVEL = $NUM$ }#糖料作物种植园 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_banana_plantation" LEVEL = $NUM$ }#香蕉种植园 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_opium_plantation" LEVEL = $NUM$ }#鸦片种植园 # Commented out due to invalid building type
 		daoyu_create_building = { TYPE = "building_food_industry" LEVEL = $NUM$ }#食品厂
-		daoyu_create_building = { TYPE = "building_textile_mills" LEVEL = $NUM$ }#纺织厂
-		daoyu_create_building = { TYPE = "building_furniture_manufacturies" LEVEL = $NUM$ }#家具制造厂
+		# daoyu_create_building = { TYPE = "building_textile_mills" LEVEL = $NUM$ }#纺织厂 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_furniture_manufacturies" LEVEL = $NUM$ }#家具制造厂 # Commented out due to invalid building type
 		daoyu_create_building = { TYPE = "building_glassworks" LEVEL = $NUM$ }#玻璃厂
-		daoyu_create_building = { TYPE = "building_tooling_workshops" LEVEL = $NUM$ }#工艺装备工坊
-		daoyu_create_building = { TYPE = "building_paper_mills" LEVEL = $NUM$ }#造纸厂
-		daoyu_create_building = { TYPE = "building_chemical_plants" LEVEL = $NUM$ }#肥料厂
-		daoyu_create_building = { TYPE = "building_explosives_factory" LEVEL = $NUM$ }#炸药厂
-		daoyu_create_building = { TYPE = "building_synthetics_plants" LEVEL = $NUM$ }#化学合成厂
-		daoyu_create_building = { TYPE = "building_steel_mills" LEVEL = $NUM$ }#炼钢厂
+		# daoyu_create_building = { TYPE = "building_tooling_workshops" LEVEL = $NUM$ }#工艺装备工坊 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_paper_mills" LEVEL = $NUM$ }#造纸厂 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_chemical_plants" LEVEL = $NUM$ }#肥料厂 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_textile_mills" LEVEL = $NUM$ }#纺织厂 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_synthetics_plants" LEVEL = $NUM$ }#化学合成厂 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_steel_mills" LEVEL = $NUM$ }#炼钢厂 # Commented out due to invalid building type
 		daoyu_create_building = { TYPE = "building_arms_industry" LEVEL = $NUM$ }#武器厂
-		daoyu_create_building = { TYPE = "building_munition_plants" LEVEL = $NUM$ }#弹药厂
-		daoyu_create_building = { TYPE = "building_artillery_foundries" LEVEL = $NUM$ }#火炮铸造厂
+		# daoyu_create_building = { TYPE = "building_munition_plants" LEVEL = $NUM$ }#弹药厂 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_artillery_foundries" LEVEL = $NUM$ }#火炮铸造厂 # Commented out due to invalid building type
 		daoyu_create_building = { TYPE = "building_motor_industry" LEVEL = $NUM$ }#动力机械厂
 		daoyu_create_building = { TYPE = "building_automotive_industry" LEVEL = $NUM$ }#汽车工业
 		daoyu_create_building = { TYPE = "building_power_plant" LEVEL = $NUM$ }#发电厂
 		daoyu_create_building = { TYPE = "building_electrics_industry" LEVEL = $NUM$ }#电子厂
-		daoyu_create_building = { TYPE = "building_shipyards" LEVEL = $NUM$ }#造船厂
-		daoyu_create_building = { TYPE = "building_military_shipyards" LEVEL = $NUM$ }#军用造船厂
+		# daoyu_create_building = { TYPE = "building_shipyards" LEVEL = $NUM$ }#造船厂 # Commented out due to invalid building type
+		# daoyu_create_building = { TYPE = "building_military_shipyards" LEVEL = $NUM$ }#军用造船厂 # Commented out due to invalid building type
 	}
 	if = { limit = { has_global_variable = daoyu_get_building_level_1 } if = { limit = { scope:daoyu_current_building_1 = { level = $NUM$ } } set_variable = { name = daoyu_current_building_1 value = $NUM$ } remove_global_variable = daoyu_get_building_level_1 } }
 	if = { limit = { has_global_variable = daoyu_get_building_level_2 } if = { limit = { scope:daoyu_current_building_2 = { level = $NUM$ } } set_variable = { name = daoyu_current_building_2 value = $NUM$ } remove_global_variable = daoyu_get_building_level_2 } }

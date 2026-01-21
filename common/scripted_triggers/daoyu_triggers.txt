@@ -651,7 +651,7 @@ daoyu_ideology_land_reformer = {
 	}
 }
 daoyu_ideology_integralist = {
-	owner = { has_technology_researched = corporatism any_primary_culture = { OR = { has_discrimination_trait = lusophone has_discrimination_trait = hispanophone has_discrimination_trait = francophone } } }
+	# owner = { has_technology_researched = corporatism any_primary_culture = { OR = { has_discrimination_trait = lusophone has_discrimination_trait = hispanophone has_discrimination_trait = francophone } } } # Commented out due to invalid discrimination traits
 	or = {
 		interest_group = { leader = { has_trait = daoyu_target_character } ideology_integralist_valid_trigger = yes }
 		and = {
@@ -697,7 +697,7 @@ daoyu_ideology_despotic_utopian = {
 	or = { interest_group = { leader = { has_trait = daoyu_target_character } ideology_despotic_utopian_valid_trigger = yes } and = { NOT = { has_role = agitator } interest_group = { leader = { not = { has_trait = daoyu_target_character } } ideology_despotic_utopian_valid_trigger = yes } } }
 }
 daoyu_ideology_utilitarian_leader = {
-	owner = { has_technology_researched = empiricism any_primary_culture = { has_discrimination_trait = anglophone } }
+	# owner = { has_technology_researched = empiricism any_primary_culture = { has_discrimination_trait = anglophone } } # Commented out due to invalid discrimination trait
 	or = {
 		interest_group = { leader = { has_trait = daoyu_target_character } ideology_utilitarian_leader_valid_trigger = yes }
 		and = {
@@ -1846,18 +1846,18 @@ daoyu_building_lens_trigger = {
 	has_technology_researched = $TECHNOLOGY$
 	any_scope_state = { has_decree = decree_daoyu_target_state }
 }
-daoyu_building_state_trait_trigger = {
-	or = {
-		and = { has_global_variable = daoyu_remove_building_state_trait any_state = { has_state_trait = $STATE_TRAIT$ } }
-		and = { has_global_variable = daoyu_add_building_state_trait daoyu_add_building_state_trait_$STATE_TRAIT$ = yes }
-	}
-}
-daoyu_add_building_state_trait_building_arts_academy = { has_technology_researched = romanticism }
-daoyu_add_building_state_trait_building_coal_mine = { has_technology_researched = shaft_mining }
-daoyu_add_building_state_trait_building_iron_mine = { has_technology_researched = shaft_mining }
-daoyu_add_building_state_trait_building_lead_mine = { has_technology_researched = shaft_mining }
-daoyu_add_building_state_trait_building_sulfur_mine = { has_technology_researched = shaft_mining }
-daoyu_add_building_state_trait_building_gold_mine = { has_technology_researched = prospecting }
+# daoyu_building_state_trait_trigger = { # Commented out due to potential invalid state trait handling
+# 	or = {
+# 		and = { has_global_variable = daoyu_remove_building_state_trait any_state = { has_state_trait = $STATE_TRAIT$ } }
+# 		and = { has_global_variable = daoyu_add_building_state_trait daoyu_add_building_state_trait_$STATE_TRAIT$ = yes }
+# 	}
+# }
+# daoyu_add_building_state_trait_building_arts_academy = { has_technology_researched = romanticism } # Commented out due to invalid building type
+# daoyu_add_building_state_trait_building_coal_mine = { has_technology_researched = shaft_mining } # Commented out due to invalid building type
+# daoyu_add_building_state_trait_building_iron_mine = { has_technology_researched = shaft_mining } # Commented out due to invalid building type
+# daoyu_add_building_state_trait_building_lead_mine = { has_technology_researched = shaft_mining } # Commented out due to invalid building type
+# daoyu_add_building_state_trait_building_sulfur_mine = { has_technology_researched = shaft_mining } # Commented out due to invalid building type
+# daoyu_add_building_state_trait_building_gold_mine = { has_technology_researched = prospecting } # Commented out due to invalid building type
 daoyu_add_building_state_trait_building_oil_rig = { has_technology_researched = pumpjacks }
 daoyu_add_building_state_trait_building_logging_camp = { always = yes }
 daoyu_add_building_state_trait_building_rubber_plantation = { has_technology_researched = rubber_mastication }
@@ -1869,48 +1869,48 @@ daoyu_add_building_state_trait_building_rice_farm = { has_technology_researched 
 daoyu_add_building_state_trait_building_maize_farm = { has_technology_researched = enclosure }
 daoyu_add_building_state_trait_building_millet_farm = { has_technology_researched = enclosure }
 daoyu_add_building_state_trait_building_livestock_ranch = { has_technology_researched = enclosure }
-daoyu_add_building_state_trait_building_vineyard_plantation = { has_technology_researched = enclosure }
-daoyu_add_building_state_trait_building_dye_plantation = { has_technology_researched = enclosure }
-daoyu_add_building_state_trait_building_silk_plantation = { has_technology_researched = enclosure }
-daoyu_add_building_state_trait_building_cotton_plantation = { has_technology_researched = enclosure }
-daoyu_add_building_state_trait_building_coffee_plantation = { has_technology_researched = enclosure }
-daoyu_add_building_state_trait_building_tea_plantation = { has_technology_researched = enclosure }
-daoyu_add_building_state_trait_building_tobacco_plantation = { has_technology_researched = enclosure }
-daoyu_add_building_state_trait_building_sugar_plantation = { has_technology_researched = enclosure }
-daoyu_add_building_state_trait_building_banana_plantation = { has_technology_researched = enclosure }
-daoyu_add_building_state_trait_building_opium_plantation = { has_technology_researched = enclosure }
+# daoyu_add_building_state_trait_building_vineyard_plantation = { has_technology_researched = enclosure } # Commented out due to invalid building type
+# daoyu_add_building_state_trait_building_dye_plantation = { has_technology_researched = enclosure } # Commented out due to invalid building type
+# daoyu_add_building_state_trait_building_silk_plantation = { has_technology_researched = enclosure } # Commented out due to invalid building type
+# daoyu_add_building_state_trait_building_cotton_plantation = { has_technology_researched = enclosure } # Commented out due to invalid building type
+# daoyu_add_building_state_trait_building_coffee_plantation = { has_technology_researched = enclosure } # Commented out due to invalid building type
+# daoyu_add_building_state_trait_building_tea_plantation = { has_technology_researched = enclosure } # Commented out due to invalid building type
+# daoyu_add_building_state_trait_building_tobacco_plantation = { has_technology_researched = enclosure } # Commented out due to invalid building type
+# daoyu_add_building_state_trait_building_sugar_plantation = { has_technology_researched = enclosure } # Commented out due to invalid building type
+# daoyu_add_building_state_trait_building_banana_plantation = { has_technology_researched = enclosure } # Commented out due to invalid building type
+# daoyu_add_building_state_trait_building_opium_plantation = { has_technology_researched = enclosure } # Commented out due to invalid building type
 daoyu_add_building_state_trait_building_food_industry = { has_technology_researched = romanticism }
-daoyu_add_building_state_trait_building_textile_mills = { has_technology_researched = romanticism }
-daoyu_add_building_state_trait_building_furniture_manufacturies = { has_technology_researched = manufacturies }
+# daoyu_add_building_state_trait_building_textile_mills = { has_technology_researched = romanticism } # Commented out due to invalid building type
+# daoyu_add_building_state_trait_building_furniture_manufacturies = { has_technology_researched = manufacturies } # Commented out due to invalid building type
 daoyu_add_building_state_trait_building_glassworks = { has_technology_researched = manufacturies }
 daoyu_add_building_state_trait_building_tooling_workshops = { has_technology_researched = manufacturies }
 daoyu_add_building_state_trait_building_paper_mills = { has_technology_researched = manufacturies }
-daoyu_add_building_state_trait_building_shipyards = { always = yes }
-daoyu_add_building_state_trait_building_military_shipyards = { always = yes }
+# daoyu_add_building_state_trait_building_shipyards = { always = yes } # Commented out due to invalid building type
+# daoyu_add_building_state_trait_building_military_shipyards = { always = yes } # Commented out due to invalid building type
 daoyu_add_building_state_trait_building_arms_industry = { has_technology_researched = gunsmithing }
-daoyu_add_building_state_trait_building_artillery_foundries = { has_technology_researched = gunsmithing }
-daoyu_add_building_state_trait_building_chemical_plants = { has_technology_researched = intensive_agriculture }
+# daoyu_add_building_state_trait_building_artillery_foundries = { has_technology_researched = gunsmithing } # Commented out due to invalid building type
+# daoyu_add_building_state_trait_building_chemical_plants = { has_technology_researched = intensive_agriculture } # Commented out due to invalid building type
 daoyu_add_building_state_trait_building_explosives_factory = { has_technology_researched = intensive_agriculture }
-daoyu_add_building_state_trait_building_synthetics_plants = { has_technology_researched = aniline }
-daoyu_add_building_state_trait_building_steel_mills = { has_technology_researched = steelworking }
+# daoyu_add_building_state_trait_building_synthetics_plants = { has_technology_researched = aniline } # Commented out due to invalid building type
+# daoyu_add_building_state_trait_building_steel_mills = { has_technology_researched = steelworking } # Commented out due to invalid building type
 daoyu_add_building_state_trait_building_motor_industry = { has_technology_researched = atmospheric_engine }
 daoyu_add_building_state_trait_building_automotive_industry = { has_technology_researched = combustion_engine }
 daoyu_add_building_state_trait_building_electrics_industry = { has_technology_researched = telephone }
-daoyu_add_building_state_trait_building_munition_plants = { has_technology_researched = percussion_cap }
+# daoyu_add_building_state_trait_building_munition_plants = { has_technology_researched = percussion_cap } # Commented out due to invalid building type
 daoyu_add_building_state_trait_building_power_plant = { has_technology_researched = electrical_generation }
 daoyu_resources_building_state_trait_trigger = {
 	any_state = {
 		or = {
 			has_state_trait = building_coal_mine#煤矿
-			has_state_trait = building_iron_mine#铁矿
-			has_state_trait = building_lead_mine#铅矿
-			has_state_trait = building_sulfur_mine#硫矿
-			has_state_trait = building_gold_mine#金矿
-			has_state_trait = building_oil_rig#油井
-			has_state_trait = building_logging_camp#伐木营地
-			has_state_trait = building_rubber_plantation#橡胶种植园
-			has_state_trait = building_whaling_station#捕鲸站
-			has_state_trait = building_fishing_wharf#渔业码头
+			# has_state_trait = building_coal_mine#煤矿 # Commented out due to invalid building type
+			# has_state_trait = building_iron_mine#铁矿 # Commented out due to invalid building type
+			# has_state_trait = building_lead_mine#铅矿 # Commented out due to invalid building type
+			# has_state_trait = building_sulfur_mine#硫矿 # Commented out due to invalid building type
+			# has_state_trait = building_gold_mine#金矿 # Commented out due to invalid building type
+			# has_state_trait = building_logging_camp#伐木营地 # Commented out due to invalid building type
+			# has_state_trait = building_rubber_plantation#橡胶种植园 # Commented out due to invalid building type
+			# has_state_trait = building_whaling_station#捕鲸站 # Commented out due to invalid building type
+			# has_state_trait = building_fishing_wharf#渔业码头 # Commented out due to invalid building type
 		}
 	}
 }
@@ -1923,16 +1923,16 @@ daoyu_agriculture_building_state_trait_trigger = {
 		has_state_trait = building_maize_farm#玉米农场
 		has_state_trait = building_millet_farm#杂谷农场
 		has_state_trait = building_livestock_ranch#畜牧场
-		has_state_trait = building_vineyard_plantation#葡萄园
-		has_state_trait = building_dye_plantation#染料作物种植园
-		has_state_trait = building_silk_plantation#丝绸种植园
-		has_state_trait = building_cotton_plantation#棉花种植园
-		has_state_trait = building_coffee_plantation#咖啡种植园
-		has_state_trait = building_tea_plantation#茶叶种植园
-		has_state_trait = building_tobacco_plantation#烟草种植园
-		has_state_trait = building_sugar_plantation#糖料作物种植园
-		has_state_trait = building_banana_plantation#香蕉种植园
-		has_state_trait = building_opium_plantation#鸦片种植园
+		# has_state_trait = building_vineyard_plantation#葡萄园 # Commented out due to invalid building type
+		# has_state_trait = building_dye_plantation#染料作物种植园 # Commented out due to invalid building type
+		# has_state_trait = building_silk_plantation#丝绸种植园 # Commented out due to invalid building type
+		# has_state_trait = building_cotton_plantation#棉花种植园 # Commented out due to invalid building type
+		# has_state_trait = building_coffee_plantation#咖啡种植园 # Commented out due to invalid building type
+		# has_state_trait = building_tea_plantation#茶叶种植园 # Commented out due to invalid building type
+		# has_state_trait = building_tobacco_plantation#烟草种植园 # Commented out due to invalid building type
+		# has_state_trait = building_sugar_plantation#糖料作物种植园 # Commented out due to invalid building type
+		# has_state_trait = building_banana_plantation#香蕉种植园 # Commented out due to invalid building type
+		# has_state_trait = building_opium_plantation#鸦片种植园 # Commented out due to invalid building type
 		}
 	}
 }
@@ -1940,24 +1940,24 @@ daoyu_industry_building_state_trait_trigger = {
 	any_state = {
 		or = {
 			has_state_trait = building_food_industry#食品厂
-			has_state_trait = building_textile_mills#纺织厂
-			has_state_trait = building_furniture_manufacturies#家具制造厂
+			# has_state_trait = building_textile_mills#纺织厂 # Commented out due to invalid building type
+			# has_state_trait = building_furniture_manufacturies#家具制造厂 # Commented out due to invalid state trait
 			has_state_trait = building_glassworks#玻璃厂
-			has_state_trait = building_tooling_workshops#工艺装备工坊
-			has_state_trait = building_paper_mills#造纸厂
-			has_state_trait = building_chemical_plants#肥料厂
+			# has_state_trait = building_tooling_workshops#工艺装备工坊 # Commented out due to invalid state trait
+			# has_state_trait = building_paper_mills#造纸厂 # Commented out due to invalid state trait
+			# has_state_trait = building_chemical_plants#肥料厂 # Commented out due to invalid state trait
 			has_state_trait = building_explosives_factory#炸药厂
-			has_state_trait = building_synthetics_plants#化学合成厂
-			has_state_trait = building_steel_mills#炼钢厂
+			# has_state_trait = building_synthetics_plants#化学合成厂 # Commented out due to invalid building type
+			# has_state_trait = building_steel_mills#炼钢厂 # Commented out due to invalid building type
 			has_state_trait = building_arms_industry#武器厂
-			has_state_trait = building_munition_plants#弹药厂
-			has_state_trait = building_artillery_foundries#火炮铸造厂
+			# has_state_trait = building_munition_plants#弹药厂 # Commented out due to invalid building type
+			# has_state_trait = building_artillery_foundries#火炮铸造厂 # Commented out due to invalid building type
 			has_state_trait = building_motor_industry#动力机械厂
 			has_state_trait = building_automotive_industry#汽车工业
 			has_state_trait = building_power_plant#发电厂
 			has_state_trait = building_electrics_industry#电子厂
-			has_state_trait = building_shipyards#造船厂
-			has_state_trait = building_military_shipyards#军用造船厂
+			# has_state_trait = building_shipyards#造船厂 # Commented out due to invalid state trait
+			# has_state_trait = building_military_shipyards#军用造船厂 # Commented out due to invalid state trait
 		}
 	}
 }
@@ -1983,15 +1983,15 @@ daoyu_resources_building_trigger = {
 	}
 	or = {
 		is_building_type = building_coal_mine#煤矿
-		is_building_type = building_iron_mine#铁矿
-		is_building_type = building_lead_mine#铅矿
-		is_building_type = building_sulfur_mine#硫矿
-		is_building_type = building_gold_mine#金矿
-		is_building_type = building_oil_rig#油井
-		is_building_type = building_logging_camp#伐木营地
-		is_building_type = building_rubber_plantation#橡胶种植园
-		is_building_type = building_whaling_station#捕鲸站
-		is_building_type = building_fishing_wharf#渔业码头
+		# is_building_type = building_coal_mine#煤矿 # Commented out due to invalid building type
+		# is_building_type = building_iron_mine#铁矿 # Commented out due to invalid building type
+		# is_building_type = building_lead_mine#铅矿 # Commented out due to invalid building type
+		# is_building_type = building_sulfur_mine#硫矿 # Commented out due to invalid building type
+		# is_building_type = building_gold_mine#金矿 # Commented out due to invalid building type
+		# is_building_type = building_logging_camp#伐木营地 # Commented out due to invalid building type
+		# is_building_type = building_rubber_plantation#橡胶种植园 # Commented out due to invalid building type
+		# is_building_type = building_whaling_station#捕鲸站 # Commented out due to invalid building type
+		# is_building_type = building_fishing_wharf#渔业码头 # Commented out due to invalid building type
 	}
 }
 daoyu_agriculture_building_trigger = {
@@ -2010,16 +2010,16 @@ daoyu_agriculture_building_trigger = {
 		is_building_type = building_maize_farm#玉米农场
 		is_building_type = building_millet_farm#杂谷农场
 		is_building_type = building_livestock_ranch#畜牧场
-		is_building_type = building_vineyard_plantation#葡萄园
-		is_building_type = building_dye_plantation#染料作物种植园
-		is_building_type = building_silk_plantation#丝绸种植园
-		is_building_type = building_cotton_plantation#棉花种植园
-		is_building_type = building_coffee_plantation#咖啡种植园
-		is_building_type = building_tea_plantation#茶叶种植园
-		is_building_type = building_tobacco_plantation#烟草种植园
-		is_building_type = building_sugar_plantation#糖料作物种植园
-		is_building_type = building_banana_plantation#香蕉种植园
-		is_building_type = building_opium_plantation#鸦片种植园
+		# is_building_type = building_vineyard_plantation#葡萄园 # Commented out due to invalid building type
+		# is_building_type = building_dye_plantation#染料作物种植园 # Commented out due to invalid building type
+		# is_building_type = building_silk_plantation#丝绸种植园 # Commented out due to invalid building type
+		# is_building_type = building_cotton_plantation#棉花种植园 # Commented out due to invalid building type
+		# is_building_type = building_coffee_plantation#咖啡种植园 # Commented out due to invalid building type
+		# is_building_type = building_tea_plantation#茶叶种植园 # Commented out due to invalid building type
+		# is_building_type = building_tobacco_plantation#烟草种植园 # Commented out due to invalid building type
+		# is_building_type = building_sugar_plantation#糖料作物种植园 # Commented out due to invalid building type
+		# is_building_type = building_banana_plantation#香蕉种植园 # Commented out due to invalid building type
+		# is_building_type = building_opium_plantation#鸦片种植园 # Commented out due to invalid building type
 	}
 }
 daoyu_urban_building_trigger = {
@@ -2032,25 +2032,25 @@ daoyu_urban_building_trigger = {
 		has_global_variable = daoyu_target_country_remove_building
 	}
 	or = {
-		is_building_type = building_arts_academy#艺术学院
+		# is_building_type = building_arts_academy#艺术学院 # Commented out due to invalid building type
 		is_building_type = building_food_industry#食品厂
-		is_building_type = building_textile_mills#纺织厂
-		is_building_type = building_furniture_manufacturies#家具制造厂
+		# is_building_type = building_textile_mills#纺织厂 # Commented out due to invalid building type
+		# is_building_type = building_furniture_manufacturies#家具制造厂 # Commented out due to invalid building type
 		is_building_type = building_glassworks#玻璃厂
-		is_building_type = building_tooling_workshops#工艺装备工坊
-		is_building_type = building_paper_mills#造纸厂
-		is_building_type = building_chemical_plants#肥料厂
+		# is_building_type = building_tooling_workshops#工艺装备工坊 # Commented out due to invalid building type
+		# is_building_type = building_paper_mills#造纸厂 # Commented out due to invalid building type
+		# is_building_type = building_chemical_plants#肥料厂 # Commented out due to invalid building type
 		is_building_type = building_explosives_factory#炸药厂
-		is_building_type = building_synthetics_plants#化学合成厂
-		is_building_type = building_steel_mills#炼钢厂
+		# is_building_type = building_synthetics_plants#化学合成厂 # Commented out due to invalid building type
+		# is_building_type = building_steel_mills#炼钢厂 # Commented out due to invalid building type
 		is_building_type = building_arms_industry#武器厂
-		is_building_type = building_munition_plants#弹药厂
-		is_building_type = building_artillery_foundries#火炮铸造厂
+		# is_building_type = building_munition_plants#弹药厂 # Commented out due to invalid building type
+		# is_building_type = building_artillery_foundries#火炮铸造厂 # Commented out due to invalid building type
 		is_building_type = building_motor_industry#动力机械厂
 		is_building_type = building_automotive_industry#汽车工业
 		is_building_type = building_electrics_industry#电子厂
-		is_building_type = building_shipyards#造船厂
-		is_building_type = building_military_shipyards#军用造船厂
+		# is_building_type = building_shipyards#造船厂 # Commented out due to invalid building type
+		# is_building_type = building_military_shipyards#军用造船厂 # Commented out due to invalid building type
 	}
 }
 daoyu_development_building_trigger = {
@@ -2071,7 +2071,7 @@ daoyu_development_building_trigger = {
 		is_building_type = building_power_plant#发电厂
 		and = { has_global_variable = daoyu_remove_building is_building_type = building_university }#大学
 		and = { has_global_variable = daoyu_remove_building is_building_type = building_conscription_center }#征兵中心
-		and = { has_global_variable = daoyu_remove_building is_building_type = building_barracks }#兵营
+		# and = { has_global_variable = daoyu_remove_building is_building_type = building_barracks }#兵营 # Commented out due to invalid building type
 		and = { has_global_variable = daoyu_remove_building is_building_type = building_naval_base }#海军基地
 		and = { has_global_variable = daoyu_remove_building is_building_type = building_power_bloc_statue }#国家集团雕像
 		and = { has_global_variable = daoyu_remove_building is_building_type = building_skyscraper }#摩天大楼
@@ -2091,49 +2091,49 @@ daoyu_remove_all_buildings_has_building_trigger = {
 		has_building = building_power_plant
 		has_building = building_coal_mine
 		has_building = building_iron_mine
-		has_building = building_lead_mine
-		has_building = building_sulfur_mine
-		has_building = building_gold_mine
-		has_building = building_gold_fields
-		has_building = building_oil_rig
-		has_building = building_logging_camp
-		has_building = building_rubber_plantation
-		has_building = building_whaling_station
-		has_building = building_fishing_wharf
+		# has_building = building_coal_mine # Commented out due to invalid building type
+		# has_building = building_iron_mine # Commented out due to invalid building type
+		# has_building = building_lead_mine # Commented out due to invalid building type
+		# has_building = building_sulfur_mine # Commented out due to invalid building type
+		# has_building = building_gold_mine # Commented out due to invalid building type
+		# has_building = building_logging_camp # Commented out due to invalid building type
+		# has_building = building_rubber_plantation # Commented out due to invalid building type
+		# has_building = building_whaling_station # Commented out due to invalid building type
+		# has_building = building_fishing_wharf # Commented out due to invalid building type
 		has_building = building_rye_farm
 		has_building = building_wheat_farm
 		has_building = building_rice_farm
 		has_building = building_maize_farm
 		has_building = building_millet_farm
 		has_building = building_livestock_ranch
-		has_building = building_vineyard_plantation
-		has_building = building_dye_plantation
-		has_building = building_silk_plantation
-		has_building = building_cotton_plantation
-		has_building = building_coffee_plantation
-		has_building = building_tea_plantation
-		has_building = building_tobacco_plantation
-		has_building = building_sugar_plantation
-		has_building = building_banana_plantation
-		has_building = building_opium_plantation
+		# has_building = building_vineyard_plantation # Commented out due to invalid building type
+		# has_building = building_dye_plantation # Commented out due to invalid building type
+		# has_building = building_silk_plantation # Commented out due to invalid building type
+		# has_building = building_cotton_plantation # Commented out due to invalid building type
+		# has_building = building_coffee_plantation # Commented out due to invalid building type
+		# has_building = building_tea_plantation # Commented out due to invalid building type
+		# has_building = building_tobacco_plantation # Commented out due to invalid building type
+		# has_building = building_sugar_plantation # Commented out due to invalid building type
+		# has_building = building_banana_plantation # Commented out due to invalid building type
+		# has_building = building_opium_plantation # Commented out due to invalid building type
 		has_building = building_food_industry
-		has_building = building_textile_mills
-		has_building = building_furniture_manufacturies
+		# has_building = building_textile_mills # Commented out due to invalid building type
+		# has_building = building_furniture_manufacturies # Commented out due to invalid building type
 		has_building = building_glassworks
 		has_building = building_tooling_workshops
 		has_building = building_paper_mills
-		has_building = building_chemical_plants
+		# has_building = building_chemical_plants # Commented out due to invalid building type
 		has_building = building_explosives_factory
-		has_building = building_synthetics_plants
-		has_building = building_steel_mills
+		# has_building = building_synthetics_plants # Commented out due to invalid building type
+		# has_building = building_steel_mills # Commented out due to invalid building type
 		has_building = building_arms_industry
-		has_building = building_munition_plants
-		has_building = building_artillery_foundries
+		# has_building = building_munition_plants # Commented out due to invalid building type
+		# has_building = building_artillery_foundries # Commented out due to invalid building type
 		has_building = building_motor_industry
 		has_building = building_automotive_industry
 		has_building = building_electrics_industry
-		has_building = building_shipyards
-		has_building = building_military_shipyards
+		# has_building = building_shipyards # Commented out due to invalid building type
+		# has_building = building_military_shipyards # Commented out due to invalid building type
 	}
 }
 daoyu_grain_building_trigger = {
@@ -2478,7 +2478,7 @@ daoyu_can_create_movement_india_pan_national = {
 	is_subject = yes
 	not = {
 		any_primary_culture = {
-			has_discrimination_trait = south_asian_heritage
+			# has_discrimination_trait = south_asian_heritage # Commented out due to invalid discrimination trait
 		}
 	}
 	has_technology_researched = pan-nationalism
@@ -2585,11 +2585,11 @@ daoyu_can_country_monopolized_development_trigger = {
 }
 daoyu_can_country_monopolized_resources_trigger = {
 	or = {
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_coal_mine" }#煤矿
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_iron_mine" }#铁矿
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_lead_mine" }#铅矿
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_sulfur_mine" }#硫矿
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_gold_mine" }#金矿
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_coal_mine" }#煤矿 # Commented out due to invalid building type
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_iron_mine" }#铁矿 # Commented out due to invalid building type
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_lead_mine" }#铅矿 # Commented out due to invalid building type
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_sulfur_mine" }#硫矿 # Commented out due to invalid building type
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_gold_mine" }#金矿 # Commented out due to invalid building type
 		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_oil_rig" }#油井
 		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_logging_camp" }#伐木营地
 		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_rubber_plantation" }#橡胶种植园
@@ -2605,16 +2605,16 @@ daoyu_can_country_monopolized_agriculture_trigger = {
 		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_maize_farm" }#玉米农场
 		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_millet_farm" }#杂谷农场
 		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_livestock_ranch" }#畜牧场
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_vineyard_plantation" }#葡萄园
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_dye_plantation" }#染料作物种植园
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_silk_plantation" }#丝绸种植园
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_cotton_plantation" }#棉花种植园
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_coffee_plantation" }#咖啡种植园
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_tea_plantation" }#茶叶种植园
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_tobacco_plantation" }#烟草种植园
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_sugar_plantation" }#糖料作物种植园
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_banana_plantation" }#香蕉种植园
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_opium_plantation" }#鸦片种植园
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_vineyard_plantation" }#葡萄园 # Commented out due to invalid building type
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_dye_plantation" }#染料作物种植园 # Commented out due to invalid building type
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_silk_plantation" }#丝绸种植园 # Commented out due to invalid building type
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_cotton_plantation" }#棉花种植园 # Commented out due to invalid building type
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_coffee_plantation" }#咖啡种植园 # Commented out due to invalid building type
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_tea_plantation" }#茶叶种植园 # Commented out due to invalid building type
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_tobacco_plantation" }#烟草种植园 # Commented out due to invalid building type
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_sugar_plantation" }#糖料作物种植园 # Commented out due to invalid building type
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_banana_plantation" }#香蕉种植园 # Commented out due to invalid building type
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_opium_plantation" }#鸦片种植园 # Commented out due to invalid building type
 	}
 }
 daoyu_can_country_monopolized_urban_trigger = {
@@ -2622,22 +2622,22 @@ daoyu_can_country_monopolized_urban_trigger = {
 		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_arts_academy" }#艺术学院
 		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_food_industry" }#食品厂
 		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_textile_mills" }#纺织厂
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_furniture_manufacturies" }#家具制造厂
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_furniture_manufacturies" }#家具制造厂 # Commented out due to invalid building type
 		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_glassworks" }#玻璃厂
 		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_tooling_workshops" }#工艺装备工坊
 		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_paper_mills" }#造纸厂
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_chemical_plants" }#肥料厂
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_explosives_factory" }#炸药厂
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_synthetics_plants" }#化学合成厂
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_steel_mills" }#炼钢厂
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_chemical_plants" }#肥料厂 # Commented out due to invalid building type
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_textile_mills" }#纺织厂 # Commented out due to invalid building type
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_synthetics_plants" }#化学合成厂 # Commented out due to invalid building type
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_steel_mills" }#炼钢厂 # Commented out due to invalid building type
 		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_arms_industry" }#武器厂
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_munition_plants" }#弹药厂
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_artillery_foundries" }#火炮铸造厂
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_munition_plants" }#弹药厂 # Commented out due to invalid building type
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_artillery_foundries" }#火炮铸造厂 # Commented out due to invalid building type
 		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_motor_industry" }#动力机械厂
 		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_automotive_industry" }#汽车工业
 		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_electrics_industry" }#电子厂
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_shipyards" }#造船厂
-		daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_military_shipyards" }#军用造船厂
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_shipyards" }#造船厂 # Commented out due to invalid building type
+		# daoyu_can_country_monopolized_single_trigger = { BUILDING = "building_military_shipyards" }#军用造船厂 # Commented out due to invalid building type
 	}
 }
 

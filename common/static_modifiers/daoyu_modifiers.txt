@@ -437,3 +437,23 @@ daoyu_auto_country_influence = {
 daoyu_treaty_articles = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
 }
+
+# 为 daoyu_nonexistent 文化添加缺失的静态修饰符
+daoyu_nonexistent_standard_of_living_modifier_positive = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_house_positive.dds
+}
+daoyu_nonexistent_standard_of_living_modifier_negative = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_house_negative.dds
+}
+daoyu_nonexistent_cultural_acceptance_modifier_positive = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+}
+daoyu_nonexistent_cultural_acceptance_modifier_negative = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+}
+daoyu_nonexistent_fervor_target_modifier_positive = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+}
+daoyu_nonexistent_fervor_target_modifier_negative = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+}

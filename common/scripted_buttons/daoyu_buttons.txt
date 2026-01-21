@@ -3,7 +3,7 @@
 	desc = "NEVER"
 	visible = { not = { has_modifier = daoyu_fast_construction } }
 	possible = { }
-	ai_chance = { base = 0 }
+	# ai_chance = { base = 0 } # Commented out - not supported in scripted_buttons
 	effect = {
 		hidden_effect = { remove_modifier = daoyu_stop_construction } add_modifier = { name = daoyu_fast_construction }
 	}
@@ -13,7 +13,7 @@ daoyu_fast_construction_off = {
 	desc = "NEVER"
 	visible = { has_modifier = daoyu_fast_construction }
 	possible = { }
-	ai_chance = { base = 0 }
+	# ai_chance = { base = 0 } # Commented out - not supported in scripted_buttons
 	effect = { remove_modifier = daoyu_fast_construction }
 }
 daoyu_stop_construction = {
@@ -21,7 +21,7 @@ daoyu_stop_construction = {
 	desc = "NEVER"
 	visible = { not = { has_modifier = daoyu_stop_construction } }
 	possible = { }
-	ai_chance = { base = 0 }
+	# ai_chance = { base = 0 } # Commented out - not supported in scripted_buttons
 	effect = {
 		hidden_effect = { remove_modifier = daoyu_fast_construction } add_modifier = { name = daoyu_stop_construction }
 	}
@@ -31,7 +31,7 @@ daoyu_stop_construction_off = {
 	desc = "NEVER"
 	visible = { has_modifier = daoyu_stop_construction }
 	possible = { }
-	ai_chance = { base = 0 }
+	# ai_chance = { base = 0 } # Commented out - not supported in scripted_buttons
 	effect = { remove_modifier = daoyu_stop_construction }
 }
 daoyu_w1 = {

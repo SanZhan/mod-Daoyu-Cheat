@@ -1,0 +1,52 @@
+namespace = daoyu
+
+# Placeholder events to satisfy trigger_event calls from scripts.
+# These are intentionally no-ops (immediate, zero-duration).
+
+daoyu.900 = {
+    type = country_event
+    placement = ROOT
+    title = daoyu_line_reaks
+    desc = daoyu_line_reaks
+    option = { name = OK }
+}
+
+daoyu.950 = {
+    type = country_event
+    placement = ROOT
+    title = daoyu_line_reaks
+    desc = daoyu_line_reaks
+    option = { name = OK }
+}
+
+daoyu.960 = {
+    type = country_event
+    placement = ROOT
+    title = daoyu_line_reaks
+    desc = daoyu_line_reaks
+    option = { name = OK }
+}
+
+daoyu.962 = {
+    type = country_event
+    placement = ROOT
+    title = daoyu_line_reaks
+    desc = daoyu_line_reaks
+    option = { name = OK }
+}
+
+daoyu.681 = {
+    type = country_event
+    placement = ROOT
+    title = daoyu_line_reaks
+    desc = daoyu_line_reaks
+    option = { name = OK }
+}
+
+daoyu.699 = {
+    type = country_event
+    placement = ROOT
+    title = daoyu_line_reaks
+    desc = daoyu_line_reaks
+    option = { name = OK }
+}

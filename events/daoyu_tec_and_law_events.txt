@@ -970,10 +970,10 @@ d_law_tec.800 = {
 			triggered_desc = { trigger = { any_country = { is_ai = yes has_modifier = daoyu_target_country nor = { daoyu_production_era = yes daoyu_military_era = yes daoyu_society_era = yes } } } desc = daoyu_target_country_get_name }
 			triggered_desc = { trigger = { not = { any_country = { is_ai = yes has_modifier = daoyu_target_country } } } desc = TARGET_COUNTRY_NOT_VALID }
 		}
-		first_valid = { triggered_desc = { trigger = { any_country = { is_ai = yes has_modifier = daoyu_target_country nor = { daoyu_production_era = yes daoyu_military_era = yes daoyu_society_era = yes } } } desc = ACHIEVEMENT_DESC_inventive } }
+		first_valid = { triggered_desc = { trigger = { any_country = { is_ai = yes has_modifier = daoyu_target_country nor = { daoyu_production_era = yes daoyu_military_era = yes daoyu_society_era = yes } } } desc = daoyu_generic_desc_inventive } }
 		first_valid = { desc = daoyu_line_reaks }
 		first_valid = { triggered_desc = { trigger = { nor = { daoyu_production_era = yes daoyu_military_era = yes daoyu_society_era = yes } } desc = daoyu_root_get_name } }
-		first_valid = { triggered_desc = { trigger = { nor = { daoyu_production_era = yes daoyu_military_era = yes daoyu_society_era = yes } } desc = ACHIEVEMENT_DESC_inventive } }
+		first_valid = { triggered_desc = { trigger = { nor = { daoyu_production_era = yes daoyu_military_era = yes daoyu_society_era = yes } } desc = daoyu_generic_desc_inventive } }
 		first_valid = { triggered_desc = { trigger = { nor = { daoyu_production_era = yes daoyu_military_era = yes daoyu_society_era = yes } } desc = daoyu_line_reaks } }
 		first_valid = { desc = daoyu_target_country_desc }
 	}
@@ -1233,7 +1233,7 @@ d_law_tec.850 = {
 #军事
 d_law_tec.860 = {
 	type = country_event
-	placement = daoyu_cheat
+	placement = root
 	title = daoyu_cheat
 	desc = military
 	flavor = daoyu_technology_desc
