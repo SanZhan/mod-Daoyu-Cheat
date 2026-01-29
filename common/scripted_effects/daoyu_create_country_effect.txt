@@ -668,18 +668,18 @@ daoyu_create_country_effect = {
 	daoyu_single_create_country_effect = { TAG = "MSN" STATE = "STATE_EASTERN_MALI" }
 	daoyu_single_create_country_effect = { TAG = "OYO" STATE = "STATE_YORUBA_STATES" }
 	daoyu_single_create_country_effect = { TAG = "BEN" STATE = "STATE_BENIN" }
-	# daoyu_single_create_country_effect = { TAG = "CAY" STATE = "STATE_SENEGAL" } # Disabled - STATE_SENEGAL has strategic region issues
-	# daoyu_single_create_country_effect = { TAG = "JLF" STATE = "STATE_SENEGAL" } # Disabled - STATE_SENEGAL has strategic region issues
-	# daoyu_single_create_country_effect = { TAG = "FTR" STATE = "STATE_SENEGAL" } # Disabled - STATE_SENEGAL has strategic region issues
+	daoyu_single_create_country_effect = { TAG = "CAY" STATE = "STATE_SENEGAL" }
+	daoyu_single_create_country_effect = { TAG = "JLF" STATE = "STATE_SENEGAL" }
+	daoyu_single_create_country_effect = { TAG = "FTR" STATE = "STATE_SENEGAL" }
 	daoyu_single_create_country_effect = { TAG = "KNG" STATE = "STATE_IVORY_COAST" }
 	daoyu_single_create_country_effect = { TAG = "DAH" STATE = "STATE_DAHOMEY" }
 	daoyu_single_create_country_effect = { TAG = "MOS" STATE = "STATE_VOLTA" }
 	daoyu_single_create_country_effect = { TAG = "KRT" STATE = "STATE_WESTERN_MALI" }
 	daoyu_single_create_country_effect = { TAG = "SGU" STATE = "STATE_WESTERN_MALI" }
 	daoyu_single_create_country_effect = { TAG = "TRZ" STATE = "STATE_MAURITANIA" }
-	# daoyu_single_create_country_effect = { TAG = "KBU" STATE = "STATE_GAMBIA" } # Disabled - STATE_GAMBIA missing strategic region
-	# daoyu_single_create_country_effect = { TAG = "BND" STATE = "STATE_GAMBIA" } # Disabled - STATE_GAMBIA missing strategic region
-	# daoyu_single_create_country_effect = { TAG = "SRR" STATE = "STATE_GAMBIA" } # Disabled - STATE_GAMBIA missing strategic region
+	daoyu_single_create_country_effect = { TAG = "KBU" STATE = "STATE_GAMBIA" }
+	daoyu_single_create_country_effect = { TAG = "BND" STATE = "STATE_GAMBIA" }
+	daoyu_single_create_country_effect = { TAG = "SRR" STATE = "STATE_GAMBIA" }
 	daoyu_single_create_country_effect = { TAG = "SSU" STATE = "STATE_GUINEA" }
 	daoyu_single_create_country_effect = { TAG = "MDK" STATE = "STATE_GUINEA" }
 	daoyu_single_create_country_effect = { TAG = "HAU" STATE = "STATE_OUTER_HAUSALAND" }

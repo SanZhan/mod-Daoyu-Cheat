@@ -754,7 +754,7 @@ daoyu_single_religious_effect = {
 		limit = { has_global_variable = daoyu_move_pop_religion_unemployed_effect }
 		if = {
 			limit = { has_global_variable = daoyu_move_pop_$RELIGION$ }
-			scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:$RELIGION$ is_employed = no } move_pop = scope:daoyu_migration_go_to } }
+			scope:daoyu_migration_from = { random_scope_pop = { limit = { culture = { has_variable = daoyu_target_culture } religion = rel:_$RELIGION$ is_employed = no } move_pop = scope:daoyu_migration_go_to } }
 		}
 	}
 	if = {
@@ -1180,8 +1180,8 @@ daoyu_move_capital_or_move_market = {
 	daoyu_mcomm = { REGION = "STATE_WESTERN_THRACE" }
 	daoyu_mcomm = { REGION = "STATE_IONIAN_ISLANDS" }
 	daoyu_mcomm = { REGION = "STATE_PELOPONNESE" }
-	daoyu_mcomm = { REGION = "STATE_MAZOVIA" }
-	# daoyu_mcomm = { REGION = "STATE_SILESIA" } # Disabled: STATE_SILESIA not present in target v1.12 map
+	daoyu_mcomm = { REGION = "﻿STATE_MAZOVIA" }
+	daoyu_mcomm = { REGION = "STATE_SILESIA" }
 	daoyu_mcomm = { REGION = "STATE_GREATER_POLAND" }
 	daoyu_mcomm = { REGION = "STATE_LESSER_POLAND" }
 	daoyu_mcomm = { REGION = "STATE_WEST_PRUSSIA" }
@@ -1235,8 +1235,8 @@ daoyu_move_capital_or_move_market = {
 	daoyu_mcomm = { REGION = "STATE_CHAD" }
 	daoyu_mcomm = { REGION = "﻿STATE_IVORY_COAST" }
 	daoyu_mcomm = { REGION = "STATE_WINDWARD_COAST" }
-	# daoyu_mcomm = { REGION = "STATE_SENEGAL" } # Disabled due to strategic region issues
-	# daoyu_mcomm = { REGION = "STATE_GAMBIA" } # Disabled due to missing strategic region definition
+	daoyu_mcomm = { REGION = "STATE_SENEGAL" }
+	daoyu_mcomm = { REGION = "STATE_GAMBIA" }
 	daoyu_mcomm = { REGION = "STATE_SIERRA_LEONE" }
 	daoyu_mcomm = { REGION = "STATE_VOLTA" }
 	daoyu_mcomm = { REGION = "STATE_LIBERIA" }
@@ -1536,7 +1536,7 @@ daoyu_move_capital_or_move_market = {
 	daoyu_mcomm = { REGION = "STATE_MANDALAY" }
 	daoyu_mcomm = { REGION = "STATE_PEGU" }
 	daoyu_mcomm = { REGION = "STATE_ARAKAN" }
-	daoyu_mcomm = { REGION = "STATE_DZUNGARIA" }
+	daoyu_mcomm = { REGION = "﻿STATE_DZUNGARIA" }
 	daoyu_mcomm = { REGION = "STATE_TIANSHAN" }
 	daoyu_mcomm = { REGION = "STATE_SICHUAN" }
 	daoyu_mcomm = { REGION = "STATE_YUNNAN" }
@@ -2071,14 +2071,10 @@ daoyu_political_movement_buff = {
 	}
 }
 daoyu_remove_company = {
-	# Safe no-op replacement: older implementations attempted to call engine
-	# operations that are not supported (remove_company / company:). To avoid
-	# runtime errors, this effect performs a harmless marker action instead.
 	random_country = {
 		limit = { has_modifier = daoyu_target_country }
-		# mark action (temporary variable) — no engine-destructive calls
-		set_variable = daoyu_removed_company_dummy
-		remove_variable = daoyu_removed_company_dummy
+		company:$COM$ = { remove_owned_country = prev }
+		remove_company = company_type:$COM$
 	}
 }
 daoyu_111 = { trigger_event = { id = daoyu.10 popup = yes } }

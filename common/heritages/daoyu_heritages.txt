@@ -1,3 +1,0 @@
-heritage_generic = {
-    # Placeholder heritage to satisfy culture references
-}

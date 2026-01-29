@@ -1,3 +1,0 @@
-language_generic = {
-    # Placeholder language to satisfy culture references
-}
